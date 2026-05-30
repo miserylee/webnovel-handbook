@@ -17,6 +17,7 @@
 - [网文核心原则](docs/02-webnovel-principles.md)
 - [人物与对话](docs/04-character-and-dialogue.md)
 - [AI 写作与降 AI 味指南](docs/06-ai-writing-guidelines.md)
+- [人味增强：人物、剧情、梗点与情绪](docs/11-human-writing-upgrade.md)
 - [模板与检查清单](docs/10-templates-and-checklists.md)
 
 如果任务是搭新小说项目或维护长篇项目，额外读取：
@@ -43,6 +44,7 @@
 - [08-review-and-reader-feedback.md](docs/08-review-and-reader-feedback.md)：编辑审稿标准、AI 含量判断、读者群试读流程。
 - [09-case-notes.md](docs/09-case-notes.md)：从旧项目沉淀出的可复用案例。
 - [10-templates-and-checklists.md](docs/10-templates-and-checklists.md)：可直接复制使用的简报、章节、自检、审稿模板。
+- [11-human-writing-upgrade.md](docs/11-human-writing-upgrade.md)：专门解决人物不活、剧情生硬、黏着性低、缺梗和情绪淡。
 - [99-decision-log.md](docs/99-decision-log.md)：本知识库的关键决策记录。
 
 ## 维护原则

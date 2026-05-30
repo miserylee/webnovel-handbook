@@ -12,7 +12,7 @@
 
 再按任务读取专题：
 
-- 起草或修订章节：`docs/02-webnovel-principles.md`、`docs/04-character-and-dialogue.md`、`docs/06-ai-writing-guidelines.md`、`docs/10-templates-and-checklists.md`
+- 起草或修订章节：`docs/02-webnovel-principles.md`、`docs/04-character-and-dialogue.md`、`docs/11-human-writing-upgrade.md`、`docs/06-ai-writing-guidelines.md`、`docs/10-templates-and-checklists.md`
 - 搭建新小说项目：`docs/03-project-workflow.md`、`docs/07-continuity-ledger.md`
 - 设计大纲或连载节奏：`docs/05-plot-and-serial-rhythm.md`
 - 审稿、试读、判断 AI 含量：`docs/08-review-and-reader-feedback.md`、`docs/09-case-notes.md`
@@ -55,3 +55,4 @@
 - 新增关键决策要记录到 `docs/99-decision-log.md`。
 - 临时想法可以先放 `notes/`，但不能替代正式文档。
 - 不创建 `final`、`v2` 这类重复文档名；需要版本脉络时写进决策记录或案例笔记。
+- 如果用户指出“人物不活、剧情生硬、没有梗、情绪淡、读者不黏”，必须读取 `docs/11-human-writing-upgrade.md`，不要只做句子润色。

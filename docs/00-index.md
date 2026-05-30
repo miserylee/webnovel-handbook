@@ -12,6 +12,7 @@
 - 已初始化基础目录：`docs/`、`templates/`、`cases/`、`prompts/`、`notes/`。
 - 已吸收本地 `novel` skill 的通用框架：项目流程、澄清流程、网文写作、人物塑造、连续性台账。
 - 已抽取旧项目经验来源：`许愿池修仙`、`人均猛将`、`编辑部`、`读者群`。
+- 已根据试写问题新增“人味增强”专题：人物鲜活、剧情自然、读者黏着、梗点和情绪浓度。
 - 本项目定位为知识库，因此允许沉淀通用方法；这一点不同于单本小说项目。
 
 ## 下一步
@@ -34,9 +35,10 @@
 
 1. `docs/02-webnovel-principles.md`
 2. `docs/04-character-and-dialogue.md`
-3. `docs/06-ai-writing-guidelines.md`
-4. `docs/07-continuity-ledger.md`
-5. `docs/10-templates-and-checklists.md`
+3. `docs/11-human-writing-upgrade.md`
+4. `docs/06-ai-writing-guidelines.md`
+5. `docs/07-continuity-ledger.md`
+6. `docs/10-templates-and-checklists.md`
 
 ### 审稿或试读前
 
@@ -56,6 +58,7 @@
 - `08-review-and-reader-feedback.md`：编辑审稿与读者群反馈。
 - `09-case-notes.md`：旧项目经验案例。
 - `10-templates-and-checklists.md`：可直接复用的模板。
+- `11-human-writing-upgrade.md`：人物鲜活、剧情自然、读者黏着、梗点和情绪浓度。
 - `99-decision-log.md`：关键决策。
 
 ## 维护规则

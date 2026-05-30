@@ -90,3 +90,29 @@
 - 读者群 `评价存档/` 下的全部评价文件。
 
 这些材料可以在后续针对具体问题时再按需整理，避免一次性把过期或项目专属内容误升格为通用规范。
+
+## 联网补充资料：人味增强
+
+本轮根据“人物不够鲜活、剧情生硬、黏着性低、没有梗点、情绪寡淡”的试写反馈，新增联网资料。核心内容已整理进 `docs/11-human-writing-upgrade.md`，并同步到人物、节奏和模板文档。
+
+### 已吸收来源
+
+- Writing Excuses：人物动机、人物缺陷、读者进度感、幽默写作相关讨论。
+  - `https://writingexcuses.com/13-18-naturally-revealing-character-motivation/`
+  - `https://writingexcuses.com/writing-excuses-episode-6-flaws-vs-handicaps/`
+  - `https://writingexcuses.com/writing-excuses-10-31-how-do-i-control-the-readers-sense-of-progress/`
+  - `https://writingexcuses.com/writing-excuses-episode-21-humor/`
+- Writer's Digest：关于 stakes 的写作建议，用于补充“个人风险、关系风险、道德/价值风险”的审稿视角。
+  - `https://www.writersdigest.com/improve-my-writing/3-key-stakes-that-drive-novels`
+- 番茄小说作家专区：中文网文语境下的代入感、熟悉感、情绪共鸣、好奇心和接地气资料。
+  - `https://fanqienovel.com/writer/zone/article/7514519759442935832`
+- 起点社区写作讨论：代入感、认同感、主角言行与读者投射资料。
+  - `https://www.qidianclub.com/threads/246/`
+
+### 可迁移经验
+
+- 人物鲜活度不能只靠背景设定，要靠自保动作、习惯性误判、关系欠账和场景反应。
+- 剧情自然度来自“目标-阻力-尝试-代价-反应-两难-新决定”的因果链。
+- 读者黏着性来自承诺、进度和回报，而不是单纯章末吊胃口。
+- 梗点应来自人物真相、关系错位或世界规则的可重复变体，不是硬塞段子。
+- 情绪浓度来自人物在乎的价值被触碰，再通过动作、沉默、误会、身体反应和关系余波呈现。
