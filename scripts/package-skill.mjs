@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+﻿#!/usr/bin/env node
 
 import { promises as fs } from "node:fs";
 import path from "node:path";
@@ -11,7 +11,7 @@ const deflateRaw = promisify(zlib.deflateRaw);
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const repoRoot = path.resolve(__dirname, "..");
-const skillRoot = path.join(repoRoot, "skill");
+const skillRoot = path.join(repoRoot, "skills", "webnovel-handbook");
 const outputPath = path.resolve(
   repoRoot,
   process.argv[2] || "dist/webnovel-handbook-skill.zip",
@@ -190,3 +190,5 @@ main().catch((error) => {
   console.error(error instanceof Error ? error.message : error);
   process.exitCode = 1;
 });
+
+

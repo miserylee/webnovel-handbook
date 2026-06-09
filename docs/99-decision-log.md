@@ -2616,3 +2616,39 @@
 
 - 后续维护脚本放入仓库级 `scripts/`。
 - `skill/` 内不放构建、打包、发布脚本，除非这些脚本本身就是 agent 运行时必须消费的 skill 资源。
+
+## 2026-06-10：skill 目录改为 npx skills 可发现布局
+
+状态：已确认
+
+决策：轻量 skill 分发目录从 `skill/` 改为顶层 `webnovel-handbook/`。目录名与 `SKILL.md` frontmatter 中的 `name: webnovel-handbook` 保持一致，以适配 `npx skills add <repo>` 的发现协议。
+
+原因：
+
+- `npx skills init webnovel-handbook` 生成的标准形态是 `webnovel-handbook/SKILL.md`。
+- 实测 `npx skills add . --list` 无法发现 `skill/SKILL.md`，即使使用 `--full-depth` 也不符合其有效 skill 识别规则。
+- 顶层技能名目录既保持轻量分发，又避免把整个仓库根目录作为 skill。
+
+执行规则：
+
+- 后续 skill 入口文件维护在 `webnovel-handbook/SKILL.md`。
+- 仓库级维护脚本继续放在 `scripts/`，不进入 skill 分发目录。
+- 打包脚本应从 `webnovel-handbook/` 目录生成 zip。
+
+## 2026-06-10：skill 使用 npx skills 默认扫描容器
+
+状态：已确认
+
+决策：轻量 skill 目录使用 `skills/webnovel-handbook/SKILL.md`。这条规则覆盖上一条“顶层 `webnovel-handbook/SKILL.md`”方案。
+
+原因：
+
+- `npx skills` 的默认发现协议会扫描仓库根目录的 `SKILL.md`，以及 `skills/<name>/SKILL.md` 等技能容器目录。
+- 顶层 `webnovel-handbook/SKILL.md` 不属于默认容器路径，实测 `npx skills add . --list --yes` 无法发现。
+- 使用 `skills/webnovel-handbook/` 可以让 `npx skills add <repo>` 不带 `--skill` 或 `--full-depth` 也能发现技能，同时避免根目录 `SKILL.md` 导致整个仓库被视为 skill。
+
+执行规则：
+
+- 不在仓库根目录放 `SKILL.md`。
+- skill 入口文件维护在 `skills/webnovel-handbook/SKILL.md`。
+- 仓库级维护脚本仍放在 `scripts/`，不进入 `skills/webnovel-handbook/`。

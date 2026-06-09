@@ -1084,11 +1084,11 @@ Agent 不应该把整个仓库塞进上下文。推荐流程：
 
 ## 作为轻量 Skill 分发
 
-本仓库提供 `skill/` 目录作为可分发的轻量 Codex skill。skill 包本身只包含入口说明和辅助脚本，不打包完整知识库；agent 触发后应将本仓库 clone 或 update 到本地固定目录，再基于本地文件进行检索和按需读取。
+本仓库提供 `skills/webnovel-handbook/` 目录作为可分发的轻量 skill，符合 `npx skills` 默认发现布局。skill 包本身只包含入口说明和辅助脚本，不打包完整知识库；agent 触发后应将本仓库 clone 或 update 到本地固定目录，再基于本地文件进行检索和按需读取。
 
 推荐消费方式：
 
-1. 从 `skill/` 打包生成 `webnovel-handbook-skill.zip` 并安装到 agent 环境。
+1. 从 `skills/webnovel-handbook/` 打包生成 `webnovel-handbook-skill.zip` 并安装到 agent 环境。
 2. agent 触发 `webnovel-handbook` 后，检查固定本地目录 `~/.webnovel-handbook/repo`。
 3. 如果缓存不存在，clone `https://github.com/miserylee/webnovel-handbook.git`；如果已存在，在网络可用时 update。
 4. agent 先读目标小说项目自己的设定、正文和连续性记录，再从本地 handbook clone 中读取 `docs/57-knowledge-base-routing-consolidation-guide.md` 与对应专题。
@@ -1102,10 +1102,12 @@ node scripts/package-skill.mjs
 
 关键入口文件：
 
-- `skill/SKILL.md`：轻量 skill 入口，负责引导 agent 同步本地 handbook clone。
-- `scripts/package-skill.mjs`：仓库级打包脚本，将 `skill/` 打包为可分发 zip。
+- `skills/webnovel-handbook/SKILL.md`：轻量 skill 入口，负责引导 agent 同步本地 handbook clone。
+- `scripts/package-skill.mjs`：仓库级打包脚本，将 `skills/webnovel-handbook/` 打包为可分发 zip。
 - `docs/00-index.md`：知识库目录。
 - `docs/57-knowledge-base-routing-consolidation-guide.md`：按任务选择最小阅读包。
 - `docs/58-integrated-drafting-beta-review-revision-workflow.md`：写稿、试读、审稿、改稿一体化流程。
+
+
 
 

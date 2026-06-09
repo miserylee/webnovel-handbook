@@ -61,3 +61,17 @@
 
 - 将 skill 打包脚本从 `skill/scripts/` 迁移到仓库级 `scripts/`，避免维护脚本被打入 skill 分发包。
 - 将打包脚本从 Windows PowerShell 改为跨平台 Node.js 脚本：`node scripts/package-skill.mjs`。
+
+## 2026-06-10
+
+### Changed
+
+- 调整轻量 skill 包布局以兼容 `npx skills`：分发目录从 `skill/` 改为顶层 `webnovel-handbook/`，目录名与 skill name 保持一致。
+- 更新 Node.js 打包脚本，使其从 `webnovel-handbook/` 目录生成 `dist/webnovel-handbook-skill.zip`。
+
+## 2026-06-10
+
+### Changed
+
+- 调整 skill 包布局为 `npx skills` 默认扫描结构：`skills/webnovel-handbook/SKILL.md`。
+- 更新打包脚本，使其从 `skills/webnovel-handbook/` 生成分发 zip。
