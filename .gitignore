@@ -7,3 +7,11 @@ Thumbs.db
 .cache/
 .temp/
 exports/
+*.swp
+*.swo
+.env
+.vscode/
+.idea/
+node_modules/
+__pycache__/
+*.pyc
