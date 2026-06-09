@@ -55,6 +55,10 @@ For a new session or after context loss, read these files from the local clone:
 For writing, continuation, review, beta-read, or revision tasks, also read:
 
 - `docs/58-integrated-drafting-beta-review-revision-workflow.md`
+- `docs/06-ai-writing-guidelines.md`
+- `docs/11-human-writing-upgrade.md`
+
+If the user says the draft feels AI-like, bland, smooth-but-fake, generic, characterless, emotionally thin, or too templated, treat `docs/11-human-writing-upgrade.md` as mandatory and do not handle the issue as sentence polishing only.
 
 ## Operating rules
 
@@ -71,11 +75,14 @@ Use the handbook as an authoritative reference, but do not copy generic methodol
 
 When asked to write or revise fiction, run one compact internal loop unless the user asks for more:
 
-1. Writer pass: produce or revise the chapter according to the project facts, outline, genre promise, and scene goal.
-2. Beta-reader pass: simulate target-reader reactions, focusing on hook, clarity, emotional pull, character vividness, and chapter-end momentum.
-3. Editor pass: check commercial readability, continuity, pacing, stakes, redundancy, and AI-like blandness.
-4. Revision pass: apply the highest-impact fixes directly instead of only reporting problems.
-5. Deliver the result with a short change note, unresolved risks, and any continuity-ledger updates the target project should record.
+1. Anti-AI gate: before drafting, identify the scene-specific friction, character self-protection move, concrete object/action chain, emotional trigger, and one controlled imperfection that should prevent generic smoothness.
+2. Writer pass: produce or revise the chapter according to the project facts, outline, genre promise, scene goal, and anti-AI gate.
+3. Beta-reader pass: simulate target-reader reactions, focusing on hook, clarity, emotional pull, character vividness, chapter-end momentum, and whether the prose feels like a prompt expansion.
+4. Editor pass: check commercial readability, continuity, pacing, stakes, redundancy, and AI-like blandness.
+5. Revision pass: apply the highest-impact fixes directly instead of only reporting problems. If AI-like blandness is high, fix scene causality, character reaction, dialogue texture, and concrete action before polishing sentences.
+6. Deliver the result with a short change note, unresolved risks, and any continuity-ledger updates the target project should record.
+
+Do not present a chapter as finished if the internal anti-AI pass still rates it as high or very high AI flavor. Revise once within scope, or report that the chapter has a structural human-writing blocker.
 
 Do not make the user switch between separate reader-group, editorial, or drafting contexts unless they explicitly request separate reports.
 

@@ -82,3 +82,10 @@
 
 - 修复 `skills/webnovel-handbook/SKILL.md` frontmatter：将包含冒号的 `description` 改为 YAML block scalar，避免 `npx skills` 解析失败。
 - 修复 `skills/webnovel-handbook/SKILL.md` 文件编码：确保文件以无 BOM UTF-8 写入，使文件开头第一个字符就是 `---`。
+
+## 2026-06-10
+
+### Changed
+
+- 提升降 AI 味在 skill 和写稿闭环中的优先级：高 AI 味稿件不能作为定稿交付，必须先修人物反应、场景摩擦、动作链和情绪触发。
+- 更新 `docs/06-ai-writing-guidelines.md`、`docs/11-human-writing-upgrade.md` 和 `docs/58-integrated-drafting-beta-review-revision-workflow.md`，明确降 AI 味不是终稿润色，而是起草前硬门槛。
