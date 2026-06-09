@@ -54,3 +54,10 @@
 ### Changed
 
 - 收束轻量 skill 的本地仓库路径策略：不再使用显式配置或环境变量优先级，统一固定为 `~/.webnovel-handbook/repo`。
+
+## 2026-06-10
+
+### Changed
+
+- 将 skill 打包脚本从 `skill/scripts/` 迁移到仓库级 `scripts/`，避免维护脚本被打入 skill 分发包。
+- 将打包脚本从 Windows PowerShell 改为跨平台 Node.js 脚本：`node scripts/package-skill.mjs`。

@@ -1097,12 +1097,13 @@ Agent 不应该把整个仓库塞进上下文。推荐流程：
 打包命令：
 
 ```powershell
-./skill/scripts/package-skill.ps1
+node scripts/package-skill.mjs
 ```
 
 关键入口文件：
 
 - `skill/SKILL.md`：轻量 skill 入口，负责引导 agent 同步本地 handbook clone。
+- `scripts/package-skill.mjs`：仓库级打包脚本，将 `skill/` 打包为可分发 zip。
 - `docs/00-index.md`：知识库目录。
 - `docs/57-knowledge-base-routing-consolidation-guide.md`：按任务选择最小阅读包。
 - `docs/58-integrated-drafting-beta-review-revision-workflow.md`：写稿、试读、审稿、改稿一体化流程。

@@ -2599,3 +2599,20 @@
 
 - `skill/SKILL.md` 和公开说明中以 `~/.webnovel-handbook/repo` 作为默认且唯一通用路径。
 - 如果用户在具体任务中明确要求其他路径，可以按该任务执行，但不改变通用 skill 默认规则。
+
+## 2026-06-10：skill 打包脚本移出分发包
+
+状态：已确认
+
+决策：skill 打包脚本属于仓库维护工具，不放在 `skill/` 内部。统一放在仓库级 `scripts/package-skill.mjs`，使用 Node.js 生成 `dist/webnovel-handbook-skill.zip`。
+
+原因：
+
+- `skill/` 应只包含实际分发给 agent 的入口内容。
+- 打包脚本放在 `skill/scripts/` 会被打入 zip，造成职责混乱。
+- Node.js 脚本比 Windows PowerShell 更适合跨平台开源分发。
+
+执行规则：
+
+- 后续维护脚本放入仓库级 `scripts/`。
+- `skill/` 内不放构建、打包、发布脚本，除非这些脚本本身就是 agent 运行时必须消费的 skill 资源。
