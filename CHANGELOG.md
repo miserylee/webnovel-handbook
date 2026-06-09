@@ -23,3 +23,34 @@
 ### Removed
 
 - 移除仅包含占位 README 的空内容目录：`notes/`、`cases/`、`prompts/`、`templates/`。
+
+## 2026-06-10
+
+### Added
+
+- 新增根目录 `SKILL.md`，使本仓库可以作为 `webnovel-handbook` skill 分发给小说项目 agent 使用。
+- 在 `README.md` 增加 skill 消费方式，强调按任务读取最小文档包，并默认接入“写手 + 试读 + 审稿 + 改稿”闭环。
+
+## 2026-06-10
+
+### Changed
+
+- 将 skill 分发方案从“整个仓库作为 skill”调整为 `skill/` 轻量入口包。
+- 轻量 skill 负责引导 agent clone/update 本仓库到本地缓存目录，再从本地文件按需检索知识库。
+
+### Added
+
+- 新增 `skill/scripts/package-skill.ps1`，用于将 `skill/` 打包为 `dist/webnovel-handbook-skill.zip`。
+- 新增 `.gitignore` 规则，忽略打包生成的 zip 产物。
+
+## 2026-06-10
+
+### Changed
+
+- 调整轻量 skill 的本地仓库路径策略：不再固定使用 Codex 目录，改为项目配置、环境变量、agent 标准缓存目录和操作系统缓存目录的优先级规则。
+
+## 2026-06-10
+
+### Changed
+
+- 收束轻量 skill 的本地仓库路径策略：不再使用显式配置或环境变量优先级，统一固定为 `~/.webnovel-handbook/repo`。

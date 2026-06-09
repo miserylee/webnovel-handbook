@@ -15,3 +15,7 @@ exports/
 node_modules/
 __pycache__/
 *.pyc
+
+# Packaged skill artifacts
+dist/
+*.zip
