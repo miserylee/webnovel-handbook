@@ -2652,3 +2652,20 @@
 - 不在仓库根目录放 `SKILL.md`。
 - skill 入口文件维护在 `skills/webnovel-handbook/SKILL.md`。
 - 仓库级维护脚本仍放在 `scripts/`，不进入 `skills/webnovel-handbook/`。
+
+## 2026-06-10：skill frontmatter 必须保持 YAML 可解析
+
+状态：已确认
+
+决策：`skills/webnovel-handbook/SKILL.md` 的 frontmatter 中，包含冒号、长句或多行说明的 `description` 使用 YAML block scalar。
+
+原因：
+
+- `npx skills` 依赖 `SKILL.md` frontmatter 中的 `name` 和 `description` 来识别技能。
+- 未加引号的长句如果包含 `: `，可能导致 YAML 解析失败，使 CLI 误判为“没有有效 skill”。
+
+执行规则：
+
+- 修改 `SKILL.md` frontmatter 时，长 `description` 使用 `>-`。
+- 不把冒号密集的说明写成未加引号的单行 YAML 字段。
+- `SKILL.md` 必须使用无 BOM UTF-8，文件开头第一个字符必须是 `---`。

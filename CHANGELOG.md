@@ -75,3 +75,10 @@
 
 - 调整 skill 包布局为 `npx skills` 默认扫描结构：`skills/webnovel-handbook/SKILL.md`。
 - 更新打包脚本，使其从 `skills/webnovel-handbook/` 生成分发 zip。
+
+## 2026-06-10
+
+### Fixed
+
+- 修复 `skills/webnovel-handbook/SKILL.md` frontmatter：将包含冒号的 `description` 改为 YAML block scalar，避免 `npx skills` 解析失败。
+- 修复 `skills/webnovel-handbook/SKILL.md` 文件编码：确保文件以无 BOM UTF-8 写入，使文件开头第一个字符就是 `---`。

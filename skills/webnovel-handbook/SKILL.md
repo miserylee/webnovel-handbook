@@ -1,6 +1,12 @@
-﻿---
+---
 name: webnovel-handbook
-description: Use when working on Chinese webnovel projects or AI-agent novel workflows: planning a new webnovel, drafting or continuing chapters, running internal beta-read/review/revision loops, diagnosing reader feedback, maintaining continuity ledgers, or routing to the Chinese webnovel handbook. This skill is a lightweight entrypoint: it should clone or update the handbook repository into a local cache directory, then search and read local files on demand.
+description: >-
+  Use when working on Chinese webnovel projects or AI-agent novel workflows:
+  planning a new webnovel, drafting or continuing chapters, running internal
+  beta-read/review/revision loops, diagnosing reader feedback, maintaining
+  continuity ledgers, or routing to the Chinese webnovel handbook. This skill is
+  a lightweight entrypoint: it should clone or update the handbook repository
+  into a local cache directory, then search and read local files on demand.
 metadata:
   short-description: 中文网文创作知识库入口
 ---
