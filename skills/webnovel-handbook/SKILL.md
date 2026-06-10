@@ -52,6 +52,16 @@ For a new session or after context loss, read these files from the local clone:
 3. `docs/00-index.md`
 4. `docs/57-knowledge-base-routing-consolidation-guide.md`
 
+
+For new-book planning, project initialization, premise discussion, market positioning, character setup, outline design, or first-chapter preparation, also read:
+
+- `docs/03-project-workflow.md`
+- `docs/35-ai-agent-novel-creation-workflow.md`
+- `docs/44-single-novel-project-initialization-package.md`
+- `docs/10-templates-and-checklists.md`
+
+Project discussion archive is mandatory. In the target novel project, write or update `docs/98-discussion-log.md` before ending the task. Record every substantive discussion item: user preferences, candidate ideas, rejected options, decision reasons, unresolved questions, source materials, and next actions. Stable decisions must also be promoted to `docs/99-decision-log.md` and the relevant project brief/outline files. Do not keep only the final brief and discard the discussion trail.
+
 For writing, continuation, review, beta-read, or revision tasks, also read:
 
 - `docs/58-integrated-drafting-beta-review-revision-workflow.md`
@@ -105,3 +115,6 @@ When improving or distributing the handbook:
 - Register stable sources in `docs/01-source-inventory.md`.
 - Record durable structural or governance decisions in `docs/99-decision-log.md`.
 
+## Drafting prose rhythm guardrail
+
+When drafting fiction, do not produce slabs of short, same-length declarative sentences. Short sentences are allowed for impact, interruption, panic, punchlines, or hard turns, but they must not become the default texture. Before final delivery, vary sentence length, merge adjacent mechanical beats, add causal or emotional transitions, and make paragraphs read like a person experiencing a scene rather than an outline being chopped into lines.

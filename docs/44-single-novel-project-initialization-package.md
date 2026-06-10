@@ -474,6 +474,7 @@ project/
 | docs/07-writing-guidelines.md |  |  |  |
 | docs/08-style-bible.md |  |  |  |
 | docs/11-story-ledger.md |  |  |  |
+| docs/98-discussion-log.md |  |  |  |
 | docs/99-decision-log.md |  |  |  |
 
 ## 3. 第一章生产许可
