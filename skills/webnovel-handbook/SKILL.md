@@ -62,6 +62,8 @@ If the user says the draft feels AI-like, bland, smooth-but-fake, generic, chara
 
 If the user says the draft has logic holes, misplaced continuity, unexplained sentence jumps, sudden facts, or lines that appear for no reason, treat this as a delivery blocker. Check scene causality, information source, character knowledge, physical action order, and sentence-level purpose before polishing.
 
+For full chapter drafting, apply a word-count and outline gate. Unless the user explicitly asks for a short scene, sample, outline expansion, or platform-specific short chapter, default to a publishable Chinese webnovel chapter around 3000 Chinese characters, with a normal target range of 2800-3500. A draft under 2500 Chinese characters should not be presented as a finished chapter by default; a draft under 2000 should be labeled as a fragment/short draft. If a chapter is too short, first diagnose whether the detailed outline is too thin: missing scene goal, resistance, failed attempt, consequence, emotional aftershock, payoff, or chapter-end pressure. Fix the chapter brief/detailed outline before expanding prose.
+
 ## Operating rules
 
 Priority order:
@@ -79,15 +81,18 @@ When asked to write or revise fiction, run one compact internal loop unless the 
 
 1. Anti-AI gate: before drafting, identify the scene-specific friction, character self-protection move, concrete object/action chain, emotional trigger, and one controlled imperfection that should prevent generic smoothness.
 2. Logic gate: identify the previous-scene carryover, current scene cause-effect chain, information sources, character knowledge limits, physical action order, and why each key sentence exists now.
-3. Writer pass: produce or revise the chapter according to the project facts, outline, genre promise, scene goal, anti-AI gate, and logic gate.
-4. Beta-reader pass: simulate target-reader reactions, focusing on hook, clarity, emotional pull, character vividness, chapter-end momentum, whether the prose feels like a prompt expansion, and whether any line appears unearned.
-5. Editor pass: check commercial readability, continuity, pacing, stakes, redundancy, AI-like blandness, logic holes, and unexplained jumps.
-6. Revision pass: apply the highest-impact fixes directly instead of only reporting problems. If AI-like blandness is high, fix scene causality, character reaction, dialogue texture, and concrete action before polishing sentences. If logic is broken, fix the cause-effect chain before changing style.
-7. Deliver the result with a short change note, unresolved risks, and any continuity-ledger updates the target project should record.
+3. Word-count and outline gate: confirm the target length. If none is provided, use about 3000 Chinese characters for a normal publishable chapter. If the planned chapter cannot naturally reach 2500 characters, revise the chapter brief/detailed outline before drafting.
+4. Writer pass: produce or revise the chapter according to the project facts, outline, genre promise, scene goal, anti-AI gate, logic gate, and target length.
+5. Beta-reader pass: simulate target-reader reactions, focusing on hook, clarity, emotional pull, character vividness, chapter-end momentum, whether the prose feels like a prompt expansion, whether any line appears unearned, and whether the chapter feels complete rather than fragmentary.
+6. Editor pass: check commercial readability, continuity, pacing, stakes, redundancy, AI-like blandness, logic holes, unexplained jumps, and whether the draft is too short because the outline is underbuilt.
+7. Revision pass: apply the highest-impact fixes directly instead of only reporting problems. If AI-like blandness is high, fix scene causality, character reaction, dialogue texture, and concrete action before polishing sentences. If logic is broken, fix the cause-effect chain before changing style. If the draft is too short, first repair the chapter brief/detailed outline, then expand with necessary scene beats rather than filler.
+8. Deliver the result with a short change note, unresolved risks, approximate word count, and any continuity-ledger updates the target project should record.
 
 Do not present a chapter as finished if the internal anti-AI pass still rates it as high or very high AI flavor. Revise once within scope, or report that the chapter has a structural human-writing blocker.
 
 Do not present a chapter as finished if there are unresolved obvious logic holes, unexplained information jumps, physical action order errors, or sentences that cannot explain their function in the scene.
+
+Do not present a normal full chapter as finished if it is obviously below the publishable length gate, unless the user explicitly requested a short chapter or fragment. If the shortfall comes from a thin detailed outline, revise the outline first.
 
 Do not make the user switch between separate reader-group, editorial, or drafting contexts unless they explicitly request separate reports.
 
