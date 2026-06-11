@@ -118,3 +118,7 @@ When improving or distributing the handbook:
 ## Drafting prose rhythm guardrail
 
 When drafting fiction, do not produce slabs of short, same-length declarative sentences. Short sentences are allowed for impact, interruption, panic, punchlines, or hard turns, but they must not become the default texture. Before final delivery, vary sentence length, merge adjacent mechanical beats, add causal or emotional transitions, and make paragraphs read like a person experiencing a scene rather than an outline being chopped into lines.
+
+## Dialogue quality and exemplar guardrail
+
+When the user says character speech is weak, samey, fake, too explanatory, or AI-like, treat dialogue quality as a structural blocker. Read `docs/04-character-and-dialogue.md` and `docs/37-project-style-bible-character-voice.md`. Do not solve it by adding catchphrases or famous-line imitation. Natural speech is the first gate: every important line must sound like this character would say it under the current relationship, pressure, knowledge limit, and emotional state. Then identify the speaker's agenda, concealment, pressure, relationship lever, line shape, action beat, and expected reaction. If using external high-performing webnovel dialogue as reference, use only short excerpts as functional examples and produce original project-specific dialogue.
