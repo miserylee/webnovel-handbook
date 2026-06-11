@@ -1,4 +1,4 @@
-﻿# 项目索引
+# 项目索引
 
 ## 项目定位
 
@@ -14,7 +14,7 @@
 - 已抽取匿名经验来源：`匿名旧项目A`、`匿名旧项目B`、`匿名编辑反馈样本`、`匿名读者反馈样本`。
 - 已建立从调研、定位、包装、核心资产、大纲、起草、审稿、运营、复盘到修订的端到端流程：`docs/35-ai-agent-novel-creation-workflow.md`。
 - 已新增“提示词与上下文打包规范”专题：`docs/36-prompt-context-packaging.md`，用于规范起草、续写、审稿、修订和复盘前的项目简报、台账、专题规则、章节目标、风格样例、禁区和输出契约。
-- 已新增“项目风格手册与角色声音规范”专题：`docs/37-project-style-bible-character-voice.md`，用于规范项目整体文风、旁白距离、角色声音矩阵、称呼术语样式表和多 agent 续写交接。
+- 已新增“项目风格手册与角色声音规范”专题：`docs/37-project-style-bible-character-voice.md`，用于规范项目整体文风、旁白距离、角色声音矩阵、称呼术语样式表和多 agent 续写交接。`r`n- 已新增“对话样本对比参考书”：`docs/59-dialogue-comparison-reference.md`，用于保存 Agent 初稿、用户改稿、差异分析和可迁移规则。
 - 已新增“章节生产流水线与多 agent 交接规范”专题：`docs/38-chapter-production-pipeline-agent-handoff.md`，用于规范章节生产链路、agent 分工、交接包、质量闸门和台账回写。
 - 已滚动吸收联网资料，并把稳定结论写入专题、模板、来源清单和决策记录。
 
@@ -131,7 +131,7 @@
 
 ### 人物、关系、对手和专项技法
 
-- `04-character-and-dialogue.md`：人物、对话、群戏和反派。
+- `04-character-and-dialogue.md`：人物、对话、群戏和反派。`r`n- `59-dialogue-comparison-reference.md`：对话样本对比参考书，保存 Agent 初稿、用户改稿、差异分析和可迁移规则。
 - `37-project-style-bible-character-voice.md`：项目风格手册、角色声音矩阵、称呼术语样式表、旁白规则和多 agent 声音交接。
 - `11-human-writing-upgrade.md`：人物鲜活、剧情自然、黏着性、梗点和情绪浓度。
 - `14-mechanism-and-cheat-design.md`：金手指、系统、重生、穿书和规则反杀机制。

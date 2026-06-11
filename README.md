@@ -1,4 +1,4 @@
-﻿# 学习写网文
+# 学习写网文
 
 这是一个面向 AI agents 的中文网文写作知识库，不是单本小说项目。它的目标是把抽象化通用写作方法、匿名旧项目样本、匿名编辑审稿经验、匿名读者反馈和联网资料沉淀成可长期复用的权威参考。
 
@@ -23,7 +23,7 @@
 - [docs/35-ai-agent-novel-creation-workflow.md](docs/35-ai-agent-novel-creation-workflow.md)：AI agents 小说创作总流程。
 - [docs/57-knowledge-base-routing-consolidation-guide.md](docs/57-knowledge-base-routing-consolidation-guide.md)：专题路由、最小阅读包和去发散收束规范。
 - [docs/58-integrated-drafting-beta-review-revision-workflow.md](docs/58-integrated-drafting-beta-review-revision-workflow.md)：写手、内部试读、审稿和改稿一体化工作流。
-- [docs/10-templates-and-checklists.md](docs/10-templates-and-checklists.md)：可直接复用的模板与检查清单。
+- [docs/10-templates-and-checklists.md](docs/10-templates-and-checklists.md)：可直接复用的模板与检查清单。`r`n- [docs/59-dialogue-comparison-reference.md](docs/59-dialogue-comparison-reference.md)：对话样本对比参考书，保存 Agent 初稿、用户改稿、差异分析和可迁移规则。
 - [CONTRIBUTING.md](CONTRIBUTING.md)：贡献指南。
 - [SOURCE_POLICY.md](SOURCE_POLICY.md)：来源与版权政策。
 - [DEIDENTIFICATION.md](DEIDENTIFICATION.md)：去身份化政策，规定私有项目、读者反馈、编辑反馈和本机路径如何匿名化。
@@ -174,7 +174,7 @@ Agent 不应该把整个仓库塞进上下文。推荐流程：
 
 ### 人物、关系、阻力和专项技法
 
-- [04-character-and-dialogue.md](docs/04-character-and-dialogue.md)：人物卡、人物差异、对话、群戏、反派和工具人。
+- [04-character-and-dialogue.md](docs/04-character-and-dialogue.md)：人物卡、人物差异、对话、群戏、反派和工具人。`r`n- [59-dialogue-comparison-reference.md](docs/59-dialogue-comparison-reference.md)：对话样本对比参考书，用成对案例训练自然对白、动作和现场反应。
 - [37-project-style-bible-character-voice.md](docs/37-project-style-bible-character-voice.md)：项目风格手册、角色声音矩阵、称呼术语样式表、旁白规则和多 agent 声音交接。
 - [11-human-writing-upgrade.md](docs/11-human-writing-upgrade.md)：人物鲜活、剧情自然、黏着性、梗点和情绪浓度。
 - [14-mechanism-and-cheat-design.md](docs/14-mechanism-and-cheat-design.md)：系统、重生、穿书、空间、读心、弹幕、规则反杀等机制。
