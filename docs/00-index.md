@@ -13,8 +13,10 @@
 - 已沉淀抽象化通用写作框架：项目流程、澄清流程、网文写作、人物塑造、连续性台账和修订边界。
 - 已抽取匿名经验来源：`匿名旧项目A`、`匿名旧项目B`、`匿名编辑反馈样本`、`匿名读者反馈样本`。
 - 已建立从调研、定位、包装、核心资产、大纲、起草、审稿、运营、复盘到修订的端到端流程：`docs/35-ai-agent-novel-creation-workflow.md`。
+- 已强化新手开书闸门：用户只说“开书/写第一章/试写”时，先走立项、项目初始化、第一章生产许可和开书准备缺口诊断，不直接进入正式正文。
 - 已新增“提示词与上下文打包规范”专题：`docs/36-prompt-context-packaging.md`，用于规范起草、续写、审稿、修订和复盘前的项目简报、台账、专题规则、章节目标、风格样例、禁区和输出契约。
-- 已新增“项目风格手册与角色声音规范”专题：`docs/37-project-style-bible-character-voice.md`，用于规范项目整体文风、旁白距离、角色声音矩阵、称呼术语样式表和多 agent 续写交接。`r`n- 已新增“对话样本对比参考书”：`docs/59-dialogue-comparison-reference.md`，用于保存 Agent 初稿、用户改稿、差异分析和可迁移规则。
+- 已新增“项目风格手册与角色声音规范”专题：`docs/37-project-style-bible-character-voice.md`，用于规范项目整体文风、旁白距离、角色声音矩阵、称呼术语样式表和多 agent 续写交接。
+- 已新增“对话样本对比参考书”：`docs/59-dialogue-comparison-reference.md`，用于保存 Agent 初稿、用户改稿、差异分析和可迁移规则。
 - 已新增“章节生产流水线与多 agent 交接规范”专题：`docs/38-chapter-production-pipeline-agent-handoff.md`，用于规范章节生产链路、agent 分工、交接包、质量闸门和台账回写。
 - 已滚动吸收联网资料，并把稳定结论写入专题、模板、来源清单和决策记录。
 
@@ -35,14 +37,17 @@
 
 ### 开新书或重定方向
 
-1. `docs/35-ai-agent-novel-creation-workflow.md`
-2. `docs/34-market-research-comp-analysis.md`
-3. `docs/03-project-workflow.md`
-4. `docs/12-platform-and-channel-differences.md`
-5. `docs/29-reader-expectation-genre-promise-selling-point.md`
-6. `docs/13-genre-patterns.md`
-7. `docs/16-title-blurb-tag-packaging.md`
-8. `docs/17-cover-visual-packaging.md`
+1. `docs/43-commercial-project-greenlight-scorecard.md`
+2. `docs/35-ai-agent-novel-creation-workflow.md`
+3. `docs/34-market-research-comp-analysis.md`
+4. `docs/03-project-workflow.md`
+5. `docs/12-platform-and-channel-differences.md`
+6. `docs/29-reader-expectation-genre-promise-selling-point.md`
+7. `docs/13-genre-patterns.md`
+8. `docs/16-title-blurb-tag-packaging.md`
+9. `docs/17-cover-visual-packaging.md`
+10. `docs/44-single-novel-project-initialization-package.md`
+11. `docs/45-first-chapter-task-brief-production-gate.md`
 
 ### 搭建核心资产
 
@@ -67,14 +72,15 @@
 ### 起草或续写章节
 
 1. `docs/35-ai-agent-novel-creation-workflow.md`
-2. `docs/38-chapter-production-pipeline-agent-handoff.md`
-3. `docs/58-integrated-drafting-beta-review-revision-workflow.md`
-4. `docs/02-webnovel-principles.md`
-5. `docs/32-chapter-paragraph-mobile-reading-experience.md`
-6. `docs/06-ai-writing-guidelines.md`
-7. `docs/37-project-style-bible-character-voice.md`
-8. `docs/10-templates-and-checklists.md`
-9. 任务相关题材/人物/世界/机制专题
+2. 新项目或第一章先读 `docs/44-single-novel-project-initialization-package.md`、`docs/45-first-chapter-task-brief-production-gate.md`
+3. `docs/38-chapter-production-pipeline-agent-handoff.md`
+4. `docs/58-integrated-drafting-beta-review-revision-workflow.md`
+5. `docs/02-webnovel-principles.md`
+6. `docs/32-chapter-paragraph-mobile-reading-experience.md`
+7. `docs/06-ai-writing-guidelines.md`
+8. `docs/37-project-style-bible-character-voice.md`
+9. `docs/10-templates-and-checklists.md`
+10. 任务相关题材/人物/世界/机制专题
 
 ### 审稿、试读或判断问题
 
@@ -104,6 +110,9 @@
 - `35-ai-agent-novel-creation-workflow.md`：端到端创作流程、阶段门槛和专题调用路线图。
 - `36-prompt-context-packaging.md`：提示词、上下文封包、任务材料选择、风格样例边界和输出契约。
 - `38-chapter-production-pipeline-agent-handoff.md`：章节生产流水线、agent 分工、交接包、质量闸门和台账回写。
+- `43-commercial-project-greenlight-scorecard.md`：开书前立项评分、暂缓、重构和淘汰门槛。
+- `44-single-novel-project-initialization-package.md`：单本小说项目最小文档包、状态标签和第一章前置资料。
+- `45-first-chapter-task-brief-production-gate.md`：第一章任务单、生产许可和失败回退路径。
 - `57-knowledge-base-routing-consolidation-guide.md`：专题路由、最小阅读包、相邻专题分流、旧专题提纯和新增专题准入门槛。
 - `58-integrated-drafting-beta-review-revision-workflow.md`：写手、试读 subagent、审稿 subagent、反馈仲裁、修订 agent 和台账回写一体化流程。
 - `99-decision-log.md`：关键决策。
@@ -131,7 +140,8 @@
 
 ### 人物、关系、对手和专项技法
 
-- `04-character-and-dialogue.md`：人物、对话、群戏和反派。`r`n- `59-dialogue-comparison-reference.md`：对话样本对比参考书，保存 Agent 初稿、用户改稿、差异分析和可迁移规则。
+- `04-character-and-dialogue.md`：人物、对话、群戏和反派。
+- `59-dialogue-comparison-reference.md`：对话样本对比参考书，保存 Agent 初稿、用户改稿、差异分析和可迁移规则。
 - `37-project-style-bible-character-voice.md`：项目风格手册、角色声音矩阵、称呼术语样式表、旁白规则和多 agent 声音交接。
 - `11-human-writing-upgrade.md`：人物鲜活、剧情自然、黏着性、梗点和情绪浓度。
 - `14-mechanism-and-cheat-design.md`：金手指、系统、重生、穿书和规则反杀机制。

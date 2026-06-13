@@ -2834,3 +2834,10 @@
 3. 如果无法说明文件应该从哪里被发现，优先不要新建文件，应并入已有专题、小节、模板或决策记录。
 4. 知识库维护时，新增正式文档还要按类型同步来源清单、模板文档、案例参考书、决策记录或 changelog。
 5. 已写入 `AGENTS.md`、`docs/03-project-workflow.md` 和 `docs/57-knowledge-base-routing-consolidation-guide.md`。
+
+## 2026-06-13：新手开书准备包与第一章生产硬闸门
+
+- 决策：用户只说“开书”“写第一章”“先试写”时，AI agent 不得默认进入正式正文。必须先判断是否已有项目简报、人物卡、设定台账、前 10 章方向、第一卷细纲、第一章任务单、风格手册和初始台账。
+- 理由：不懂网文流程的用户往往不会主动要求大纲、细纲、人物卡和设定集；如果 handbook 只教 agent 写章节，agent 会跳过项目准备，导致正文缺少承诺、连续性、角色声音和章节方向。
+- 执行规则：新书和第一章任务先读 `43`、`44`、`45` 和 `10` 的开书准备缺口诊断卡；资料不齐时只输出候选方案、小样、项目文档或章节任务单。正式章节生产必须等项目初始化和第一章生产许可通过。
+- 影响范围：`README.md`、`AGENTS.md`、`docs/00-index.md`、`docs/03-project-workflow.md`、`docs/10-templates-and-checklists.md`、`docs/35-ai-agent-novel-creation-workflow.md`、`docs/38-chapter-production-pipeline-agent-handoff.md`、`docs/44-single-novel-project-initialization-package.md`、`docs/45-first-chapter-task-brief-production-gate.md`、`docs/57-knowledge-base-routing-consolidation-guide.md`、`docs/58-integrated-drafting-beta-review-revision-workflow.md`。

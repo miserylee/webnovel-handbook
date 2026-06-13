@@ -2,6 +2,13 @@
 
 这个项目是“学习如何写网文”的知识库。后续 AI 写网文、改网文、审稿或初始化小说项目时，可以把这里当作权威参考资料。
 
+## 新手开书硬规则
+
+- 用户说“想开书”“帮我写第一章”“先试写一下”时，不默认进入正式正文。
+- 先做开书准备缺口诊断，判断是否已有项目简报、人物卡、设定台账、前 10 章方向、第一卷细纲、第一章任务单、风格手册和初始台账。
+- 缺口未补齐时，只能输出候选方案、开场小样、项目文档或章节任务单，不能把内容写成正式章节。
+- 用户不懂网文流程时，agent 主动引导补资料，不把“用户没要求”当作跳过大纲和细纲的理由。
+
 ## 每次先读
 
 新会话或上下文丢失后，先读：
@@ -12,8 +19,8 @@
 
 再按任务读取专题：
 
-- 起草或修订章节：`docs/02-webnovel-principles.md`、`docs/04-character-and-dialogue.md`、`docs/11-human-writing-upgrade.md`、`docs/06-ai-writing-guidelines.md`、`docs/10-templates-and-checklists.md`
-- 搭建新小说项目：`docs/03-project-workflow.md`、`docs/07-continuity-ledger.md`
+- 起草或修订章节：`docs/35-ai-agent-novel-creation-workflow.md`、`docs/38-chapter-production-pipeline-agent-handoff.md`、`docs/58-integrated-drafting-beta-review-revision-workflow.md`、`docs/02-webnovel-principles.md`、`docs/04-character-and-dialogue.md`、`docs/11-human-writing-upgrade.md`、`docs/06-ai-writing-guidelines.md`、`docs/10-templates-and-checklists.md`
+- 搭建新小说项目：`docs/43-commercial-project-greenlight-scorecard.md`、`docs/44-single-novel-project-initialization-package.md`、`docs/45-first-chapter-task-brief-production-gate.md`、`docs/03-project-workflow.md`、`docs/07-continuity-ledger.md`
 - 设计大纲或连载节奏：`docs/05-plot-and-serial-rhythm.md`
 - 审稿、试读、判断 AI 含量：`docs/08-review-and-reader-feedback.md`、`docs/09-case-notes.md`
 

@@ -21,9 +21,13 @@
 - [docs/00-index.md](docs/00-index.md)：完整索引、任务读取路线和专题分组。
 - [docs/01-source-inventory.md](docs/01-source-inventory.md)：来源登记和使用边界。
 - [docs/35-ai-agent-novel-creation-workflow.md](docs/35-ai-agent-novel-creation-workflow.md)：AI agents 小说创作总流程。
+- [docs/43-commercial-project-greenlight-scorecard.md](docs/43-commercial-project-greenlight-scorecard.md)：商业级开书立项评分与淘汰。
+- [docs/44-single-novel-project-initialization-package.md](docs/44-single-novel-project-initialization-package.md)：单本小说项目初始化最小文档包。
+- [docs/45-first-chapter-task-brief-production-gate.md](docs/45-first-chapter-task-brief-production-gate.md)：第一章任务单与开篇生产许可。
 - [docs/57-knowledge-base-routing-consolidation-guide.md](docs/57-knowledge-base-routing-consolidation-guide.md)：专题路由、最小阅读包和去发散收束规范。
 - [docs/58-integrated-drafting-beta-review-revision-workflow.md](docs/58-integrated-drafting-beta-review-revision-workflow.md)：写手、内部试读、审稿和改稿一体化工作流。
-- [docs/10-templates-and-checklists.md](docs/10-templates-and-checklists.md)：可直接复用的模板与检查清单。`r`n- [docs/59-dialogue-comparison-reference.md](docs/59-dialogue-comparison-reference.md)：对话样本对比参考书，保存 Agent 初稿、用户改稿、差异分析和可迁移规则。
+- [docs/10-templates-and-checklists.md](docs/10-templates-and-checklists.md)：可直接复用的模板与检查清单。
+- [docs/59-dialogue-comparison-reference.md](docs/59-dialogue-comparison-reference.md)：对话样本对比参考书，保存 Agent 初稿、用户改稿、差异分析和可迁移规则。
 - [CONTRIBUTING.md](CONTRIBUTING.md)：贡献指南。
 - [SOURCE_POLICY.md](SOURCE_POLICY.md)：来源与版权政策。
 - [DEIDENTIFICATION.md](DEIDENTIFICATION.md)：去身份化政策，规定私有项目、读者反馈、编辑反馈和本机路径如何匿名化。
@@ -35,7 +39,7 @@ Agent 不应该把整个仓库塞进上下文。推荐流程：
 
 1. 先读 `README.md`、`AGENTS.md`、`docs/00-index.md`。
 2. 用 `docs/57-knowledge-base-routing-consolidation-guide.md` 判断本次任务的最小阅读包。
-3. 如果是写稿、续写、审稿后改稿，调用 `docs/58-integrated-drafting-beta-review-revision-workflow.md`。
+3. 如果是新书、第一章或项目资料不完整，先调用 `docs/43`、`docs/44`、`docs/45`；只有项目包和章节任务单齐备后，才进入 `docs/58` 的写稿闭环。
 4. 根据任务阶段读取 `docs/35`、`docs/36`、`docs/37`、`docs/38` 等流程文档。
 5. 只读取当前场景直接相关的专题，不横向泛读全部县域、行业或制度文档。
 6. 输出时只提炼本次任务需要的规则、场景链、证据链、风险和修改动作，不大段复述知识库原文。
@@ -78,6 +82,7 @@ Agent 不应该把整个仓库塞进上下文。推荐流程：
 
 ### 开新书或重定方向
 
+- [商业级开书立项评分与淘汰](docs/43-commercial-project-greenlight-scorecard.md)
 - [AI agents 小说创作总流程](docs/35-ai-agent-novel-creation-workflow.md)
 - [开书前市场调研与竞品拆解](docs/34-market-research-comp-analysis.md)
 - [项目流程与文档规范](docs/03-project-workflow.md)
@@ -86,6 +91,8 @@ Agent 不应该把整个仓库塞进上下文。推荐流程：
 - [题材类型拆解表](docs/13-genre-patterns.md)
 - [书名简介标签包装](docs/16-title-blurb-tag-packaging.md)
 - [封面与视觉包装](docs/17-cover-visual-packaging.md)
+- [单本小说项目初始化最小文档包](docs/44-single-novel-project-initialization-package.md)
+- [第一章任务单与开篇生产许可](docs/45-first-chapter-task-brief-production-gate.md)
 
 ### 搭建核心资产
 
@@ -109,6 +116,7 @@ Agent 不应该把整个仓库塞进上下文。推荐流程：
 ### 起草或续写章节
 
 - [AI agents 小说创作总流程](docs/35-ai-agent-novel-creation-workflow.md)
+- 新项目或第一章先读：[单本小说项目初始化最小文档包](docs/44-single-novel-project-initialization-package.md)、[第一章任务单与开篇生产许可](docs/45-first-chapter-task-brief-production-gate.md)
 - [章节生产流水线与多 agent 交接规范](docs/38-chapter-production-pipeline-agent-handoff.md)
 - [写手、试读、审稿与改稿一体化工作流](docs/58-integrated-drafting-beta-review-revision-workflow.md)
 - [网文核心原则](docs/02-webnovel-principles.md)
@@ -174,7 +182,8 @@ Agent 不应该把整个仓库塞进上下文。推荐流程：
 
 ### 人物、关系、阻力和专项技法
 
-- [04-character-and-dialogue.md](docs/04-character-and-dialogue.md)：人物卡、人物差异、对话、群戏、反派和工具人。`r`n- [59-dialogue-comparison-reference.md](docs/59-dialogue-comparison-reference.md)：对话样本对比参考书，用成对案例训练自然对白、动作和现场反应。
+- [04-character-and-dialogue.md](docs/04-character-and-dialogue.md)：人物卡、人物差异、对话、群戏、反派和工具人。
+- [59-dialogue-comparison-reference.md](docs/59-dialogue-comparison-reference.md)：对话样本对比参考书，用成对案例训练自然对白、动作和现场反应。
 - [37-project-style-bible-character-voice.md](docs/37-project-style-bible-character-voice.md)：项目风格手册、角色声音矩阵、称呼术语样式表、旁白规则和多 agent 声音交接。
 - [11-human-writing-upgrade.md](docs/11-human-writing-upgrade.md)：人物鲜活、剧情自然、黏着性、梗点和情绪浓度。
 - [14-mechanism-and-cheat-design.md](docs/14-mechanism-and-cheat-design.md)：系统、重生、穿书、空间、读心、弹幕、规则反杀等机制。
