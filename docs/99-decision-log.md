@@ -2841,3 +2841,30 @@
 - 理由：不懂网文流程的用户往往不会主动要求大纲、细纲、人物卡和设定集；如果 handbook 只教 agent 写章节，agent 会跳过项目准备，导致正文缺少承诺、连续性、角色声音和章节方向。
 - 执行规则：新书和第一章任务先读 `43`、`44`、`45` 和 `10` 的开书准备缺口诊断卡；资料不齐时只输出候选方案、小样、项目文档或章节任务单。正式章节生产必须等项目初始化和第一章生产许可通过。
 - 影响范围：`README.md`、`AGENTS.md`、`docs/00-index.md`、`docs/03-project-workflow.md`、`docs/10-templates-and-checklists.md`、`docs/35-ai-agent-novel-creation-workflow.md`、`docs/38-chapter-production-pipeline-agent-handoff.md`、`docs/44-single-novel-project-initialization-package.md`、`docs/45-first-chapter-task-brief-production-gate.md`、`docs/57-knowledge-base-routing-consolidation-guide.md`、`docs/58-integrated-drafting-beta-review-revision-workflow.md`。
+
+## 2026-06-13：索引改为渐进式披露，入口薄化，大文件只做定向检索
+
+状态：已确认
+
+用户确认：当前项目索引不应继续作为大而全目录让 agent 整篇读取。部分关键文件体积很大，不适合作为默认上下文；后续 agent 应通过极少上下文完成任务阶段判断，再按需读取最小阅读包、目标专题和必要来源。
+
+执行规则：
+
+1. `docs/00-index.md` 改为渐进式启动索引，只保留任务路线、最小阅读包、专题簇和大文件读取规则。
+2. 旧版长索引保留为 `docs/00-expanded-topic-catalog.md`，只用于关键词检索和精确定位专题，不作为默认整读入口。
+3. `docs/01-source-inventory.md` 和 `docs/10-templates-and-checklists.md` 明确为大文件：只在来源核查、模板调用或命中小节时定向读取。
+4. 写稿、续写、审稿和改稿任务默认优先进入质量闭环：人味、降 AI 味、逻辑连续性、对白自然度、读者下一章欲望，不能被行业资料和模板清单稀释。
+5. 新建文件必须同步建立索引路径；新增索引文件本身也必须能从 README 和 `docs/00-index.md` 被发现。
+
+## 2026-06-13：仓库维护优先使用 Bash/POSIX 兼容与跨平台脚本
+
+状态：已确认
+
+用户确认：本仓库作为开源项目，后续可能在 Linux、macOS 和 Windows 环境中维护。AI agent 执行命令和新增脚本时，不应默认依赖 Windows 专属脚本；在可行时优先使用 Bash/POSIX 兼容命令、Node.js 脚本或其他跨平台工具。
+
+执行规则：
+
+1. 本仓库维护命令优先考虑 Bash/POSIX 兼容性。
+2. 新增脚本、打包流程、安装说明和 agent 工作流必须默认跨平台。
+3. 小范围文档修改优先使用补丁方式；大段文本重构优先使用 Node.js 读写 UTF-8。
+4. 如确需保留 Windows、Linux 或 macOS 专属命令，必须标明适用系统，并给出跨平台替代方案。

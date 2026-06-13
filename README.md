@@ -18,7 +18,8 @@
 
 - [README.md](README.md)：项目入口、关键文件和阅读路线。
 - [AGENTS.md](AGENTS.md)：AI agent 在本仓库内工作的协作规则。
-- [docs/00-index.md](docs/00-index.md)：完整索引、任务读取路线和专题分组。
+- [docs/00-index.md](docs/00-index.md)：渐进式启动索引，用最少上下文定位任务最小阅读包。
+- [docs/00-expanded-topic-catalog.md](docs/00-expanded-topic-catalog.md)：扩展专题目录，只在需要精确查找专题时定向检索。
 - [docs/01-source-inventory.md](docs/01-source-inventory.md)：来源登记和使用边界。
 - [docs/35-ai-agent-novel-creation-workflow.md](docs/35-ai-agent-novel-creation-workflow.md)：AI agents 小说创作总流程。
 - [docs/43-commercial-project-greenlight-scorecard.md](docs/43-commercial-project-greenlight-scorecard.md)：商业级开书立项评分与淘汰。
@@ -35,13 +36,13 @@
 
 ## AI agent 如何消费本仓库
 
-Agent 不应该把整个仓库塞进上下文。推荐流程：
+Agent 不应该把整个仓库塞进上下文。本仓库采用渐进式披露：
 
-1. 先读 `README.md`、`AGENTS.md`、`docs/00-index.md`。
-2. 用 `docs/57-knowledge-base-routing-consolidation-guide.md` 判断本次任务的最小阅读包。
-3. 如果是新书、第一章或项目资料不完整，先调用 `docs/43`、`docs/44`、`docs/45`；只有项目包和章节任务单齐备后，才进入 `docs/58` 的写稿闭环。
-4. 根据任务阶段读取 `docs/35`、`docs/36`、`docs/37`、`docs/38` 等流程文档。
-5. 只读取当前场景直接相关的专题，不横向泛读全部县域、行业或制度文档。
+1. 启动只读 `README.md`、`AGENTS.md`、`docs/00-index.md`。
+2. 先在 `docs/00-index.md` 判断任务阶段和最小阅读包。
+3. 写稿、续写、审稿、改稿默认进入 `docs/58` 的一体化闭环，并按需读取 `docs/06`、`docs/11`、`docs/37`、`docs/59`。
+4. 只有涉及真实行业、制度、地域、平台规则或专业事实时，才检索 `docs/00-expanded-topic-catalog.md` 定位目标专题。
+5. `docs/01-source-inventory.md` 和 `docs/10-templates-and-checklists.md` 是大文件，只做定向检索，不默认整读。
 6. 输出时只提炼本次任务需要的规则、场景链、证据链、风险和修改动作，不大段复述知识库原文。
 
 最小阅读包建议：
@@ -49,6 +50,8 @@ Agent 不应该把整个仓库塞进上下文。推荐流程：
 - 轻任务：`2-4` 篇文档。
 - 中任务：`4-8` 篇文档。
 - 重任务：通常不超过 `8-12` 篇文档。
+
+如果任务边界不清，先读 `docs/57-knowledge-base-routing-consolidation-guide.md` 收束，不要横向泛读全部专题。
 
 ## 贡献与安全
 
@@ -65,18 +68,13 @@ Agent 不应该把整个仓库塞进上下文。推荐流程：
 
 每次新会话或上下文丢失后，先读：
 
-1. [项目索引](docs/00-index.md)
-2. [资料来源清单](docs/01-source-inventory.md)
-3. [AI agents 小说创作总流程](docs/35-ai-agent-novel-creation-workflow.md)
-4. [提示词与上下文打包规范](docs/36-prompt-context-packaging.md)
-5. [项目风格手册与角色声音规范](docs/37-project-style-bible-character-voice.md)
-6. [章节生产流水线与多 agent 交接规范](docs/38-chapter-production-pipeline-agent-handoff.md)
-7. [写手、试读、审稿与改稿一体化工作流](docs/58-integrated-drafting-beta-review-revision-workflow.md)
-8. 当前任务对应的专题文档
+1. [README.md](README.md)
+2. [AGENTS.md](AGENTS.md)
+3. [项目索引：渐进式入口](docs/00-index.md)
 
-执行原则：先判断任务阶段，再调用专题；不要直接跳到正文、审稿或润色。
+然后按 `docs/00-index.md` 的任务路线选择最小阅读包。只有在专题过多、任务边界不清或容易横向发散时，再读 [知识库专题路由、最小阅读包与去发散收束规范](docs/57-knowledge-base-routing-consolidation-guide.md)。
 
-当专题数量过多、任务边界不清或容易横向发散时，先读 [知识库专题路由、最小阅读包与去发散收束规范](docs/57-knowledge-base-routing-consolidation-guide.md)。它负责把任务压缩为“阶段核心文档 + 人物/节奏/风格文档 + 主专题 + 必要相邻专题”，避免把全部专题塞进上下文。
+大文件读取规则：`docs/01-source-inventory.md`、`docs/10-templates-and-checklists.md`、`docs/00-expanded-topic-catalog.md` 只做定向检索，不作为默认整读入口。
 
 ## 按任务读取
 
