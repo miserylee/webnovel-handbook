@@ -172,3 +172,9 @@
 ### Changed
 
 - 更新封面制作规则：正式封面标题字优先由 AI 与底图一体生成，不再推荐用脚本硬贴字体作为最终封面；脚本排字仅作为临时占位或兜底方案。
+## 2026-06-13
+
+### Added
+
+- 新增 AI 新建文件索引规则：所有新文件必须同步挂到明确入口，并在交付说明中写明新文件路径、索引入口、读取场景和维护状态。
+- 在 `AGENTS.md`、`docs/03-project-workflow.md`、`docs/57-knowledge-base-routing-consolidation-guide.md` 和 `docs/99-decision-log.md` 中补充禁止孤儿文件的维护要求。
