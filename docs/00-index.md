@@ -1,4 +1,4 @@
-# 00. 项目索引（渐进式入口）
+﻿# 00. 项目索引（渐进式入口）
 
 状态：已确认  
 用途：给 AI agents 用极少上下文找到本次任务真正需要的知识。本文是启动索引，不是全量目录。
@@ -38,7 +38,7 @@
 |---|---|---|---|
 | 知识库维护、索引治理 | `README.md`、`AGENTS.md`、`docs/00-index.md`、`docs/57-knowledge-base-routing-consolidation-guide.md`、`docs/99-decision-log.md` | 被修改的目标专题、`SOURCE_POLICY.md`、`DEIDENTIFICATION.md`、`SAFETY.md` | `docs/01-source-inventory.md` 全文、`docs/10` 全文 |
 | 开新书、重定方向 | `docs/35-ai-agent-novel-creation-workflow.md`、`docs/43-commercial-project-greenlight-scorecard.md`、`docs/44-single-novel-project-initialization-package.md`、`docs/45-first-chapter-task-brief-production-gate.md` | `docs/29-reader-expectation-genre-promise-selling-point.md`、`docs/13-genre-patterns.md`、`docs/16-title-blurb-tag-packaging.md`、`docs/17-cover-visual-packaging.md`、`docs/34-market-research-comp-analysis.md` | 直接写 `ch001.md` |
-| 单本小说项目初始化 | `docs/44-single-novel-project-initialization-package.md`、`docs/35-ai-agent-novel-creation-workflow.md`、`docs/07-continuity-ledger.md`、`docs/37-project-style-bible-character-voice.md` | `docs/10` 中的项目模板、`docs/45` 的第一章许可 | 把本知识库通用方法整段搬进项目 |
+| 单本小说项目初始化 | `docs/44-single-novel-project-initialization-package.md`、`docs/64-single-novel-project-document-granularity.md`、`docs/35-ai-agent-novel-creation-workflow.md`、`docs/07-continuity-ledger.md`、`docs/37-project-style-bible-character-voice.md` | `docs/10` 中的项目模板、`docs/45` 的第一章许可 | 把本知识库通用方法整段搬进项目 |
 | 起草或续写章节 | `docs/58-integrated-drafting-beta-review-revision-workflow.md`、`docs/06-ai-writing-guidelines.md`、`docs/11-human-writing-upgrade.md`、`docs/37-project-style-bible-character-voice.md`、`docs/07-continuity-ledger.md`、`docs/32-chapter-paragraph-mobile-reading-experience.md` | `docs/59-dialogue-comparison-reference.md`、`docs/04-character-and-dialogue.md`、`docs/05-plot-and-serial-rhythm.md`、题材/机制/情绪/悬疑/喜剧专题 | 只凭大纲直接扩写正文 |
 | 人物、对白、降低 AI 味 | `docs/59-dialogue-comparison-reference.md`、`docs/04-character-and-dialogue.md`、`docs/37-project-style-bible-character-voice.md`、`docs/11-human-writing-upgrade.md`、`docs/06-ai-writing-guidelines.md` | `docs/25-emotion-line-relationship-progression.md`、`docs/27-comedy-gags-lightness.md` | 只替换词语、只加口癖 |
 | 审稿、试读、改稿 | `docs/58-integrated-drafting-beta-review-revision-workflow.md`、`docs/08-review-and-reader-feedback.md`、`docs/06-ai-writing-guidelines.md`、`docs/11-human-writing-upgrade.md`、`docs/33-revision-rewrite-version-workflow.md` | `docs/59`、`docs/37`、`docs/07`、`docs/18-reader-data-feedback-diagnosis.md`、`docs/20-content-compliance-risk-review.md` | 只给“加强/优化/自然一点” |
@@ -84,7 +84,8 @@
 
 - `docs/02-webnovel-principles.md`：网文核心原则、开篇、爽点、章末钩子和信息投放。
 - `docs/05-plot-and-serial-rhythm.md`：长篇引擎、阶段目标、爽点循环和节奏压缩。
-- `docs/07-continuity-ledger.md`：事实台账、伏笔闭环、设定连续性和写后回写。
+- docs/07-continuity-ledger.md：事实台账、伏笔闭环、设定连续性和写后回写。
+- docs/64-single-novel-project-document-granularity.md：单本小说项目短文档、多索引、台账拆分和巨型文件治理。
 - `docs/22-opening-retention-model.md`：第一章、前 3-6 章、前 10 章和前 30 章留存模型。
 - `docs/23-midbook-volume-structure.md`：中段防水、卷结构、支线管理和卷末结算。
 - `docs/24-ending-completion-risk-control.md`：结尾、最后一卷、完本和烂尾风险控制。
@@ -154,3 +155,4 @@ AI 新建任何正式文件时，交付前必须说明：
 ```
 
 如果无法说明索引入口，优先不要新建文件，把内容并入已有专题、模板、案例参考书或决策记录。
+
