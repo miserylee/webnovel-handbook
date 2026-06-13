@@ -64,10 +64,12 @@
 ### 4.1 入口、流程与上下文
 
 - `docs/35-ai-agent-novel-creation-workflow.md`：端到端创作阶段、门槛和交付物。
+- `docs/00-readme-details.md`：根 README 下沉出来的扩展说明，包含详细阅读路线、贡献与安全说明。
 - `docs/36-prompt-context-packaging.md`：提示词、上下文封包、输出契约和材料边界。
 - `docs/38-chapter-production-pipeline-agent-handoff.md`：章节生产流水线、多 agent 交接和质量闸门。
 - `docs/57-knowledge-base-routing-consolidation-guide.md`：专题路由、最小阅读包和新增专题准入。
 - `docs/58-integrated-drafting-beta-review-revision-workflow.md`：写手、试读、审稿、仲裁、改稿一体化闭环。
+- `docs/99-decision-log.md`：活跃决策短索引；历史长文按月归档到 `docs/decisions/`。
 
 ### 4.2 人物、声音、对白和人味
 
@@ -135,6 +137,10 @@
 用途：来源登记和使用边界。只在新增来源、核查来源、确认引用边界或处理合规问题时读取。
 
 不要把来源清单当作写作指南；写正文时先读专题规则，必要时再回源。
+
+### 5.4 `docs/99-decision-log.md` 与 `docs/decisions/`
+
+`docs/99-decision-log.md` 是活跃决策短索引，适合默认读取。`docs/decisions/` 是历史决策归档，只在需要追溯旧决策原因时按月份和关键词检索。
 
 ## 6. 新文件索引要求
 

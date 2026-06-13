@@ -265,21 +265,28 @@ project/
 
 - 当前阶段和下一步写在 `docs/00-index.md`。
 - 主承诺写在 `docs/02-core-concept.md`。
-- 目标读者和平台写在 `docs/01-market-strategy.md`。- 前 10 章方向写在 `docs/05-plot-architecture.md`。
-- 第一卷阶段目标写在 `docs/06-volume-outlines.md`。'@
-Replace-Exact $p44 '缺一项时，只能补项目文档，不得进入正文。允许输出“声音小样”或“开场方案”供用户判断 taste，但必须标为候选小样，不能作为正式章节。' '缺一项时，只能补项目文档，不得进入正文。允许输出“声音小样”或“开场方案”供用户判断 taste，但必须标为候选小样，不能作为正式章节。'
-
-$p45 = 'C:\Users\Administrator\Documents\学习写网文\docs\45-first-chapter-task-brief-production-gate.md'
-Insert-After $p45 '一句话原则：第一章任务单不是大纲摘要，而是正文生产许可；任务单不齐，不能写 `ch001.md`。' @'
-
-如果用户是第一次开书，或项目里还没有大纲、细纲、人物卡、设定台账和风格手册，agent 必须先回到 `docs/44-single-novel-project-initialization-package.md` 补最小文档包。第一章许可不能替代项目初始化。
+- 目标读者和平台写在 `docs/01-market-strategy.md`。
+- 前 10 章方向写在 `docs/05-plot-architecture.md`。
+- 第一卷阶段目标写在 `docs/06-volume-outlines.md`。
 - 主角第一章行动写在 `docs/04-characters.md` 或章节任务中。
 - 世界/机制第一章所需规则写在 `docs/03-world-rules.md`。
 - 第一章任务写在 `manuscript/vol-01-opening/outline.md`。
 - 风格底线写在 `docs/08-style-bible.md`。
 - 初始台账写在 `docs/11-story-ledger.md`。
 
-缺一项时，只能补项目文档，不得进入正文。
+如果用户是第一次开书，或项目里还没有大纲、细纲、人物卡、设定台账和风格手册，agent 必须先补最小文档包。第一章许可不能替代项目初始化。
+
+缺一项时，只能补项目文档，不得进入正文。允许输出“声音小样”或“开场方案”供用户判断 taste，但必须标为候选小样，不能作为正式章节。
+
+初始化文档不是一次性锁死。项目简报、大纲、细纲、前 10 章拍表、第一卷目标和章节任务单，都只是当前确认版本。连载过程中如果正文执行、读者反馈、数据表现或逻辑审查证明原计划需要调整，agent 应更新项目文档，而不是把旧排表当成不可违背的固定路线。
+
+动态调整时必须保留版本脉络：
+
+- 记录为什么调整。
+- 标出哪些内容仍然有效。
+- 标出哪些内容废弃或降为候选。
+- 写清影响哪些后续章节、人物状态、伏笔和包装承诺。
+- 同步 `docs/11-story-ledger.md`、卷纲、章节排表、风格手册和下一章任务。
 
 ---
 
