@@ -11,7 +11,7 @@ labels: topic-request
 
 ## 为什么现有专题不能承接
 
-请先参考 `docs/57-knowledge-base-routing-consolidation-guide.md`，说明为什么不能通过旧专题小节、交叉引用或模板字段解决。
+请先参考 `docs/workflows/57-knowledge-base-routing-consolidation-guide.md`，说明为什么不能通过旧专题小节、交叉引用或模板字段解决。
 
 ## 准入理由
 

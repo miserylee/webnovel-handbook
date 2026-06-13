@@ -16,7 +16,7 @@
 
 目标：让 AI agent 少读、读准、能执行。
 
-- 继续强化 `docs/57-knowledge-base-routing-consolidation-guide.md`。
+- 继续强化 `docs/workflows/57-knowledge-base-routing-consolidation-guide.md`。
 - 把常用任务压缩为最小阅读包。
 - 给过长专题补“十秒定位卡”。
 - 抽取重复的投诉链、证据链、部门分流链和安全边界模板。
@@ -25,7 +25,7 @@
 
 目标：让写稿、内部试读、审稿、改稿和台账回写成为默认闭环。
 
-- 继续打磨 `docs/58-integrated-drafting-beta-review-revision-workflow.md`。
+- 继续打磨 `docs/workflows/58-integrated-drafting-beta-review-revision-workflow.md`。
 - 增加更多章节生产卡和交接包样例。
 - 明确何时需要外部真实读者和编辑反馈。
 - 优化前 10 章、前 30 章和卷级推进的调用路径。

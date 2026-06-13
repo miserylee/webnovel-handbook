@@ -17,14 +17,14 @@
 2. `AGENTS.md`
 3. `docs/00-index.md`
 
-`docs/01-source-inventory.md` 是大文件，不再作为默认整读入口。只有在新增来源、核查来源、处理引用边界或来源冲突时，才按关键词定向读取。
+`docs/sources/01-source-inventory.md` 是大文件，不再作为默认整读入口。只有在新增来源、核查来源、处理引用边界或来源冲突时，才按关键词定向读取。
 
 再按任务读取专题：
 
-- 起草或修订章节：`docs/35-ai-agent-novel-creation-workflow.md`、`docs/38-chapter-production-pipeline-agent-handoff.md`、`docs/58-integrated-drafting-beta-review-revision-workflow.md`、`docs/02-webnovel-principles.md`、`docs/04-character-and-dialogue.md`、`docs/11-human-writing-upgrade.md`、`docs/06-ai-writing-guidelines.md`、`docs/10-templates-and-checklists.md`
-- 搭建新小说项目：`docs/43-commercial-project-greenlight-scorecard.md`、`docs/44-single-novel-project-initialization-package.md`、`docs/45-first-chapter-task-brief-production-gate.md`、`docs/03-project-workflow.md`、`docs/07-continuity-ledger.md`
-- 设计大纲或连载节奏：`docs/05-plot-and-serial-rhythm.md`
-- 审稿、试读、判断 AI 含量：`docs/08-review-and-reader-feedback.md`、`docs/09-case-notes.md`
+- 起草或修订章节：`docs/workflows/35-ai-agent-novel-creation-workflow.md`、`docs/workflows/38-chapter-production-pipeline-agent-handoff.md`、`docs/workflows/58-integrated-drafting-beta-review-revision-workflow.md`、`docs/core-writing/02-webnovel-principles.md`、`docs/core-writing/04-character-and-dialogue.md`、`docs/core-writing/11-human-writing-upgrade.md`、`docs/core-writing/06-ai-writing-guidelines.md`、`docs/templates/10-templates-and-checklists.md`
+- 搭建新小说项目：`docs/workflows/43-commercial-project-greenlight-scorecard.md`、`docs/workflows/44-single-novel-project-initialization-package.md`、`docs/workflows/45-first-chapter-task-brief-production-gate.md`、`docs/workflows/03-project-workflow.md`、`docs/core-writing/07-continuity-ledger.md`
+- 设计大纲或连载节奏：`docs/core-writing/05-plot-and-serial-rhythm.md`
+- 审稿、试读、判断 AI 含量：`docs/feedback-revision/08-review-and-reader-feedback.md`、`docs/feedback-revision/09-case-notes.md`
 
 ## 来源优先级
 
@@ -36,7 +36,7 @@
 4. 匿名旧项目样本、匿名编辑反馈样本、匿名读者反馈样本中已经沉淀的经验。
 5. 临时笔记和未整理材料。
 
-如果来源之间冲突，先写明冲突，再按用户最新决定或本项目 `99-decision-log.md` 里的已确认规则处理。
+如果来源之间冲突，先写明冲突，再按用户最新决定或本项目 `docs/governance/99-decision-log.md` 里的已确认规则处理。
 
 ## 本项目的特殊性
 
@@ -67,21 +67,21 @@
 ## 维护规则
 
 - 新增稳定结论要写进专题文档，不只留在聊天里。
-- 新增来源要登记到 `docs/01-source-inventory.md`。
-- 新增关键决策优先记录到 `docs/99-decision-log.md` 的短索引；确需长说明时，创建短小的单条决策文件并从 `docs/99-decision-log.md` 链接。不要继续维护超大活跃文档或向已冻结的历史长归档追加正文。
+- 新增来源要登记到 `docs/sources/01-source-inventory.md`。
+- 新增关键决策优先记录到 `docs/governance/99-decision-log.md` 的短索引；确需长说明时，创建短小的单条决策文件并从 `docs/governance/99-decision-log.md` 链接。不要继续维护超大活跃文档或向已冻结的历史长归档追加正文。
 - 活跃文档应保持短小；内容膨胀时，允许索引链路变长，优先拆分成“入口索引 -> 分类索引 -> 目标短文档”。
 - 临时想法可以先放 `notes/`，但不能替代正式文档。
 - 不创建 `final`、`v2` 这类重复文档名；需要版本脉络时写进决策记录或案例笔记。
-- 如果用户指出“人物不活、剧情生硬、没有梗、情绪淡、读者不黏”，必须读取 `docs/11-human-writing-upgrade.md`，不要只做句子润色。
+- 如果用户指出“人物不活、剧情生硬、没有梗、情绪淡、读者不黏”，必须读取 `docs/core-writing/11-human-writing-upgrade.md`，不要只做句子润色。
 
 ## 开源维护补充
 
 - 本仓库按 MIT License 开源，贡献内容默认接受 MIT 授权。
-- 开源后优先维护 `README.md`、`docs/00-index.md`、`docs/57-knowledge-base-routing-consolidation-guide.md`、`docs/58-integrated-drafting-beta-review-revision-workflow.md` 等关键入口。
+- 开源后优先维护 `README.md`、`docs/00-index.md`、`docs/workflows/57-knowledge-base-routing-consolidation-guide.md`、`docs/workflows/58-integrated-drafting-beta-review-revision-workflow.md` 等关键入口。
 - 不提交真实匿名读者反馈原文、编辑内部意见原文、未公开稿件、付费课程原文、截图、联系方式、账号、群名或其他可识别个人信息。
 - 新增来源必须遵守 `SOURCE_POLICY.md`；涉及隐私、未成年人、违法风险、公共安全、医疗、金融、平台合规等内容时，必须遵守 `SAFETY.md`。
 - 所有私有来源、旧项目样本、编辑反馈样本和读者反馈样本必须遵守 `DEIDENTIFICATION.md`，不得保留真实项目名、本机路径、群名、账号、昵称或可拼接识别的来源结构。
-- 贡献者请求新增专题时，先用 `docs/57-knowledge-base-routing-consolidation-guide.md` 判断是否能由旧专题、索引交叉引用或模板字段承接。
+- 贡献者请求新增专题时，先用 `docs/workflows/57-knowledge-base-routing-consolidation-guide.md` 判断是否能由旧专题、索引交叉引用或模板字段承接。
 - 空占位目录、临时导出、缓存和本地草稿不进入开源仓库；确需记录临时想法时，优先转成 issue、正式文档小节或本地未提交笔记。
 
 
@@ -91,7 +91,7 @@
 
 - AI 在本仓库或单本小说项目中创建任何新文件时，必须同时给出明确索引路径，不能留下后续 agent 找不到的孤儿文件。
 - “明确索引路径”至少包括：它被哪个入口文件引用、属于哪个任务路线、后续 agent 应该在什么场景读取它。
-- 本知识库新增正式文档时，必须同步更新 `README.md` 或 `docs/00-index.md` 中至少一个入口；如果是来源、决策、模板、案例或变更，还要同步更新对应的 `docs/01-source-inventory.md`、`docs/99-decision-log.md`、`docs/10-templates-and-checklists.md`、案例参考书或 `CHANGELOG.md`。
+- 本知识库新增正式文档时，必须同步更新 `README.md` 或 `docs/00-index.md` 中至少一个入口；如果是来源、决策、模板、案例或变更，还要同步更新对应的 `docs/sources/01-source-inventory.md`、`docs/governance/99-decision-log.md`、`docs/templates/10-templates-and-checklists.md`、案例参考书或 `CHANGELOG.md`。
 - 单本小说项目新增文件时，必须同步更新该项目的 `README.md`、`docs/00-index.md`、卷/目录 `README.md`、故事台账或决策记录中的至少一个，让后续 agent 能按阶段找到它。
 - 临时文件如果不准备进入索引，不应提交；确需保留时必须标明“临时/本地/不提交”用途，并放在被忽略或明确说明的位置。
 - 交付说明中要写明新文件的入口路径；如果无法说明入口，说明这个文件不应该创建或不应该提交。
@@ -106,7 +106,7 @@
 
 ## 单本小说项目短文档维护规则
 
-- 初始化或维护单本小说项目时，优先采用短文档、多索引、可替换的资料结构，详见 `docs/64-single-novel-project-document-granularity.md`。
+- 初始化或维护单本小说项目时，优先采用短文档、多索引、可替换的资料结构，详见 `docs/workflows/64-single-novel-project-document-granularity.md`。
 - 允许索引链路变长，不要把设定、大纲、台账、讨论记录和废稿复盘堆成巨型文件。
 - 一个文件只解决一个主要主题；入口文件只负责索引、状态和读取顺序。
 - 新增项目文件必须同步建立入口；没有索引路径的项目文件不合格。

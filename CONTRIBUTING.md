@@ -8,7 +8,7 @@
 
 1. `README.md`
 2. `docs/00-index.md`
-3. `docs/57-knowledge-base-routing-consolidation-guide.md`
+3. `docs/workflows/57-knowledge-base-routing-consolidation-guide.md`
 4. 本次修改直接相关的专题文档
 
 如果修改涉及来源、版权、隐私或安全边界，请同时阅读：
@@ -16,8 +16,8 @@
 - `SOURCE_POLICY.md`
 - `DEIDENTIFICATION.md`
 - `SAFETY.md`
-- `docs/01-source-inventory.md`
-- `docs/99-decision-log.md`
+- `docs/sources/01-source-inventory.md`
+- `docs/governance/99-decision-log.md`
 
 ## 可以贡献什么
 
@@ -26,7 +26,7 @@
 - 修正文档错误、过时链接和术语混乱。
 - 提纯已有专题，补充入口判断、行动链、证据链、常见误写和安全边界。
 - 改进 AI agent 的工作流、提示词封包、试读/审稿/改稿流程。
-- 补充可靠来源，并把来源登记到 `docs/01-source-inventory.md`。
+- 补充可靠来源，并把来源登记到 `docs/sources/01-source-inventory.md`。
 - 增加模板、检查清单和可复用场景卡。
 - 改进 README、索引、贡献流程和开源治理文件。
 
@@ -43,7 +43,7 @@
 
 ## 新专题准入
 
-新增专题前，请先用 `docs/57-knowledge-base-routing-consolidation-guide.md` 判断是否真的需要新文件。
+新增专题前，请先用 `docs/workflows/57-knowledge-base-routing-consolidation-guide.md` 判断是否真的需要新文件。
 
 至少满足以下条件中的多项，才建议新建专题：
 
@@ -74,10 +74,10 @@
 
 按修改类型同步：
 
-- 新增来源：更新 `docs/01-source-inventory.md`。
-- 新增关键决策：更新 `docs/99-decision-log.md`。
-- 新增专题：更新 `README.md`、`docs/00-index.md`、必要时更新 `docs/10-templates-and-checklists.md`。
-- 新增 agent 工作流：更新 `README.md`、`docs/35-ai-agent-novel-creation-workflow.md`、相关入口文档和模板。
+- 新增来源：更新 `docs/sources/01-source-inventory.md`。
+- 新增关键决策：更新 `docs/governance/99-decision-log.md`。
+- 新增专题：更新 `README.md`、`docs/00-index.md`、必要时更新 `docs/templates/10-templates-and-checklists.md`。
+- 新增 agent 工作流：更新 `README.md`、`docs/workflows/35-ai-agent-novel-creation-workflow.md`、相关入口文档和模板。
 - 开源治理变更：更新 README、相关政策文件和 PR 模板。
 
 ## PR 检查

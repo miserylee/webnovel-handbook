@@ -50,25 +50,25 @@ For a new session or after context loss, read these files from the local clone:
 1. `README.md`
 2. `AGENTS.md`
 3. `docs/00-index.md`
-4. `docs/57-knowledge-base-routing-consolidation-guide.md`
+4. `docs/workflows/57-knowledge-base-routing-consolidation-guide.md`
 
 
 For new-book planning, project initialization, premise discussion, market positioning, character setup, outline design, or first-chapter preparation, also read:
 
-- `docs/03-project-workflow.md`
-- `docs/35-ai-agent-novel-creation-workflow.md`
-- `docs/44-single-novel-project-initialization-package.md`
-- `docs/10-templates-and-checklists.md`
+- `docs/workflows/03-project-workflow.md`
+- `docs/workflows/35-ai-agent-novel-creation-workflow.md`
+- `docs/workflows/44-single-novel-project-initialization-package.md`
+- `docs/templates/10-templates-and-checklists.md`
 
-Project discussion archive is mandatory. In the target novel project, write or update `docs/98-discussion-log.md` before ending the task. Record every substantive discussion item: user preferences, candidate ideas, rejected options, decision reasons, unresolved questions, source materials, and next actions. Stable decisions must also be promoted to `docs/99-decision-log.md` and the relevant project brief/outline files. Do not keep only the final brief and discard the discussion trail.
+Project discussion archive is mandatory. In the target novel project, write or update `docs/98-discussion-log.md` before ending the task. Record every substantive discussion item: user preferences, candidate ideas, rejected options, decision reasons, unresolved questions, source materials, and next actions. Stable decisions must also be promoted to `docs/governance/99-decision-log.md` and the relevant project brief/outline files. Do not keep only the final brief and discard the discussion trail.
 
 For writing, continuation, review, beta-read, or revision tasks, also read:
 
-- `docs/58-integrated-drafting-beta-review-revision-workflow.md`
-- `docs/06-ai-writing-guidelines.md`
-- `docs/11-human-writing-upgrade.md`
+- `docs/workflows/58-integrated-drafting-beta-review-revision-workflow.md`
+- `docs/core-writing/06-ai-writing-guidelines.md`
+- `docs/core-writing/11-human-writing-upgrade.md`
 
-If the user says the draft feels AI-like, bland, smooth-but-fake, generic, characterless, emotionally thin, or too templated, treat `docs/11-human-writing-upgrade.md` as mandatory and do not handle the issue as sentence polishing only.
+If the user says the draft feels AI-like, bland, smooth-but-fake, generic, characterless, emotionally thin, or too templated, treat `docs/core-writing/11-human-writing-upgrade.md` as mandatory and do not handle the issue as sentence polishing only.
 
 If the user says the draft has logic holes, misplaced continuity, unexplained sentence jumps, sudden facts, or lines that appear for no reason, treat this as a delivery blocker. Check scene causality, information source, character knowledge, physical action order, and sentence-level purpose before polishing.
 
@@ -112,8 +112,8 @@ When improving or distributing the handbook:
 
 - Do not include private project names, local paths, chat identities, or unpublished source text.
 - Abstract examples into reusable patterns before writing them into public docs.
-- Register stable sources in `docs/01-source-inventory.md`.
-- Record durable structural or governance decisions in `docs/99-decision-log.md`.
+- Register stable sources in `docs/sources/01-source-inventory.md`.
+- Record durable structural or governance decisions in `docs/governance/99-decision-log.md`.
 
 ## Drafting prose rhythm guardrail
 
@@ -121,4 +121,4 @@ When drafting fiction, do not produce slabs of short, same-length declarative se
 
 ## Dialogue quality and exemplar guardrail
 
-When the user says character speech is weak, samey, fake, too explanatory, or AI-like, treat dialogue quality as a structural blocker. Read `docs/04-character-and-dialogue.md` and `docs/37-project-style-bible-character-voice.md`. Do not solve it by adding catchphrases or famous-line imitation. Natural speech is the first gate: every important line must sound like this character would say it under the current relationship, pressure, knowledge limit, and emotional state. Then identify the speaker's agenda, concealment, pressure, relationship lever, line shape, action beat, and expected reaction. If using external high-performing webnovel dialogue as reference, use only short excerpts as functional examples and produce original project-specific dialogue.
+When the user says character speech is weak, samey, fake, too explanatory, or AI-like, treat dialogue quality as a structural blocker. Read `docs/core-writing/04-character-and-dialogue.md` and `docs/core-writing/37-project-style-bible-character-voice.md`. Do not solve it by adding catchphrases or famous-line imitation. Natural speech is the first gate: every important line must sound like this character would say it under the current relationship, pressure, knowledge limit, and emotional state. Then identify the speaker's agenda, concealment, pressure, relationship lever, line shape, action beat, and expected reaction. If using external high-performing webnovel dialogue as reference, use only short excerpts as functional examples and produce original project-specific dialogue.

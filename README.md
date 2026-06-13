@@ -16,22 +16,22 @@
 
 1. 读 [AGENTS.md](AGENTS.md)。
 2. 读 [docs/00-index.md](docs/00-index.md) 判断任务阶段和最小阅读包。
-3. 写稿、续写、审稿、改稿优先进入 [docs/58-integrated-drafting-beta-review-revision-workflow.md](docs/58-integrated-drafting-beta-review-revision-workflow.md)。
-4. 人物、对白、人味、降低 AI 味优先读 [docs/11-human-writing-upgrade.md](docs/11-human-writing-upgrade.md)、[docs/37-project-style-bible-character-voice.md](docs/37-project-style-bible-character-voice.md)、[docs/59-dialogue-comparison-reference.md](docs/59-dialogue-comparison-reference.md)。
-5. 需要找大量专题时，再定向检索 [docs/00-expanded-topic-catalog.md](docs/00-expanded-topic-catalog.md)。
+3. 写稿、续写、审稿、改稿优先进入 [docs/workflows/58-integrated-drafting-beta-review-revision-workflow.md](./docs/workflows/58-integrated-drafting-beta-review-revision-workflow.md)。
+4. 人物、对白、人味、降低 AI 味优先读 [docs/core-writing/11-human-writing-upgrade.md](./docs/core-writing/11-human-writing-upgrade.md)、[docs/core-writing/37-project-style-bible-character-voice.md](./docs/core-writing/37-project-style-bible-character-voice.md)、[docs/core-writing/59-dialogue-comparison-reference.md](./docs/core-writing/59-dialogue-comparison-reference.md)。
+5. 需要找大量专题时，再定向检索 [docs/navigation/00-expanded-topic-catalog.md](./docs/navigation/00-expanded-topic-catalog.md)。
 
-更完整的阅读路线见 [docs/00-readme-details.md](docs/00-readme-details.md)。
+更完整的阅读路线见 [docs/navigation/00-readme-details.md](./docs/navigation/00-readme-details.md)。
 
 ## 核心入口
 
 - [docs/00-index.md](docs/00-index.md)：渐进式启动索引。
-- [docs/00-expanded-topic-catalog.md](docs/00-expanded-topic-catalog.md)：扩展专题目录，按需检索。
-- [docs/35-ai-agent-novel-creation-workflow.md](docs/35-ai-agent-novel-creation-workflow.md)：AI agents 小说创作总流程。
-- [docs/44-single-novel-project-initialization-package.md](docs/44-single-novel-project-initialization-package.md)：单本小说项目初始化最小文档包。
-- [docs/45-first-chapter-task-brief-production-gate.md](docs/45-first-chapter-task-brief-production-gate.md)：第一章任务单与生产许可。
-- [docs/58-integrated-drafting-beta-review-revision-workflow.md](docs/58-integrated-drafting-beta-review-revision-workflow.md)：写手、试读、审稿、改稿一体化闭环。
-- [docs/10-templates-and-checklists.md](docs/10-templates-and-checklists.md)：模板仓库，只按需检索。
-- [docs/99-decision-log.md](docs/99-decision-log.md)：活跃决策短索引。
+- [docs/navigation/00-expanded-topic-catalog.md](./docs/navigation/00-expanded-topic-catalog.md)：扩展专题目录，按需检索。
+- [docs/workflows/35-ai-agent-novel-creation-workflow.md](./docs/workflows/35-ai-agent-novel-creation-workflow.md)：AI agents 小说创作总流程。
+- [docs/workflows/44-single-novel-project-initialization-package.md](./docs/workflows/44-single-novel-project-initialization-package.md)：单本小说项目初始化最小文档包。
+- [docs/workflows/45-first-chapter-task-brief-production-gate.md](./docs/workflows/45-first-chapter-task-brief-production-gate.md)：第一章任务单与生产许可。
+- [docs/workflows/58-integrated-drafting-beta-review-revision-workflow.md](./docs/workflows/58-integrated-drafting-beta-review-revision-workflow.md)：写手、试读、审稿、改稿一体化闭环。
+- [docs/templates/10-templates-and-checklists.md](./docs/templates/10-templates-and-checklists.md)：模板仓库，只按需检索。
+- [docs/governance/99-decision-log.md](./docs/governance/99-decision-log.md)：活跃决策短索引。
 
 ## 关键原则
 
@@ -47,4 +47,4 @@
 - License: [MIT](LICENSE)
 - 主要语言：中文
 - 主要用途：中文网文创作知识库与 agent 工作流
-- 详细贡献、安全、来源和去身份化规则见 [docs/00-readme-details.md](docs/00-readme-details.md)
+- 详细贡献、安全、来源和去身份化规则见 [docs/navigation/00-readme-details.md](./docs/navigation/00-readme-details.md)

@@ -88,7 +88,7 @@
 ### Changed
 
 - 提升降 AI 味在 skill 和写稿闭环中的优先级：高 AI 味稿件不能作为定稿交付，必须先修人物反应、场景摩擦、动作链和情绪触发。
-- 更新 `docs/06-ai-writing-guidelines.md`、`docs/11-human-writing-upgrade.md` 和 `docs/58-integrated-drafting-beta-review-revision-workflow.md`，明确降 AI 味不是终稿润色，而是起草前硬门槛。
+- 更新 `docs/core-writing/06-ai-writing-guidelines.md`、`docs/core-writing/11-human-writing-upgrade.md` 和 `docs/workflows/58-integrated-drafting-beta-review-revision-workflow.md`，明确降 AI 味不是终稿润色，而是起草前硬门槛。
 
 ## 2026-06-10
 
@@ -152,17 +152,17 @@
 
 ### Added
 
-- 新增 `docs/59-dialogue-comparison-reference.md`，作为对话样本对比参考书，集中保存 Agent 初稿、用户改稿、差异分析和可迁移规则。
+- 新增 `docs/core-writing/59-dialogue-comparison-reference.md`，作为对话样本对比参考书，集中保存 Agent 初稿、用户改稿、差异分析和可迁移规则。
 
 ### Changed
 
-- 将对话样本对比从 `docs/04-character-and-dialogue.md` 中抽离为独立参考入口，并更新 README 与索引中的读取路线。
+- 将对话样本对比从 `docs/core-writing/04-character-and-dialogue.md` 中抽离为独立参考入口，并更新 README 与索引中的读取路线。
 ## 2026-06-13
 
 ### Added
 
-- 在 `docs/17-cover-visual-packaging.md` 新增商业网文封面设计标准，强调封面不是给底图贴大字，而是平台合规、缩略图可读、类型承诺和点击测试素材。
-- 在 `docs/01-source-inventory.md` 登记番茄多封面效果排名、作品运作说明和用户封面复盘反馈的可迁移结论。
+- 在 `docs/market-serialization/17-cover-visual-packaging.md` 新增商业网文封面设计标准，强调封面不是给底图贴大字，而是平台合规、缩略图可读、类型承诺和点击测试素材。
+- 在 `docs/sources/01-source-inventory.md` 登记番茄多封面效果排名、作品运作说明和用户封面复盘反馈的可迁移结论。
 
 ### Changed
 
@@ -177,4 +177,4 @@
 ### Added
 
 - 新增 AI 新建文件索引规则：所有新文件必须同步挂到明确入口，并在交付说明中写明新文件路径、索引入口、读取场景和维护状态。
-- 在 `AGENTS.md`、`docs/03-project-workflow.md`、`docs/57-knowledge-base-routing-consolidation-guide.md` 和 `docs/99-decision-log.md` 中补充禁止孤儿文件的维护要求。
+- 在 `AGENTS.md`、`docs/workflows/03-project-workflow.md`、`docs/workflows/57-knowledge-base-routing-consolidation-guide.md` 和 `docs/governance/99-decision-log.md` 中补充禁止孤儿文件的维护要求。
