@@ -1426,9 +1426,44 @@ async function checkMarkdownSizeGovernance(markdownFiles) {
     ["docs/navigation/00-expanded-topic-catalog.md", "expanded catalog; keyword search only"],
     ["docs/navigation/01-readme-details.md", "README overflow details; read by section"],
   ]);
+  const docsIndexRequiredLargeDocRoutes = new Map([
+    [
+      "docs/navigation/01-readme-details.md",
+      "README overflow details must remain explicitly routed as a non-default section read",
+    ],
+  ]);
   const routedLargeDocPattern =
     /(按需读取|定向读取|按标题|关键词|不要整篇|不作为默认整读|默认入口只读|冻结历史)/u;
   const largeMarkdownThreshold = 100_000;
+  const docsIndexContent = await fs.readFile(
+    path.join(repoRoot, "docs", "00-index.md"),
+    "utf8",
+  );
+  const docsIndexLargeDocListBlock = extractBlock(
+    docsIndexContent,
+    "不要默认整读以下大文件",
+    "### 0.1 路径约定",
+  );
+  const docsIndexLargeDocUsageBlock = extractBlock(
+    docsIndexContent,
+    "## 6. 大文件使用方式",
+    "## 7. 新文件索引要求",
+  );
+
+  for (const [repoPath, reason] of docsIndexRequiredLargeDocRoutes) {
+    if (
+      !docsIndexLargeDocListBlock.includes(repoPath) ||
+      !docsIndexLargeDocUsageBlock.includes(repoPath)
+    ) {
+      sizeProblems.push({
+        file: "docs/00-index.md",
+        target: repoPath,
+        sample:
+          `allowed large markdown (${reason}) must appear in both the ` +
+          "non-default large-doc list and the large-file usage section",
+      });
+    }
+  }
 
   for (const file of markdownFiles) {
     const repoPath = toRepoPath(file);
