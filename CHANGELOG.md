@@ -20,6 +20,7 @@
 
 ### Changed
 
+- 扩展 `docs/workflows/README.md` 为目录级渐进式索引，按知识库维护、开书、章节生产、连载项目管理和 agent 检索装配组织读取链路。
 - 扩展 `docs/core-writing/README.md` 为目录级渐进式索引，按章节成立、人味/AI 味、人物对白、连续性、段落阅读和反派升级等问题组织读取链路。
 - 扩展 `docs/feedback-revision/README.md` 为目录级渐进式索引，按审稿、数据、评论、冲突、优先级队列和修订执行组织读取链路。
 - README 增加开源使用、关键文件和 AI agent 消费路径。
