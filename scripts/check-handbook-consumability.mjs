@@ -217,6 +217,24 @@ async function checkUtf8Bom(textFiles) {
   return bomFiles;
 }
 
+async function checkCrlfLineEndings(textFiles) {
+  const crlfFiles = [];
+  const crlfPattern = Buffer.from("\r\n");
+
+  for (const file of textFiles) {
+    const content = await fs.readFile(file);
+
+    if (content.includes(crlfPattern)) {
+      crlfFiles.push({
+        file: toRepoPath(file),
+        sample: "file contains CRLF line endings; use LF",
+      });
+    }
+  }
+
+  return crlfFiles;
+}
+
 async function checkDirectoryReadmeCoverage(markdownFiles) {
   const missingCoverage = [];
   const readmeCache = new Map();
@@ -473,6 +491,7 @@ async function main() {
     missingRawDocPaths,
     suspiciousMojibake,
     utf8BomFiles,
+    crlfLineEndingFiles,
     missingDirectoryReadmeCoverage,
     missingEntrypoints,
     missingDirectoryIndexCoverage,
@@ -484,6 +503,7 @@ async function main() {
       checkRawRepoDocPaths(markdownFiles),
       checkMojibake(textFiles),
       checkUtf8Bom(textFiles),
+      checkCrlfLineEndings(textFiles),
       checkDirectoryReadmeCoverage(markdownFiles),
       checkRequiredEntrypoints(),
       checkDocsDirectoryIndexCoverage(),
@@ -495,6 +515,7 @@ async function main() {
   printSection("Missing raw repo docs paths", missingRawDocPaths);
   printSection("Suspicious mojibake files", suspiciousMojibake);
   printSection("UTF-8 BOM files", utf8BomFiles);
+  printSection("CRLF line ending files", crlfLineEndingFiles);
   printSection(
     "Docs missing directory README coverage",
     missingDirectoryReadmeCoverage,
@@ -512,6 +533,7 @@ async function main() {
     missingRawDocPaths.length > 0 ||
     suspiciousMojibake.length > 0 ||
     utf8BomFiles.length > 0 ||
+    crlfLineEndingFiles.length > 0 ||
     missingDirectoryReadmeCoverage.length > 0 ||
     missingEntrypoints.length > 0 ||
     missingDirectoryIndexCoverage.length > 0 ||
