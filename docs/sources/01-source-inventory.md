@@ -4887,3 +4887,21 @@
 - WIP 限制的实践说明，迁移为“同一时间只开少量正式章节、修订和主线变更，避免 agent 多线失忆”。
 
 使用边界：这些资料是通用项目管理方法，不是小说创作公式。迁移时只保留能提升连载协作、台账回写、变更透明和交付质量的部分；不能用看板替代人物、情绪、类型承诺和正文审稿。
+
+## 2026-06-15：反馈修订优先级队列
+
+用途：支撑 `docs/feedback-revision/43-feedback-revision-priority-queue.md`，补足评论聚类、反馈冲突仲裁和修订执行之间的“排队与取舍”层。
+
+来源：
+
+- Intercom, RICE: Simple prioritization for product managers: https://www.intercom.com/blog/rice-simple-prioritization-for-product-managers/
+- Atlassian, Six product prioritization frameworks and how to pick the right one: https://www.atlassian.com/agile/product-management/prioritization-framework
+- Agile Business Consortium, What is MoSCoW Prioritization?: https://www.agilebusiness.org/resource/what-is-moscow-prioritization/
+
+吸收点：
+
+- RICE 的 Reach、Impact、Confidence、Effort 迁移为网文反馈的影响范围、影响强度、证据置信度和修改成本。
+- Atlassian 对 RICE 的风险提示迁移为“分数只用于解释取舍，不能迷信数字，也不能替代文本诊断”。
+- MoSCoW 的 Must/Should/Could/Won't this time 迁移为连载修订时间盒：本轮必须修、近期应修、可观察、暂不采纳。
+
+使用边界：这些资料是产品和项目优先级方法，不是小说审美标准。迁移时只用于反馈排队、修订节奏保护和决策可复盘；不能用分数替代目标读者、类型承诺、人味、逻辑和正文质量判断。
