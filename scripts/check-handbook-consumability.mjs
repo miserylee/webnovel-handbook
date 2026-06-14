@@ -1700,6 +1700,37 @@ async function checkDocsStatusMetadata(markdownFiles) {
   return statusMetadataProblems;
 }
 
+async function checkDocsDirectoryReadmePurposeMetadata(markdownFiles) {
+  const purposeMetadataProblems = [];
+  const purposePattern = /(^|\n)用途：\s*\S/;
+
+  for (const file of markdownFiles) {
+    const repoPath = toRepoPath(file);
+
+    if (!repoPath.startsWith("docs/")) {
+      continue;
+    }
+
+    if (path.basename(repoPath).toLowerCase() !== "readme.md") {
+      continue;
+    }
+
+    const headingBlock = (await fs.readFile(file, "utf8"))
+      .split(/\r?\n/)
+      .slice(0, 12)
+      .join("\n");
+
+    if (!purposePattern.test(headingBlock)) {
+      purposeMetadataProblems.push({
+        file: repoPath,
+        sample: "directory README is missing 用途： near the top",
+      });
+    }
+  }
+
+  return purposeMetadataProblems;
+}
+
 function checkDocsFilenameConventions(markdownFiles) {
   const filenameConventionProblems = [];
   const docsFileNamePattern = /^[0-9a-z][0-9a-z.-]*[0-9a-z]\.md$/;
@@ -1796,6 +1827,7 @@ async function main() {
     docsHeadingPrefixProblems,
     docsHeadingNumberProblems,
     docsStatusMetadataProblems,
+    docsDirectoryReadmePurposeMetadataProblems,
     docsFilenameConventionProblems,
   ] =
     await Promise.all([
@@ -1831,6 +1863,7 @@ async function main() {
       checkDocsHeadingPrefixConsistency(markdownFiles),
       checkEntrypointHeadingNumberUniqueness(markdownFiles),
       checkDocsStatusMetadata(markdownFiles),
+      checkDocsDirectoryReadmePurposeMetadata(markdownFiles),
       checkDocsFilenameConventions(markdownFiles),
     ]);
 
@@ -1899,6 +1932,10 @@ async function main() {
   printSection("Docs heading prefix problems", docsHeadingPrefixProblems);
   printSection("Entrypoint heading number problems", docsHeadingNumberProblems);
   printSection("Docs status metadata problems", docsStatusMetadataProblems);
+  printSection(
+    "Docs directory README purpose metadata problems",
+    docsDirectoryReadmePurposeMetadataProblems,
+  );
   printSection("Docs filename convention problems", docsFilenameConventionProblems);
 
   const hasProblems =
@@ -1934,6 +1971,7 @@ async function main() {
     docsHeadingPrefixProblems.length > 0 ||
     docsHeadingNumberProblems.length > 0 ||
     docsStatusMetadataProblems.length > 0 ||
+    docsDirectoryReadmePurposeMetadataProblems.length > 0 ||
     docsFilenameConventionProblems.length > 0;
 
   if (hasProblems) {
