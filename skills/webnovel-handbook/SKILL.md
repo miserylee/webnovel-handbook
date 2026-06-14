@@ -108,6 +108,21 @@ Do not present a normal full chapter as finished if it is obviously below the pu
 
 Do not make the user switch between separate reader-group, editorial, or drafting contexts unless they explicitly request separate reports.
 
+## Delivery completion gate
+
+Before presenting a normal chapter as finished, apply the completion definition from `docs/workflows/58-integrated-drafting-beta-review-revision-workflow.md`.
+
+Treat these as delivery blockers, not minor polish:
+
+- The current human-approved draft version or previous chapter ending is unconfirmed.
+- The draft still has obvious logic gaps, unexplained information jumps, impossible action order, or sentences with no scene function.
+- AI flavor remains high: samey voices, abstract emotional summaries, report-like evidence chains, slabbed short sentences, or pretty but useless lines.
+- A normal chapter is below the publishable length gate, or the shortfall comes from a thin detailed outline.
+- The chapter changes facts, relationships, foreshadowing, or next-chapter obligations but has no ledger handoff.
+- Compliance risks remain unresolved.
+
+If any blocker remains, deliver it as a fragment, revision draft, issue report, or outline/ledger repair task. Do not label it as a finished chapter.
+
 ## Public-source hygiene
 
 When improving or distributing the handbook:
