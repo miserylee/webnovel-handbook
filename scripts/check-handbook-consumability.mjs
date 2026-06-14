@@ -237,6 +237,39 @@ async function checkRawRepoDocPaths(markdownFiles) {
   return missingRawDocPaths;
 }
 
+async function checkRawRepoFilePaths(markdownFiles) {
+  const missingRawRepoFilePaths = [];
+  const rawRepoFilePathPattern =
+    /(^|[^A-Za-z0-9_<>/-])((?:scripts|skills)\/[A-Za-z0-9._/-]+\.[A-Za-z0-9]+|(?:README|AGENTS|CHANGELOG|CODE_OF_CONDUCT|CONTRIBUTING|DEIDENTIFICATION|ROADMAP|SAFETY|SECURITY|SOURCE_POLICY)\.md|LICENSE|package\.json)/g;
+
+  for (const file of markdownFiles) {
+    const content = await fs.readFile(file, "utf8");
+    const lines = content.split(/\r?\n/);
+
+    for (const [index, line] of lines.entries()) {
+      let match;
+      while ((match = rawRepoFilePathPattern.exec(line))) {
+        const target = match[2];
+        if (target.includes("...")) {
+          continue;
+        }
+
+        const targetPath = path.resolve(repoRoot, target);
+
+        if (!(await exists(targetPath))) {
+          missingRawRepoFilePaths.push({
+            file: toRepoPath(file),
+            line: index + 1,
+            target,
+          });
+        }
+      }
+    }
+  }
+
+  return missingRawRepoFilePaths;
+}
+
 async function checkMojibake(textFiles) {
   const suspiciousFiles = [];
 
@@ -1234,6 +1267,7 @@ async function main() {
   const [
     brokenLinks,
     missingRawDocPaths,
+    missingRawRepoFilePaths,
     suspiciousMojibake,
     utf8BomFiles,
     crlfLineEndingFiles,
@@ -1261,6 +1295,7 @@ async function main() {
     await Promise.all([
       checkMarkdownLinks(markdownFiles),
       checkRawRepoDocPaths(markdownFiles),
+      checkRawRepoFilePaths(markdownFiles),
       checkMojibake(textFiles),
       checkUtf8Bom(textFiles),
       checkCrlfLineEndings(textFiles),
@@ -1288,6 +1323,7 @@ async function main() {
 
   printSection("Broken Markdown links", brokenLinks);
   printSection("Missing raw repo docs paths", missingRawDocPaths);
+  printSection("Missing raw repo file paths", missingRawRepoFilePaths);
   printSection("Suspicious mojibake files", suspiciousMojibake);
   printSection("UTF-8 BOM files", utf8BomFiles);
   printSection("CRLF line ending files", crlfLineEndingFiles);
@@ -1336,6 +1372,7 @@ async function main() {
   const hasProblems =
     brokenLinks.length > 0 ||
     missingRawDocPaths.length > 0 ||
+    missingRawRepoFilePaths.length > 0 ||
     suspiciousMojibake.length > 0 ||
     utf8BomFiles.length > 0 ||
     crlfLineEndingFiles.length > 0 ||
