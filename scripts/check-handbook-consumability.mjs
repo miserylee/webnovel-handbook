@@ -558,6 +558,50 @@ async function checkSkillPackageLayout() {
   return skillPackageProblems;
 }
 
+async function checkSkillStartupRoutingConsistency() {
+  const startupProblems = [];
+  const skillFile = path.join(repoRoot, "skills", "webnovel-handbook", "SKILL.md");
+
+  if (!(await exists(skillFile))) {
+    return startupProblems;
+  }
+
+  const content = await fs.readFile(skillFile, "utf8");
+  const firstReadsMatch = content.match(
+    /For a new session or after context loss, read these files from the local clone:\s*\n([\s\S]*?)\n\s*For /,
+  );
+  const firstReadsBlock = firstReadsMatch?.[1] || "";
+  const requiredFirstReads = ["README.md", "AGENTS.md", "docs/00-index.md"];
+
+  for (const repoPath of requiredFirstReads) {
+    if (!firstReadsBlock.includes(`\`${repoPath}\``)) {
+      startupProblems.push({
+        file: "skills/webnovel-handbook/SKILL.md",
+        target: repoPath,
+        sample: "skill minimal startup reads are missing a required thin entrypoint",
+      });
+    }
+  }
+
+  if (firstReadsBlock.includes("docs/workflows/57-knowledge-base-routing-consolidation-guide.md")) {
+    startupProblems.push({
+      file: "skills/webnovel-handbook/SKILL.md",
+      target: "docs/workflows/57-knowledge-base-routing-consolidation-guide.md",
+      sample: "routing guide should be conditional, not part of the minimal startup reads",
+    });
+  }
+
+  if (!content.includes("For route-ambiguous tasks, knowledge-base maintenance, index governance")) {
+    startupProblems.push({
+      file: "skills/webnovel-handbook/SKILL.md",
+      target: "docs/workflows/57-knowledge-base-routing-consolidation-guide.md",
+      sample: "skill is missing the conditional routing-guide trigger",
+    });
+  }
+
+  return startupProblems;
+}
+
 async function checkSkillPackagingSetup() {
   const packagingProblems = [];
   const packageScriptRepoPath = "scripts/package-skill.mjs";
@@ -858,6 +902,7 @@ async function main() {
     missingRootReadmeLinks,
     missingDirectoryIndexCoverage,
     skillPackageProblems,
+    skillStartupRoutingProblems,
     skillPackagingProblems,
     markdownSizeGovernanceProblems,
     docsNumericPrefixProblems,
@@ -878,6 +923,7 @@ async function main() {
       checkRootReadmeLinkCoverage(),
       checkDocsDirectoryIndexCoverage(),
       checkSkillPackageLayout(),
+      checkSkillStartupRoutingConsistency(),
       checkSkillPackagingSetup(),
       checkMarkdownSizeGovernance(markdownFiles),
       checkDocsNumericPrefixUniqueness(markdownFiles),
@@ -907,6 +953,7 @@ async function main() {
     missingDirectoryIndexCoverage,
   );
   printSection("Skill package layout problems", skillPackageProblems);
+  printSection("Skill startup routing problems", skillStartupRoutingProblems);
   printSection("Skill packaging setup problems", skillPackagingProblems);
   printSection("Markdown size governance problems", markdownSizeGovernanceProblems);
   printSection("Docs numeric prefix problems", docsNumericPrefixProblems);
@@ -927,6 +974,7 @@ async function main() {
     missingRootReadmeLinks.length > 0 ||
     missingDirectoryIndexCoverage.length > 0 ||
     skillPackageProblems.length > 0 ||
+    skillStartupRoutingProblems.length > 0 ||
     skillPackagingProblems.length > 0 ||
     markdownSizeGovernanceProblems.length > 0 ||
     docsNumericPrefixProblems.length > 0 ||

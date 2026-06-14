@@ -50,8 +50,10 @@ For a new session or after context loss, read these files from the local clone:
 1. `README.md`
 2. `AGENTS.md`
 3. `docs/00-index.md`
-4. `docs/workflows/57-knowledge-base-routing-consolidation-guide.md`
 
+For route-ambiguous tasks, knowledge-base maintenance, index governance, or tasks that may require many topics, also read:
+
+- `docs/workflows/57-knowledge-base-routing-consolidation-guide.md`
 
 For new-book planning, project initialization, premise discussion, market positioning, character setup, outline design, or first-chapter preparation, also read:
 

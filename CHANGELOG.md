@@ -21,6 +21,7 @@
 
 ### Changed
 
+- 收束 `webnovel-handbook` skill 启动阅读口径：新会话默认只读 `README.md`、`AGENTS.md` 和 `docs/00-index.md`，将 `57` 路由规范改为复杂任务、知识库维护或路由不明时再读，并在消费检查器中加入 skill 启动最小阅读包检查。
 - 增强 `scripts/check-handbook-consumability.mjs`，新增 `docs` 文件名跨平台命名检查，要求正式文档文件名使用小写 ASCII、数字、点、连字符和 `.md`，避免空格、中文、大小写混用、双连字符和过长文件名影响开源维护与 agent 检索。
 - 增强关键 agent 入口的路由信号：为缺少用途提示的总流程、人物对话、AI 写作、人味增强和 workflows 目录入口补充开头用途说明，并让 `scripts/check-handbook-consumability.mjs` 检查关键入口是否具备用途/适用信号。
 - 补齐 `docs` 正式文档的开头状态元数据，并增强 `scripts/check-handbook-consumability.mjs`，要求非目录 README 的正式文档在开头声明 `状态：已确认/候选/待确认`，减少 agent 对文档稳定性的误判。
