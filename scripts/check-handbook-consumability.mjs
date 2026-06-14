@@ -488,6 +488,20 @@ async function checkSkillPackagingSetup() {
         sample: "package script default output is not dist/webnovel-handbook-skill.zip",
       });
     }
+
+    if (!packageScript.includes("validateSkillEntryNames")) {
+      packagingProblems.push({
+        file: packageScriptRepoPath,
+        sample: "package script does not validate lightweight skill entry names",
+      });
+    }
+
+    if (!packageScript.includes("readZipEntryNames")) {
+      packagingProblems.push({
+        file: packageScriptRepoPath,
+        sample: "package script does not inspect the generated zip entry list",
+      });
+    }
   }
 
   if (!(await exists(gitignorePath))) {

@@ -18,6 +18,14 @@ const outputPath = path.resolve(
 );
 
 const requiredSkillFile = path.join(skillRoot, "SKILL.md");
+const forbiddenSkillEntryPrefixes = [
+  ".git/",
+  "dist/",
+  "docs/",
+  "node_modules/",
+  "scripts/",
+  "skills/",
+];
 
 function crc32(buffer) {
   let crc = 0xffffffff;
@@ -67,6 +75,36 @@ async function listFiles(directory, baseDirectory = directory) {
   }
 
   return files.sort((left, right) => left.zipPath.localeCompare(right.zipPath));
+}
+
+function validateSkillEntryNames(entryNames, label) {
+  if (!entryNames.includes("SKILL.md")) {
+    throw new Error(`${label} is missing root SKILL.md`);
+  }
+
+  const unsafeEntries = entryNames.filter((entryName) => {
+    return (
+      entryName.startsWith("/") ||
+      entryName.includes("\\") ||
+      entryName.split("/").includes("..")
+    );
+  });
+
+  if (unsafeEntries.length > 0) {
+    throw new Error(
+      `${label} contains unsafe zip paths: ${unsafeEntries.join(", ")}`,
+    );
+  }
+
+  const forbiddenEntries = entryNames.filter((entryName) => {
+    return forbiddenSkillEntryPrefixes.some((prefix) => entryName.startsWith(prefix));
+  });
+
+  if (forbiddenEntries.length > 0) {
+    throw new Error(
+      `${label} contains repository content that should stay outside the lightweight skill: ${forbiddenEntries.join(", ")}`,
+    );
+  }
 }
 
 function localFileHeader({ compressedSize, crc, dosDate, dosTime, nameBuffer, size }) {
@@ -128,6 +166,72 @@ function endOfCentralDirectory({ centralDirectoryOffset, centralDirectorySize, e
   return header;
 }
 
+function findEndOfCentralDirectory(zipBuffer) {
+  const signature = 0x06054b50;
+  const minimumOffset = Math.max(0, zipBuffer.length - 22 - 0xffff);
+
+  for (let offset = zipBuffer.length - 22; offset >= minimumOffset; offset -= 1) {
+    if (zipBuffer.readUInt32LE(offset) === signature) {
+      return offset;
+    }
+  }
+
+  throw new Error("Generated zip is invalid: end of central directory not found");
+}
+
+function readZipEntryNames(zipBuffer) {
+  const endOffset = findEndOfCentralDirectory(zipBuffer);
+  const entryCount = zipBuffer.readUInt16LE(endOffset + 10);
+  let offset = zipBuffer.readUInt32LE(endOffset + 16);
+  const entryNames = [];
+
+  for (let index = 0; index < entryCount; index += 1) {
+    if (offset + 46 > zipBuffer.length) {
+      throw new Error("Generated zip is invalid: central directory is truncated");
+    }
+
+    if (zipBuffer.readUInt32LE(offset) !== 0x02014b50) {
+      throw new Error("Generated zip is invalid: central directory header is missing");
+    }
+
+    const nameLength = zipBuffer.readUInt16LE(offset + 28);
+    const extraLength = zipBuffer.readUInt16LE(offset + 30);
+    const commentLength = zipBuffer.readUInt16LE(offset + 32);
+    const nameStart = offset + 46;
+    const nameEnd = nameStart + nameLength;
+
+    if (nameEnd > zipBuffer.length) {
+      throw new Error("Generated zip is invalid: entry name is truncated");
+    }
+
+    entryNames.push(zipBuffer.subarray(nameStart, nameEnd).toString("utf8"));
+    offset = nameEnd + extraLength + commentLength;
+  }
+
+  return entryNames;
+}
+
+function validateZipEntryNames(actualEntries, expectedEntries) {
+  validateSkillEntryNames(actualEntries, "packaged skill zip");
+
+  const actual = [...actualEntries].sort();
+  const expected = [...expectedEntries].sort();
+
+  if (actual.length !== expected.length) {
+    throw new Error(
+      `Packaged skill zip entry count mismatch: expected ${expected.length}, got ${actual.length}`,
+    );
+  }
+
+  for (let index = 0; index < expected.length; index += 1) {
+    if (actual[index] !== expected[index]) {
+      throw new Error(
+        `Packaged skill zip entry mismatch: expected ${expected[index]}, got ${actual[index]}`,
+      );
+    }
+  }
+}
+
 async function main() {
   await fs.access(requiredSkillFile);
 
@@ -135,6 +239,9 @@ async function main() {
   if (files.length === 0) {
     throw new Error(`No files found in skill directory: ${skillRoot}`);
   }
+
+  const expectedZipPaths = files.map((file) => file.zipPath);
+  validateSkillEntryNames(expectedZipPaths, "source skill directory");
 
   const localParts = [];
   const centralParts = [];
@@ -183,12 +290,16 @@ async function main() {
   await fs.mkdir(path.dirname(outputPath), { recursive: true });
   await fs.writeFile(outputPath, Buffer.concat([...localParts, centralDirectory, endHeader]));
 
+  const generatedZip = await fs.readFile(outputPath);
+  const packagedEntries = readZipEntryNames(generatedZip);
+  validateZipEntryNames(packagedEntries, expectedZipPaths);
+
   console.log(`Packaged skill: ${outputPath}`);
+  console.log(`Packaged entries: ${packagedEntries.join(", ")}`);
 }
 
 main().catch((error) => {
   console.error(error instanceof Error ? error.message : error);
   process.exitCode = 1;
 });
-
 
