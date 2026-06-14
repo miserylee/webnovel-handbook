@@ -392,6 +392,46 @@ async function checkRootReadmeLinkCoverage() {
     }
   }
 
+  const scriptsDirectory = path.join(repoRoot, "scripts");
+  if (await exists(scriptsDirectory)) {
+    const scriptEntries = await fs.readdir(scriptsDirectory, { withFileTypes: true });
+
+    for (const entry of scriptEntries) {
+      if (!entry.isFile() || !/\.(?:js|mjs)$/i.test(entry.name)) {
+        continue;
+      }
+
+      const repoPath = `scripts/${entry.name}`;
+      if (!readmeContent.includes(repoPath)) {
+        missingRootReadmeLinks.push({
+          file: "README.md",
+          target: repoPath,
+          sample: "maintenance script is not mentioned in README.md",
+        });
+      }
+    }
+  }
+
+  const skillsDirectory = path.join(repoRoot, "skills");
+  if (await exists(skillsDirectory)) {
+    const skillEntries = await fs.readdir(skillsDirectory, { withFileTypes: true });
+
+    for (const entry of skillEntries) {
+      if (!entry.isDirectory()) {
+        continue;
+      }
+
+      const repoPath = `skills/${entry.name}/SKILL.md`;
+      if (!readmeContent.includes(repoPath)) {
+        missingRootReadmeLinks.push({
+          file: "README.md",
+          target: repoPath,
+          sample: "skill package entrypoint is not linked from README.md",
+        });
+      }
+    }
+  }
+
   return missingRootReadmeLinks;
 }
 

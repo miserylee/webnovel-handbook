@@ -20,6 +20,7 @@
 
 ### Changed
 
+- 增强 `scripts/check-handbook-consumability.mjs`，要求 `scripts/*.js|mjs` 维护脚本和 `skills/*/SKILL.md` 分发入口都能从根 README 被发现，避免工具脚本或 skill 包成为没有索引路径的孤儿文件。
 - 增强 `scripts/check-handbook-consumability.mjs`，新增根 README 对开源治理关键文件的链接覆盖检查，避免 `AGENTS.md`、贡献、安全、来源、去身份化、路线图和变更记录等根目录文件变成孤儿入口。
 - 增强 `scripts/check-handbook-consumability.mjs`，新增活跃入口体积护栏和超大 Markdown 白名单检查，防止 README、启动索引、决策入口和路由入口继续膨胀，也避免未来新增未路由的巨型文档。
 - 增强 `scripts/package-skill.mjs`，打包后反读 zip 目录并校验根层 `SKILL.md`、路径安全和轻量 skill 内容边界；`scripts/check-handbook-consumability.mjs` 同步检查打包脚本是否保留 zip entry 校验能力。
