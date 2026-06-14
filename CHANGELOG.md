@@ -23,6 +23,7 @@
 
 ### Changed
 
+- 修正 `scripts/check-handbook-consumability.mjs` 对 `docs/00-index.md` 最小阅读包的解析方式，改为识别分块清单里的“先读”字段，并拦截旧式密集 Markdown 表格回潮。
 - 收束 `docs/workflows/57-knowledge-base-routing-consolidation-guide.md` 的任务阶段层，移除重复维护的默认读取表，统一委托 `docs/00-index.md` 的“常用任务最小阅读包”作为可执行路线。
 - 修正 `docs/navigation/01-readme-details.md` 中根 `README.md` 的相对链接，并新增子目录文档裸链根入口的语义检查，避免链接存在但跳到同名目录 README。
 - 重构 `docs/00-index.md` 的“常用任务最小阅读包”，由超长 Markdown 表格改为任务小节加“先读/按需追加/不要默认读”字段，并收紧启动索引行长护栏。

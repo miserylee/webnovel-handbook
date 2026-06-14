@@ -763,7 +763,7 @@ async function checkDefaultRouteLargeDocLeakage() {
   const agentsContent = await fs.readFile(agentsPath, "utf8");
   const agentsTaskRouteBlock = extractBlock(
     agentsContent,
-    "再按任务读取专题：",
+    "再按",
     "## 来源优先级",
   );
 
@@ -791,22 +791,41 @@ async function checkDefaultRouteLargeDocLeakage() {
     "## 2. 常用任务最小阅读包",
     "## 3. 写稿质量硬入口",
   );
+  let currentMinimumReadField = "";
 
   for (const [index, line] of minimumReadSection.split(/\r?\n/).entries()) {
-    if (!line.startsWith("|") || !line.includes("`")) {
+    const trimmedLine = line.trim();
+
+    if (trimmedLine.startsWith("|")) {
+      leakageProblems.push({
+        file: "docs/00-index.md",
+        line: index + 1,
+        sample:
+          "minimum reading pack should use task subsections with explicit fields, not a dense Markdown table",
+      });
       continue;
     }
 
-    const cells = line.split("|").map((cell) => cell.trim());
-    const firstReadCell = cells[2] || "";
+    if (
+      trimmedLine === "先读：" ||
+      trimmedLine === "按需追加：" ||
+      trimmedLine === "不要默认读："
+    ) {
+      currentMinimumReadField = trimmedLine;
+      continue;
+    }
+
+    if (!line.startsWith("- ") || currentMinimumReadField !== "先读：") {
+      continue;
+    }
 
     for (const repoPath of disallowedDefaultRoutePaths) {
-      if (firstReadCell.includes(repoPath)) {
+      if (line.includes(repoPath)) {
         leakageProblems.push({
           file: "docs/00-index.md",
           line: index + 1,
           target: repoPath,
-          sample: "large or conditional document appears in a minimum-read cell",
+          sample: "large or conditional document appears in a minimum-read first-read item",
         });
       }
     }
