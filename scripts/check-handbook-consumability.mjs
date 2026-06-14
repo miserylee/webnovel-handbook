@@ -683,6 +683,41 @@ async function checkDocsNumericPrefixUniqueness(markdownFiles) {
   return duplicatePrefixProblems;
 }
 
+async function checkDocsHeadingPrefixConsistency(markdownFiles) {
+  const headingPrefixProblems = [];
+
+  for (const file of markdownFiles) {
+    const repoPath = toRepoPath(file);
+
+    if (!repoPath.startsWith("docs/")) {
+      continue;
+    }
+
+    const fileName = path.basename(repoPath);
+    const filePrefixMatch = fileName.match(/^(\d+)-/);
+
+    if (!filePrefixMatch) {
+      continue;
+    }
+
+    const firstHeading = (await fs.readFile(file, "utf8"))
+      .split(/\r?\n/)
+      .find((line) => line.startsWith("# "));
+    const headingPrefixMatch = firstHeading?.match(/^#\s+(\d+)(?:[.．、]|\s)/);
+
+    if (!headingPrefixMatch || headingPrefixMatch[1] === filePrefixMatch[1]) {
+      continue;
+    }
+
+    headingPrefixProblems.push({
+      file: repoPath,
+      sample: `filename prefix is ${filePrefixMatch[1]}, first heading prefix is ${headingPrefixMatch[1]}: ${firstHeading}`,
+    });
+  }
+
+  return headingPrefixProblems;
+}
+
 function printSection(title, rows) {
   console.log(`\n${title}: ${rows.length}`);
   for (const row of rows.slice(0, 50)) {
@@ -718,6 +753,7 @@ async function main() {
     skillPackagingProblems,
     markdownSizeGovernanceProblems,
     docsNumericPrefixProblems,
+    docsHeadingPrefixProblems,
   ] =
     await Promise.all([
       checkMarkdownLinks(markdownFiles),
@@ -734,6 +770,7 @@ async function main() {
       checkSkillPackagingSetup(),
       checkMarkdownSizeGovernance(markdownFiles),
       checkDocsNumericPrefixUniqueness(markdownFiles),
+      checkDocsHeadingPrefixConsistency(markdownFiles),
     ]);
 
   printSection("Broken Markdown links", brokenLinks);
@@ -756,6 +793,7 @@ async function main() {
   printSection("Skill packaging setup problems", skillPackagingProblems);
   printSection("Markdown size governance problems", markdownSizeGovernanceProblems);
   printSection("Docs numeric prefix problems", docsNumericPrefixProblems);
+  printSection("Docs heading prefix problems", docsHeadingPrefixProblems);
 
   const hasProblems =
     brokenLinks.length > 0 ||
@@ -771,7 +809,8 @@ async function main() {
     skillPackageProblems.length > 0 ||
     skillPackagingProblems.length > 0 ||
     markdownSizeGovernanceProblems.length > 0 ||
-    docsNumericPrefixProblems.length > 0;
+    docsNumericPrefixProblems.length > 0 ||
+    docsHeadingPrefixProblems.length > 0;
 
   if (hasProblems) {
     process.exitCode = 1;
