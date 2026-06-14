@@ -758,6 +758,52 @@ async function checkDefaultRouteLargeDocLeakage() {
   return leakageProblems;
 }
 
+async function checkAgentsRouteDelegation() {
+  const delegationProblems = [];
+  const agentsPath = path.join(repoRoot, "AGENTS.md");
+  const agentsContent = await fs.readFile(agentsPath, "utf8");
+  const agentsTaskRouteBlock = extractBlock(
+    agentsContent,
+    "再按",
+    "## 来源优先级",
+  );
+
+  if (!agentsTaskRouteBlock.includes("docs/00-index.md")) {
+    delegationProblems.push({
+      file: "AGENTS.md",
+      target: "docs/00-index.md",
+      sample: "AGENTS task routing should delegate to the startup index",
+    });
+  }
+
+  if (!agentsTaskRouteBlock.includes("常用任务最小阅读包")) {
+    delegationProblems.push({
+      file: "AGENTS.md",
+      target: "常用任务最小阅读包",
+      sample: "AGENTS task routing should name the minimum-reading table",
+    });
+  }
+
+  const routeDocPathPattern = /docs\/[A-Za-z0-9._/-]+\.md/g;
+  const routeDocs = new Set(agentsTaskRouteBlock.match(routeDocPathPattern) || []);
+  const allowedRouteDocs = new Set([
+    "docs/00-index.md",
+    "docs/workflows/57-knowledge-base-routing-consolidation-guide.md",
+  ]);
+
+  for (const repoPath of [...routeDocs].sort()) {
+    if (!allowedRouteDocs.has(repoPath)) {
+      delegationProblems.push({
+        file: "AGENTS.md",
+        target: repoPath,
+        sample: "AGENTS task routing should not duplicate detailed task routes; put them in docs/00-index.md",
+      });
+    }
+  }
+
+  return delegationProblems;
+}
+
 async function checkSkillPackageLayout() {
   const skillPackageProblems = [];
   const skillsDirectory = path.join(repoRoot, "skills");
@@ -1341,6 +1387,7 @@ async function main() {
     missingDocsIndexRequiredEntrypointCoverage,
     missingDocsIndexMinimumReadEntrypointCoverage,
     defaultRouteLargeDocLeakageProblems,
+    agentsRouteDelegationProblems,
     skillPackageProblems,
     skillStartupRoutingProblems,
     startupReadingConsistencyProblems,
@@ -1370,6 +1417,7 @@ async function main() {
       checkDocsIndexRequiredEntrypointCoverage(),
       checkDocsIndexMinimumReadEntrypointCoverage(),
       checkDefaultRouteLargeDocLeakage(),
+      checkAgentsRouteDelegation(),
       checkSkillPackageLayout(),
       checkSkillStartupRoutingConsistency(),
       checkStartupReadingConsistency(),
@@ -1420,6 +1468,7 @@ async function main() {
     "Default routes leaking large conditional docs",
     defaultRouteLargeDocLeakageProblems,
   );
+  printSection("AGENTS task route delegation problems", agentsRouteDelegationProblems);
   printSection("Skill package layout problems", skillPackageProblems);
   printSection("Skill startup routing problems", skillStartupRoutingProblems);
   printSection(
@@ -1452,6 +1501,7 @@ async function main() {
     missingDocsIndexRequiredEntrypointCoverage.length > 0 ||
     missingDocsIndexMinimumReadEntrypointCoverage.length > 0 ||
     defaultRouteLargeDocLeakageProblems.length > 0 ||
+    agentsRouteDelegationProblems.length > 0 ||
     skillPackageProblems.length > 0 ||
     skillStartupRoutingProblems.length > 0 ||
     startupReadingConsistencyProblems.length > 0 ||

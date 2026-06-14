@@ -19,12 +19,11 @@
 
 `docs/sources/01-source-inventory.md` 是大文件，不再作为默认整读入口。只有在新增来源、核查来源、处理引用边界或来源冲突时，才按关键词定向读取。
 
-再按任务读取专题：
+再按 `docs/00-index.md` 的“常用任务最小阅读包”读取专题。`AGENTS.md` 不再重复维护任务路线清单，避免和启动索引漂移。
 
-- 起草或修订章节：`docs/workflows/35-ai-agent-novel-creation-workflow.md`、`docs/workflows/38-chapter-production-pipeline-agent-handoff.md`、`docs/workflows/58-integrated-drafting-beta-review-revision-workflow.md`、`docs/core-writing/02-webnovel-principles.md`、`docs/core-writing/04-character-and-dialogue.md`、`docs/core-writing/11-human-writing-upgrade.md`、`docs/core-writing/06-ai-writing-guidelines.md`
-- 搭建新小说项目：`docs/workflows/43-commercial-project-greenlight-scorecard.md`、`docs/workflows/44-single-novel-project-initialization-package.md`、`docs/workflows/45-first-chapter-task-brief-production-gate.md`、`docs/workflows/03-project-workflow.md`、`docs/core-writing/07-continuity-ledger.md`
-- 设计大纲或连载节奏：`docs/core-writing/05-plot-and-serial-rhythm.md`
-- 审稿、试读、判断 AI 含量：`docs/feedback-revision/08-review-and-reader-feedback.md`、`docs/feedback-revision/09-case-notes.md`
+- 起草、续写、审稿、修订、开书、项目初始化、包装、数据复盘或知识库维护，都先回到 `docs/00-index.md` 选择本轮最小阅读包。
+- 如果任务路由不明、需要维护知识库或可能牵涉多个专题，再读 `docs/workflows/57-knowledge-base-routing-consolidation-guide.md`。
+- 大文件仍然只按需检索：来源清单、模板仓库和扩展目录不能因为“可能有用”就整篇读取。
 
 ## 来源优先级
 
