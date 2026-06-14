@@ -88,6 +88,11 @@ const requiredRootReadmeLinks = [
 
 const startupFirstReads = ["README.md", "AGENTS.md", "docs/00-index.md"];
 const sourceInventoryPath = "docs/sources/01-source-inventory.md";
+const largeConditionalStartupPaths = [
+  sourceInventoryPath,
+  "docs/templates/10-templates-and-checklists.md",
+  "docs/navigation/00-expanded-topic-catalog.md",
+];
 
 const routeSignalPattern =
   /(用途|适用对象|适用场景|核心用途|核心目标|目标：|适合|用于)/;
@@ -766,7 +771,7 @@ async function checkStartupReadingConsistency() {
       requiredPaths: startupFirstReads,
       startMarker: "## 每次先读",
       endMarker: "`docs/sources/01-source-inventory.md` 是大文件",
-      disallowedDefaultPaths: [sourceInventoryPath],
+      disallowedDefaultPaths: largeConditionalStartupPaths,
       missingBlockSample: "AGENTS.md is missing the minimal first-read section",
     },
     {
@@ -774,7 +779,7 @@ async function checkStartupReadingConsistency() {
       requiredPaths: startupFirstReads,
       startMarker: "## 0. 先读结论",
       endMarker: "不要默认整读以下大文件",
-      disallowedDefaultPaths: [sourceInventoryPath],
+      disallowedDefaultPaths: largeConditionalStartupPaths,
       missingBlockSample: "docs/00-index.md is missing the minimal first-read conclusion",
     },
     {
@@ -784,7 +789,7 @@ async function checkStartupReadingConsistency() {
         "For a new session or after context loss, read these files from the local clone:",
       endMarker: "For route-ambiguous tasks",
       disallowedDefaultPaths: [
-        sourceInventoryPath,
+        ...largeConditionalStartupPaths,
         "docs/workflows/57-knowledge-base-routing-consolidation-guide.md",
       ],
       missingBlockSample: "skill entrypoint is missing the minimal first-read block",

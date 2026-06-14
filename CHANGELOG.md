@@ -23,6 +23,7 @@
 
 ### Changed
 
+- 增强 `scripts/check-handbook-consumability.mjs`，扩展启动阅读一致性检查，防止来源清单、模板仓库和扩展目录等大文件被误放进默认启动阅读包。
 - 增强 `scripts/check-handbook-consumability.mjs`，将 `docs/00-index.md` 最小阅读包中的高频先读专题纳入关键入口清单，并新增反向检查，防止未来先读路径只写进索引却没有被关键入口规则守住。
 - 增强 `scripts/check-handbook-consumability.mjs`，将 `CHANGELOG.md` 纳入活跃入口体积护栏，防止变更记录在长期维护中继续无上限膨胀。
 - 增强 `scripts/check-handbook-consumability.mjs`，要求所有关键 `docs` 入口能从 `docs/00-index.md` 被发现，并把项目工作流与案例笔记补回启动索引，减少 agent 从 AGENTS 跳转时的路径断层。
