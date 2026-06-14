@@ -23,6 +23,7 @@
 
 ### Changed
 
+- 增强 `scripts/check-handbook-consumability.mjs`，要求所有关键 `docs` 入口能从 `docs/00-index.md` 被发现，并把项目工作流与案例笔记补回启动索引，减少 agent 从 AGENTS 跳转时的路径断层。
 - 增强 `scripts/check-handbook-consumability.mjs`，自动检查根目录新增 Markdown 文件是否从 README 可发现，避免未来新增公开说明文档后留下孤儿入口。
 - 增强 `scripts/check-handbook-consumability.mjs`，新增 README、AGENTS、`docs/00-index.md` 和轻量 skill 的启动最小阅读包一致性检查，确保默认只读薄入口，来源清单和路由规范保持条件读取。
 - 增强 `scripts/check-handbook-consumability.mjs`，把 `AGENTS.md` 中的任务路线专题纳入 required entrypoints，并新增 AGENTS 路线覆盖检查，防止协作说明里的必读文件没有被关键入口存在性和用途信号校验守住。

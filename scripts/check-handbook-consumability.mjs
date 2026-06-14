@@ -578,6 +578,32 @@ async function checkDocsDirectoryIndexCoverage() {
   return missingDirectoryIndexCoverage;
 }
 
+async function checkDocsIndexRequiredEntrypointCoverage() {
+  const missingDocsIndexCoverage = [];
+  const indexPath = path.join(repoRoot, "docs", "00-index.md");
+  const indexContent = await fs.readFile(indexPath, "utf8");
+
+  for (const repoPath of requiredEntrypoints) {
+    if (!repoPath.startsWith("docs/") || !markdownFilePattern.test(repoPath)) {
+      continue;
+    }
+
+    if (path.basename(repoPath).toLowerCase() === "readme.md") {
+      continue;
+    }
+
+    if (!indexContent.includes(repoPath)) {
+      missingDocsIndexCoverage.push({
+        file: "docs/00-index.md",
+        target: repoPath,
+        sample: "required docs entrypoint is not discoverable from the startup index",
+      });
+    }
+  }
+
+  return missingDocsIndexCoverage;
+}
+
 async function checkSkillPackageLayout() {
   const skillPackageProblems = [];
   const skillsDirectory = path.join(repoRoot, "skills");
@@ -1156,6 +1182,7 @@ async function main() {
     missingEntrypointRouteSignals,
     missingRootReadmeLinks,
     missingDirectoryIndexCoverage,
+    missingDocsIndexRequiredEntrypointCoverage,
     skillPackageProblems,
     skillStartupRoutingProblems,
     startupReadingConsistencyProblems,
@@ -1181,6 +1208,7 @@ async function main() {
       checkRequiredEntrypointRouteSignals(),
       checkRootReadmeLinkCoverage(),
       checkDocsDirectoryIndexCoverage(),
+      checkDocsIndexRequiredEntrypointCoverage(),
       checkSkillPackageLayout(),
       checkSkillStartupRoutingConsistency(),
       checkStartupReadingConsistency(),
@@ -1218,6 +1246,10 @@ async function main() {
     "Docs top-level directories missing index coverage",
     missingDirectoryIndexCoverage,
   );
+  printSection(
+    "Docs index missing required entrypoint coverage",
+    missingDocsIndexRequiredEntrypointCoverage,
+  );
   printSection("Skill package layout problems", skillPackageProblems);
   printSection("Skill startup routing problems", skillStartupRoutingProblems);
   printSection(
@@ -1246,6 +1278,7 @@ async function main() {
     missingEntrypointRouteSignals.length > 0 ||
     missingRootReadmeLinks.length > 0 ||
     missingDirectoryIndexCoverage.length > 0 ||
+    missingDocsIndexRequiredEntrypointCoverage.length > 0 ||
     skillPackageProblems.length > 0 ||
     skillStartupRoutingProblems.length > 0 ||
     startupReadingConsistencyProblems.length > 0 ||
