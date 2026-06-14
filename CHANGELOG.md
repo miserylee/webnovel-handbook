@@ -6,6 +6,7 @@
 
 ### Added
 
+- 新增 `docs/workflows/65-serial-project-kanban-change-control.md`，用于把 Kanban/Scrum 的可视化工作流、WIP 限制、完成定义和复盘机制迁移为连载小说项目管理规则。
 - MIT License。
 - 贡献指南 `CONTRIBUTING.md`。
 - 来源与版权政策 `SOURCE_POLICY.md`。

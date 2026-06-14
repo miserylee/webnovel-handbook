@@ -4870,3 +4870,20 @@
 - 使用边界：只抽象为通用 agent 工作流，不保留项目名、人物名、本机路径、未公开正文、聊天身份或可识别细节。
 - 可迁移结论：续写前必须核对人工正稿和上一章真实落点；大纲、聊天讨论和 AI 草稿不能覆盖正文事实；每章正稿或作者改稿后必须回写章节节奏、关键节点、包袱回收和主线支线推进台账。
 - 适用文档：`docs/core-writing/07-continuity-ledger.md`、`docs/workflows/38-chapter-production-pipeline-agent-handoff.md`、`docs/workflows/58-integrated-drafting-beta-review-revision-workflow.md`、`docs/templates/10-templates-and-checklists.md`。
+## 2026-06-15：连载项目看板、WIP 限制与完成定义
+
+用途：支撑 `docs/workflows/65-serial-project-kanban-change-control.md`，补足单本小说项目在连载期的任务流转、变更控制、阻塞处理和完成定义。
+
+来源：
+
+- Kanban University, The Official Guide to The Kanban Method: https://kanban.university/kanban-guide/
+- The Scrum Guide 2020: https://scrumguides.org/scrum-guide.html
+- Atlassian Agile Coach, Working with WIP limits for kanban: https://www.atlassian.com/agile/kanban/wip-limits
+
+吸收点：
+
+- Kanban 的可视化工作流、限制 WIP、显式工作策略和管理流动，迁移为“小说项目看板、任务卡、阻塞列和进行中限制”。
+- Scrum 的 Sprint Goal、Sprint Backlog、Definition of Done、Review/Retrospective，迁移为“章节/周期目标、完成定义、短周期复盘和未达标退回任务池”。
+- WIP 限制的实践说明，迁移为“同一时间只开少量正式章节、修订和主线变更，避免 agent 多线失忆”。
+
+使用边界：这些资料是通用项目管理方法，不是小说创作公式。迁移时只保留能提升连载协作、台账回写、变更透明和交付质量的部分；不能用看板替代人物、情绪、类型承诺和正文审稿。
