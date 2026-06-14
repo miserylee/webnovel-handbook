@@ -14,11 +14,12 @@
 
 不要把整个仓库塞进上下文。默认按渐进式披露读取：
 
-1. 读 [AGENTS.md](AGENTS.md)。
-2. 读 [docs/00-index.md](docs/00-index.md) 判断任务阶段和最小阅读包。
-3. 写稿、续写、审稿、改稿优先进入 [docs/workflows/58-integrated-drafting-beta-review-revision-workflow.md](./docs/workflows/58-integrated-drafting-beta-review-revision-workflow.md)。
-4. 人物、对白、人味、降低 AI 味优先读 [docs/core-writing/11-human-writing-upgrade.md](./docs/core-writing/11-human-writing-upgrade.md)、[docs/core-writing/37-project-style-bible-character-voice.md](./docs/core-writing/37-project-style-bible-character-voice.md)、[docs/core-writing/59-dialogue-comparison-reference.md](./docs/core-writing/59-dialogue-comparison-reference.md)。
-5. 需要找大量专题时，再定向检索 [docs/navigation/00-expanded-topic-catalog.md](./docs/navigation/00-expanded-topic-catalog.md)。
+1. 从 [README.md](README.md) 确认本仓库定位和渐进式读取原则。
+2. 读 [AGENTS.md](AGENTS.md)。
+3. 读 [docs/00-index.md](docs/00-index.md) 判断任务阶段和最小阅读包。
+4. 写稿、续写、审稿、改稿优先进入 [docs/workflows/58-integrated-drafting-beta-review-revision-workflow.md](./docs/workflows/58-integrated-drafting-beta-review-revision-workflow.md)。
+5. 人物、对白、人味、降低 AI 味优先读 [docs/core-writing/11-human-writing-upgrade.md](./docs/core-writing/11-human-writing-upgrade.md)、[docs/core-writing/37-project-style-bible-character-voice.md](./docs/core-writing/37-project-style-bible-character-voice.md)、[docs/core-writing/59-dialogue-comparison-reference.md](./docs/core-writing/59-dialogue-comparison-reference.md)。
+6. 需要找大量专题时，再定向检索 [docs/navigation/00-expanded-topic-catalog.md](./docs/navigation/00-expanded-topic-catalog.md)。
 
 更完整的阅读路线见 [docs/navigation/01-readme-details.md](./docs/navigation/01-readme-details.md)。
 

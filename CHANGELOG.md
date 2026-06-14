@@ -23,6 +23,7 @@
 
 ### Changed
 
+- 补齐 `README.md` 快速使用入口的自包含启动顺序，并让消费检查器要求该区块显式覆盖 `README.md`、`AGENTS.md`、`docs/00-index.md` 三个先读入口。
 - 整理历史 `CHANGELOG.md` 分类结构，将同一日期下重复的 Added/Changed/Fixed 等小节合并，并让消费检查器拦截重复分类标题。
 - 增强 `scripts/check-handbook-consumability.mjs`，新增连续问号型编码污染检查，防止中文内容被替换成连续问号后仍通过维护验证。
 - 整理历史 `CHANGELOG.md` 日期结构，将同一天的多段记录合并到单个日期标题下，并让消费检查器拦截重复日期标题。

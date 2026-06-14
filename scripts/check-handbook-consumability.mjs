@@ -944,7 +944,7 @@ async function checkStartupReadingConsistency() {
     },
     {
       file: "README.md",
-      requiredPaths: ["AGENTS.md", "docs/00-index.md"],
+      requiredPaths: startupFirstReads,
       startMarker: "## 快速使用",
       endMarker: "更完整的阅读路线",
       disallowedDefaultPaths: [sourceInventoryPath],
