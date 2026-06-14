@@ -72,6 +72,9 @@ const requiredRootReadmeLinks = [
   "SOURCE_POLICY.md",
 ];
 
+const startupFirstReads = ["README.md", "AGENTS.md", "docs/00-index.md"];
+const sourceInventoryPath = "docs/sources/01-source-inventory.md";
+
 const routeSignalPattern =
   /(用途|适用对象|适用场景|核心用途|核心目标|目标：|适合|用于)/;
 
@@ -130,6 +133,18 @@ async function exists(absolutePath) {
   } catch {
     return false;
   }
+}
+
+function extractBlock(content, startMarker, endMarker) {
+  const startIndex = content.indexOf(startMarker);
+
+  if (startIndex === -1) {
+    return "";
+  }
+
+  const endIndex = content.indexOf(endMarker, startIndex + startMarker.length);
+
+  return content.slice(startIndex, endIndex === -1 ? undefined : endIndex);
 }
 
 async function checkMarkdownLinks(markdownFiles) {
@@ -612,9 +627,8 @@ async function checkSkillStartupRoutingConsistency() {
     /For a new session or after context loss, read these files from the local clone:\s*\n([\s\S]*?)\n\s*For /,
   );
   const firstReadsBlock = firstReadsMatch?.[1] || "";
-  const requiredFirstReads = ["README.md", "AGENTS.md", "docs/00-index.md"];
 
-  for (const repoPath of requiredFirstReads) {
+  for (const repoPath of startupFirstReads) {
     if (!firstReadsBlock.includes(`\`${repoPath}\``)) {
       startupProblems.push({
         file: "skills/webnovel-handbook/SKILL.md",
@@ -638,6 +652,96 @@ async function checkSkillStartupRoutingConsistency() {
       target: "docs/workflows/57-knowledge-base-routing-consolidation-guide.md",
       sample: "skill is missing the conditional routing-guide trigger",
     });
+  }
+
+  return startupProblems;
+}
+
+async function checkStartupReadingConsistency() {
+  const startupProblems = [];
+  const startupBlocks = [
+    {
+      file: "AGENTS.md",
+      requiredPaths: startupFirstReads,
+      startMarker: "## 每次先读",
+      endMarker: "`docs/sources/01-source-inventory.md` 是大文件",
+      disallowedDefaultPaths: [sourceInventoryPath],
+      missingBlockSample: "AGENTS.md is missing the minimal first-read section",
+    },
+    {
+      file: "docs/00-index.md",
+      requiredPaths: startupFirstReads,
+      startMarker: "## 0. 先读结论",
+      endMarker: "不要默认整读以下大文件",
+      disallowedDefaultPaths: [sourceInventoryPath],
+      missingBlockSample: "docs/00-index.md is missing the minimal first-read conclusion",
+    },
+    {
+      file: "skills/webnovel-handbook/SKILL.md",
+      requiredPaths: startupFirstReads,
+      startMarker:
+        "For a new session or after context loss, read these files from the local clone:",
+      endMarker: "For route-ambiguous tasks",
+      disallowedDefaultPaths: [
+        sourceInventoryPath,
+        "docs/workflows/57-knowledge-base-routing-consolidation-guide.md",
+      ],
+      missingBlockSample: "skill entrypoint is missing the minimal first-read block",
+    },
+    {
+      file: "README.md",
+      requiredPaths: ["AGENTS.md", "docs/00-index.md"],
+      startMarker: "## 快速使用",
+      endMarker: "更完整的阅读路线",
+      disallowedDefaultPaths: [sourceInventoryPath],
+      missingBlockSample: "README.md is missing the quick-use routing block",
+    },
+  ];
+
+  for (const {
+    file,
+    requiredPaths,
+    startMarker,
+    endMarker,
+    disallowedDefaultPaths,
+    missingBlockSample,
+  } of startupBlocks) {
+    const absolutePath = path.join(repoRoot, file);
+
+    if (!(await exists(absolutePath))) {
+      continue;
+    }
+
+    const content = await fs.readFile(absolutePath, "utf8");
+    const block = extractBlock(content, startMarker, endMarker);
+
+    if (!block) {
+      startupProblems.push({
+        file,
+        sample: missingBlockSample,
+      });
+      continue;
+    }
+
+    for (const repoPath of requiredPaths) {
+      if (!block.includes(repoPath)) {
+        startupProblems.push({
+          file,
+          target: repoPath,
+          sample: "minimal startup reading route is missing a required thin entrypoint",
+        });
+      }
+    }
+
+    for (const repoPath of disallowedDefaultPaths) {
+      if (block.includes(repoPath)) {
+        startupProblems.push({
+          file,
+          target: repoPath,
+          sample: "large or conditional document appears in the default startup reading block",
+        });
+      }
+    }
   }
 
   return startupProblems;
@@ -1035,6 +1139,7 @@ async function main() {
     missingDirectoryIndexCoverage,
     skillPackageProblems,
     skillStartupRoutingProblems,
+    startupReadingConsistencyProblems,
     skillPackagingProblems,
     packageJsonProblems,
     markdownSizeGovernanceProblems,
@@ -1059,6 +1164,7 @@ async function main() {
       checkDocsDirectoryIndexCoverage(),
       checkSkillPackageLayout(),
       checkSkillStartupRoutingConsistency(),
+      checkStartupReadingConsistency(),
       checkSkillPackagingSetup(),
       checkPackageJsonScripts(),
       checkMarkdownSizeGovernance(markdownFiles),
@@ -1095,6 +1201,10 @@ async function main() {
   );
   printSection("Skill package layout problems", skillPackageProblems);
   printSection("Skill startup routing problems", skillStartupRoutingProblems);
+  printSection(
+    "Startup reading consistency problems",
+    startupReadingConsistencyProblems,
+  );
   printSection("Skill packaging setup problems", skillPackagingProblems);
   printSection("Package.json script problems", packageJsonProblems);
   printSection("Markdown size governance problems", markdownSizeGovernanceProblems);
@@ -1119,6 +1229,7 @@ async function main() {
     missingDirectoryIndexCoverage.length > 0 ||
     skillPackageProblems.length > 0 ||
     skillStartupRoutingProblems.length > 0 ||
+    startupReadingConsistencyProblems.length > 0 ||
     skillPackagingProblems.length > 0 ||
     packageJsonProblems.length > 0 ||
     markdownSizeGovernanceProblems.length > 0 ||
