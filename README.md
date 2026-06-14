@@ -52,4 +52,6 @@
 - License: [MIT](LICENSE)
 - 主要语言：中文
 - 主要用途：中文网文创作知识库与 agent 工作流
+- 协作入口：[AGENTS.md](AGENTS.md)、[CONTRIBUTING.md](CONTRIBUTING.md)、[CHANGELOG.md](CHANGELOG.md)、[ROADMAP.md](ROADMAP.md)
+- 开源治理：[SOURCE_POLICY.md](SOURCE_POLICY.md)、[SAFETY.md](SAFETY.md)、[DEIDENTIFICATION.md](DEIDENTIFICATION.md)、[SECURITY.md](SECURITY.md)、[CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
 - 详细贡献、安全、来源和去身份化规则见 [docs/navigation/00-readme-details.md](./docs/navigation/00-readme-details.md)

@@ -48,6 +48,19 @@ const requiredEntrypoints = [
   "docs/governance/99-decision-log.md",
 ];
 
+const requiredRootReadmeLinks = [
+  "AGENTS.md",
+  "CHANGELOG.md",
+  "CODE_OF_CONDUCT.md",
+  "CONTRIBUTING.md",
+  "DEIDENTIFICATION.md",
+  "LICENSE",
+  "ROADMAP.md",
+  "SAFETY.md",
+  "SECURITY.md",
+  "SOURCE_POLICY.md",
+];
+
 async function walk(directory) {
   const entries = await fs.readdir(directory, { withFileTypes: true });
   const files = [];
@@ -364,6 +377,24 @@ async function checkRequiredEntrypoints() {
   return missingEntrypoints;
 }
 
+async function checkRootReadmeLinkCoverage() {
+  const missingRootReadmeLinks = [];
+  const readmePath = path.join(repoRoot, "README.md");
+  const readmeContent = await fs.readFile(readmePath, "utf8");
+
+  for (const repoPath of requiredRootReadmeLinks) {
+    if (!readmeContent.includes(repoPath)) {
+      missingRootReadmeLinks.push({
+        file: "README.md",
+        target: repoPath,
+        sample: "root public file is not linked from README.md",
+      });
+    }
+  }
+
+  return missingRootReadmeLinks;
+}
+
 async function checkDocsDirectoryIndexCoverage() {
   const missingDirectoryIndexCoverage = [];
   const docsDirectory = path.join(repoRoot, "docs");
@@ -602,6 +633,7 @@ async function main() {
     publicHygieneResidue,
     missingDirectoryReadmeCoverage,
     missingEntrypoints,
+    missingRootReadmeLinks,
     missingDirectoryIndexCoverage,
     skillPackageProblems,
     skillPackagingProblems,
@@ -616,6 +648,7 @@ async function main() {
       checkPublicHygieneResidue(textFiles),
       checkDirectoryReadmeCoverage(markdownFiles),
       checkRequiredEntrypoints(),
+      checkRootReadmeLinkCoverage(),
       checkDocsDirectoryIndexCoverage(),
       checkSkillPackageLayout(),
       checkSkillPackagingSetup(),
@@ -633,6 +666,7 @@ async function main() {
     missingDirectoryReadmeCoverage,
   );
   printSection("Missing required agent entrypoints", missingEntrypoints);
+  printSection("Missing root README links", missingRootReadmeLinks);
   printSection(
     "Docs top-level directories missing index coverage",
     missingDirectoryIndexCoverage,
@@ -650,6 +684,7 @@ async function main() {
     publicHygieneResidue.length > 0 ||
     missingDirectoryReadmeCoverage.length > 0 ||
     missingEntrypoints.length > 0 ||
+    missingRootReadmeLinks.length > 0 ||
     missingDirectoryIndexCoverage.length > 0 ||
     skillPackageProblems.length > 0 ||
     skillPackagingProblems.length > 0 ||
