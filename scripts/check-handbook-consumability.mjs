@@ -1415,7 +1415,7 @@ async function checkMarkdownSizeGovernance(markdownFiles) {
   const activeEntrypointBudgets = new Map([
     ["README.md", 10_000],
     ["AGENTS.md", 18_000],
-    ["CHANGELOG.md", 24_000],
+    ["CHANGELOG.md", 8_000],
     ["docs/00-index.md", 28_000],
     ["docs/governance/99-decision-log.md", 10_000],
     ["docs/workflows/57-knowledge-base-routing-consolidation-guide.md", 24_000],
