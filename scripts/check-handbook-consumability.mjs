@@ -33,18 +33,28 @@ const requiredEntrypoints = [
   "docs/navigation/README.md",
   "docs/navigation/00-expanded-topic-catalog.md",
   "docs/navigation/01-readme-details.md",
+  "docs/sources/01-source-inventory.md",
   "docs/workflows/README.md",
+  "docs/workflows/03-project-workflow.md",
   "docs/workflows/35-ai-agent-novel-creation-workflow.md",
+  "docs/workflows/38-chapter-production-pipeline-agent-handoff.md",
+  "docs/workflows/43-commercial-project-greenlight-scorecard.md",
   "docs/workflows/44-single-novel-project-initialization-package.md",
   "docs/workflows/45-first-chapter-task-brief-production-gate.md",
   "docs/workflows/57-knowledge-base-routing-consolidation-guide.md",
   "docs/workflows/58-integrated-drafting-beta-review-revision-workflow.md",
+  "docs/workflows/64-single-novel-project-document-granularity.md",
   "docs/templates/10-templates-and-checklists.md",
+  "docs/core-writing/02-webnovel-principles.md",
   "docs/core-writing/04-character-and-dialogue.md",
+  "docs/core-writing/05-plot-and-serial-rhythm.md",
   "docs/core-writing/06-ai-writing-guidelines.md",
+  "docs/core-writing/07-continuity-ledger.md",
   "docs/core-writing/11-human-writing-upgrade.md",
   "docs/core-writing/37-project-style-bible-character-voice.md",
   "docs/core-writing/59-dialogue-comparison-reference.md",
+  "docs/feedback-revision/08-review-and-reader-feedback.md",
+  "docs/feedback-revision/09-case-notes.md",
   "docs/governance/99-decision-log.md",
 ];
 
@@ -388,6 +398,27 @@ async function checkRequiredEntrypoints() {
   }
 
   return missingEntrypoints;
+}
+
+async function checkAgentsInstructionEntrypointCoverage() {
+  const coverageProblems = [];
+  const agentsPath = path.join(repoRoot, "AGENTS.md");
+  const agentsContent = await fs.readFile(agentsPath, "utf8");
+  const agentDocPathPattern = /docs\/[A-Za-z0-9._/-]+\.md/g;
+  const requiredEntrypointSet = new Set(requiredEntrypoints);
+  const agentDocPaths = new Set(agentsContent.match(agentDocPathPattern) || []);
+
+  for (const repoPath of [...agentDocPaths].sort()) {
+    if (!requiredEntrypointSet.has(repoPath)) {
+      coverageProblems.push({
+        file: "AGENTS.md",
+        target: repoPath,
+        sample: "AGENTS.md references a task route that is not listed in requiredEntrypoints",
+      });
+    }
+  }
+
+  return coverageProblems;
 }
 
 async function checkRequiredEntrypointRouteSignals() {
@@ -998,6 +1029,7 @@ async function main() {
     publicHygieneResidue,
     missingDirectoryReadmeCoverage,
     missingEntrypoints,
+    missingAgentsInstructionEntrypointCoverage,
     missingEntrypointRouteSignals,
     missingRootReadmeLinks,
     missingDirectoryIndexCoverage,
@@ -1021,6 +1053,7 @@ async function main() {
       checkPublicHygieneResidue(textFiles),
       checkDirectoryReadmeCoverage(markdownFiles),
       checkRequiredEntrypoints(),
+      checkAgentsInstructionEntrypointCoverage(),
       checkRequiredEntrypointRouteSignals(),
       checkRootReadmeLinkCoverage(),
       checkDocsDirectoryIndexCoverage(),
@@ -1047,6 +1080,10 @@ async function main() {
     missingDirectoryReadmeCoverage,
   );
   printSection("Missing required agent entrypoints", missingEntrypoints);
+  printSection(
+    "Missing AGENTS route entrypoint coverage",
+    missingAgentsInstructionEntrypointCoverage,
+  );
   printSection(
     "Missing required entrypoint route signals",
     missingEntrypointRouteSignals,
@@ -1076,6 +1113,7 @@ async function main() {
     publicHygieneResidue.length > 0 ||
     missingDirectoryReadmeCoverage.length > 0 ||
     missingEntrypoints.length > 0 ||
+    missingAgentsInstructionEntrypointCoverage.length > 0 ||
     missingEntrypointRouteSignals.length > 0 ||
     missingRootReadmeLinks.length > 0 ||
     missingDirectoryIndexCoverage.length > 0 ||
