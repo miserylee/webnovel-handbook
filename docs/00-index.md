@@ -39,18 +39,205 @@
 
 ## 2. 常用任务最小阅读包
 
-| 任务 | 先读 | 按需追加 | 不要默认读 |
-|---|---|---|---|
-| 知识库维护、索引治理 | `README.md`、`AGENTS.md`、`docs/00-index.md`、`docs/workflows/57-knowledge-base-routing-consolidation-guide.md`、`docs/governance/99-decision-log.md` | 被修改的目标专题、`SOURCE_POLICY.md`、`DEIDENTIFICATION.md`、`SAFETY.md`、`node scripts/check-handbook-consumability.mjs` | `docs/sources/01-source-inventory.md` 全文、`docs/templates/10-templates-and-checklists.md` 全文 |
-| 开新书、重定方向 | `docs/workflows/35-ai-agent-novel-creation-workflow.md`、`docs/workflows/43-commercial-project-greenlight-scorecard.md`、`docs/workflows/44-single-novel-project-initialization-package.md`、`docs/workflows/45-first-chapter-task-brief-production-gate.md` | `docs/market-serialization/29-reader-expectation-genre-promise-selling-point.md`、`docs/market-serialization/13-genre-patterns.md`、`docs/market-serialization/16-title-blurb-tag-packaging.md`、`docs/market-serialization/17-cover-visual-packaging.md`、`docs/market-serialization/34-market-research-comp-analysis.md` | 直接写 `ch001.md` |
-| 单本小说项目初始化 | `docs/workflows/44-single-novel-project-initialization-package.md`、`docs/workflows/64-single-novel-project-document-granularity.md`、`docs/workflows/65-serial-project-kanban-change-control.md`、`docs/workflows/35-ai-agent-novel-creation-workflow.md`、`docs/core-writing/07-continuity-ledger.md`、`docs/core-writing/37-project-style-bible-character-voice.md` | `docs/templates/10-templates-and-checklists.md` 中的项目模板、`docs/workflows/45-first-chapter-task-brief-production-gate.md` 的第一章许可 | 把本知识库通用方法整段搬进项目 |
-| 起草或续写章节 | `docs/workflows/58-integrated-drafting-beta-review-revision-workflow.md`、`docs/core-writing/06-ai-writing-guidelines.md`、`docs/core-writing/11-human-writing-upgrade.md`、`docs/core-writing/37-project-style-bible-character-voice.md`、`docs/core-writing/07-continuity-ledger.md`、`docs/core-writing/32-chapter-paragraph-mobile-reading-experience.md` | `docs/core-writing/59-dialogue-comparison-reference.md`、`docs/core-writing/04-character-and-dialogue.md`、`docs/core-writing/05-plot-and-serial-rhythm.md`、题材/机制/情绪/悬疑/喜剧专题 | 只凭大纲直接扩写正文 |
-| 人物、对白、降低 AI 味 | `docs/core-writing/59-dialogue-comparison-reference.md`、`docs/core-writing/04-character-and-dialogue.md`、`docs/core-writing/37-project-style-bible-character-voice.md`、`docs/core-writing/11-human-writing-upgrade.md`、`docs/core-writing/06-ai-writing-guidelines.md` | `docs/storycraft/25-emotion-line-relationship-progression.md`、`docs/storycraft/27-comedy-gags-lightness.md` | 只替换词语、只加口癖 |
-| 审稿、试读、改稿 | `docs/workflows/58-integrated-drafting-beta-review-revision-workflow.md`、`docs/feedback-revision/08-review-and-reader-feedback.md`、`docs/core-writing/06-ai-writing-guidelines.md`、`docs/core-writing/11-human-writing-upgrade.md`、`docs/feedback-revision/33-revision-rewrite-version-workflow.md` | `docs/core-writing/59-dialogue-comparison-reference.md`、`docs/core-writing/37-project-style-bible-character-voice.md`、`docs/core-writing/07-continuity-ledger.md`、`docs/feedback-revision/18-reader-data-feedback-diagnosis.md`、`docs/feedback-revision/43-feedback-revision-priority-queue.md`、`docs/safety-research/20-content-compliance-risk-review.md` | 只给“加强/优化/自然一点” |
-| 逻辑、连续性、伏笔、反转 | `docs/workflows/58-integrated-drafting-beta-review-revision-workflow.md`、`docs/core-writing/07-continuity-ledger.md`、`docs/core-writing/32-chapter-paragraph-mobile-reading-experience.md`、`docs/core-writing/05-plot-and-serial-rhythm.md` | `docs/storycraft/26-suspense-reversal-information-control.md`、`docs/storycraft/63-foreshadowing-callback-reader-memory-management.md` | 把逻辑漏洞改成漂亮句 |
-| 投稿、包装、发布前材料 | `docs/market-serialization/16-title-blurb-tag-packaging.md`、`docs/market-serialization/17-cover-visual-packaging.md`、`docs/market-serialization/12-platform-and-channel-differences.md`、`docs/market-serialization/29-reader-expectation-genre-promise-selling-point.md` | `docs/market-serialization/19-serialization-update-operations.md`、`docs/safety-research/20-content-compliance-risk-review.md` | 把单次封面/书名方案当通用规则 |
-| 发布后数据与评论复盘 | `docs/feedback-revision/18-reader-data-feedback-diagnosis.md`、`docs/feedback-revision/40-serial-data-tuning-loop.md`、`docs/feedback-revision/41-reader-comment-coding-feedback-clustering.md`、`docs/feedback-revision/42-editor-reader-data-feedback-conflict-resolution.md`、`docs/feedback-revision/43-feedback-revision-priority-queue.md` | `docs/feedback-revision/33-revision-rewrite-version-workflow.md`、对应章节/包装专题 | 编造没有提供的数据 |
-| 现实职业、行业、县域公共事务 | `docs/reality-reference/30-profession-industry-life-detail-credibility.md`、`docs/reality-reference/31-region-era-social-custom-texture.md` | 用关键词检索 `docs/navigation/00-expanded-topic-catalog.md` 后读取目标专题 | 先读全部县域专题 |
+先匹配任务标题，再读取对应小节。每个任务只读“先读”字段；“按需追加”必须有明确场景触发。
+
+### 2.1 知识库维护、索引治理
+
+先读：
+
+- `README.md`
+- `AGENTS.md`
+- `docs/00-index.md`
+- `docs/workflows/57-knowledge-base-routing-consolidation-guide.md`
+- `docs/governance/99-decision-log.md`
+
+按需追加：
+
+- 被修改的目标专题
+- `SOURCE_POLICY.md`
+- `DEIDENTIFICATION.md`
+- `SAFETY.md`
+- `node scripts/check-handbook-consumability.mjs`
+
+不要默认读：
+
+- `docs/sources/01-source-inventory.md` 全文
+- `docs/templates/10-templates-and-checklists.md` 全文
+
+### 2.2 开新书、重定方向
+
+先读：
+
+- `docs/workflows/35-ai-agent-novel-creation-workflow.md`
+- `docs/workflows/43-commercial-project-greenlight-scorecard.md`
+- `docs/workflows/44-single-novel-project-initialization-package.md`
+- `docs/workflows/45-first-chapter-task-brief-production-gate.md`
+
+按需追加：
+
+- `docs/market-serialization/29-reader-expectation-genre-promise-selling-point.md`
+- `docs/market-serialization/13-genre-patterns.md`
+- `docs/market-serialization/16-title-blurb-tag-packaging.md`
+- `docs/market-serialization/17-cover-visual-packaging.md`
+- `docs/market-serialization/34-market-research-comp-analysis.md`
+
+不要默认读：
+
+- 直接写 `ch001.md`
+
+### 2.3 单本小说项目初始化
+
+先读：
+
+- `docs/workflows/44-single-novel-project-initialization-package.md`
+- `docs/workflows/64-single-novel-project-document-granularity.md`
+- `docs/workflows/65-serial-project-kanban-change-control.md`
+- `docs/workflows/35-ai-agent-novel-creation-workflow.md`
+- `docs/core-writing/07-continuity-ledger.md`
+- `docs/core-writing/37-project-style-bible-character-voice.md`
+
+按需追加：
+
+- `docs/templates/10-templates-and-checklists.md` 中的项目模板
+- `docs/workflows/45-first-chapter-task-brief-production-gate.md` 的第一章许可
+
+不要默认读：
+
+- 把本知识库通用方法整段搬进项目
+
+### 2.4 起草或续写章节
+
+先读：
+
+- `docs/workflows/58-integrated-drafting-beta-review-revision-workflow.md`
+- `docs/core-writing/06-ai-writing-guidelines.md`
+- `docs/core-writing/11-human-writing-upgrade.md`
+- `docs/core-writing/37-project-style-bible-character-voice.md`
+- `docs/core-writing/07-continuity-ledger.md`
+- `docs/core-writing/32-chapter-paragraph-mobile-reading-experience.md`
+
+按需追加：
+
+- `docs/core-writing/59-dialogue-comparison-reference.md`
+- `docs/core-writing/04-character-and-dialogue.md`
+- `docs/core-writing/05-plot-and-serial-rhythm.md`
+- 题材、机制、情绪、悬疑或喜剧专题
+
+不要默认读：
+
+- 只凭大纲直接扩写正文
+
+### 2.5 人物、对白、降低 AI 味
+
+先读：
+
+- `docs/core-writing/59-dialogue-comparison-reference.md`
+- `docs/core-writing/04-character-and-dialogue.md`
+- `docs/core-writing/37-project-style-bible-character-voice.md`
+- `docs/core-writing/11-human-writing-upgrade.md`
+- `docs/core-writing/06-ai-writing-guidelines.md`
+
+按需追加：
+
+- `docs/storycraft/25-emotion-line-relationship-progression.md`
+- `docs/storycraft/27-comedy-gags-lightness.md`
+
+不要默认读：
+
+- 只替换词语、只加口癖
+
+### 2.6 审稿、试读、改稿
+
+先读：
+
+- `docs/workflows/58-integrated-drafting-beta-review-revision-workflow.md`
+- `docs/feedback-revision/08-review-and-reader-feedback.md`
+- `docs/core-writing/06-ai-writing-guidelines.md`
+- `docs/core-writing/11-human-writing-upgrade.md`
+- `docs/feedback-revision/33-revision-rewrite-version-workflow.md`
+
+按需追加：
+
+- `docs/core-writing/59-dialogue-comparison-reference.md`
+- `docs/core-writing/37-project-style-bible-character-voice.md`
+- `docs/core-writing/07-continuity-ledger.md`
+- `docs/feedback-revision/18-reader-data-feedback-diagnosis.md`
+- `docs/feedback-revision/43-feedback-revision-priority-queue.md`
+- `docs/safety-research/20-content-compliance-risk-review.md`
+
+不要默认读：
+
+- 只给“加强/优化/自然一点”
+
+### 2.7 逻辑、连续性、伏笔、反转
+
+先读：
+
+- `docs/workflows/58-integrated-drafting-beta-review-revision-workflow.md`
+- `docs/core-writing/07-continuity-ledger.md`
+- `docs/core-writing/32-chapter-paragraph-mobile-reading-experience.md`
+- `docs/core-writing/05-plot-and-serial-rhythm.md`
+
+按需追加：
+
+- `docs/storycraft/26-suspense-reversal-information-control.md`
+- `docs/storycraft/63-foreshadowing-callback-reader-memory-management.md`
+
+不要默认读：
+
+- 把逻辑漏洞改成漂亮句
+
+### 2.8 投稿、包装、发布前材料
+
+先读：
+
+- `docs/market-serialization/16-title-blurb-tag-packaging.md`
+- `docs/market-serialization/17-cover-visual-packaging.md`
+- `docs/market-serialization/12-platform-and-channel-differences.md`
+- `docs/market-serialization/29-reader-expectation-genre-promise-selling-point.md`
+
+按需追加：
+
+- `docs/market-serialization/19-serialization-update-operations.md`
+- `docs/safety-research/20-content-compliance-risk-review.md`
+
+不要默认读：
+
+- 把单次封面或书名方案当通用规则
+
+### 2.9 发布后数据与评论复盘
+
+先读：
+
+- `docs/feedback-revision/18-reader-data-feedback-diagnosis.md`
+- `docs/feedback-revision/40-serial-data-tuning-loop.md`
+- `docs/feedback-revision/41-reader-comment-coding-feedback-clustering.md`
+- `docs/feedback-revision/42-editor-reader-data-feedback-conflict-resolution.md`
+- `docs/feedback-revision/43-feedback-revision-priority-queue.md`
+
+按需追加：
+
+- `docs/feedback-revision/33-revision-rewrite-version-workflow.md`
+- 对应章节或包装专题
+
+不要默认读：
+
+- 编造没有提供的数据
+
+### 2.10 现实职业、行业、县域公共事务
+
+先读：
+
+- `docs/reality-reference/30-profession-industry-life-detail-credibility.md`
+- `docs/reality-reference/31-region-era-social-custom-texture.md`
+
+按需追加：
+
+- 用关键词检索 `docs/navigation/00-expanded-topic-catalog.md` 后读取目标专题
+
+不要默认读：
+
+- 先读全部县域专题
 
 ## 3. 写稿质量硬入口
 

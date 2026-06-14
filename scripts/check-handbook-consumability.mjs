@@ -1274,7 +1274,7 @@ async function checkEntrypointLineLengthGovernance() {
     ["README.md", 360],
     ["AGENTS.md", 360],
     ["CHANGELOG.md", 360],
-    ["docs/00-index.md", 800],
+    ["docs/00-index.md", 420],
     ["docs/governance/99-decision-log.md", 360],
     ["docs/workflows/57-knowledge-base-routing-consolidation-guide.md", 360],
   ]);
