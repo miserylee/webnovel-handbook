@@ -1,0 +1,173 @@
+# 01. Changelog detail archive
+
+??????  
+??????? `CHANGELOG.md` ???????????????????????????????????????????????????/??????
+
+## ????
+
+- ????? `CHANGELOG.md` ????
+- ??????????????????????????
+- ????????????????????????????????????????????
+- ? `CHANGELOG.md` ??????????????????????????????
+
+## ????
+
+????? 2026-06-15 ??? `CHANGELOG.md` ????????
+
+## Unreleased
+
+### Added
+
+- 新增 `scripts/verify-maintenance.mjs` 和 `npm run verify`，把知识库可消费性检查、轻量 skill 打包校验、本机已安装 skill 同步检查串成一条跨平台维护命令。
+- 新增 `package.json` 作为跨平台维护命令入口，提供 `npm run check`、`npm run package-skill`、`npm run sync-skill:check` 和 `npm run sync-skill`，并让消费检查器校验这些脚本存在。
+- 新增 `scripts/sync-installed-skill.mjs`，用于检查或同步本机已安装的 `webnovel-handbook` skill，避免仓库分发入口更新后本机 agent 继续读取旧规则。
+- 新增 `docs/feedback-revision/43-feedback-revision-priority-queue.md`，把 RICE/MoSCoW 等优先级方法迁移为连载反馈修订队列，帮助 agent 在多源反馈中决定本轮改、后文补、观察或拒绝。
+- 新增 `docs/workflows/65-serial-project-kanban-change-control.md`，用于把 Kanban/Scrum 的可视化工作流、WIP 限制、完成定义和复盘机制迁移为连载小说项目管理规则。
+- MIT License。
+- 贡献指南 `CONTRIBUTING.md`。
+- 来源与版权政策 `SOURCE_POLICY.md`。
+- 安全与内容边界 `SAFETY.md`。
+- 安全报告说明 `SECURITY.md`。
+- 社区行为准则 `CODE_OF_CONDUCT.md`。
+- 路线图 `ROADMAP.md`。
+- GitHub PR 模板和 issue 模板。
+- 新增 `scripts/check-handbook-consumability.mjs`，用于检查 agent 消费入口的 Markdown 链接、仓库内 `docs/...md` 裸路径和常见编码污染。
+
+### Changed
+
+- 同步 `AGENTS.md` 与消费检查器的大文件口径，将 README 下沉说明纳入条件读取清单，防止后续 agent 把它当默认整读入口。
+- 增强 `scripts/check-handbook-consumability.mjs` 的大文件治理，要求 README 下沉长页同时出现在 `docs/00-index.md` 的“不默认整读大文件”清单和“大文件使用方式”小节。
+- 将 `docs/navigation/01-readme-details.md` 显式纳入 `docs/00-index.md` 的大文件按需读取规则，避免 agent 顺着 README 扩展说明默认整读超长下沉页。
+- 同步补充 `docs/navigation/01-readme-details.md` 的维护检查说明，明确最小阅读包三字段结构、旧式密集表格回潮和 `57` 路由规范重复任务表都属于可消费性护栏。
+- 增强 `scripts/check-handbook-consumability.mjs`，要求 `docs/00-index.md` 的每个最小阅读包任务小节都保留 `先读`、`按需追加`、`不要默认读` 三个字段且各有条目。
+- 增强 `scripts/check-handbook-consumability.mjs` 的路由委托检查，要求 `57` 路由规范的任务阶段层继续委托 `docs/00-index.md`，并拦截重复任务路线表回潮。
+- 修正 `scripts/check-handbook-consumability.mjs` 对 `docs/00-index.md` 最小阅读包的解析方式，改为识别分块清单里的“先读”字段，并拦截旧式密集 Markdown 表格回潮。
+- 收束 `docs/workflows/57-knowledge-base-routing-consolidation-guide.md` 的任务阶段层，移除重复维护的默认读取表，统一委托 `docs/00-index.md` 的“常用任务最小阅读包”作为可执行路线。
+- 修正 `docs/navigation/01-readme-details.md` 中根 `README.md` 的相对链接，并新增子目录文档裸链根入口的语义检查，避免链接存在但跳到同名目录 README。
+- 重构 `docs/00-index.md` 的“常用任务最小阅读包”，由超长 Markdown 表格改为任务小节加“先读/按需追加/不要默认读”字段，并收紧启动索引行长护栏。
+- 补强超大白名单文档治理：模板仓库、历史决策归档和 README 扩展说明均在开头声明按标题、日期或关键词定向读取，并让消费检查器拦截缺少开头路由提示的白名单长文档。
+- 收束 `README.md` 维护检查说明，把完整检查项下沉到 `docs/navigation/01-readme-details.md`，并新增活跃入口超长行护栏，避免根入口重新膨胀成明细清单。
+- 补齐 `README.md` 快速使用入口的自包含启动顺序，并让消费检查器要求该区块显式覆盖 `README.md`、`AGENTS.md`、`docs/00-index.md` 三个先读入口。
+- 整理历史 `CHANGELOG.md` 分类结构，将同一日期下重复的 Added/Changed/Fixed 等小节合并，并让消费检查器拦截重复分类标题。
+- 增强 `scripts/check-handbook-consumability.mjs`，新增连续问号型编码污染检查，防止中文内容被替换成连续问号后仍通过维护验证。
+- 整理历史 `CHANGELOG.md` 日期结构，将同一天的多段记录合并到单个日期标题下，并让消费检查器拦截重复日期标题。
+- 收束 `AGENTS.md` 任务路线维护口径：不再重复维护详细任务路线清单，统一委托 `docs/00-index.md` 的“常用任务最小阅读包”，并让消费检查器拦截 AGENTS 路线副本回潮。
+- 收束 `AGENTS.md` 写稿默认读取路线，移除模板总表的默认读取，并让消费检查器拦截默认任务路线误读来源清单、模板仓库或扩展目录。
+- 增强 `scripts/check-handbook-consumability.mjs`，新增仓库关键裸路径检查，防止 README、AGENTS 或专题中裸写的 `scripts/...`、`skills/...`、根目录文件路径失效后仍被 agent 误用。
+- 增强 `scripts/check-handbook-consumability.mjs`，扩展启动阅读一致性检查，防止来源清单、模板仓库和扩展目录等大文件被误放进默认启动阅读包。
+- 增强 `scripts/check-handbook-consumability.mjs`，将 `docs/00-index.md` 最小阅读包中的高频先读专题纳入关键入口清单，并新增反向检查，防止未来先读路径只写进索引却没有被关键入口规则守住。
+- 增强 `scripts/check-handbook-consumability.mjs`，将 `CHANGELOG.md` 纳入活跃入口体积护栏，防止变更记录在长期维护中继续无上限膨胀。
+- 增强 `scripts/check-handbook-consumability.mjs`，要求所有关键 `docs` 入口能从 `docs/00-index.md` 被发现，并把项目工作流与案例笔记补回启动索引，减少 agent 从 AGENTS 跳转时的路径断层。
+- 增强 `scripts/check-handbook-consumability.mjs`，自动检查根目录新增 Markdown 文件是否从 README 可发现，避免未来新增公开说明文档后留下孤儿入口。
+- 增强 `scripts/check-handbook-consumability.mjs`，新增 README、AGENTS、`docs/00-index.md` 和轻量 skill 的启动最小阅读包一致性检查，确保默认只读薄入口，来源清单和路由规范保持条件读取。
+- 增强 `scripts/check-handbook-consumability.mjs`，把 `AGENTS.md` 中的任务路线专题纳入 required entrypoints，并新增 AGENTS 路线覆盖检查，防止协作说明里的必读文件没有被关键入口存在性和用途信号校验守住。
+- 增强 `scripts/check-handbook-consumability.mjs`，新增关键入口文档内同级编号标题不重复检查，并修正 `docs/workflows/57-knowledge-base-routing-consolidation-guide.md` 中重复的 `## 12` 编号，减少 agent 按标题定位时的歧义。
+- 补强 `docs/workflows/38-chapter-production-pipeline-agent-handoff.md` 的章节任务单 Ready 定义，要求起草前具备承接点、章节目标、场景链、人物压力、信息来源、回报币种、章末牵引、目标字数和台账预期，防止 agent 拿薄事件列表硬扩成短章或提纲味正文。
+- 同步补强轻量 `webnovel-handbook` skill 的交付完成闸门，让小说项目 agent 在只读 skill 入口时也能知道正稿事实、逻辑链、高 AI 味、字数/细纲、台账和合规问题不能作为普通润色放行。
+- 补强 `docs/workflows/58-integrated-drafting-beta-review-revision-workflow.md` 的交付前完成定义，把正稿事实、逻辑链、高 AI 味、字数门槛、细纲厚度、台账回写和合规风险明确为一票阻塞项，避免 agent 把返修稿包装成定稿。
+- 收束 `webnovel-handbook` skill 启动阅读口径：新会话默认只读 `README.md`、`AGENTS.md` 和 `docs/00-index.md`，将 `57` 路由规范改为复杂任务、知识库维护或路由不明时再读，并在消费检查器中加入 skill 启动最小阅读包检查。
+- 增强 `scripts/check-handbook-consumability.mjs`，新增 `docs` 文件名跨平台命名检查，要求正式文档文件名使用小写 ASCII、数字、点、连字符和 `.md`，避免空格、中文、大小写混用、双连字符和过长文件名影响开源维护与 agent 检索。
+- 增强关键 agent 入口的路由信号：为缺少用途提示的总流程、人物对话、AI 写作、人味增强和 workflows 目录入口补充开头用途说明，并让 `scripts/check-handbook-consumability.mjs` 检查关键入口是否具备用途/适用信号。
+- 补齐 `docs` 正式文档的开头状态元数据，并增强 `scripts/check-handbook-consumability.mjs`，要求非目录 README 的正式文档在开头声明 `状态：已确认/候选/待确认`，减少 agent 对文档稳定性的误判。
+- 增强 `scripts/check-handbook-consumability.mjs`，新增 `docs` 文件名数字前缀与一级标题数字前缀一致性检查，并修复上一轮重命名后残留的旧标题编号。
+- 增强 `scripts/check-handbook-consumability.mjs`，新增同一 `docs` 分类目录内数字前缀唯一性检查，防止新增专题时出现编号撞车导致 agent 路由混淆。
+- 增强 `scripts/check-handbook-consumability.mjs`，要求 `scripts/*.js|mjs` 维护脚本和 `skills/*/SKILL.md` 分发入口都能从根 README 被发现，避免工具脚本或 skill 包成为没有索引路径的孤儿文件。
+- 增强 `scripts/check-handbook-consumability.mjs`，新增根 README 对开源治理关键文件的链接覆盖检查，避免 `AGENTS.md`、贡献、安全、来源、去身份化、路线图和变更记录等根目录文件变成孤儿入口。
+- 增强 `scripts/check-handbook-consumability.mjs`，新增活跃入口体积护栏和超大 Markdown 白名单检查，防止 README、启动索引、决策入口和路由入口继续膨胀，也避免未来新增未路由的巨型文档。
+- 增强 `scripts/package-skill.mjs`，打包后反读 zip 目录并校验根层 `SKILL.md`、路径安全和轻量 skill 内容边界；`scripts/check-handbook-consumability.mjs` 同步检查打包脚本是否保留 zip entry 校验能力。
+- 增强 `scripts/check-handbook-consumability.mjs`，新增 `docs/<目录>/<专题>.md` 必须被同目录 `README.md` 覆盖、关键 agent 入口必须存在、`docs` 一级目录必须被 `docs/00-index.md` 覆盖、skill 包目录名必须匹配 `SKILL.md` frontmatter `name`、skill 打包脚本必须指向当前分发目录且产物必须被忽略、文本文件不得带 UTF-8 BOM 或 CRLF 换行、开源文档不得残留本机路径、私有 Codex 路径或旧本地写作 skill 说法的检查，并补齐已发现的目录索引缺链。
+- 扩展 `docs/advanced-craft/README.md` 为高级专题目录级索引，按前 30 章工程、卷级推进、大场面/舆论、上架运营、场景微观技法、反馈路由等问题组织读取链路。
+- 扩展 `docs/governance/README.md` 为治理目录级索引，明确活跃决策、历史归档、变更记录和长期规则写入边界。
+- 扩展 `docs/navigation/README.md` 为导航目录级索引，明确启动索引、扩展专题目录和 README 下沉说明的读取边界，并修正导航文件名。
+- 扩展 `docs/sources/README.md` 为来源治理目录级索引，明确新增来源、私有样本、版权摘录、事实核查和来源冲突的读取链路，并修正来源清单文件名为 `01-source-inventory.md`。
+- 扩展 `docs/templates/README.md` 为超大模板仓库的目录级索引，按开书、项目初始化、章节生产、前 10 章拍表、人味/降 AI 味、审稿试读、数据反馈、包装市场、机制结构和资料沉淀组织检索关键词。
+- 扩展 `docs/scene-craft/README.md` 为场景技法目录级索引，按动作追逐、比赛试炼、调查法庭、谈判契约、商业权力、关系爆点、伤病死亡、恐怖梦境、穿越身份、生活质感和身体照护等场景功能组织读取链路。
+- 扩展 `docs/safety-research/README.md` 为风险闸门式目录索引，按平台合规、来源转化、敏感伤害、事实核查、版权授权和 AI/深度合成风险组织读取链路。
+- 扩展 `docs/reality-reference/README.md` 为现实资料目录级索引，按身份证据、职场商业、家庭财产、公安司法、医疗教育、县域治理、农村农业、公共安全、交通住房和文旅特殊经营等主轴组织读取链路。
+- 扩展 `docs/agent-operations/README.md` 为 agent 操作导航面板，明确检索装配、上下文打包、知识库维护、写稿闭环、项目接入、研究转写和完本/IP 复盘的入口路径。
+- 扩展 `docs/storycraft/README.md` 为目录级渐进式索引，按机制、关系情绪、反派阻力、开篇留存、中段卷结构、结尾、悬疑伏笔、喜剧、设定投放和失败代价组织读取链路。
+- 扩展 `docs/market-serialization/README.md` 为目录级渐进式索引，按平台频道、题材承诺、包装、封面、更新运营、读者生命周期、口碑和完本/IP 组织读取链路。
+- 扩展 `docs/workflows/README.md` 为目录级渐进式索引，按知识库维护、开书、章节生产、连载项目管理和 agent 检索装配组织读取链路。
+- 扩展 `docs/core-writing/README.md` 为目录级渐进式索引，按章节成立、人味/AI 味、人物对白、连续性、段落阅读和反派升级等问题组织读取链路。
+- 扩展 `docs/feedback-revision/README.md` 为目录级渐进式索引，按审稿、数据、评论、冲突、优先级队列和修订执行组织读取链路。
+- README 增加开源使用、关键文件和 AI agent 消费路径。
+- 仓库维护重心明确为收束、提纯和 agent 可消费。
+
+### Removed
+
+- 移除仅包含占位 README 的空内容目录：`notes/`、`cases/`、`prompts/`、`templates/`。
+
+## 2026-06-10
+
+### Added
+
+- 新增根目录 `SKILL.md`，使本仓库可以作为 `webnovel-handbook` skill 分发给小说项目 agent 使用。
+- 在 `README.md` 增加 skill 消费方式，强调按任务读取最小文档包，并默认接入“写手 + 试读 + 审稿 + 改稿”闭环。
+- 新增 `skill/scripts/package-skill.ps1`，用于将 `skill/` 打包为 `dist/webnovel-handbook-skill.zip`。
+- 新增 `.gitignore` 规则，忽略打包生成的 zip 产物。
+- 在审稿入口和一体化写稿闭环中补充审稿反例，帮助 agent 识别空泛审稿、误把通顺当合格、AI 味词句化处理、逻辑跳跃放行和无功能漂亮句保留等错误审查方式。
+- 补充稿文本身的命中反例，覆盖逻辑跳跃、信息空降、角色知识越界、动作顺序错误、无功能漂亮句、AI 味情绪旁白、全员同声、证据链纪要、假章末钩子、主角被剧情推走、反派降智送证据和爽点未落袋。
+
+### Changed
+
+- 将 skill 分发方案从“整个仓库作为 skill”调整为 `skill/` 轻量入口包。
+- 轻量 skill 负责引导 agent clone/update 本仓库到本地缓存目录，再从本地文件按需检索知识库。
+- 调整轻量 skill 的本地仓库路径策略：不再固定使用 Codex 目录，改为项目配置、环境变量、agent 标准缓存目录和操作系统缓存目录的优先级规则。
+- 收束轻量 skill 的本地仓库路径策略：不再使用显式配置或环境变量优先级，统一固定为 `~/.webnovel-handbook/repo`。
+- 将 skill 打包脚本从 `skill/scripts/` 迁移到仓库级 `scripts/`，避免维护脚本被打入 skill 分发包。
+- 将打包脚本从 Windows PowerShell 改为跨平台 Node.js 脚本：`node scripts/package-skill.mjs`。
+- 调整轻量 skill 包布局以兼容 `npx skills`：分发目录从 `skill/` 改为顶层 `webnovel-handbook/`，目录名与 skill name 保持一致。
+- 更新 Node.js 打包脚本，使其从 `webnovel-handbook/` 目录生成 `dist/webnovel-handbook-skill.zip`。
+- 调整 skill 包布局为 `npx skills` 默认扫描结构：`skills/webnovel-handbook/SKILL.md`。
+- 更新打包脚本，使其从 `skills/webnovel-handbook/` 生成分发 zip。
+- 提升降 AI 味在 skill 和写稿闭环中的优先级：高 AI 味稿件不能作为定稿交付，必须先修人物反应、场景摩擦、动作链和情绪触发。
+- 更新 `docs/core-writing/06-ai-writing-guidelines.md`、`docs/core-writing/11-human-writing-upgrade.md` 和 `docs/workflows/58-integrated-drafting-beta-review-revision-workflow.md`，明确降 AI 味不是终稿润色，而是起草前硬门槛。
+- 将逻辑连续性提升为章节交付硬门槛：明显逻辑漏洞、前后错位、信息空降、动作顺序错误和无功能句不能作为定稿交付。
+- 在 skill 入口、AI 写作指南和一体化写稿闭环中增加逻辑 gate，要求先修因果、信息来源和句子功能，再做文风润色。
+- 新增章节字数与细纲门槛：普通可发布中文网文章节默认约 3000 字，常规目标区间为 2800-3500 字；短于 2500 字时优先检查细纲是否过薄。
+- 新增短句节奏规则：禁止把提纲拆成成片短句，普通叙述必须有长短句变化、动作链承接和人物现场反应。
+
+### Fixed
+
+- 修复 `skills/webnovel-handbook/SKILL.md` frontmatter：将包含冒号的 `description` 改为 YAML block scalar，避免 `npx skills` 解析失败。
+- 修复 `skills/webnovel-handbook/SKILL.md` 文件编码：确保文件以无 BOM UTF-8 写入，使文件开头第一个字符就是 `---`。
+
+## 2026-06-11
+
+### Added
+
+- 新增顶尖网文短摘句示例：用单句级摘句拆解人物对白的说话动作、关系杠杆、句子形状和 agent 原创改写方法。
+
+### Changed
+
+- 将“顶尖网文短摘句”从名句赏析升级为对白训练集：每条样本补充成立条件、AI 坏仿写、原创改写练习和可迁移规则，帮助 agent 学会人物说话的场景功能，而不是复读名句。
+
+## 2026-06-12
+
+### Changed
+
+- 将人物对白训练的最高优先级调整为“自然度”：台词必须先像角色在当前关系、压力和信息条件下会说的话，再追求金句、压场、锋利或幽默。
+- 将对话样本对比从 `docs/core-writing/04-character-and-dialogue.md` 中抽离为独立参考入口，并更新 README 与索引中的读取路线。
+
+### Added
+
+- 新增试写纠错沉淀样本：记录散文化物象、审判腔对白、短句切碎和直球功能动作四类问题，并给出通过版与可迁移规则。
+- 新增“动作不要直球报功能”规则，要求录音、截图、证据、合同等功能性动作先像人物自然动作，再服务剧情机关。
+- 新增“职场对峙不要写成审讯台”试写纠错样本，强调老板甩锅、主角自保和反击台词都要保留真实关系里的试探、绕法和压力。
+- 新增试写纠错对比案例规范，要求同时保存 Agent 初稿和用户改稿，并记录差异分析与可迁移规则。
+- 新增“合同数字与附件二”“客户报价甩锅”两个对比案例，用于训练职场对峙对白的自然度。
+- 新增 `docs/core-writing/59-dialogue-comparison-reference.md`，作为对话样本对比参考书，集中保存 Agent 初稿、用户改稿、差异分析和可迁移规则。
+
+## 2026-06-13
+
+### Added
+
+- 在 `docs/market-serialization/17-cover-visual-packaging.md` 新增商业网文封面设计标准，强调封面不是给底图贴大字，而是平台合规、缩略图可读、类型承诺和点击测试素材。
+- 在 `docs/sources/01-source-inventory.md` 登记番茄多封面效果排名、作品运作说明和用户封面复盘反馈的可迁移结论。
+- 新增 AI 新建文件索引规则：所有新文件必须同步挂到明确入口，并在交付说明中写明新文件路径、索引入口、读取场景和维护状态。
+- 在 `AGENTS.md`、`docs/workflows/03-project-workflow.md`、`docs/workflows/57-knowledge-base-routing-consolidation-guide.md` 和 `docs/governance/99-decision-log.md` 中补充禁止孤儿文件的维护要求。
+
+### Changed
+
+- 明确封面指导手册只沉淀通用判断，不保留具体书名、人物设定、标题拆行或单次生成方案。
+- 更新封面制作规则：正式封面标题字优先由 AI 与底图一体生成，不再推荐用脚本硬贴字体作为最终封面；脚本排字仅作为临时占位或兜底方案。
