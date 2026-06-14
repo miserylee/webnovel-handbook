@@ -1165,6 +1165,51 @@ async function checkChangelogDateHeadingUniqueness() {
   return duplicateDateHeadingProblems;
 }
 
+async function checkChangelogSubsectionHeadingUniqueness() {
+  const duplicateSubsectionHeadingProblems = [];
+  const changelogPath = path.join(repoRoot, "CHANGELOG.md");
+
+  if (!(await exists(changelogPath))) {
+    return duplicateSubsectionHeadingProblems;
+  }
+
+  const lines = (await fs.readFile(changelogPath, "utf8")).split(/\r?\n/);
+  const sectionHeadingPattern = /^##\s+(.+?)\s*$/;
+  const subsectionHeadingPattern = /^###\s+(.+?)\s*$/;
+  let currentSection = "";
+  let seenSubsections = new Map();
+
+  for (const [index, line] of lines.entries()) {
+    const sectionMatch = line.match(sectionHeadingPattern);
+    if (sectionMatch) {
+      currentSection = sectionMatch[1];
+      seenSubsections = new Map();
+      continue;
+    }
+
+    const subsectionMatch = line.match(subsectionHeadingPattern);
+    if (!subsectionMatch || !currentSection) {
+      continue;
+    }
+
+    const subsection = subsectionMatch[1];
+    const previousLine = seenSubsections.get(subsection);
+    if (previousLine !== undefined) {
+      duplicateSubsectionHeadingProblems.push({
+        file: "CHANGELOG.md",
+        line: index + 1,
+        target: `${currentSection} / ${subsection}`,
+        sample: "duplicate changelog subsection heading inside one release section; previous occurrence is on line " + previousLine,
+      });
+      continue;
+    }
+
+    seenSubsections.set(subsection, index + 1);
+  }
+
+  return duplicateSubsectionHeadingProblems;
+}
+
 async function checkMarkdownSizeGovernance(markdownFiles) {
   const sizeProblems = [];
   const activeEntrypointBudgets = new Map([
@@ -1439,6 +1484,7 @@ async function main() {
     skillPackagingProblems,
     packageJsonProblems,
     changelogDateHeadingProblems,
+    changelogSubsectionHeadingProblems,
     markdownSizeGovernanceProblems,
     docsNumericPrefixProblems,
     docsHeadingPrefixProblems,
@@ -1470,6 +1516,7 @@ async function main() {
       checkSkillPackagingSetup(),
       checkPackageJsonScripts(),
       checkChangelogDateHeadingUniqueness(),
+      checkChangelogSubsectionHeadingUniqueness(),
       checkMarkdownSizeGovernance(markdownFiles),
       checkDocsNumericPrefixUniqueness(markdownFiles),
       checkDocsHeadingPrefixConsistency(markdownFiles),
@@ -1525,6 +1572,10 @@ async function main() {
   printSection("Skill packaging setup problems", skillPackagingProblems);
   printSection("Package.json script problems", packageJsonProblems);
   printSection("Changelog duplicate date headings", changelogDateHeadingProblems);
+  printSection(
+    "Changelog duplicate subsection headings",
+    changelogSubsectionHeadingProblems,
+  );
   printSection("Markdown size governance problems", markdownSizeGovernanceProblems);
   printSection("Docs numeric prefix problems", docsNumericPrefixProblems);
   printSection("Docs heading prefix problems", docsHeadingPrefixProblems);
@@ -1556,6 +1607,7 @@ async function main() {
     skillPackagingProblems.length > 0 ||
     packageJsonProblems.length > 0 ||
     changelogDateHeadingProblems.length > 0 ||
+    changelogSubsectionHeadingProblems.length > 0 ||
     markdownSizeGovernanceProblems.length > 0 ||
     docsNumericPrefixProblems.length > 0 ||
     docsHeadingPrefixProblems.length > 0 ||
