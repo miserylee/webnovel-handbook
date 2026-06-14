@@ -1120,6 +1120,42 @@ async function checkPackageJsonScripts() {
   return packageProblems;
 }
 
+async function checkChangelogDateHeadingUniqueness() {
+  const duplicateDateHeadingProblems = [];
+  const changelogPath = path.join(repoRoot, "CHANGELOG.md");
+
+  if (!(await exists(changelogPath))) {
+    return duplicateDateHeadingProblems;
+  }
+
+  const lines = (await fs.readFile(changelogPath, "utf8")).split(/\r?\n/);
+  const seen = new Map();
+  const dateHeadingPattern = /^##\s+(\d{4}-\d{2}-\d{2})\s*$/;
+
+  for (const [index, line] of lines.entries()) {
+    const match = line.match(dateHeadingPattern);
+    if (!match) {
+      continue;
+    }
+
+    const date = match[1];
+    const previousLine = seen.get(date);
+    if (previousLine !== undefined) {
+      duplicateDateHeadingProblems.push({
+        file: "CHANGELOG.md",
+        line: index + 1,
+        target: date,
+        sample: "duplicate changelog date heading; previous occurrence is on line " + previousLine,
+      });
+      continue;
+    }
+
+    seen.set(date, index + 1);
+  }
+
+  return duplicateDateHeadingProblems;
+}
+
 async function checkMarkdownSizeGovernance(markdownFiles) {
   const sizeProblems = [];
   const activeEntrypointBudgets = new Map([
@@ -1393,6 +1429,7 @@ async function main() {
     startupReadingConsistencyProblems,
     skillPackagingProblems,
     packageJsonProblems,
+    changelogDateHeadingProblems,
     markdownSizeGovernanceProblems,
     docsNumericPrefixProblems,
     docsHeadingPrefixProblems,
@@ -1423,6 +1460,7 @@ async function main() {
       checkStartupReadingConsistency(),
       checkSkillPackagingSetup(),
       checkPackageJsonScripts(),
+      checkChangelogDateHeadingUniqueness(),
       checkMarkdownSizeGovernance(markdownFiles),
       checkDocsNumericPrefixUniqueness(markdownFiles),
       checkDocsHeadingPrefixConsistency(markdownFiles),
@@ -1477,6 +1515,7 @@ async function main() {
   );
   printSection("Skill packaging setup problems", skillPackagingProblems);
   printSection("Package.json script problems", packageJsonProblems);
+  printSection("Changelog duplicate date headings", changelogDateHeadingProblems);
   printSection("Markdown size governance problems", markdownSizeGovernanceProblems);
   printSection("Docs numeric prefix problems", docsNumericPrefixProblems);
   printSection("Docs heading prefix problems", docsHeadingPrefixProblems);
@@ -1507,6 +1546,7 @@ async function main() {
     startupReadingConsistencyProblems.length > 0 ||
     skillPackagingProblems.length > 0 ||
     packageJsonProblems.length > 0 ||
+    changelogDateHeadingProblems.length > 0 ||
     markdownSizeGovernanceProblems.length > 0 ||
     docsNumericPrefixProblems.length > 0 ||
     docsHeadingPrefixProblems.length > 0 ||
