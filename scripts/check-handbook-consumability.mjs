@@ -94,6 +94,7 @@ const largeConditionalStartupPaths = [
   "docs/templates/10-templates-and-checklists.md",
   "docs/navigation/00-expanded-topic-catalog.md",
   "docs/navigation/01-readme-details.md",
+  "docs/governance/01-changelog-detail-archive.md",
 ];
 
 const routeSignalPattern =
@@ -1432,6 +1433,10 @@ async function checkMarkdownSizeGovernance(markdownFiles) {
     [
       "docs/navigation/01-readme-details.md",
       "README overflow details must remain explicitly routed as a non-default section read",
+    ],
+    [
+      "docs/governance/01-changelog-detail-archive.md",
+      "changelog detail archive must remain explicitly routed as a non-default date or keyword read",
     ],
   ]);
   const routedLargeDocPattern =
