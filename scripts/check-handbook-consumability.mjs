@@ -1692,7 +1692,7 @@ async function checkDocsStatusMetadata(markdownFiles) {
     if (!statusPattern.test(headingBlock)) {
       statusMetadataProblems.push({
         file: repoPath,
-        sample: "formal docs file is missing 状态：已确认/候选/待确认 near the top",
+        sample: "formal docs file or directory README is missing 状态：已确认/候选/待确认 near the top",
       });
     }
   }
