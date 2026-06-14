@@ -5,6 +5,7 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
+    "verify": "node scripts/verify-maintenance.mjs",
     "check": "node scripts/check-handbook-consumability.mjs",
     "package-skill": "node scripts/package-skill.mjs",
     "sync-skill": "node scripts/sync-installed-skill.mjs --write",

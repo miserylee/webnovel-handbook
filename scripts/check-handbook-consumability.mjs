@@ -685,6 +685,7 @@ async function checkPackageJsonScripts() {
   const packageProblems = [];
   const packageJsonPath = path.join(repoRoot, "package.json");
   const requiredScripts = new Map([
+    ["verify", "node scripts/verify-maintenance.mjs"],
     ["check", "node scripts/check-handbook-consumability.mjs"],
     ["package-skill", "node scripts/package-skill.mjs"],
     ["sync-skill", "node scripts/sync-installed-skill.mjs --write"],

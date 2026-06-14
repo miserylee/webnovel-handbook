@@ -6,6 +6,7 @@
 
 ### Added
 
+- 新增 `scripts/verify-maintenance.mjs` 和 `npm run verify`，把知识库可消费性检查、轻量 skill 打包校验、本机已安装 skill 同步检查串成一条跨平台维护命令。
 - 新增 `package.json` 作为跨平台维护命令入口，提供 `npm run check`、`npm run package-skill`、`npm run sync-skill:check` 和 `npm run sync-skill`，并让消费检查器校验这些脚本存在。
 - 新增 `scripts/sync-installed-skill.mjs`，用于检查或同步本机已安装的 `webnovel-handbook` skill，避免仓库分发入口更新后本机 agent 继续读取旧规则。
 - 新增 `docs/feedback-revision/43-feedback-revision-priority-queue.md`，把 RICE/MoSCoW 等优先级方法迁移为连载反馈修订队列，帮助 agent 在多源反馈中决定本轮改、后文补、观察或拒绝。
