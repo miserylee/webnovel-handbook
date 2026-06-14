@@ -1,5 +1,7 @@
 # 连载更新与发布运营专项
 
+状态：已确认
+
 相关入口：
 
 - 连载期数据已经出现异常、推荐期需要判断要不要改、上架前后需要设置观察窗口，先看 `docs/feedback-revision/40-serial-data-tuning-loop.md`。

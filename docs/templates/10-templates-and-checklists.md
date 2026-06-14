@@ -1,5 +1,7 @@
 # 模板与检查清单
 
+状态：已确认
+
 ## 1.24 章节生产流水线与 agent 交接卡
 
 用于批量起草、续写、多 agent 接力、审稿后修订和发布前质检。详见 [38. 章节生产流水线与多 agent 交接规范](../workflows/38-chapter-production-pipeline-agent-handoff.md)。

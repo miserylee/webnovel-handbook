@@ -1,5 +1,7 @@
 # 40. 连载期数据复盘与调参闭环规范
 
+状态：已确认
+
 反馈冲突入口：
 
 - 如果编辑反馈、读者反馈、后台数据、作者直觉或项目主承诺互相冲突，先看 `docs/feedback-revision/42-editor-reader-data-feedback-conflict-resolution.md`。该专题负责判断来源权重、证据同向性、主承诺保护、修改成本和观察窗口，避免简单投票或盲从单一反馈。

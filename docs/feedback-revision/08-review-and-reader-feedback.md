@@ -1,5 +1,7 @@
 # 审稿与读者反馈
 
+状态：已确认
+
 写手、试读、审稿与改稿一体化入口：
 
 - 如果审稿不是单独交付意见，而是要在写稿流程里自动完成“试读 subagent -> 审稿 subagent -> 反馈仲裁 -> 修订 agent”，先看 `docs/workflows/58-integrated-drafting-beta-review-revision-workflow.md`。本篇继续提供审稿标准和读者反馈判断，但一体化写稿时不再要求用户手动切换读者群或匿名编辑反馈样本。

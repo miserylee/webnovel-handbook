@@ -718,6 +718,37 @@ async function checkDocsHeadingPrefixConsistency(markdownFiles) {
   return headingPrefixProblems;
 }
 
+async function checkDocsStatusMetadata(markdownFiles) {
+  const statusMetadataProblems = [];
+  const statusPattern = /(^|\n)状态：\s*(已确认|候选|待确认)/;
+
+  for (const file of markdownFiles) {
+    const repoPath = toRepoPath(file);
+
+    if (!repoPath.startsWith("docs/")) {
+      continue;
+    }
+
+    if (path.basename(repoPath).toLowerCase() === "readme.md") {
+      continue;
+    }
+
+    const headingBlock = (await fs.readFile(file, "utf8"))
+      .split(/\r?\n/)
+      .slice(0, 12)
+      .join("\n");
+
+    if (!statusPattern.test(headingBlock)) {
+      statusMetadataProblems.push({
+        file: repoPath,
+        sample: "formal docs file is missing 状态：已确认/候选/待确认 near the top",
+      });
+    }
+  }
+
+  return statusMetadataProblems;
+}
+
 function printSection(title, rows) {
   console.log(`\n${title}: ${rows.length}`);
   for (const row of rows.slice(0, 50)) {
@@ -754,6 +785,7 @@ async function main() {
     markdownSizeGovernanceProblems,
     docsNumericPrefixProblems,
     docsHeadingPrefixProblems,
+    docsStatusMetadataProblems,
   ] =
     await Promise.all([
       checkMarkdownLinks(markdownFiles),
@@ -771,6 +803,7 @@ async function main() {
       checkMarkdownSizeGovernance(markdownFiles),
       checkDocsNumericPrefixUniqueness(markdownFiles),
       checkDocsHeadingPrefixConsistency(markdownFiles),
+      checkDocsStatusMetadata(markdownFiles),
     ]);
 
   printSection("Broken Markdown links", brokenLinks);
@@ -794,6 +827,7 @@ async function main() {
   printSection("Markdown size governance problems", markdownSizeGovernanceProblems);
   printSection("Docs numeric prefix problems", docsNumericPrefixProblems);
   printSection("Docs heading prefix problems", docsHeadingPrefixProblems);
+  printSection("Docs status metadata problems", docsStatusMetadataProblems);
 
   const hasProblems =
     brokenLinks.length > 0 ||
@@ -810,7 +844,8 @@ async function main() {
     skillPackagingProblems.length > 0 ||
     markdownSizeGovernanceProblems.length > 0 ||
     docsNumericPrefixProblems.length > 0 ||
-    docsHeadingPrefixProblems.length > 0;
+    docsHeadingPrefixProblems.length > 0 ||
+    docsStatusMetadataProblems.length > 0;
 
   if (hasProblems) {
     process.exitCode = 1;

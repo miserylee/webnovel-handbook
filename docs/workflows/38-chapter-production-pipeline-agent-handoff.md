@@ -1,5 +1,7 @@
 # 38. 章节生产流水线与多 agent 交接规范
 
+状态：已确认
+
 写手、试读、审稿与改稿一体化入口：
 
 - 如果用户希望写稿时自动完成内部试读、商业审稿、反馈仲裁和改稿，而不是在读者群、编辑部、写手项目之间手动切换，先看 `docs/workflows/58-integrated-drafting-beta-review-revision-workflow.md`。该专题把本流水线中的“正文起草 -> 风格与连续性初检 -> 商业审稿 -> 修订执行”扩展为“起草 agent -> 试读 subagents -> 审稿 subagents -> 反馈仲裁 -> 修订 agent -> 二次轻检 -> 台账回写”。

@@ -1,5 +1,7 @@
 # 书名简介标签包装专项
 
+状态：已确认
+
 ## 相关入口：开篇试写与 A/B 版本评估
 
 当书名、简介、标签和开篇正文需要联动测试时，调用 `docs/feedback-revision/39-opening-variant-ab-evaluation.md`。点击高但追读低时，优先检查包装承诺和第一章体验是否错位。
