@@ -44,6 +44,7 @@ const requiredEntrypoints = [
   "docs/workflows/57-knowledge-base-routing-consolidation-guide.md",
   "docs/workflows/58-integrated-drafting-beta-review-revision-workflow.md",
   "docs/workflows/64-single-novel-project-document-granularity.md",
+  "docs/workflows/65-serial-project-kanban-change-control.md",
   "docs/templates/10-templates-and-checklists.md",
   "docs/core-writing/02-webnovel-principles.md",
   "docs/core-writing/04-character-and-dialogue.md",
@@ -51,10 +52,23 @@ const requiredEntrypoints = [
   "docs/core-writing/06-ai-writing-guidelines.md",
   "docs/core-writing/07-continuity-ledger.md",
   "docs/core-writing/11-human-writing-upgrade.md",
+  "docs/core-writing/32-chapter-paragraph-mobile-reading-experience.md",
   "docs/core-writing/37-project-style-bible-character-voice.md",
   "docs/core-writing/59-dialogue-comparison-reference.md",
+  "docs/market-serialization/12-platform-and-channel-differences.md",
+  "docs/market-serialization/16-title-blurb-tag-packaging.md",
+  "docs/market-serialization/17-cover-visual-packaging.md",
+  "docs/market-serialization/29-reader-expectation-genre-promise-selling-point.md",
   "docs/feedback-revision/08-review-and-reader-feedback.md",
   "docs/feedback-revision/09-case-notes.md",
+  "docs/feedback-revision/18-reader-data-feedback-diagnosis.md",
+  "docs/feedback-revision/33-revision-rewrite-version-workflow.md",
+  "docs/feedback-revision/40-serial-data-tuning-loop.md",
+  "docs/feedback-revision/41-reader-comment-coding-feedback-clustering.md",
+  "docs/feedback-revision/42-editor-reader-data-feedback-conflict-resolution.md",
+  "docs/feedback-revision/43-feedback-revision-priority-queue.md",
+  "docs/reality-reference/30-profession-industry-life-detail-credibility.md",
+  "docs/reality-reference/31-region-era-social-custom-texture.md",
   "docs/governance/99-decision-log.md",
 ];
 
@@ -602,6 +616,48 @@ async function checkDocsIndexRequiredEntrypointCoverage() {
   }
 
   return missingDocsIndexCoverage;
+}
+
+async function checkDocsIndexMinimumReadEntrypointCoverage() {
+  const missingMinimumReadCoverage = [];
+  const indexPath = path.join(repoRoot, "docs", "00-index.md");
+  const indexContent = await fs.readFile(indexPath, "utf8");
+  const minimumReadSection = extractBlock(
+    indexContent,
+    "## 2. 常用任务最小阅读包",
+    "## 3. 写稿质量硬入口",
+  );
+  const requiredEntrypointSet = new Set(requiredEntrypoints);
+  const minimumReadDocPathPattern = /docs\/[A-Za-z0-9._/-]+\.md/g;
+  const seen = new Set();
+
+  for (const line of minimumReadSection.split(/\r?\n/)) {
+    if (!line.startsWith("|") || !line.includes("`docs/")) {
+      continue;
+    }
+
+    const cells = line.split("|").map((cell) => cell.trim());
+    const firstReadCell = cells[2] || "";
+    const matches = firstReadCell.match(minimumReadDocPathPattern) || [];
+
+    for (const repoPath of matches) {
+      if (seen.has(repoPath)) {
+        continue;
+      }
+
+      seen.add(repoPath);
+
+      if (!requiredEntrypointSet.has(repoPath)) {
+        missingMinimumReadCoverage.push({
+          file: "docs/00-index.md",
+          target: repoPath,
+          sample: "docs/00-index.md minimum-read doc is not listed in requiredEntrypoints",
+        });
+      }
+    }
+  }
+
+  return missingMinimumReadCoverage;
 }
 
 async function checkSkillPackageLayout() {
@@ -1184,6 +1240,7 @@ async function main() {
     missingRootReadmeLinks,
     missingDirectoryIndexCoverage,
     missingDocsIndexRequiredEntrypointCoverage,
+    missingDocsIndexMinimumReadEntrypointCoverage,
     skillPackageProblems,
     skillStartupRoutingProblems,
     startupReadingConsistencyProblems,
@@ -1210,6 +1267,7 @@ async function main() {
       checkRootReadmeLinkCoverage(),
       checkDocsDirectoryIndexCoverage(),
       checkDocsIndexRequiredEntrypointCoverage(),
+      checkDocsIndexMinimumReadEntrypointCoverage(),
       checkSkillPackageLayout(),
       checkSkillStartupRoutingConsistency(),
       checkStartupReadingConsistency(),
@@ -1251,6 +1309,10 @@ async function main() {
     "Docs index missing required entrypoint coverage",
     missingDocsIndexRequiredEntrypointCoverage,
   );
+  printSection(
+    "Docs index minimum reads missing entrypoint coverage",
+    missingDocsIndexMinimumReadEntrypointCoverage,
+  );
   printSection("Skill package layout problems", skillPackageProblems);
   printSection("Skill startup routing problems", skillStartupRoutingProblems);
   printSection(
@@ -1280,6 +1342,7 @@ async function main() {
     missingRootReadmeLinks.length > 0 ||
     missingDirectoryIndexCoverage.length > 0 ||
     missingDocsIndexRequiredEntrypointCoverage.length > 0 ||
+    missingDocsIndexMinimumReadEntrypointCoverage.length > 0 ||
     skillPackageProblems.length > 0 ||
     skillStartupRoutingProblems.length > 0 ||
     startupReadingConsistencyProblems.length > 0 ||
