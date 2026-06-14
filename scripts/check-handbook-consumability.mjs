@@ -1227,12 +1227,15 @@ async function checkMarkdownSizeGovernance(markdownFiles) {
     ["docs/navigation/00-expanded-topic-catalog.md", "expanded catalog; keyword search only"],
     ["docs/navigation/01-readme-details.md", "README overflow details; read by section"],
   ]);
+  const routedLargeDocPattern =
+    /(按需读取|定向读取|按标题|关键词|不要整篇|不作为默认整读|默认入口只读|冻结历史)/u;
   const largeMarkdownThreshold = 100_000;
 
   for (const file of markdownFiles) {
     const repoPath = toRepoPath(file);
     const { size } = await fs.stat(file);
     const activeBudget = activeEntrypointBudgets.get(repoPath);
+    const largeDocReason = allowedLargeMarkdownFiles.get(repoPath);
 
     if (activeBudget !== undefined && size > activeBudget) {
       sizeProblems.push({
@@ -1241,11 +1244,24 @@ async function checkMarkdownSizeGovernance(markdownFiles) {
       });
     }
 
-    if (size >= largeMarkdownThreshold && !allowedLargeMarkdownFiles.has(repoPath)) {
+    if (size >= largeMarkdownThreshold && !largeDocReason) {
       sizeProblems.push({
         file: repoPath,
         sample: `large markdown file is ${size} bytes; add an explicit routing reason or split into smaller documents`,
       });
+    }
+
+    if (largeDocReason) {
+      const content = await fs.readFile(file, "utf8");
+      const opening = content.slice(0, 1200);
+      if (!routedLargeDocPattern.test(opening)) {
+        sizeProblems.push({
+          file: repoPath,
+          sample:
+            `allowed large markdown (${largeDocReason}) is missing an opening routing note; ` +
+            "state that agents should read it by heading, keyword, date, or section instead of full loading",
+        });
+      }
     }
   }
 

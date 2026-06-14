@@ -23,6 +23,7 @@
 
 ### Changed
 
+- 补强超大白名单文档治理：模板仓库、历史决策归档和 README 扩展说明均在开头声明按标题、日期或关键词定向读取，并让消费检查器拦截缺少开头路由提示的白名单长文档。
 - 收束 `README.md` 维护检查说明，把完整检查项下沉到 `docs/navigation/01-readme-details.md`，并新增活跃入口超长行护栏，避免根入口重新膨胀成明细清单。
 - 补齐 `README.md` 快速使用入口的自包含启动顺序，并让消费检查器要求该区块显式覆盖 `README.md`、`AGENTS.md`、`docs/00-index.md` 三个先读入口。
 - 整理历史 `CHANGELOG.md` 分类结构，将同一日期下重复的 Added/Changed/Fixed 等小节合并，并让消费检查器拦截重复分类标题。

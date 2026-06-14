@@ -3,6 +3,8 @@
 状态：已确认  
 用途：从根 README 下沉出来的详细阅读路线、任务入口和维护说明。默认入口只读根 README；需要更完整项目导航时再读本文。
 
+读取规则：本文偏长，不要整篇塞进上下文。先按任务标题、专题编号或关键词定位小节，再读取命中段落和对应目标文档。
+
 ## 贡献与安全
 
 贡献前请阅读：
@@ -1078,6 +1080,5 @@ node scripts/package-skill.mjs
 - `docs/00-index.md`：知识库目录。
 - `docs/workflows/57-knowledge-base-routing-consolidation-guide.md`：按任务选择最小阅读包。
 - `docs/workflows/58-integrated-drafting-beta-review-revision-workflow.md`：写稿、试读、审稿、改稿一体化流程。
-
 
 
