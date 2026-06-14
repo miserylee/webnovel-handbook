@@ -16,7 +16,7 @@ const ignoredDirectories = new Set([
   "build",
 ]);
 
-const textFilePattern = /\.(md|mdx|yml|yaml|json|txt)$/i;
+const textFilePattern = /\.(md|mdx|mjs|js|yml|yaml|json|txt)$/i;
 const markdownFilePattern = /\.(md|mdx)$/i;
 const highConfidenceMojibakePattern =
   /(?:�|鈥|銆|锛|乣|歚|宎|鐨|鍏|鏂|鍐|寮|姣|缃|闈|绱)/g;
@@ -171,6 +171,10 @@ async function checkMojibake(textFiles) {
   const suspiciousFiles = [];
 
   for (const file of textFiles) {
+    if (toRepoPath(file) === "scripts/check-handbook-consumability.mjs") {
+      continue;
+    }
+
     const content = await fs.readFile(file, "utf8");
     const matches = content.match(highConfidenceMojibakePattern) || [];
 
@@ -189,6 +193,28 @@ async function checkMojibake(textFiles) {
   }
 
   return suspiciousFiles;
+}
+
+async function checkUtf8Bom(textFiles) {
+  const bomFiles = [];
+
+  for (const file of textFiles) {
+    const content = await fs.readFile(file);
+
+    if (
+      content.length >= 3 &&
+      content[0] === 0xef &&
+      content[1] === 0xbb &&
+      content[2] === 0xbf
+    ) {
+      bomFiles.push({
+        file: toRepoPath(file),
+        sample: "file starts with a UTF-8 BOM",
+      });
+    }
+  }
+
+  return bomFiles;
 }
 
 async function checkDirectoryReadmeCoverage(markdownFiles) {
@@ -446,6 +472,7 @@ async function main() {
     brokenLinks,
     missingRawDocPaths,
     suspiciousMojibake,
+    utf8BomFiles,
     missingDirectoryReadmeCoverage,
     missingEntrypoints,
     missingDirectoryIndexCoverage,
@@ -456,6 +483,7 @@ async function main() {
       checkMarkdownLinks(markdownFiles),
       checkRawRepoDocPaths(markdownFiles),
       checkMojibake(textFiles),
+      checkUtf8Bom(textFiles),
       checkDirectoryReadmeCoverage(markdownFiles),
       checkRequiredEntrypoints(),
       checkDocsDirectoryIndexCoverage(),
@@ -466,6 +494,7 @@ async function main() {
   printSection("Broken Markdown links", brokenLinks);
   printSection("Missing raw repo docs paths", missingRawDocPaths);
   printSection("Suspicious mojibake files", suspiciousMojibake);
+  printSection("UTF-8 BOM files", utf8BomFiles);
   printSection(
     "Docs missing directory README coverage",
     missingDirectoryReadmeCoverage,
@@ -482,6 +511,7 @@ async function main() {
     brokenLinks.length > 0 ||
     missingRawDocPaths.length > 0 ||
     suspiciousMojibake.length > 0 ||
+    utf8BomFiles.length > 0 ||
     missingDirectoryReadmeCoverage.length > 0 ||
     missingEntrypoints.length > 0 ||
     missingDirectoryIndexCoverage.length > 0 ||

@@ -1,4 +1,4 @@
-﻿# Security Policy
+# Security Policy
 
 This repository is primarily a documentation and workflow knowledge base for Chinese web-novel writing agents. Security issues usually mean unsafe documentation content, privacy leakage, copyright leakage, or workflow guidance that could enable real-world harm.
 

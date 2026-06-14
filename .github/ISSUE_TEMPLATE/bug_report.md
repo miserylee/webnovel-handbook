@@ -1,4 +1,4 @@
-﻿---
+---
 name: 文档错误或过时内容
 about: 报告错别字、链接失效、规则过时或文档矛盾
 labels: bug, documentation

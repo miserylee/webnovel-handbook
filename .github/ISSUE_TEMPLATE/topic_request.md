@@ -1,4 +1,4 @@
-﻿---
+---
 name: 新专题请求
 about: 请求新增一个知识库专题
 labels: topic-request
