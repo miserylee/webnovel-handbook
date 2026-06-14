@@ -26,6 +26,7 @@
 - 拆分 `00-index` 中决策归档与变更日志归档的说明，修复残留问号编码并补上独立大文件读取路线。
 - 补回 `docs/market-serialization/14-platform-and-reader-binding.md` 的全路径索引入口，避免平台读者绑定专题在跨目录检索中缺链。
 - 在贡献指南中补充 GitHub issue/PR 模板选择入口，避免开源协作模板成为无索引路径的孤立文件。
+- 将 `14-platform-and-reader-binding.md` 同步补入 `57` 路由规范的市场与包装簇，保持启动索引、扩展目录和路由规范一致。
 
 ### Removed
 
