@@ -1,5 +1,7 @@
 # market-serialization
 
+状态：已确认
+
 平台、题材、包装、封面、更新、读者画像、读者生命周期、口碑传播、完本复盘和 IP 延展。
 
 本目录负责作品作为“连载商品”如何被读者看见、理解、点击、留下、追读和传播。正文质量去 `../core-writing/README.md`，反馈数据诊断去 `../feedback-revision/README.md`，开书流程去 `../workflows/README.md`。

@@ -1,5 +1,7 @@
 # agent-operations
 
+状态：已确认
+
 agent 路由、任务装配、研究转化、上下文交接、系列化和 IP/完本复盘的导航入口。
 
 本目录目前是“操作导航面板”，不是独立专题库。真正的执行规则分布在 `../workflows/`、`../market-serialization/`、`../reality-reference/`、`../feedback-revision/` 等目录。除非出现稳定高频的 agent 操作规则，否则不要在这里复制已有专题。

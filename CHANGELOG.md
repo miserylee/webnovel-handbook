@@ -27,6 +27,7 @@
 - 补回 `docs/market-serialization/14-platform-and-reader-binding.md` 的全路径索引入口，避免平台读者绑定专题在跨目录检索中缺链。
 - 在贡献指南中补充 GitHub issue/PR 模板选择入口，避免开源协作模板成为无索引路径的孤立文件。
 - 将 `14-platform-and-reader-binding.md` 同步补入 `57` 路由规范的市场与包装簇，保持启动索引、扩展目录和路由规范一致。
+- 为主要 `docs/*/README.md` 分类入口补充状态元数据，让目录级索引也符合活跃文档治理口径。
 
 ### Removed
 

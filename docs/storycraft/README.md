@@ -1,5 +1,7 @@
 # storycraft
 
+状态：已确认
+
 机制、关系、情绪、悬疑、喜剧、卷结构、伏笔、失败代价和设定投放。
 
 本目录负责“故事为什么好看、为什么能连续看下去”。正文句子和人味去 `../core-writing/README.md`，写稿流程去 `../workflows/README.md`，市场包装去 `../market-serialization/README.md`。
