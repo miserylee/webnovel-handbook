@@ -70,20 +70,20 @@
 
 目录分工：
 
-- `navigation/`：导航、扩展目录和 README 下沉说明。
-- `sources/`：来源清单和来源边界。
-- `templates/`：模板和检查卡。
-- `governance/`：活跃决策、维护治理和决策索引。
-- `workflows/`：agent 工作流、项目初始化、章节生产和路由规则。
-- `core-writing/`：核心写作原则、人味、AI 味、对话、连续性和章法。
-- `storycraft/`：机制、关系、情绪、悬疑、喜剧、卷结构和伏笔。
-- `market-serialization/`：平台、题材、包装、封面、更新、数据和读者生命周期。
-- `feedback-revision/`：审稿、试读、反馈聚类、修订和掉点诊断。
-- `agent-operations/`：agent 路由、任务装配、研究转化、系列化和 IP/完本复盘。
-- `scene-craft/`：场景类型、动作、谈判、战斗、生活细节和专项桥段技法。
-- `reality-reference/`：现实职业、行业、县域、制度、公共事务和生活事实专题。
-- `safety-research/`：合规、安全、版权、敏感内容和事实核查边界。
-- `advanced-craft/`：高级专题和过渡性专题；后续内容膨胀时继续拆分。
+- `docs/navigation/`：导航、扩展目录和 README 下沉说明。
+- `docs/sources/`：来源清单和来源边界。
+- `docs/templates/`：模板和检查卡。
+- `docs/governance/`：活跃决策、维护治理和决策索引。
+- `docs/workflows/`：agent 工作流、项目初始化、章节生产和路由规则。
+- `docs/core-writing/`：核心写作原则、人味、AI 味、对话、连续性和章法。
+- `docs/storycraft/`：机制、关系、情绪、悬疑、喜剧、卷结构和伏笔。
+- `docs/market-serialization/`：平台、题材、包装、封面、更新、数据和读者生命周期。
+- `docs/feedback-revision/`：审稿、试读、反馈聚类、修订和掉点诊断。
+- `docs/agent-operations/`：agent 路由、任务装配、研究转化、系列化和 IP/完本复盘。
+- `docs/scene-craft/`：场景类型、动作、谈判、战斗、生活细节和专项桥段技法。
+- `docs/reality-reference/`：现实职业、行业、县域、制度、公共事务和生活事实专题。
+- `docs/safety-research/`：合规、安全、版权、敏感内容和事实核查边界。
+- `docs/advanced-craft/`：高级专题和过渡性专题；后续内容膨胀时继续拆分。
 
 读取顺序：
 

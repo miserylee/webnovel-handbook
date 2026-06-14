@@ -21,6 +21,33 @@ const markdownFilePattern = /\.(md|mdx)$/i;
 const highConfidenceMojibakePattern =
   /(?:�|鈥|銆|锛|乣|歚|宎|鐨|鍏|鏂|鍐|寮|姣|缃|闈|绱)/g;
 
+const requiredEntrypoints = [
+  "README.md",
+  "AGENTS.md",
+  "LICENSE",
+  "SOURCE_POLICY.md",
+  "SAFETY.md",
+  "DEIDENTIFICATION.md",
+  "skills/webnovel-handbook/SKILL.md",
+  "docs/00-index.md",
+  "docs/navigation/README.md",
+  "docs/navigation/00-expanded-topic-catalog.md",
+  "docs/navigation/00-readme-details.md",
+  "docs/workflows/README.md",
+  "docs/workflows/35-ai-agent-novel-creation-workflow.md",
+  "docs/workflows/44-single-novel-project-initialization-package.md",
+  "docs/workflows/45-first-chapter-task-brief-production-gate.md",
+  "docs/workflows/57-knowledge-base-routing-consolidation-guide.md",
+  "docs/workflows/58-integrated-drafting-beta-review-revision-workflow.md",
+  "docs/templates/10-templates-and-checklists.md",
+  "docs/core-writing/04-character-and-dialogue.md",
+  "docs/core-writing/06-ai-writing-guidelines.md",
+  "docs/core-writing/11-human-writing-upgrade.md",
+  "docs/core-writing/37-project-style-bible-character-voice.md",
+  "docs/core-writing/59-dialogue-comparison-reference.md",
+  "docs/governance/99-decision-log.md",
+];
+
 async function walk(directory) {
   const entries = await fs.readdir(directory, { withFileTypes: true });
   const files = [];
@@ -224,6 +251,58 @@ async function checkDirectoryReadmeCoverage(markdownFiles) {
   return missingCoverage;
 }
 
+async function checkRequiredEntrypoints() {
+  const missingEntrypoints = [];
+
+  for (const repoPath of requiredEntrypoints) {
+    const absolutePath = path.join(repoRoot, repoPath);
+
+    if (!(await exists(absolutePath))) {
+      missingEntrypoints.push({
+        file: repoPath,
+        sample: "required agent entrypoint is missing",
+      });
+    }
+  }
+
+  return missingEntrypoints;
+}
+
+async function checkDocsDirectoryIndexCoverage() {
+  const missingDirectoryIndexCoverage = [];
+  const docsDirectory = path.join(repoRoot, "docs");
+  const indexPath = path.join(docsDirectory, "00-index.md");
+  const indexContent = await fs.readFile(indexPath, "utf8");
+  const entries = await fs.readdir(docsDirectory, { withFileTypes: true });
+
+  for (const entry of entries) {
+    if (!entry.isDirectory()) {
+      continue;
+    }
+
+    const directoryRepoPath = `docs/${entry.name}/`;
+    const readmePath = path.join(docsDirectory, entry.name, "README.md");
+
+    if (!(await exists(readmePath))) {
+      missingDirectoryIndexCoverage.push({
+        file: directoryRepoPath,
+        sample: "top-level docs directory is missing README.md",
+      });
+      continue;
+    }
+
+    if (!indexContent.includes(directoryRepoPath)) {
+      missingDirectoryIndexCoverage.push({
+        file: "docs/00-index.md",
+        target: directoryRepoPath,
+        sample: "top-level docs directory is not mentioned in docs/00-index.md",
+      });
+    }
+  }
+
+  return missingDirectoryIndexCoverage;
+}
+
 function printSection(title, rows) {
   console.log(`\n${title}: ${rows.length}`);
   for (const row of rows.slice(0, 50)) {
@@ -249,12 +328,16 @@ async function main() {
     missingRawDocPaths,
     suspiciousMojibake,
     missingDirectoryReadmeCoverage,
+    missingEntrypoints,
+    missingDirectoryIndexCoverage,
   ] =
     await Promise.all([
       checkMarkdownLinks(markdownFiles),
       checkRawRepoDocPaths(markdownFiles),
       checkMojibake(textFiles),
       checkDirectoryReadmeCoverage(markdownFiles),
+      checkRequiredEntrypoints(),
+      checkDocsDirectoryIndexCoverage(),
     ]);
 
   printSection("Broken Markdown links", brokenLinks);
@@ -264,12 +347,19 @@ async function main() {
     "Docs missing directory README coverage",
     missingDirectoryReadmeCoverage,
   );
+  printSection("Missing required agent entrypoints", missingEntrypoints);
+  printSection(
+    "Docs top-level directories missing index coverage",
+    missingDirectoryIndexCoverage,
+  );
 
   const hasProblems =
     brokenLinks.length > 0 ||
     missingRawDocPaths.length > 0 ||
     suspiciousMojibake.length > 0 ||
-    missingDirectoryReadmeCoverage.length > 0;
+    missingDirectoryReadmeCoverage.length > 0 ||
+    missingEntrypoints.length > 0 ||
+    missingDirectoryIndexCoverage.length > 0;
 
   if (hasProblems) {
     process.exitCode = 1;

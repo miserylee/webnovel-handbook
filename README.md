@@ -44,7 +44,7 @@
 
 ## 维护检查
 
-- 调整索引、路径或 skill 入口后，可运行 `node scripts/check-handbook-consumability.mjs` 检查 Markdown 本地链接、本仓库 `docs/...md` 裸路径、目录 README 覆盖和常见编码污染。
+- 调整索引、路径或 skill 入口后，可运行 `node scripts/check-handbook-consumability.mjs` 检查 Markdown 本地链接、本仓库 `docs/...md` 裸路径、目录 README 覆盖、关键 agent 入口、`docs` 一级目录索引覆盖和常见编码污染。
 
 ## 开源状态
 
