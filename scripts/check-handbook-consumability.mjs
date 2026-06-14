@@ -271,6 +271,54 @@ async function checkRawRepoFilePaths(markdownFiles) {
   return missingRawRepoFilePaths;
 }
 
+async function checkRootEntrypointLinkSemantics(markdownFiles) {
+  const rootEntrypointLinkProblems = [];
+  const rootEntrypointNames = new Set([
+    "README.md",
+    "AGENTS.md",
+    "CHANGELOG.md",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "DEIDENTIFICATION.md",
+    "ROADMAP.md",
+    "SAFETY.md",
+    "SECURITY.md",
+    "SOURCE_POLICY.md",
+  ]);
+  const markdownLinkPattern = /\[[^\]]+\]\(([^)]+)\)/g;
+
+  for (const file of markdownFiles) {
+    const repoPath = toRepoPath(file);
+    if (!repoPath.includes("/")) {
+      continue;
+    }
+
+    const content = await fs.readFile(file, "utf8");
+    const lines = content.split(/\r?\n/);
+
+    for (const [index, line] of lines.entries()) {
+      let match;
+      while ((match = markdownLinkPattern.exec(line))) {
+        const target = match[1].split("#")[0];
+        if (!rootEntrypointNames.has(target)) {
+          continue;
+        }
+
+        rootEntrypointLinkProblems.push({
+          file: repoPath,
+          line: index + 1,
+          target,
+          sample:
+            "subdirectory document links to a root entrypoint with a bare relative target; " +
+            "use the correct ../ path to the repository root",
+        });
+      }
+    }
+  }
+
+  return rootEntrypointLinkProblems;
+}
+
 async function checkMojibake(textFiles) {
   const suspiciousFiles = [];
 
@@ -1516,6 +1564,7 @@ async function main() {
     brokenLinks,
     missingRawDocPaths,
     missingRawRepoFilePaths,
+    rootEntrypointLinkProblems,
     suspiciousMojibake,
     utf8BomFiles,
     crlfLineEndingFiles,
@@ -1549,6 +1598,7 @@ async function main() {
       checkMarkdownLinks(markdownFiles),
       checkRawRepoDocPaths(markdownFiles),
       checkRawRepoFilePaths(markdownFiles),
+      checkRootEntrypointLinkSemantics(markdownFiles),
       checkMojibake(textFiles),
       checkUtf8Bom(textFiles),
       checkCrlfLineEndings(textFiles),
@@ -1582,6 +1632,7 @@ async function main() {
   printSection("Broken Markdown links", brokenLinks);
   printSection("Missing raw repo docs paths", missingRawDocPaths);
   printSection("Missing raw repo file paths", missingRawRepoFilePaths);
+  printSection("Root entrypoint link semantic problems", rootEntrypointLinkProblems);
   printSection("Suspicious mojibake files", suspiciousMojibake);
   printSection("UTF-8 BOM files", utf8BomFiles);
   printSection("CRLF line ending files", crlfLineEndingFiles);
@@ -1645,6 +1696,7 @@ async function main() {
     brokenLinks.length > 0 ||
     missingRawDocPaths.length > 0 ||
     missingRawRepoFilePaths.length > 0 ||
+    rootEntrypointLinkProblems.length > 0 ||
     suspiciousMojibake.length > 0 ||
     utf8BomFiles.length > 0 ||
     crlfLineEndingFiles.length > 0 ||

@@ -20,7 +20,7 @@
 
 每次新会话或上下文丢失后，先读：
 
-1. [README.md](README.md)
+1. [README.md](../../README.md)
 2. [AGENTS.md](../../AGENTS.md)
 3. [项目索引：渐进式入口](../00-index.md)
 
@@ -1080,5 +1080,4 @@ node scripts/package-skill.mjs
 - `docs/00-index.md`：知识库目录。
 - `docs/workflows/57-knowledge-base-routing-consolidation-guide.md`：按任务选择最小阅读包。
 - `docs/workflows/58-integrated-drafting-beta-review-revision-workflow.md`：写稿、试读、审稿、改稿一体化流程。
-
 
