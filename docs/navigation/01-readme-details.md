@@ -171,7 +171,9 @@
 
 - Markdown 本地链接、仓库内 `docs/...md`、`scripts/...`、`skills/...` 和根目录关键文件裸路径。
 - 目录 README 覆盖、根 README 链接覆盖、`docs/00-index.md` 关键入口覆盖和最小阅读包覆盖。
-- AGENTS 任务路线委托、启动阅读一致性、默认任务路线是否误读来源清单、模板仓库或扩展目录。
+- `docs/00-index.md` 最小阅读包必须按任务小节保留 `先读`、`按需追加`、`不要默认读` 三字段，避免退回难检索的密集表格。
+- AGENTS 和 `57` 路由规范必须继续把可执行任务路线委托给 `docs/00-index.md`，避免重新出现多套最小阅读包。
+- 启动阅读一致性、默认任务路线是否误读来源清单、模板仓库或扩展目录。
 - 关键入口用途信号、正式文档状态元数据、编号唯一性、标题编号一致性和跨平台文件名约束。
 - 轻量 skill 包布局、skill 启动路由、skill 打包设置、包内 zip entry 校验和本机 skill 同步。
 - CHANGELOG 日期标题与分类标题唯一性，README、AGENTS、CHANGELOG、启动索引、决策入口和路由入口体积护栏。
@@ -1080,4 +1082,3 @@ node scripts/package-skill.mjs
 - `docs/00-index.md`：知识库目录。
 - `docs/workflows/57-knowledge-base-routing-consolidation-guide.md`：按任务选择最小阅读包。
 - `docs/workflows/58-integrated-drafting-beta-review-revision-workflow.md`：写稿、试读、审稿、改稿一体化流程。
-
