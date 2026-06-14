@@ -60,7 +60,7 @@ For new-book planning, project initialization, premise discussion, market positi
 - `docs/workflows/44-single-novel-project-initialization-package.md`
 - `docs/templates/10-templates-and-checklists.md`
 
-Project discussion archive is mandatory. In the target novel project, write or update `docs/98-discussion-log.md` before ending the task. Record every substantive discussion item: user preferences, candidate ideas, rejected options, decision reasons, unresolved questions, source materials, and next actions. Stable decisions must also be promoted to `docs/governance/99-decision-log.md` and the relevant project brief/outline files. Do not keep only the final brief and discard the discussion trail.
+Project discussion archive is mandatory. In the target novel project, write or update `<novel-project-docs>/98-discussion-log.md` before ending the task. Record every substantive discussion item: user preferences, candidate ideas, rejected options, decision reasons, unresolved questions, source materials, and next actions. Stable decisions must also be promoted to `docs/governance/99-decision-log.md` and the relevant project brief/outline files. Do not keep only the final brief and discard the discussion trail.
 
 For writing, continuation, review, beta-read, or revision tasks, also read:
 

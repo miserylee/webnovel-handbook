@@ -23,7 +23,7 @@
 - `docs/reality-reference/177-inheritance-will-estate-division-remarried-family-kinship-property-conflict.md`：负责遗嘱、遗产、继承人范围、债务和不动产/存款过户。本篇负责丧葬费用、骨灰墓位安排和死亡后最早爆发的亲属冲突。
 - `docs/reality-reference/169-hospital-emergency-inpatient-medical-record-insurance-dispute-caregiving.md`：负责医院死亡、病历、尸检、医疗纠纷和医患沟通。本篇负责从医院死亡后进入殡葬和家属善后系统。
 - `docs/reality-reference/184-elderly-care-institution-nursing-home-community-care-guardianship-contract-rights-risk.md`：负责养老机构死亡前后的护理记录和责任争议。本篇负责老人去世后的殡葬、骨灰、公墓、祭扫和家属后续纠纷。
-- `docs/166-police-report-case-filing-investigation-detention-interrogation-lawyer-criminal-procedure.md`：负责非正常死亡、刑事案件、报警、调查和鉴定。本篇遇到可疑死亡时只写殡葬流程暂停或衔接，调查细节接入该专题。
+- `docs/reality-reference/166-police-reporting-public-security-investigation-detention-search-case-procedure.md`：负责非正常死亡、刑事案件、报警、调查和鉴定。本篇遇到可疑死亡时只写殡葬流程暂停或衔接，调查细节接入该专题。
 - `docs/reality-reference/164-fire-disaster-emergency-evacuation-rescue-accident-aftermath-safety.md`：负责灾害事故、救援和遇难者善后。本篇处理遇难者遗体、身份确认、集体悼念和后续安葬的生活化链条。
 - `docs/reality-reference/180-consumer-rights-ecommerce-platform-return-refund-false-advertising-product-quality-after-sales.md`：负责一般消费维权。本篇处理殡葬服务收费、套餐诱导、公墓销售、祭扫用品和殡葬服务纠纷。
 

@@ -78,7 +78,7 @@
 
 ## 2. 四类核心台账
 
-单本小说项目建议在 `docs/11-story-ledger.md` 维护四类表。
+单本小说项目建议在 `<novel-project-docs>/11-story-ledger.md` 维护四类表。
 
 ### 章节事件账
 

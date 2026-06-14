@@ -280,9 +280,9 @@ county_meteorology_scene_card:
 - 写农业抢收、农机调度和天气窗口时，联动 `docs/reality-reference/215-county-agricultural-machinery-mechanization-harvest-service-cross-region-operation-subsidy-safety-accident.md`。
 - 写旅游景区、票务退改、活动取消和游客安全时，联动 `docs/reality-reference/182-tourism-travel-scenic-spot-hotel-agency-ticket-change-refund-guide-service-dispute.md`。
 - 写公共交通停运、道路结冰、班车晚点时，联动 `docs/reality-reference/241-county-public-transport-rural-passenger-bus-taxi-ride-hailing-station-transport-service-safety.md`。
-- 写保险理赔、债务和经济损失时，联动 `docs/165-finance-banking-payment-loan-credit-risk-compliance.md`、`docs/reality-reference/196-rural-finance-farmer-loan-agricultural-insurance-guarantee-mutual-aid-debt-dispute.md`。
+- 写保险理赔、债务和经济损失时，联动 `docs/reality-reference/165-bank-loan-credit-insurance-tax-invoice-financial-compliance-money-flow.md`、`docs/reality-reference/196-rural-finance-farmer-loan-agricultural-insurance-guarantee-mutual-aid-debt-dispute.md`。
 - 写行政处罚、复议诉讼和气象行政争议时，联动 `docs/reality-reference/227-county-administrative-reconsideration-litigation-penalty-hearing-enforcement-state-compensation-remedy.md`。
-- 写谣言、平台传播和群聊证据时，联动 `docs/advanced-craft/61-information-public-opinion-discourse-battle.md`、`docs/163-digital-accounts-phone-records-online-identity-privacy-evidence-chain.md`。
+- 写谣言、平台传播和群聊证据时，联动 `docs/advanced-craft/61-information-public-opinion-discourse-battle.md`、`docs/reality-reference/163-digital-account-password-privacy-cybersecurity-hacking-data-evidence.md`。
 
 ---
 

@@ -18,14 +18,14 @@
 
 ## 2. 与既有专题的分工
 
-- `docs/160-aging-elderly-care-cognitive-decline-family-responsibility.md`：负责老年人生存状态、家庭照护、认知退化和代际责任的大系统。本篇负责养老服务机构、社区居家服务、合同、记录、事故和监管。
+- `docs/scene-craft/160-aging-eldercare-dementia-long-term-care-caregiver-burden-intergenerational-responsibility.md`：负责老年人生存状态、家庭照护、认知退化和代际责任的大系统。本篇负责养老服务机构、社区居家服务、合同、记录、事故和监管。
 - `docs/reality-reference/169-hospital-emergency-inpatient-medical-record-insurance-dispute-caregiving.md`：负责急诊、住院、病历、医疗费用和出院。本篇负责出院后进入养老、护理院、康复和长期照护系统。
 - `docs/reality-reference/177-inheritance-will-estate-division-remarried-family-kinship-property-conflict.md`：负责遗嘱继承、再婚家庭和遗产分割。本篇只处理养老期间的财产保管、费用支付、监护和财产侵害风险。
 - `docs/reality-reference/175-real-estate-rental-home-buying-selling-brokerage-property-management-moving-handover-dispute.md`：负责房屋买卖租赁和搬家交接。本篇只处理以房养老、老人房产被挪用、入住机构前后居所变化。
 - `docs/reality-reference/180-consumer-rights-ecommerce-platform-return-refund-false-advertising-product-quality-after-sales.md`：负责一般消费者维权。本篇处理养老预付费、会员制养老、康养项目虚假宣传等老人服务消费场景。
 - `docs/reality-reference/170-food-restaurant-kitchen-food-safety-delivery-banquet-allergy-poisoning-risk.md`：负责食品安全。本篇只提养老机构饮食风险的叙事接口，如吞咽、糖尿病饮食、误食、噎食和集体供餐。
-- `docs/166-police-report-case-filing-investigation-detention-interrogation-lawyer-criminal-procedure.md`：负责报警、立案、刑事程序。本篇遇到虐待、诈骗、侵占、遗弃、故意伤害等情节时接入该专题。
-- `docs/159-disability-accessibility-assistive-device-public-service-caregiving.md`：负责残障、无障碍和辅助器具。本篇处理老年失能、半失能、认知障碍和养老服务中的辅助设施。
+- `docs/reality-reference/166-police-reporting-public-security-investigation-detention-search-case-procedure.md`：负责报警、立案、刑事程序。本篇遇到虐待、诈骗、侵占、遗弃、故意伤害等情节时接入该专题。
+- `docs/scene-craft/159-disability-chronic-illness-neurodiversity-accessibility-assistive-devices.md`：负责残障、无障碍和辅助器具。本篇处理老年失能、半失能、认知障碍和养老服务中的辅助设施。
 
 ## 3. 安全边界
 

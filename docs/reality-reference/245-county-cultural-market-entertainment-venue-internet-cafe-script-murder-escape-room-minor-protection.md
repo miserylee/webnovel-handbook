@@ -267,8 +267,8 @@ county_cultural_market_scene_card:
 - 写消防检查、火灾隐患、人员密集场所和火灾事故调查时，联动 `docs/reality-reference/235-county-fire-rescue-supervision-inspection-fire-investigation-hidden-danger-rectification.md`、`docs/reality-reference/164-fire-disaster-emergency-evacuation-rescue-accident-aftermath-safety.md`。
 - 写未成年人保护、校园、欺凌、侵害、家校沟通和心理危机时，联动 `docs/reality-reference/192-school-bullying-minor-protection-home-school-communication-discipline-transfer-psychological-crisis-intervention.md`、`docs/reality-reference/200-rural-education-boarding-school-left-behind-children-nutrition-meal-school-bus-attendance-dropout-control-chain.md`。
 - 写消费退款、虚假宣传、价格和会员充值争议时，联动 `docs/reality-reference/180-consumer-rights-ecommerce-platform-return-refund-false-advertising-product-quality-after-sales.md`、`docs/reality-reference/211-county-market-regulation-consumer-complaint-12315-product-quality-price-advertising-measurement-administrative-penalty.md`。
-- 写报警、治安、侵害、涉赌涉毒涉黄和刑事案件时，联动 `docs/166-police-report-criminal-procedure-public-security-investigation-evidence.md`、`docs/229-county-criminal-justice-public-security-procuratorate-court-sentencing-community-correction-victim-protection.md`。
-- 写网络账号、上网记录、监控、聊天和电子证据时，联动 `docs/163-digital-accounts-phone-records-online-identity-privacy-evidence-chain.md`。
+- 写报警、治安、侵害、涉赌涉毒涉黄和刑事案件时，联动 `docs/reality-reference/166-police-reporting-public-security-investigation-detention-search-case-procedure.md`、`docs/reality-reference/229-county-procuratorate-public-prosecution-arrest-review-legal-supervision-public-interest-litigation-minor-protection.md`。
+- 写网络账号、上网记录、监控、聊天和电子证据时，联动 `docs/reality-reference/163-digital-account-password-privacy-cybersecurity-hacking-data-evidence.md`。
 - 写舞台表演、音乐、戏曲、演唱会和观众反馈时，联动 `docs/scene-craft/146-sound-music-performance-stage-concert-opera-audience-feedback.md`。
 - 写谜题设计和虚构密室公平性时，联动 `docs/scene-craft/138-puzzle-trap-riddle-trial-mechanism-lockroom-fairness.md`；写现实密室经营和安全时优先用本篇。
 - 写行政处罚、听证、复议诉讼和行政救济时，联动 `docs/reality-reference/227-county-administrative-reconsideration-litigation-penalty-hearing-enforcement-state-compensation-remedy.md`。

@@ -104,9 +104,9 @@ project/
 
 可选扩展：
 
-- `docs/09-feedback-log.md`：有读者试读、编辑反馈或评论复盘时再建。
-- `docs/10-publication-ops.md`：进入发布、推荐、上架或连载运营后再建。
-- `docs/12-risk-review.md`：高合规、高版权、高专业资料项目可提前建。
+- `<novel-project-docs>/09-feedback-log.md`：有读者试读、编辑反馈或评论复盘时再建。
+- `<novel-project-docs>/10-publication-ops.md`：进入发布、推荐、上架或连载运营后再建。
+- `<novel-project-docs>/12-risk-review.md`：高合规、高版权、高专业资料项目可提前建。
 - `assets/`：只在确实需要封面参考、地图、时间线图或素材授权记录时建立。
 
 不要默认创建：
@@ -130,15 +130,15 @@ project/
 | `README.md` | 项目入口和文档地图 | 项目名、阶段、下一步、文件说明 | 长篇脑洞堆积 |
 | `novel-notes.md` | 临时想法池 | 候选想法区和待整理区 | 已确认事实的唯一来源 |
 | `docs/00-index.md` | 当前状态和导航 | 当前阶段、下一步、必读路线 | 正文草稿 |
-| `docs/01-market-strategy.md` | 平台、读者、商业承诺 | 平台、频道、目标读者、竞品结论 | 未登记来源的榜单结论 |
-| `docs/02-core-concept.md` | 核心概念和主承诺 | 一句话主承诺、主角、钩子、长线引擎 | 只有世界观百科 |
-| `docs/03-world-rules.md` | 世界、机制、资料规则 | 已确认规则和待确认资料 | 与正文矛盾的候选规则 |
-| `docs/04-characters.md` | 人物、关系、声音底稿 | 主角、核心关系、角色状态 | 单纯外貌表 |
-| `docs/05-plot-architecture.md` | 长线结构 | 主线压力、前 10 章、前 30 章、卷级方向 | 逐章正文 |
-| `docs/06-volume-outlines.md` | 分卷和阶段目录 | 第一卷目标和阶段回报 | 未确认大结局细节强行锁死 |
-| `docs/07-writing-guidelines.md` | 项目专属写法规则 | 节奏、禁区、例外、平台特殊要求 | 通用技法整段搬运 |
-| `docs/08-style-bible.md` | 项目声音和角色语言 | 旁白距离、角色声音、称呼术语 | 空泛“文风优美” |
-| `docs/11-story-ledger.md` | 连续性台账 | 初始事实、伏笔、角色状态、规则状态 | 全章复述 |
+| `<novel-project-docs>/01-market-strategy.md` | 平台、读者、商业承诺 | 平台、频道、目标读者、竞品结论 | 未登记来源的榜单结论 |
+| `<novel-project-docs>/02-core-concept.md` | 核心概念和主承诺 | 一句话主承诺、主角、钩子、长线引擎 | 只有世界观百科 |
+| `<novel-project-docs>/03-world-rules.md` | 世界、机制、资料规则 | 已确认规则和待确认资料 | 与正文矛盾的候选规则 |
+| `<novel-project-docs>/04-characters.md` | 人物、关系、声音底稿 | 主角、核心关系、角色状态 | 单纯外貌表 |
+| `<novel-project-docs>/05-plot-architecture.md` | 长线结构 | 主线压力、前 10 章、前 30 章、卷级方向 | 逐章正文 |
+| `<novel-project-docs>/06-volume-outlines.md` | 分卷和阶段目录 | 第一卷目标和阶段回报 | 未确认大结局细节强行锁死 |
+| `<novel-project-docs>/07-writing-guidelines.md` | 项目专属写法规则 | 节奏、禁区、例外、平台特殊要求 | 通用技法整段搬运 |
+| `<novel-project-docs>/08-style-bible.md` | 项目声音和角色语言 | 旁白距离、角色声音、称呼术语 | 空泛“文风优美” |
+| `<novel-project-docs>/11-story-ledger.md` | 连续性台账 | 初始事实、伏笔、角色状态、规则状态 | 全章复述 |
 | `docs/governance/99-decision-log.md` | 关键决策 | 立项、主承诺、平台、结构、禁区 | 临时脑洞 |
 | `manuscript/README.md` | 正文目录规则 | 正文只放读者可见内容 | 自检和大纲 |
 | `manuscript/vol-01-opening/outline.md` | 第一卷细纲 | 第一卷目标、前 10 章任务 | 已发布正文 |
@@ -189,8 +189,8 @@ project/
 
 输出：
 
-- `docs/01-market-strategy.md`
-- `docs/02-core-concept.md`
+- `<novel-project-docs>/01-market-strategy.md`
+- `<novel-project-docs>/02-core-concept.md`
 - `docs/governance/99-decision-log.md`
 
 门槛：
@@ -206,9 +206,9 @@ project/
 
 输出：
 
-- `docs/03-world-rules.md`
-- `docs/04-characters.md`
-- `docs/05-plot-architecture.md`
+- `<novel-project-docs>/03-world-rules.md`
+- `<novel-project-docs>/04-characters.md`
+- `<novel-project-docs>/05-plot-architecture.md`
 
 门槛：
 
@@ -224,9 +224,9 @@ project/
 
 输出：
 
-- `docs/07-writing-guidelines.md`
-- `docs/08-style-bible.md`
-- `docs/11-story-ledger.md`
+- `<novel-project-docs>/07-writing-guidelines.md`
+- `<novel-project-docs>/08-style-bible.md`
+- `<novel-project-docs>/11-story-ledger.md`
 
 门槛：
 
@@ -241,7 +241,7 @@ project/
 
 输出：
 
-- `docs/06-volume-outlines.md`
+- `<novel-project-docs>/06-volume-outlines.md`
 - `manuscript/vol-01-opening/README.md`
 - `manuscript/vol-01-opening/outline.md`
 
@@ -264,15 +264,15 @@ project/
 只有以下内容齐备，才能进入第一章正文：
 
 - 当前阶段和下一步写在 `docs/00-index.md`。
-- 主承诺写在 `docs/02-core-concept.md`。
-- 目标读者和平台写在 `docs/01-market-strategy.md`。
-- 前 10 章方向写在 `docs/05-plot-architecture.md`。
-- 第一卷阶段目标写在 `docs/06-volume-outlines.md`。
-- 主角第一章行动写在 `docs/04-characters.md` 或章节任务中。
-- 世界/机制第一章所需规则写在 `docs/03-world-rules.md`。
+- 主承诺写在 `<novel-project-docs>/02-core-concept.md`。
+- 目标读者和平台写在 `<novel-project-docs>/01-market-strategy.md`。
+- 前 10 章方向写在 `<novel-project-docs>/05-plot-architecture.md`。
+- 第一卷阶段目标写在 `<novel-project-docs>/06-volume-outlines.md`。
+- 主角第一章行动写在 `<novel-project-docs>/04-characters.md` 或章节任务中。
+- 世界/机制第一章所需规则写在 `<novel-project-docs>/03-world-rules.md`。
 - 第一章任务写在 `manuscript/vol-01-opening/outline.md`。
-- 风格底线写在 `docs/08-style-bible.md`。
-- 初始台账写在 `docs/11-story-ledger.md`。
+- 风格底线写在 `<novel-project-docs>/08-style-bible.md`。
+- 初始台账写在 `<novel-project-docs>/11-story-ledger.md`。
 
 如果用户是第一次开书，或项目里还没有大纲、细纲、人物卡、设定台账和风格手册，agent 必须先补最小文档包。第一章许可不能替代项目初始化。
 
@@ -286,7 +286,7 @@ project/
 - 标出哪些内容仍然有效。
 - 标出哪些内容废弃或降为候选。
 - 写清影响哪些后续章节、人物状态、伏笔和包装承诺。
-- 同步 `docs/11-story-ledger.md`、卷纲、章节排表、风格手册和下一章任务。
+- 同步 `<novel-project-docs>/11-story-ledger.md`、卷纲、章节排表、风格手册和下一章任务。
 
 ---
 
@@ -334,7 +334,7 @@ project/
 - 最近决策。
 - 下一步。
 
-### 7.4 `docs/01-market-strategy.md`
+### 7.4 `<novel-project-docs>/01-market-strategy.md`
 
 必须包含：
 
@@ -346,7 +346,7 @@ project/
 - 不可迁移风险。
 - 包装方向。
 
-### 7.5 `docs/02-core-concept.md`
+### 7.5 `<novel-project-docs>/02-core-concept.md`
 
 必须包含：
 
@@ -358,7 +358,7 @@ project/
 - 第一章证明方式。
 - 前 10 章第一轮回报。
 
-### 7.6 `docs/03-world-rules.md`
+### 7.6 `<novel-project-docs>/03-world-rules.md`
 
 必须包含：
 
@@ -369,7 +369,7 @@ project/
 - 第一章必须知道的规则。
 - 不能提前暴露的规则。
 
-### 7.7 `docs/04-characters.md`
+### 7.7 `<novel-project-docs>/04-characters.md`
 
 必须包含：
 
@@ -380,7 +380,7 @@ project/
 - 人物声音候选。
 - 已确认人物事实。
 
-### 7.8 `docs/05-plot-architecture.md`
+### 7.8 `<novel-project-docs>/05-plot-architecture.md`
 
 必须包含：
 
@@ -391,7 +391,7 @@ project/
 - 卷级引擎。
 - 关键伏笔和回收方向。
 
-### 7.9 `docs/06-volume-outlines.md`
+### 7.9 `<novel-project-docs>/06-volume-outlines.md`
 
 必须包含：
 
@@ -401,7 +401,7 @@ project/
 - 章节任务索引。
 - 卷末结算。
 
-### 7.10 `docs/07-writing-guidelines.md`
+### 7.10 `<novel-project-docs>/07-writing-guidelines.md`
 
 必须包含：
 
@@ -411,7 +411,7 @@ project/
 - 对通用知识库规则的项目例外。
 - 发布前自检规则。
 
-### 7.11 `docs/08-style-bible.md`
+### 7.11 `<novel-project-docs>/08-style-bible.md`
 
 必须包含：
 
@@ -423,7 +423,7 @@ project/
 - 可保留粗糙。
 - 不得改平的资产。
 
-### 7.12 `docs/11-story-ledger.md`
+### 7.12 `<novel-project-docs>/11-story-ledger.md`
 
 必须包含：
 
@@ -493,16 +493,16 @@ project/
 | AGENTS.md |  |  |  |
 | README.md |  |  |  |
 | docs/00-index.md |  |  |  |
-| docs/01-market-strategy.md |  |  |  |
-| docs/02-core-concept.md |  |  |  |
-| docs/03-world-rules.md |  |  |  |
-| docs/04-characters.md |  |  |  |
-| docs/05-plot-architecture.md |  |  |  |
-| docs/06-volume-outlines.md |  |  |  |
-| docs/07-writing-guidelines.md |  |  |  |
-| docs/08-style-bible.md |  |  |  |
-| docs/11-story-ledger.md |  |  |  |
-| docs/98-discussion-log.md |  |  |  |
+| <novel-project-docs>/01-market-strategy.md |  |  |  |
+| <novel-project-docs>/02-core-concept.md |  |  |  |
+| <novel-project-docs>/03-world-rules.md |  |  |  |
+| <novel-project-docs>/04-characters.md |  |  |  |
+| <novel-project-docs>/05-plot-architecture.md |  |  |  |
+| <novel-project-docs>/06-volume-outlines.md |  |  |  |
+| <novel-project-docs>/07-writing-guidelines.md |  |  |  |
+| <novel-project-docs>/08-style-bible.md |  |  |  |
+| <novel-project-docs>/11-story-ledger.md |  |  |  |
+| <novel-project-docs>/98-discussion-log.md |  |  |  |
 | docs/governance/99-decision-log.md |  |  |  |
 
 ## 3. 第一章生产许可

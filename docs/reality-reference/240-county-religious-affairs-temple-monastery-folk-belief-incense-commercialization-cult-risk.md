@@ -289,9 +289,9 @@ county_religious_affairs_scene_card:
 - 写旅游景区、旅行社、门票和游客投诉时，联动 `docs/reality-reference/182-tourism-travel-scenic-spot-hotel-agency-ticket-change-refund-guide-service-dispute.md`。
 - 写民宿、住宿登记、客房隐私和旅馆安全时，联动 `docs/reality-reference/171-hotel-guesthouse-homestay-checkin-registration-room-service-surveillance-privacy-safety.md`。
 - 写市场价格、虚假广告、消费投诉和商品质量时，联动 `docs/reality-reference/211-county-market-regulation-consumer-complaint-12315-product-quality-price-advertising-measurement-administrative-penalty.md`。
-- 写诈骗、报警、侦查和刑事风险时，联动 `docs/166-police-report-criminal-procedure-public-security-investigation-evidence.md`、`docs/229-county-criminal-justice-public-security-procuratorate-court-sentencing-community-correction-victim-protection.md`。
+- 写诈骗、报警、侦查和刑事风险时，联动 `docs/reality-reference/166-police-reporting-public-security-investigation-detention-search-case-procedure.md`、`docs/reality-reference/229-county-procuratorate-public-prosecution-arrest-review-legal-supervision-public-interest-litigation-minor-protection.md`。
 - 写火灾、明火、山林防火和人员密集场所安全时，联动 `docs/reality-reference/235-county-fire-rescue-supervision-inspection-fire-investigation-hidden-danger-rectification.md`。
-- 写短视频、账号、隐私、聊天记录和电子证据时，联动 `docs/163-digital-accounts-phone-records-online-identity-privacy-evidence-chain.md`。
+- 写短视频、账号、隐私、聊天记录和电子证据时，联动 `docs/reality-reference/163-digital-account-password-privacy-cybersecurity-hacking-data-evidence.md`。
 
 ---
 

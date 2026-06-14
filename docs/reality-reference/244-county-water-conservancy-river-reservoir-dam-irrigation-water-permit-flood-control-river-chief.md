@@ -283,7 +283,7 @@ county_water_conservancy_scene_card:
 - 写农机抢收、农业保险、合作社和粮食生产压力时，联动 `docs/reality-reference/215-county-agricultural-machinery-mechanization-harvest-service-cross-region-operation-subsidy-safety-accident.md`、`docs/reality-reference/196-rural-finance-farmer-loan-agricultural-insurance-guarantee-mutual-aid-debt-dispute.md`。
 - 写村集体、土地承包、项目占地、集体收益分配时，联动 `docs/reality-reference/194-rural-homestead-land-contract-collective-economy-expropriation-compensation-village-governance-dispute.md`、`docs/reality-reference/209-village-self-governance-village-affairs-disclosure-villagers-meeting-village-rules-supervision-collective-economy-organization.md`。
 - 写水利工程招投标、项目验收、审计整改和自然资源资产离任审计时，联动 `docs/reality-reference/222-county-government-procurement-bidding-public-resource-transaction-project-acceptance-audit-settlement.md`、`docs/reality-reference/225-county-audit-supervision-budget-execution-economic-responsibility-government-investment-rectification.md`。
-- 写非法采砂、破坏水利设施、妨害防汛、刑事案件和公益诉讼时，联动 `docs/166-police-report-criminal-procedure-public-security-investigation-evidence.md`、`docs/229-county-criminal-justice-public-security-procuratorate-court-sentencing-community-correction-victim-protection.md`。
+- 写非法采砂、破坏水利设施、妨害防汛、刑事案件和公益诉讼时，联动 `docs/reality-reference/166-police-reporting-public-security-investigation-detention-search-case-procedure.md`、`docs/reality-reference/229-county-procuratorate-public-prosecution-arrest-review-legal-supervision-public-interest-litigation-minor-protection.md`。
 
 ---
 

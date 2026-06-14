@@ -21,10 +21,10 @@ AI 写作时要先把“婚事”当成一个系统，而不是一场仪式。
 
 ## 2. 与既有专题的分工
 
-- `docs/176-marriage-law-divorce-bride-price-domestic-violence-inheritance-adoption-guardianship-family-dispute.md` 管通用婚姻家庭法律链，本篇只管县域/乡村婚恋的生活质地、相亲生态、婚俗治理和家庭债务叙事。
-- `docs/161-citizen-identity-household-registration-marriage-birth-adoption-ethnic-change-id-card-case.md` 管户口、身份证、婚姻登记、出生收养等身份材料，本篇只抽取婚姻登记对剧情的影响。
-- `docs/147-folk-custom-temple-fair-lineage-ritual-paperwork.md` 管仪式和宗族民俗，本篇只处理婚礼、订婚、红白理事会、婚俗改革与婚姻面子的接口。
-- `docs/175-family-real-estate-wealth-transfer-inheritance-gift-sale-loan-tax-case.md` 管家庭财产转移，本篇只处理婚房、婚车、嫁妆、共同贷款和父母出资在婚事里的功能。
+- `docs/reality-reference/176-romance-marriage-engagement-cohabitation-bride-price-dowry-divorce-property-intimate-responsibility.md` 管通用婚姻家庭法律链，本篇只管县域/乡村婚恋的生活质地、相亲生态、婚俗治理和家庭债务叙事。
+- `docs/reality-reference/161-identity-documents-registration-records-permits-credentials-civil-status.md` 管户口、身份证、婚姻登记、出生收养等身份材料，本篇只抽取婚姻登记对剧情的影响。
+- `docs/scene-craft/147-ritual-ceremony-wedding-funeral-investiture-initiation-status-transition.md` 管仪式和宗族民俗，本篇只处理婚礼、订婚、红白理事会、婚俗改革与婚姻面子的接口。
+- `docs/reality-reference/175-real-estate-rental-home-buying-selling-brokerage-property-management-moving-handover-dispute.md` 管家庭财产转移，本篇只处理婚房、婚车、嫁妆、共同贷款和父母出资在婚事里的功能。
 - `docs/reality-reference/194-rural-homestead-land-contract-collective-economy-expropriation-compensation-village-governance-dispute.md` 管宅基地与农村土地，本篇只处理“结婚建房、分家宅基地、婚房归属”带来的婚恋压力。
 - `docs/reality-reference/196-rural-finance-farmer-loan-agricultural-insurance-guarantee-mutual-aid-debt-dispute.md` 管农村融资，本篇只处理彩礼、酒席、婚房装修、买车等婚嫁支出如何变成债务。
 - `docs/reality-reference/201-county-employment-migrant-work-return-home-employment-gig-market-labor-agency-wage-arrears-rights.md` 管就业和务工，本篇处理外出务工收入、返乡相亲、跨地恋爱和婚后流动。

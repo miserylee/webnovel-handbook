@@ -26,9 +26,9 @@
 - `docs/feedback-revision/101-reader-dropoff-poison-points-red-flags-retention-safety.md`：负责毒点雷点。本篇负责识别怀孕梗、带球跑、孩子虐点、强制生育、换子和亲子身份反转的留存风险。
 - `docs/safety-research/105-sensitive-content-trauma-informed-harm-avoidance.md`：负责创伤、性暴力、家庭暴力、自伤、未成年人伤害和心理危机。本篇涉及流产、婴儿死亡、产后抑郁、强迫怀孕、弃养、虐童时必须联动。
 - `docs/safety-research/111-research-fact-checking-source-evaluation-fiction-transformation.md`：负责事实查证。本篇只沉淀创作结构，具体医学、法律、政策不能凭记忆写。
-- `docs/115-intimacy-consent-boundary-romance-spice.md`：负责亲密关系同意和边界。本篇负责怀孕、避孕失败、生育选择和育儿分工中的同意与责任。
+- `docs/scene-craft/115-romantic-chemistry-intimacy-boundaries-relationship-tension.md`：负责亲密关系同意和边界。本篇负责怀孕、避孕失败、生育选择和育儿分工中的同意与责任。
 - `docs/scene-craft/126-character-death-sacrifice-injury-resurrection-exit-grief-fallout.md`：负责死亡、重伤、丧亲和悲伤。本篇涉及孕产死亡、胎儿/婴儿死亡时要联动。
-- `docs/131-medical-healing-injury-illness-treatment-recovery.md`：负责医疗治疗和恢复。本篇负责孕产相关医疗事实的叙事使用，不替代医疗专题。
+- `docs/scene-craft/131-injury-illness-treatment-healing-recovery-medical-credibility.md`：负责医疗治疗和恢复。本篇负责孕产相关医疗事实的叙事使用，不替代医疗专题。
 - `docs/scene-craft/151-age-lifespan-generation-seniority-growth-stage-continuity.md`：负责年龄、成长阶段和代际连续性。本篇负责从孕期到婴幼儿照护的家庭台账。
 - `docs/scene-craft/153-sleep-fatigue-rest-recovery-circadian-body-resource-continuity.md`：负责睡眠、疲劳和恢复。本篇负责孕期、产后和带娃的睡眠资源变化。
 - `docs/scene-craft/154-hygiene-bathing-toilet-laundry-sanitation-smell-body-care-daily-life.md`：负责卫生、清洁、经期、洗浴和公共卫生。本篇负责产后和婴幼儿照护中的卫生与体面。

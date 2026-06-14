@@ -19,11 +19,11 @@
 - `docs/feedback-revision/18-reader-data-feedback-diagnosis.md`
 - `docs/market-serialization/19-serialization-update-operations.md`
 - `docs/core-writing/05-plot-and-serial-rhythm.md`
-- `docs/22-opening-hook-first-10-chapters.md`
-- `docs/23-midbook-retention-and-fatigue.md`
+- `docs/storycraft/22-opening-retention-model.md`
+- `docs/storycraft/23-midbook-volume-structure.md`
 - `docs/feedback-revision/33-revision-rewrite-version-workflow.md`
 - `docs/workflows/38-chapter-production-pipeline-agent-handoff.md`
-- `docs/39-opening-ab-testing-and-iteration.md`
+- `docs/feedback-revision/39-opening-variant-ab-evaluation.md`
 - `docs/templates/10-templates-and-checklists.md`
 
 ---

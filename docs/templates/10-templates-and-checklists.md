@@ -1690,15 +1690,15 @@
 | AGENTS.md |  |  |  |
 | README.md |  |  |  |
 | docs/00-index.md |  |  |  |
-| docs/01-market-strategy.md |  |  |  |
-| docs/02-core-concept.md |  |  |  |
-| docs/03-world-rules.md |  |  |  |
-| docs/04-characters.md |  |  |  |
-| docs/05-plot-architecture.md |  |  |  |
-| docs/06-volume-outlines.md |  |  |  |
-| docs/07-writing-guidelines.md |  |  |  |
-| docs/08-style-bible.md |  |  |  |
-| docs/11-story-ledger.md |  |  |  |
+| <novel-project-docs>/01-market-strategy.md |  |  |  |
+| <novel-project-docs>/02-core-concept.md |  |  |  |
+| <novel-project-docs>/03-world-rules.md |  |  |  |
+| <novel-project-docs>/04-characters.md |  |  |  |
+| <novel-project-docs>/05-plot-architecture.md |  |  |  |
+| <novel-project-docs>/06-volume-outlines.md |  |  |  |
+| <novel-project-docs>/07-writing-guidelines.md |  |  |  |
+| <novel-project-docs>/08-style-bible.md |  |  |  |
+| <novel-project-docs>/11-story-ledger.md |  |  |  |
 | docs/governance/99-decision-log.md |  |  |  |
 
 ## 3. 第一章生产许可
@@ -9849,7 +9849,7 @@ integrated_drafting_beta_review_revision_workflow:
 
 ## 项目讨论留档模板
 
-用于目标小说项目的 `docs/98-discussion-log.md`。任一阶段只要讨论会影响项目事实、创作方向、细纲、正文、审稿取舍、反馈处理或发布节奏，就必须先写留档，再输出阶段性交付物。
+用于目标小说项目的 `<novel-project-docs>/98-discussion-log.md`。任一阶段只要讨论会影响项目事实、创作方向、细纲、正文、审稿取舍、反馈处理或发布节奏，就必须先写留档，再输出阶段性交付物。
 
 ```markdown
 # 项目讨论留档

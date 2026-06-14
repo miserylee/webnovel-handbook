@@ -31,8 +31,8 @@ AI 写梦境、幻境和精神空间时常见问题：
 
 | 文档 | 负责什么 | 本专题新增什么 |
 |---|---|---|
-| `docs/26-suspense-reversal-foreshadowing.md` | 悬疑、反转和伏笔 | 梦境/幻境反转如何保持公平，不靠梦醒诈骗 |
-| `docs/63-foreshadowing-callback-plant-payoff.md` | 长线伏笔和回收 | 幻境线索如何前文埋、出梦后回收 |
+| `docs/storycraft/26-suspense-reversal-information-control.md` | 悬疑、反转和伏笔 | 梦境/幻境反转如何保持公平，不靠梦醒诈骗 |
+| `docs/storycraft/63-foreshadowing-callback-reader-memory-management.md` | 长线伏笔和回收 | 幻境线索如何前文埋、出梦后回收 |
 | `docs/core-writing/69-pov-narrative-distance-information-focus.md` | 视角距离和信息焦点 | 真假现实中读者、主角、对手知道什么 |
 | `docs/advanced-craft/72-reader-trust-plausibility-anti-cheat.md` | 读者信任和防作弊 | 幻境不能临时改规则救场 |
 | `docs/advanced-craft/77-character-arc-belief-behavior-evidence.md` | 人物弧线证据 | 心魔/问心试炼必须用选择证明成长 |

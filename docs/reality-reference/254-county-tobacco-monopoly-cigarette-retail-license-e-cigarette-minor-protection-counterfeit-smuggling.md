@@ -472,12 +472,12 @@ AI 写县域烟草相关情节时，最容易出现这些问题：
 
 ## 12. 与其他专题的衔接
 
-- 与 `docs/211-county-market-regulation-consumer-protection-price-food-drug-advertising.md` 衔接：市场监管专题处理一般消费者权益、价格、广告和普通商品质量；本专题处理烟草专卖与电子烟特殊监管。
-- 与 `docs/180-product-quality-consumer-rights-after-sales-returns-refunds-complaints.md` 衔接：假货投诉的通用证据可参考消费者权益专题，但烟草真假和来源问题要回到烟草专卖监管。
-- 与 `docs/245-county-cultural-market-internet-cafe-ktv-game-room-printing-publishing-minors-protection.md` 衔接：文化市场专题处理网吧、KTV、游戏厅、出版物和未成年人场所；本专题处理烟酒彩票销售网点和电子烟拒售。
+- 与 `docs/reality-reference/211-county-market-regulation-consumer-complaint-12315-product-quality-price-advertising-measurement-administrative-penalty.md` 衔接：市场监管专题处理一般消费者权益、价格、广告和普通商品质量；本专题处理烟草专卖与电子烟特殊监管。
+- 与 `docs/reality-reference/180-consumer-rights-ecommerce-platform-return-refund-false-advertising-product-quality-after-sales.md` 衔接：假货投诉的通用证据可参考消费者权益专题，但烟草真假和来源问题要回到烟草专卖监管。
+- 与 `docs/reality-reference/245-county-cultural-market-entertainment-venue-internet-cafe-script-murder-escape-room-minor-protection.md` 衔接：文化市场专题处理网吧、KTV、游戏厅、出版物和未成年人场所；本专题处理烟酒彩票销售网点和电子烟拒售。
 - 与 `docs/reality-reference/236-county-emergency-management-work-safety-hazardous-chemicals-accident-investigation.md` 衔接：如写烟草企业生产安全或仓储事故，转应急管理专题；小店卖烟仍以本专题为主。
-- 与 `docs/214-county-telecom-fraud-cybercrime-bank-card-freezing-police-anti-fraud-center.md` 衔接：如果“网上买烟/电子烟”变成诈骗、洗钱、银行卡冻结线索，转反诈专题。
-- 与 `docs/163-privacy-and-personal-information-protection.md` 衔接：涉及监控、身份证核验、学生信息传播时，要补个人信息保护和未成年人隐私边界。
+- 与 `docs/reality-reference/214-county-telecom-network-fraud-anti-fraud-center-bank-card-freeze-stop-payment-warning-family-recovery.md` 衔接：如果“网上买烟/电子烟”变成诈骗、洗钱、银行卡冻结线索，转反诈专题。
+- 与 `docs/reality-reference/163-digital-account-password-privacy-cybersecurity-hacking-data-evidence.md` 衔接：涉及监控、身份证核验、学生信息传播时，要补个人信息保护和未成年人隐私边界。
 - 与 `docs/scene-craft/154-hygiene-bathing-toilet-laundry-sanitation-smell-body-care-daily-life.md` 衔接：烟味、衣物气味、身体气味可用卫生与日常生活专题增强体感。
 
 ---

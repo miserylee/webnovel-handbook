@@ -79,15 +79,15 @@ project/
 - `README.md`：项目入口、定位、文档地图。
 - `novel-notes.md`：原始想法和临时草稿，不作为唯一事实来源。
 - `docs/00-index.md`：当前状态、下一步、阅读顺序。
-- `docs/01-market-strategy.md`：平台、频道、目标读者、商业承诺。
-- `docs/02-core-concept.md`：标题、卖点、主角、核心引擎。
-- `docs/03-world-rules.md`：世界、规则、外挂、代价、限制。
-- `docs/04-characters.md`：人物卡、关系、声音、弧线。
-- `docs/05-plot-architecture.md`：长线结构、卷目标、重大转折。
-- `docs/06-volume-outlines.md`：各卷细纲入口。
-- `docs/07-writing-guidelines.md`：项目专属节奏、禁区、修订规则。
-- `docs/08-style-bible.md`：叙述视角、语气、文风、场景规则。
-- `docs/11-story-ledger.md`：章节事件、人物状态、规则、伏笔。
+- `<novel-project-docs>/01-market-strategy.md`：平台、频道、目标读者、商业承诺。
+- `<novel-project-docs>/02-core-concept.md`：标题、卖点、主角、核心引擎。
+- `<novel-project-docs>/03-world-rules.md`：世界、规则、外挂、代价、限制。
+- `<novel-project-docs>/04-characters.md`：人物卡、关系、声音、弧线。
+- `<novel-project-docs>/05-plot-architecture.md`：长线结构、卷目标、重大转折。
+- `<novel-project-docs>/06-volume-outlines.md`：各卷细纲入口。
+- `<novel-project-docs>/07-writing-guidelines.md`：项目专属节奏、禁区、修订规则。
+- `<novel-project-docs>/08-style-bible.md`：叙述视角、语气、文风、场景规则。
+- `<novel-project-docs>/11-story-ledger.md`：章节事件、人物状态、规则、伏笔。
 - `docs/governance/99-decision-log.md`：跨文件的重要决定。
 - `manuscript/`：只放读者可见正文。
 
@@ -143,8 +143,8 @@ project/
 
 记录位置：
 
-- 世界规则进入 `docs/03-world-rules.md`。
-- 人物进入 `docs/04-characters.md`。
+- 世界规则进入 `<novel-project-docs>/03-world-rules.md`。
+- 人物进入 `<novel-project-docs>/04-characters.md`。
 - 如果是候选想法，必须标“候选”，不要当作已确认。
 
 ### 阶段四：结构

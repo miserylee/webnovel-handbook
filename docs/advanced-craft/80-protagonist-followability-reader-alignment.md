@@ -369,7 +369,7 @@
 - `docs/templates/10-templates-and-checklists.md`：本专题提供主角可追随性诊断卡。
 - `docs/core-writing/11-human-writing-upgrade.md`：本专题是“人物不活”的前置修复工具。
 - `docs/feedback-revision/39-opening-variant-ab-evaluation.md`：开篇 A/B 测试必须比较主角追随入口。
-- `docs/43-reader-empathy-and-character-focus.md`：本专题进一步区分共情与追随。
+- `docs/advanced-craft/94-reader-immersion-narrative-transportation-presence.md`：本专题进一步区分共情与追随。
 - `docs/advanced-craft/72-reader-trust-plausibility-anti-cheat.md`：主角越界、开挂、获利时，需要同时维护读者信任。
 - `docs/advanced-craft/74-character-choice-dilemma-costly-decision.md`：主角追随性依赖选择、困境和代价。
 - `docs/advanced-craft/77-character-arc-belief-behavior-evidence.md`：长期追随性要靠信念、行为和变化证据维持。

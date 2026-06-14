@@ -31,13 +31,13 @@ AI 写金融桥段常见坏味道：
 
 ## 2. 与既有专题的分工
 
-- `docs/30-profession-workflow-credibility.md`：负责职业流程可信度。本篇补充银行、保险、税务、财务和合规流程。
+- `docs/reality-reference/30-profession-industry-life-detail-credibility.md`：负责职业流程可信度。本篇补充银行、保险、税务、财务和合规流程。
 - `docs/advanced-craft/61-information-public-opinion-discourse-battle.md`：负责舆论信息战。本篇负责资金流水、发票、保单和税务记录如何成为证据或舆论燃料。
 - `docs/advanced-craft/72-reader-trust-plausibility-anti-cheat.md`：负责总体合理性。本篇提供金融桥段的具体合理性规则。
 - `docs/safety-research/111-research-fact-checking-source-evaluation-fiction-transformation.md`：负责事实查证。本篇要求金融、保险、税务、监管和法律相关内容查权威来源。
 - `docs/scene-craft/120-investigation-clue-evidence-chain-reasoning-procedure.md`：负责调查证据链。本篇补充银行流水、转账记录、保单、发票、合同、审计底稿和税务资料。
 - `docs/scene-craft/124-business-building-base-territory-management-production-chain.md`：负责经营循环。本篇补充现金流、融资、税费、发票、账期、保险和合规成本。
-- `docs/141-court-trial-hearing-judgment-public-procedure-evidence.md`：负责审判程序。本篇提供金融证据和金融争议的前置材料。
+- `docs/scene-craft/141-trial-courtroom-adjudication-evidence-verdict-procedure.md`：负责审判程序。本篇提供金融证据和金融争议的前置材料。
 - `docs/scene-craft/148-message-communication-letter-courier-delay-misdelivery-signal-chain.md`：负责消息链。本篇补充银行通知、催收短信、保险通知、税务通知和平台支付通知。
 - `docs/scene-craft/150-money-currency-price-income-expense-debt-cost-of-living-economic-credibility.md`：负责日常金钱、价格、收入、债务和生活成本。本篇负责钱进入银行、贷款、保险、税务和监管后的制度链。
 - `docs/reality-reference/161-identity-documents-registration-records-permits-credentials-civil-status.md`：负责身份文件和资格。本篇补充开户、投保、贷款、税务登记和受益人身份。

@@ -88,14 +88,14 @@
 | 输入 | 来源 | 必须包含 |
 |---|---|---|
 | 项目状态 | `docs/00-index.md` | 当前阶段、下一步、已确认/候选/待确认 |
-| 市场与读者 | `docs/01-market-strategy.md` | 平台、频道、目标读者、同类承诺 |
-| 核心概念 | `docs/02-core-concept.md` | 主承诺、主角、钩子、长线引擎 |
-| 世界/机制 | `docs/03-world-rules.md` | 第一章必须知道的规则、不能提前说的规则 |
-| 人物 | `docs/04-characters.md` | 主角欲望、压力、底线、初始关系 |
-| 第一卷结构 | `docs/05-plot-architecture.md`、`docs/06-volume-outlines.md` | 第一卷目标、前 10 章回报 |
-| 写作规则 | `docs/07-writing-guidelines.md` | 项目专属节奏、禁区、平台规则 |
-| 风格手册 | `docs/08-style-bible.md` | 旁白距离、角色声音、称呼术语 |
-| 台账 | `docs/11-story-ledger.md` | 初始事实、角色状态、伏笔状态 |
+| 市场与读者 | `<novel-project-docs>/01-market-strategy.md` | 平台、频道、目标读者、同类承诺 |
+| 核心概念 | `<novel-project-docs>/02-core-concept.md` | 主承诺、主角、钩子、长线引擎 |
+| 世界/机制 | `<novel-project-docs>/03-world-rules.md` | 第一章必须知道的规则、不能提前说的规则 |
+| 人物 | `<novel-project-docs>/04-characters.md` | 主角欲望、压力、底线、初始关系 |
+| 第一卷结构 | `<novel-project-docs>/05-plot-architecture.md`、`<novel-project-docs>/06-volume-outlines.md` | 第一卷目标、前 10 章回报 |
+| 写作规则 | `<novel-project-docs>/07-writing-guidelines.md` | 项目专属节奏、禁区、平台规则 |
+| 风格手册 | `<novel-project-docs>/08-style-bible.md` | 旁白距离、角色声音、称呼术语 |
+| 台账 | `<novel-project-docs>/11-story-ledger.md` | 初始事实、角色状态、伏笔状态 |
 | 第一章任务单 | `manuscript/vol-01-opening/outline.md` | 场景、压力、选择、阻力、卖点、钩子 |
 
 如果第一章是 A/B 版本或重写版本，还必须包含：
@@ -344,7 +344,7 @@
 
 | 失败表现 | 回退到哪里 | 动作 |
 |---|---|---|
-| 不知道第一章写谁 | `docs/02-core-concept.md`、`docs/04-characters.md` | 重定主角和视角 |
+| 不知道第一章写谁 | `<novel-project-docs>/02-core-concept.md`、`<novel-project-docs>/04-characters.md` | 重定主角和视角 |
 | 不知道读者等什么 | `docs/market-serialization/29-reader-expectation-genre-promise-selling-point.md` | 重写主承诺和卖点证明 |
 | 开场只有设定 | `docs/storycraft/22-opening-retention-model.md`、`docs/core-writing/32-chapter-paragraph-mobile-reading-experience.md` | 改成有目标和阻力的场景 |
 | 主角没有选择 | `docs/core-writing/04-character-and-dialogue.md`、`docs/storycraft/21-antagonist-opposition-system.md` | 增加欲望、压力、对手和代价 |

@@ -279,7 +279,7 @@ county_grain_purchase_storage_scene_card:
 - 写食品安全、学校食堂、餐饮和成品粮油进入餐桌时，联动 `docs/reality-reference/170-food-restaurant-kitchen-food-safety-delivery-banquet-allergy-poisoning-risk.md`、`docs/reality-reference/211-county-market-regulation-consumer-complaint-12315-product-quality-price-advertising-measurement-administrative-penalty.md`。
 - 写安全生产、粮仓火灾、粉尘爆炸、有限空间和事故调查时，联动 `docs/reality-reference/236-county-emergency-management-work-safety-hazardous-chemicals-accident-investigation.md`、`docs/reality-reference/235-county-fire-rescue-supervision-inspection-fire-investigation-hidden-danger-rectification.md`。
 - 写财政审计、粮食购销腐败、政府投资仓储项目和自然资源资产审计时，联动 `docs/reality-reference/225-county-audit-supervision-budget-execution-economic-responsibility-government-investment-rectification.md`。
-- 写刑事案件、虚假入库、骗贷骗补、职务犯罪和公益诉讼时，联动 `docs/166-police-report-criminal-procedure-public-security-investigation-evidence.md`、`docs/229-county-criminal-justice-public-security-procuratorate-court-sentencing-community-correction-victim-protection.md`。
+- 写刑事案件、虚假入库、骗贷骗补、职务犯罪和公益诉讼时，联动 `docs/reality-reference/166-police-reporting-public-security-investigation-detention-search-case-procedure.md`、`docs/reality-reference/229-county-procuratorate-public-prosecution-arrest-review-legal-supervision-public-interest-litigation-minor-protection.md`。
 - 写气象、暴雨、连阴雨、抢收抢烘和灾损时，联动 `docs/reality-reference/242-county-meteorology-weather-warning-disaster-prevention-lightning-protection-artificial-weather.md`、`docs/reality-reference/237-county-natural-disaster-warning-transfer-relief-flood-drought-geological-hazard.md`。
 
 ---

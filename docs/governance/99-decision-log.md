@@ -71,7 +71,7 @@
 
 ## 新增决策写入格式
 
-新增决策时，优先只在本文追加短索引。确实需要长说明时，新建单条决策文件，例如 `docs/decisions/active/YYYY-MM-DD-short-title.md`：
+新增决策时，优先只在本文追加短索引。确实需要长说明时，新建单条决策文件，例如 `docs/decisions/active/<YYYY-MM-DD-short-title>.md`：
 
 ```markdown
 ## YYYY-MM-DD：决策标题

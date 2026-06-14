@@ -18,15 +18,15 @@
 
 ## 2. 与既有专题的分工
 
-- `docs/56-new-map-new-stage-volume-opening.md`：负责新地图、新阶段、新卷开场。本篇负责人物如何抵达新地图，以及抵达前后状态差额。
-- `docs/57-timeskip-compression-and-long-timespan.md`：负责时间跳跃和长时段压缩。本篇负责旅程是否值得展开、如何压缩、压缩后保留哪些变化。
-- `docs/62-low-intensity-daily-life-anti-padding.md`：负责低强度日常不水文。本篇负责普通赶路如何不变成水章。
-- `docs/88-spatial-blocking-and-reader-mental-map.md`：负责单场景空间调度。本篇负责跨地点路线、节点和距离成本。
-- `docs/91-scene-transition-bridges-and-reader-orientation.md`：负责场景转场。本篇负责长距离转场的交通、通行和成本。
-- `docs/121-chase-escape-pursuit-route-pressure.md`：负责追逃路线。本篇负责非追逃状态下的常规出行、商队、护送、拜访、赴任、入学、赶考、迁徙、远征前置。
-- `docs/31-region-era-texture-system.md`：负责地域与时代质感。本篇负责把交通方式、道路条件、客栈驿站和口岸关卡转化为可执行情节。
-- `docs/132-mount-pet-spirit-beast-nonhuman-companion.md`：负责坐骑、宠物、灵兽作为角色。本篇只处理它们作为交通与旅程成本的一部分。
-- `docs/140-equipment-vehicle-ship-mecha-artifact-upgrade-and-maintenance.md`：负责载具、飞舟、船、车、机甲、法器的制作和维护。本篇只处理它们在路程中的使用限制和剧情压力。
+- `docs/advanced-craft/56-volume-transition-new-stage-launch.md`：负责新地图、新阶段、新卷开场。本篇负责人物如何抵达新地图，以及抵达前后状态差额。
+- `docs/workflows/57-long-timeskip-state-compression.md`：负责时间跳跃和长时段压缩。本篇负责旅程是否值得展开、如何压缩、压缩后保留哪些变化。
+- `docs/storycraft/62-everyday-transition-low-intensity-anti-padding.md`：负责低强度日常不水文。本篇负责普通赶路如何不变成水章。
+- `docs/advanced-craft/88-spatial-blocking-scene-geography-action-continuity.md`：负责单场景空间调度。本篇负责跨地点路线、节点和距离成本。
+- `docs/advanced-craft/91-scene-transition-bridge-continuity-momentum.md`：负责场景转场。本篇负责长距离转场的交通、通行和成本。
+- `docs/scene-craft/121-chase-escape-pursuit-hunt-cat-and-mouse-structure.md`：负责追逃路线。本篇负责非追逃状态下的常规出行、商队、护送、拜访、赴任、入学、赶考、迁徙、远征前置。
+- `docs/reality-reference/31-region-era-social-custom-texture.md`：负责地域与时代质感。本篇负责把交通方式、道路条件、客栈驿站和口岸关卡转化为可执行情节。
+- `docs/scene-craft/132-beast-taming-spirit-pet-summon-nonhuman-companion.md`：负责坐骑、宠物、灵兽作为角色。本篇只处理它们作为交通与旅程成本的一部分。
+- `docs/scene-craft/140-crafting-artifact-alchemy-equipment-item-upgrade-economy.md`：负责载具、飞舟、船、车、机甲、法器的制作和维护。本篇只处理它们在路程中的使用限制和剧情压力。
 - `docs/scene-craft/148-message-communication-letter-courier-delay-misdelivery-signal-chain.md`：负责消息链。本篇负责人物身体移动与消息移动之间的速度差、误差和信息落差。
 
 ---

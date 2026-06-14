@@ -30,12 +30,12 @@
 
 ## 2. 与其他专题的分工
 
-- `docs/180-online-consumer-rights-ecommerce-platform-after-sales-prepaid-consumption-complaint-chain.md`：从消费者、平台、商家售后视角写“买到东西后怎么维权”。本篇从监管侧写“投诉举报之后，市场监管如何处理”。
-- `docs/170-county-food-safety-license-kitchen-inspection-banquet-catering-poisoning-traceability.md`：食品安全专项。本篇只写市场监管通用链，食品案件可引用第 170 篇。
-- `docs/183-county-beauty-fitness-prepaid-card-medical-beauty-consumer-dispute-service-contract.md`：医美、健身、预付卡服务合同专项。本篇只补市场监管处理与证据路径。
-- `docs/197-county-agriculture-products-origin-quality-safety-brand-counterfeit-live-commerce-cooperative.md`：农产品质量、产地品牌和假冒产地专项。本篇补产品质量、广告宣传、价格计量和消费者投诉的通用规则。
+- `docs/reality-reference/180-consumer-rights-ecommerce-platform-return-refund-false-advertising-product-quality-after-sales.md`：从消费者、平台、商家售后视角写“买到东西后怎么维权”。本篇从监管侧写“投诉举报之后，市场监管如何处理”。
+- `docs/reality-reference/170-food-restaurant-kitchen-food-safety-delivery-banquet-allergy-poisoning-risk.md`：食品安全专项。本篇只写市场监管通用链，食品案件可引用第 170 篇。
+- `docs/reality-reference/183-beauty-medical-aesthetics-fitness-wellness-prepaid-card-body-risk-service-dispute.md`：医美、健身、预付卡服务合同专项。本篇只补市场监管处理与证据路径。
+- `docs/reality-reference/197-agricultural-product-food-safety-pesticide-veterinary-drug-cold-chain-traceability-live-commerce-quality-complaint.md`：农产品质量、产地品牌和假冒产地专项。本篇补产品质量、广告宣传、价格计量和消费者投诉的通用规则。
 - `docs/reality-reference/206-county-government-service-administrative-license-12345-hotline-information-disclosure-window-service-material-correction-business-environment.md`：政务服务和窗口办理专项。本篇只写市场监管业务，不把 12345 热线等同于 12315。
-- `docs/179-intellectual-property-trademark-copyright-patent-trade-secret-platform-takedown-anti-counterfeit.md`：知识产权和商标侵权专项。本篇只写“假冒伪劣、虚假宣传、质量价格计量”等市场监管面向。
+- `docs/reality-reference/179-intellectual-property-copyright-trademark-patent-trade-secret-adaptation-licensing-infringement.md`：知识产权和商标侵权专项。本篇只写“假冒伪劣、虚假宣传、质量价格计量”等市场监管面向。
 
 ## 3. 当前规则时间点
 

@@ -25,7 +25,7 @@
 - `docs/reality-reference/163-digital-account-password-privacy-cybersecurity-hacking-data-evidence.md`：负责账号、数据和电子证据。本篇负责无人机飞控日志、遥控器、图传、云台影像、远程识别和平台数据。
 - `docs/reality-reference/178-company-enterprise-equity-partnership-employment-labor-commercial-dispute.md`：负责企业经营和商业纠纷。本篇负责无人机运营公司、航拍工作室、巡检服务商、物流服务商和低空经济合同。
 - `docs/reality-reference/170-food-restaurant-kitchen-food-safety-delivery-banquet-allergy-poisoning-risk.md`：负责食品餐饮。本篇只处理无人机配送中的飞行、交付、坠落和服务责任，食品质量仍接入第170篇。
-- `docs/166-police-report-case-filing-investigation-detention-interrogation-lawyer-criminal-procedure.md`：负责警务程序。本篇遇到黑飞、扰航、偷拍、涉密、伤人、诈骗和破坏公共安全时接入该专题。
+- `docs/reality-reference/166-police-reporting-public-security-investigation-detention-search-case-procedure.md`：负责警务程序。本篇遇到黑飞、扰航、偷拍、涉密、伤人、诈骗和破坏公共安全时接入该专题。
 
 ## 3. 安全边界
 

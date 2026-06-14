@@ -289,7 +289,7 @@ county_forestry_scene_card:
 - 写气象预警、防雷、人工影响天气和气象资料时，联动 `docs/reality-reference/242-county-meteorology-weather-warning-disaster-prevention-lightning-protection-artificial-weather.md`。
 - 写乡村土地、宅基地、征收补偿和村集体收益时，联动 `docs/reality-reference/194-rural-homestead-land-contract-collective-economy-expropriation-compensation-village-governance-dispute.md`、`docs/reality-reference/209-village-self-governance-village-affairs-disclosure-villagers-meeting-village-rules-supervision-collective-economy-organization.md`。
 - 写文旅开发、古村古建、自然景区和游客安全时，联动 `docs/reality-reference/182-tourism-travel-scenic-spot-hotel-agency-ticket-change-refund-guide-service-dispute.md`、`docs/reality-reference/219-county-cultural-relics-intangible-heritage-ancient-village-archaeology-museum-tourism-development-protection.md`。
-- 写刑事侦查、盗伐盗猎、纵火和非法交易时，联动 `docs/166-police-report-criminal-procedure-public-security-investigation-evidence.md`、`docs/229-county-criminal-justice-public-security-procuratorate-court-sentencing-community-correction-victim-protection.md`。
+- 写刑事侦查、盗伐盗猎、纵火和非法交易时，联动 `docs/reality-reference/166-police-reporting-public-security-investigation-detention-search-case-procedure.md`、`docs/reality-reference/229-county-procuratorate-public-prosecution-arrest-review-legal-supervision-public-interest-litigation-minor-protection.md`。
 - 写政府投资、项目审计和自然资源资产离任审计时，联动 `docs/reality-reference/225-county-audit-supervision-budget-execution-economic-responsibility-government-investment-rectification.md`。
 
 ---

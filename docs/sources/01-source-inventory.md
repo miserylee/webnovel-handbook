@@ -23,8 +23,8 @@
 
 ### 已吸收内容
 
-- `docs/07-writing-guidelines.md`：规则反杀、重生修仙、爽点兑现、宗门群像分层、证据链阻力、降判词、章节自检。
-- `docs/09-reader-feedback.md`：第一章试读、第二至五章复审、第六至十章审稿与读者反馈、节奏压缩处理。
+- `docs/core-writing/06-ai-writing-guidelines.md`：规则反杀、重生修仙、爽点兑现、宗门群像分层、证据链阻力、降判词、章节自检。
+- `docs/feedback-revision/09-case-notes.md`：第一章试读、第二至五章复审、第六至十章审稿与读者反馈、节奏压缩处理。
 - 项目结构：标准小说项目骨架，比单纯笔记更适合作为后续 AI 写作的事实来源。
 
 ### 可迁移经验
@@ -43,7 +43,7 @@
 - `README.md`：小说项目入口、文档地图、接续方式。
 - `AGENTS.md`：AI 协作说明、连续性来源、写作规则、修订规则。
 - `docs/00-index.md`：项目定位、当前状态、下一步。
-- `docs/07-writing-guidelines.md`：单元喜剧结构、荒诞脑洞与生活入口、喜剧禁区。
+- `docs/core-writing/06-ai-writing-guidelines.md`：单元喜剧结构、荒诞脑洞与生活入口、喜剧禁区。
 
 ### 可迁移经验
 
@@ -57,8 +57,8 @@
 
 ### 已吸收内容
 
-- `docs/01-review-criteria.md`：投稿审稿标准、设定审查、大纲审查、正文审查、AI 含量判断、结论分级。
-- `docs/04-editorial-lessons.md`：开篇判断、设定判断、大纲判断、正文判断、AI 含量经验、可复用修改方向。
+- `docs/feedback-revision/08-review-and-reader-feedback.md`：投稿审稿标准、设定审查、大纲审查、正文审查、AI 含量判断、结论分级。
+- `docs/feedback-revision/09-case-notes.md`：开篇判断、设定判断、大纲判断、正文判断、AI 含量经验、可复用修改方向。
 
 ### 可迁移经验
 

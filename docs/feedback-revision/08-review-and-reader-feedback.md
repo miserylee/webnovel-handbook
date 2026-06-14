@@ -523,7 +523,7 @@ AI 审稿输出必须包含：
 
 再把稳定经验转入：
 
-- 单本项目的 `docs/09-reader-feedback.md`。
+- 单本项目的 `<novel-project-docs>/09-reader-feedback.md`。
 - 本知识库的 `docs/feedback-revision/09-case-notes.md`，如果经验有通用价值。
 - 写作指南或节奏文档，如果规则要影响后续写作。
 
