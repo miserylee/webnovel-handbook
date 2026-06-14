@@ -23,6 +23,7 @@
 
 ### Changed
 
+- 将 `docs/navigation/01-readme-details.md` 显式纳入 `docs/00-index.md` 的大文件按需读取规则，避免 agent 顺着 README 扩展说明默认整读超长下沉页。
 - 同步补充 `docs/navigation/01-readme-details.md` 的维护检查说明，明确最小阅读包三字段结构、旧式密集表格回潮和 `57` 路由规范重复任务表都属于可消费性护栏。
 - 增强 `scripts/check-handbook-consumability.mjs`，要求 `docs/00-index.md` 的每个最小阅读包任务小节都保留 `先读`、`按需追加`、`不要默认读` 三个字段且各有条目。
 - 增强 `scripts/check-handbook-consumability.mjs` 的路由委托检查，要求 `57` 路由规范的任务阶段层继续委托 `docs/00-index.md`，并拦截重复任务路线表回潮。
