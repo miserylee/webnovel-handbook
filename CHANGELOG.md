@@ -14,6 +14,7 @@
 - 社区行为准则 `CODE_OF_CONDUCT.md`。
 - 路线图 `ROADMAP.md`。
 - GitHub PR 模板和 issue 模板。
+- 新增 `scripts/check-handbook-consumability.mjs`，用于检查 agent 消费入口的 Markdown 链接、仓库内 `docs/...md` 裸路径和常见编码污染。
 
 ### Changed
 

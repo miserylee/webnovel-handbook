@@ -42,6 +42,10 @@
 - 动态连载：大纲、细纲和章节排表是活文档，可以调整，但必须留痕。
 - 渐进式读取：先最小阅读包，再目标专题，不默认整读大文件。
 
+## 维护检查
+
+- 调整索引、路径或 skill 入口后，可运行 `node scripts/check-handbook-consumability.mjs` 检查 Markdown 本地链接、本仓库 `docs/...md` 裸路径和常见编码污染。
+
 ## 开源状态
 
 - License: [MIT](LICENSE)
