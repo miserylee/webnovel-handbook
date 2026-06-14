@@ -47,10 +47,11 @@
 3. `docs/market-serialization/34-market-research-comp-analysis.md`
 4. `docs/workflows/03-project-workflow.md`
 5. `docs/market-serialization/12-platform-and-channel-differences.md`
-6. `docs/market-serialization/29-reader-expectation-genre-promise-selling-point.md`
-7. `docs/market-serialization/13-genre-patterns.md`
-8. `docs/market-serialization/16-title-blurb-tag-packaging.md`
-9. `docs/market-serialization/17-cover-visual-packaging.md`
+6. `docs/market-serialization/14-platform-and-reader-binding.md`
+7. `docs/market-serialization/29-reader-expectation-genre-promise-selling-point.md`
+8. `docs/market-serialization/13-genre-patterns.md`
+9. `docs/market-serialization/16-title-blurb-tag-packaging.md`
+10. `docs/market-serialization/17-cover-visual-packaging.md`
 10. `docs/workflows/44-single-novel-project-initialization-package.md`
 11. `docs/workflows/45-first-chapter-task-brief-production-gate.md`
 
@@ -125,6 +126,7 @@
 ### 市场、平台、题材和包装
 
 - `docs/market-serialization/12-platform-and-channel-differences.md`：平台、频道、标签和读者期待差异。
+- `docs/market-serialization/14-platform-and-reader-binding.md`：平台生态、签约窗口、更新信任和长期追读绑定。
 - `docs/market-serialization/13-genre-patterns.md`：题材类型、开篇承诺、核心引擎、章节回报和高危套路。
 - `docs/market-serialization/16-title-blurb-tag-packaging.md`：书名、简介、标签与第一章承诺一致性。
 - `docs/market-serialization/17-cover-visual-packaging.md`：封面、缩略图、视觉风格与平台包装承诺一致性。
@@ -1524,5 +1526,4 @@
 - 用途：给 AI agent 写县城小卖部、烟酒店、电子烟店、学生买烟、烟草证、假烟投诉、走私烟线索、订货配送、烟草专卖检查等情节时使用。
 - 核心链路：经营需求/购买争议 -> 商品类型判断 -> 许可证与经营地址 -> 进货渠道与票据 -> 买方年龄与未成年人保护 -> 库存/配送/明码标价 -> 投诉举报 -> 烟草专卖/市场监管/公安/学校社区分流 -> 整改、处罚、移送或信誉后果。
 - 安全边界：只写证据、程序、诱因和后果；不写伪造烟草证、假烟制作、走私运输、串码规避、绕开电子烟平台或向未成年人售卖的方法。
-
 
