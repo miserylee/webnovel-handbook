@@ -23,6 +23,7 @@
 
 ### Changed
 
+- 同步 `AGENTS.md` 与消费检查器的大文件口径，将 README 下沉说明纳入条件读取清单，防止后续 agent 把它当默认整读入口。
 - 增强 `scripts/check-handbook-consumability.mjs` 的大文件治理，要求 README 下沉长页同时出现在 `docs/00-index.md` 的“不默认整读大文件”清单和“大文件使用方式”小节。
 - 将 `docs/navigation/01-readme-details.md` 显式纳入 `docs/00-index.md` 的大文件按需读取规则，避免 agent 顺着 README 扩展说明默认整读超长下沉页。
 - 同步补充 `docs/navigation/01-readme-details.md` 的维护检查说明，明确最小阅读包三字段结构、旧式密集表格回潮和 `57` 路由规范重复任务表都属于可消费性护栏。

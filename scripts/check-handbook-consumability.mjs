@@ -93,6 +93,7 @@ const largeConditionalStartupPaths = [
   sourceInventoryPath,
   "docs/templates/10-templates-and-checklists.md",
   "docs/navigation/00-expanded-topic-catalog.md",
+  "docs/navigation/01-readme-details.md",
 ];
 
 const routeSignalPattern =
