@@ -834,6 +834,97 @@ async function checkDefaultRouteLargeDocLeakage() {
   return leakageProblems;
 }
 
+async function checkMinimumReadingPackFieldStructure() {
+  const structureProblems = [];
+  const requiredFields = ["先读：", "按需追加：", "不要默认读："];
+  const indexPath = path.join(repoRoot, "docs", "00-index.md");
+  const indexContent = await fs.readFile(indexPath, "utf8");
+  const minimumReadSection = extractBlock(
+    indexContent,
+    "## 2. 常用任务最小阅读包",
+    "## 3. 写稿质量硬入口",
+  );
+  const taskSections = [];
+  let currentTask = null;
+  let currentField = "";
+
+  for (const [index, line] of minimumReadSection.split(/\r?\n/).entries()) {
+    const trimmedLine = line.trim();
+    const taskHeadingMatch = trimmedLine.match(/^### 2\.\d+ .+/);
+
+    if (taskHeadingMatch) {
+      if (currentTask) {
+        taskSections.push(currentTask);
+      }
+
+      currentTask = {
+        heading: trimmedLine,
+        line: index + 1,
+        fields: new Map(),
+        bulletCounts: new Map(),
+      };
+      currentField = "";
+      continue;
+    }
+
+    if (!currentTask) {
+      continue;
+    }
+
+    if (requiredFields.includes(trimmedLine)) {
+      currentField = trimmedLine;
+      currentTask.fields.set(trimmedLine, index + 1);
+      currentTask.bulletCounts.set(trimmedLine, 0);
+      continue;
+    }
+
+    if (line.startsWith("- ") && currentField) {
+      currentTask.bulletCounts.set(
+        currentField,
+        (currentTask.bulletCounts.get(currentField) || 0) + 1,
+      );
+    }
+  }
+
+  if (currentTask) {
+    taskSections.push(currentTask);
+  }
+
+  if (taskSections.length === 0) {
+    structureProblems.push({
+      file: "docs/00-index.md",
+      target: "## 2. 常用任务最小阅读包",
+      sample: "minimum reading pack is missing task subsections such as ### 2.1",
+    });
+    return structureProblems;
+  }
+
+  for (const taskSection of taskSections) {
+    for (const field of requiredFields) {
+      if (!taskSection.fields.has(field)) {
+        structureProblems.push({
+          file: "docs/00-index.md",
+          line: taskSection.line,
+          target: `${taskSection.heading} / ${field}`,
+          sample: "each minimum-reading task subsection must include all three fields",
+        });
+        continue;
+      }
+
+      if ((taskSection.bulletCounts.get(field) || 0) === 0) {
+        structureProblems.push({
+          file: "docs/00-index.md",
+          line: taskSection.fields.get(field),
+          target: `${taskSection.heading} / ${field}`,
+          sample: "minimum-reading task field must contain at least one bullet item",
+        });
+      }
+    }
+  }
+
+  return structureProblems;
+}
+
 async function checkAgentsRouteDelegation() {
   const delegationProblems = [];
   const agentsPath = path.join(repoRoot, "AGENTS.md");
@@ -1638,6 +1729,7 @@ async function main() {
     missingDocsIndexRequiredEntrypointCoverage,
     missingDocsIndexMinimumReadEntrypointCoverage,
     defaultRouteLargeDocLeakageProblems,
+    minimumReadingPackFieldStructureProblems,
     agentsRouteDelegationProblems,
     skillPackageProblems,
     skillStartupRoutingProblems,
@@ -1672,6 +1764,7 @@ async function main() {
       checkDocsIndexRequiredEntrypointCoverage(),
       checkDocsIndexMinimumReadEntrypointCoverage(),
       checkDefaultRouteLargeDocLeakage(),
+      checkMinimumReadingPackFieldStructure(),
       checkAgentsRouteDelegation(),
       checkSkillPackageLayout(),
       checkSkillStartupRoutingConsistency(),
@@ -1727,6 +1820,10 @@ async function main() {
     "Default routes leaking large conditional docs",
     defaultRouteLargeDocLeakageProblems,
   );
+  printSection(
+    "Minimum reading pack field structure problems",
+    minimumReadingPackFieldStructureProblems,
+  );
   printSection("AGENTS task route delegation problems", agentsRouteDelegationProblems);
   printSection("Skill package layout problems", skillPackageProblems);
   printSection("Skill startup routing problems", skillStartupRoutingProblems);
@@ -1770,6 +1867,7 @@ async function main() {
     missingDocsIndexRequiredEntrypointCoverage.length > 0 ||
     missingDocsIndexMinimumReadEntrypointCoverage.length > 0 ||
     defaultRouteLargeDocLeakageProblems.length > 0 ||
+    minimumReadingPackFieldStructureProblems.length > 0 ||
     agentsRouteDelegationProblems.length > 0 ||
     skillPackageProblems.length > 0 ||
     skillStartupRoutingProblems.length > 0 ||
