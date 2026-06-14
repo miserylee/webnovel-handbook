@@ -20,6 +20,7 @@ const textFilePattern = /\.(md|mdx|mjs|js|yml|yaml|json|txt)$/i;
 const markdownFilePattern = /\.(md|mdx)$/i;
 const highConfidenceMojibakePattern =
   /(?:�|鈥|銆|锛|乣|歚|宎|鐨|鍏|鏂|鍐|寮|姣|缃|闈|绱)/g;
+const replacementQuestionMarkPattern = /\?{4,}/;
 
 const requiredEntrypoints = [
   "README.md",
@@ -279,17 +280,25 @@ async function checkMojibake(textFiles) {
     }
 
     const content = await fs.readFile(file, "utf8");
+    const lines = content.split(/\r?\n/);
     const matches = content.match(highConfidenceMojibakePattern) || [];
+    const questionMarkReplacementLine = lines.find((line) =>
+      replacementQuestionMarkPattern.test(line),
+    );
 
-    if (matches.length >= 5 || content.includes("�")) {
+    if (matches.length >= 5 || content.includes("�") || questionMarkReplacementLine) {
       const firstSuspiciousLine =
-        content
-          .split(/\r?\n/)
-          .find((line) => highConfidenceMojibakePattern.test(line)) || "";
+        lines.find((line) => {
+          highConfidenceMojibakePattern.lastIndex = 0;
+          return (
+            highConfidenceMojibakePattern.test(line) ||
+            replacementQuestionMarkPattern.test(line)
+          );
+        }) || "";
 
       suspiciousFiles.push({
         file: toRepoPath(file),
-        count: matches.length,
+        count: matches.length + (questionMarkReplacementLine ? 1 : 0),
         sample: firstSuspiciousLine.slice(0, 120),
       });
     }

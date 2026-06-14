@@ -23,7 +23,8 @@
 
 ### Changed
 
-- ???? `CHANGELOG.md` ?????????????????????????????????????????
+- 增强 `scripts/check-handbook-consumability.mjs`，新增连续问号型编码污染检查，防止中文内容被替换成连续问号后仍通过维护验证。
+- 整理历史 `CHANGELOG.md` 日期结构，将同一天的多段记录合并到单个日期标题下，并让消费检查器拦截重复日期标题。
 - 收束 `AGENTS.md` 任务路线维护口径：不再重复维护详细任务路线清单，统一委托 `docs/00-index.md` 的“常用任务最小阅读包”，并让消费检查器拦截 AGENTS 路线副本回潮。
 - 收束 `AGENTS.md` 写稿默认读取路线，移除模板总表的默认读取，并让消费检查器拦截默认任务路线误读来源清单、模板仓库或扩展目录。
 - 增强 `scripts/check-handbook-consumability.mjs`，新增仓库关键裸路径检查，防止 README、AGENTS 或专题中裸写的 `scripts/...`、`skills/...`、根目录文件路径失效后仍被 agent 误用。
