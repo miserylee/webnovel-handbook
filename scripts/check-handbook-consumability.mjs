@@ -856,7 +856,7 @@ async function checkAgentsRouteDelegation() {
     delegationProblems.push({
       file: "AGENTS.md",
       target: "常用任务最小阅读包",
-      sample: "AGENTS task routing should name the minimum-reading table",
+      sample: "AGENTS task routing should name the minimum-reading section",
     });
   }
 
@@ -873,6 +873,47 @@ async function checkAgentsRouteDelegation() {
         file: "AGENTS.md",
         target: repoPath,
         sample: "AGENTS task routing should not duplicate detailed task routes; put them in docs/00-index.md",
+      });
+    }
+  }
+
+  const routingGuidePath = path.join(
+    repoRoot,
+    "docs",
+    "workflows",
+    "57-knowledge-base-routing-consolidation-guide.md",
+  );
+  const routingGuideContent = await fs.readFile(routingGuidePath, "utf8");
+  const taskStageBlock = extractBlock(
+    routingGuideContent,
+    "### 2.1 第一层：任务阶段层",
+    "### 2.2 第二层：叙事功能层",
+  );
+
+  if (!taskStageBlock.includes("docs/00-index.md")) {
+    delegationProblems.push({
+      file: "docs/workflows/57-knowledge-base-routing-consolidation-guide.md",
+      target: "docs/00-index.md",
+      sample: "routing guide task-stage layer should delegate executable minimum reads to docs/00-index.md",
+    });
+  }
+
+  if (!taskStageBlock.includes("常用任务最小阅读包")) {
+    delegationProblems.push({
+      file: "docs/workflows/57-knowledge-base-routing-consolidation-guide.md",
+      target: "常用任务最小阅读包",
+      sample: "routing guide task-stage layer should name the single minimum-reading section",
+    });
+  }
+
+  for (const [index, line] of taskStageBlock.split(/\r?\n/).entries()) {
+    if (line.trim().startsWith("|")) {
+      delegationProblems.push({
+        file: "docs/workflows/57-knowledge-base-routing-consolidation-guide.md",
+        line: index + 1,
+        sample:
+          "routing guide task-stage layer should not reintroduce a duplicate task route table; " +
+          "keep executable routes in docs/00-index.md",
       });
     }
   }

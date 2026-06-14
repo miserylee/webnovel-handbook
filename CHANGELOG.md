@@ -23,6 +23,7 @@
 
 ### Changed
 
+- 增强 `scripts/check-handbook-consumability.mjs` 的路由委托检查，要求 `57` 路由规范的任务阶段层继续委托 `docs/00-index.md`，并拦截重复任务路线表回潮。
 - 修正 `scripts/check-handbook-consumability.mjs` 对 `docs/00-index.md` 最小阅读包的解析方式，改为识别分块清单里的“先读”字段，并拦截旧式密集 Markdown 表格回潮。
 - 收束 `docs/workflows/57-knowledge-base-routing-consolidation-guide.md` 的任务阶段层，移除重复维护的默认读取表，统一委托 `docs/00-index.md` 的“常用任务最小阅读包”作为可执行路线。
 - 修正 `docs/navigation/01-readme-details.md` 中根 `README.md` 的相对链接，并新增子目录文档裸链根入口的语义检查，避免链接存在但跳到同名目录 README。
