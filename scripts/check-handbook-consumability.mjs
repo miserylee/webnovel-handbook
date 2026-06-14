@@ -1684,10 +1684,6 @@ async function checkDocsStatusMetadata(markdownFiles) {
       continue;
     }
 
-    if (path.basename(repoPath).toLowerCase() === "readme.md") {
-      continue;
-    }
-
     const headingBlock = (await fs.readFile(file, "utf8"))
       .split(/\r?\n/)
       .slice(0, 12)
