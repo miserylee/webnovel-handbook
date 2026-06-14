@@ -65,6 +65,15 @@ const requiredRootReadmeLinks = [
 const routeSignalPattern =
   /(用途|适用对象|适用场景|核心用途|核心目标|目标：|适合|用于)/;
 
+const numberedHeadingUniqueEntrypoints = new Set([
+  "docs/00-index.md",
+  "docs/workflows/35-ai-agent-novel-creation-workflow.md",
+  "docs/workflows/38-chapter-production-pipeline-agent-handoff.md",
+  "docs/workflows/57-knowledge-base-routing-consolidation-guide.md",
+  "docs/workflows/58-integrated-drafting-beta-review-revision-workflow.md",
+  "docs/governance/99-decision-log.md",
+]);
+
 async function walk(directory) {
   const entries = await fs.readdir(directory, { withFileTypes: true });
   const files = [];
@@ -846,6 +855,46 @@ async function checkDocsHeadingPrefixConsistency(markdownFiles) {
   return headingPrefixProblems;
 }
 
+async function checkEntrypointHeadingNumberUniqueness(markdownFiles) {
+  const duplicateHeadingNumberProblems = [];
+  const numberedHeadingPattern = /^(#{2,6})\s+(\d+(?:\.\d+)*)(?:[.．、]|\s)/;
+
+  for (const file of markdownFiles) {
+    const repoPath = toRepoPath(file);
+
+    if (!numberedHeadingUniqueEntrypoints.has(repoPath)) {
+      continue;
+    }
+
+    const seen = new Map();
+    const lines = (await fs.readFile(file, "utf8")).split(/\r?\n/);
+
+    for (const [index, line] of lines.entries()) {
+      const match = line.match(numberedHeadingPattern);
+
+      if (!match) {
+        continue;
+      }
+
+      const key = `${match[1]} ${match[2]}`;
+      const previous = seen.get(key);
+
+      if (previous !== undefined) {
+        duplicateHeadingNumberProblems.push({
+          file: repoPath,
+          line: index + 1,
+          sample: `duplicate numbered heading ${key}; previous occurrence is on line ${previous}`,
+        });
+        continue;
+      }
+
+      seen.set(key, index + 1);
+    }
+  }
+
+  return duplicateHeadingNumberProblems;
+}
+
 async function checkDocsStatusMetadata(markdownFiles) {
   const statusMetadataProblems = [];
   const statusPattern = /(^|\n)状态：\s*(已确认|候选|待确认)/;
@@ -959,6 +1008,7 @@ async function main() {
     markdownSizeGovernanceProblems,
     docsNumericPrefixProblems,
     docsHeadingPrefixProblems,
+    docsHeadingNumberProblems,
     docsStatusMetadataProblems,
     docsFilenameConventionProblems,
   ] =
@@ -981,6 +1031,7 @@ async function main() {
       checkMarkdownSizeGovernance(markdownFiles),
       checkDocsNumericPrefixUniqueness(markdownFiles),
       checkDocsHeadingPrefixConsistency(markdownFiles),
+      checkEntrypointHeadingNumberUniqueness(markdownFiles),
       checkDocsStatusMetadata(markdownFiles),
       checkDocsFilenameConventions(markdownFiles),
     ]);
@@ -1012,6 +1063,7 @@ async function main() {
   printSection("Markdown size governance problems", markdownSizeGovernanceProblems);
   printSection("Docs numeric prefix problems", docsNumericPrefixProblems);
   printSection("Docs heading prefix problems", docsHeadingPrefixProblems);
+  printSection("Entrypoint heading number problems", docsHeadingNumberProblems);
   printSection("Docs status metadata problems", docsStatusMetadataProblems);
   printSection("Docs filename convention problems", docsFilenameConventionProblems);
 
@@ -1034,6 +1086,7 @@ async function main() {
     markdownSizeGovernanceProblems.length > 0 ||
     docsNumericPrefixProblems.length > 0 ||
     docsHeadingPrefixProblems.length > 0 ||
+    docsHeadingNumberProblems.length > 0 ||
     docsStatusMetadataProblems.length > 0 ||
     docsFilenameConventionProblems.length > 0;
 
