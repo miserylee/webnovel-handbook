@@ -161,6 +161,20 @@
 - 文档默认中文、UTF-8；状态标签使用“已确认”“候选”“待确认”。
 - 不创建 `final`、`v2` 这类重复文档名；版本脉络写进决策记录或案例笔记。
 
+## 维护检查细则
+
+默认先运行 `npm run verify`。它会串联知识库可消费性检查、轻量 skill 打包校验和本机已安装 skill 同步检查。
+
+只调整索引、路径、入口或治理规则时，也可以单独运行 `node scripts/check-handbook-consumability.mjs`。该检查覆盖：
+
+- Markdown 本地链接、仓库内 `docs/...md`、`scripts/...`、`skills/...` 和根目录关键文件裸路径。
+- 目录 README 覆盖、根 README 链接覆盖、`docs/00-index.md` 关键入口覆盖和最小阅读包覆盖。
+- AGENTS 任务路线委托、启动阅读一致性、默认任务路线是否误读来源清单、模板仓库或扩展目录。
+- 关键入口用途信号、正式文档状态元数据、编号唯一性、标题编号一致性和跨平台文件名约束。
+- 轻量 skill 包布局、skill 启动路由、skill 打包设置、包内 zip entry 校验和本机 skill 同步。
+- CHANGELOG 日期标题与分类标题唯一性，README、AGENTS、CHANGELOG、启动索引、决策入口和路由入口体积护栏。
+- 超大 Markdown 白名单、活跃入口超长行、UTF-8 BOM、CRLF 换行、常见编码污染、连续问号型编码污染和开源去身份化残留。
+
 ## 开篇试写与 A/B 版本评估入口
 
 当任务涉及新书开头、第一章重写、包装和正文联测、多个开篇方案取舍时，必须读取 `docs/feedback-revision/39-opening-variant-ab-evaluation.md`。该专题要求 agent 先锁定同一个主承诺，再设计版本假设、控制变量、收集盲评或数据，最后把胜出版本同步到项目圣经、章节流水线和交接包。
@@ -1064,7 +1078,6 @@ node scripts/package-skill.mjs
 - `docs/00-index.md`：知识库目录。
 - `docs/workflows/57-knowledge-base-routing-consolidation-guide.md`：按任务选择最小阅读包。
 - `docs/workflows/58-integrated-drafting-beta-review-revision-workflow.md`：写稿、试读、审稿、改稿一体化流程。
-
 
 
 

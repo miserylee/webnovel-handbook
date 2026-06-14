@@ -48,7 +48,9 @@
 - Skill 分发入口：[skills/webnovel-handbook/SKILL.md](skills/webnovel-handbook/SKILL.md)。
 - 统一命令入口：[package.json](package.json)，常用命令为 `npm run verify`、`npm run check`、`npm run package-skill`、`npm run sync-skill:check` 和 `npm run sync-skill`。
 - 一键维护验证：[scripts/verify-maintenance.mjs](scripts/verify-maintenance.mjs)，运行 `npm run verify` 会依次检查知识库可消费性、打包轻量 skill 并校验 zip 内容、检查本机已安装 skill 是否同步。
-- 调整索引、路径或 skill 入口后，可运行 `node scripts/check-handbook-consumability.mjs` 检查 Markdown 本地链接、本仓库 `docs/...md`、`scripts/...`、`skills/...` 等关键裸路径、目录 README 覆盖、AGENTS 任务路线是否委托 `docs/00-index.md`、根目录 Markdown 是否挂到 README、关键 docs 入口是否挂到 `docs/00-index.md`、`docs/00-index.md` 最小阅读包是否纳入关键入口校验、默认任务路线是否误读大文件、同一 `docs` 分类目录内编号唯一、文件名编号与标题编号一致、关键入口文档内同级编号标题不重复、正式文档状态元数据、关键 agent 入口与用途信号、`docs` 文件名跨平台命名、`docs` 一级目录索引覆盖、README/AGENTS/启动索引/skill 的启动最小阅读包与大文件条件读取一致性、skill 包布局、skill 打包设置、CHANGELOG 日期和分类标题唯一性、README/AGENTS/CHANGELOG/启动索引/决策入口/路由入口体积护栏、超大 Markdown 白名单、UTF-8 BOM、CRLF 换行、常见编码污染、连续问号型编码污染和开源去身份化残留。
+- 调整索引、路径或 skill 入口后，可运行 `node scripts/check-handbook-consumability.mjs`。
+  它会检查链接、裸路径、索引覆盖、启动阅读一致性、skill 包布局、CHANGELOG 唯一性、体积护栏、编码问题和开源去身份化残留。
+  完整检查项见 [README 扩展说明：维护检查细则](./docs/navigation/01-readme-details.md#维护检查细则)。
 - 分发 skill 前，可运行 `node scripts/package-skill.mjs` 生成 `dist/webnovel-handbook-skill.zip`；脚本会反读 zip 目录，确认根层包含 `SKILL.md`，且没有把 `docs/`、仓库级 `scripts/` 或其他仓库内容误打进轻量 skill 包。
 - 本机已安装 skill 需要同步时，可运行 `node scripts/sync-installed-skill.mjs --check` 或 `node scripts/sync-installed-skill.mjs --write`；默认目标是 `~/.agents/skills/webnovel-handbook/SKILL.md`，也可用 `--target` 指定。
 

@@ -1252,6 +1252,42 @@ async function checkMarkdownSizeGovernance(markdownFiles) {
   return sizeProblems;
 }
 
+async function checkEntrypointLineLengthGovernance() {
+  const lineLengthProblems = [];
+  const lineLengthBudgets = new Map([
+    ["README.md", 360],
+    ["AGENTS.md", 360],
+    ["CHANGELOG.md", 360],
+    ["docs/00-index.md", 800],
+    ["docs/governance/99-decision-log.md", 360],
+    ["docs/workflows/57-knowledge-base-routing-consolidation-guide.md", 360],
+  ]);
+
+  for (const [repoPath, budget] of lineLengthBudgets) {
+    const absolutePath = path.join(repoRoot, ...repoPath.split("/"));
+    const content = await fs.readFile(absolutePath, "utf8");
+    const lines = content.split(/\n/);
+
+    for (const [index, line] of lines.entries()) {
+      const lineLength = [...line].length;
+      if (lineLength <= budget) {
+        continue;
+      }
+
+      lineLengthProblems.push({
+        file: repoPath,
+        line: index + 1,
+        target: `${lineLength} characters`,
+        sample:
+          `active entrypoint line exceeds ${budget} characters; ` +
+          "split details into wrapped lines or a routed detail document",
+      });
+    }
+  }
+
+  return lineLengthProblems;
+}
+
 async function checkDocsNumericPrefixUniqueness(markdownFiles) {
   const duplicatePrefixProblems = [];
   const prefixesByDirectory = new Map();
@@ -1486,6 +1522,7 @@ async function main() {
     changelogDateHeadingProblems,
     changelogSubsectionHeadingProblems,
     markdownSizeGovernanceProblems,
+    entrypointLineLengthGovernanceProblems,
     docsNumericPrefixProblems,
     docsHeadingPrefixProblems,
     docsHeadingNumberProblems,
@@ -1518,6 +1555,7 @@ async function main() {
       checkChangelogDateHeadingUniqueness(),
       checkChangelogSubsectionHeadingUniqueness(),
       checkMarkdownSizeGovernance(markdownFiles),
+      checkEntrypointLineLengthGovernance(),
       checkDocsNumericPrefixUniqueness(markdownFiles),
       checkDocsHeadingPrefixConsistency(markdownFiles),
       checkEntrypointHeadingNumberUniqueness(markdownFiles),
@@ -1577,6 +1615,10 @@ async function main() {
     changelogSubsectionHeadingProblems,
   );
   printSection("Markdown size governance problems", markdownSizeGovernanceProblems);
+  printSection(
+    "Entrypoint line length governance problems",
+    entrypointLineLengthGovernanceProblems,
+  );
   printSection("Docs numeric prefix problems", docsNumericPrefixProblems);
   printSection("Docs heading prefix problems", docsHeadingPrefixProblems);
   printSection("Entrypoint heading number problems", docsHeadingNumberProblems);
@@ -1609,6 +1651,7 @@ async function main() {
     changelogDateHeadingProblems.length > 0 ||
     changelogSubsectionHeadingProblems.length > 0 ||
     markdownSizeGovernanceProblems.length > 0 ||
+    entrypointLineLengthGovernanceProblems.length > 0 ||
     docsNumericPrefixProblems.length > 0 ||
     docsHeadingPrefixProblems.length > 0 ||
     docsHeadingNumberProblems.length > 0 ||
