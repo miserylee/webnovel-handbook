@@ -44,7 +44,7 @@
 
 ## 维护检查
 
-- 调整索引、路径或 skill 入口后，可运行 `node scripts/check-handbook-consumability.mjs` 检查 Markdown 本地链接、本仓库 `docs/...md` 裸路径、目录 README 覆盖、关键 agent 入口、`docs` 一级目录索引覆盖、skill 包布局、skill 打包设置、UTF-8 BOM、CRLF 换行、常见编码污染和开源去身份化残留。
+- 调整索引、路径或 skill 入口后，可运行 `node scripts/check-handbook-consumability.mjs` 检查 Markdown 本地链接、本仓库 `docs/...md` 裸路径、目录 README 覆盖、关键 agent 入口、`docs` 一级目录索引覆盖、skill 包布局、skill 打包设置、活跃入口体积护栏、超大 Markdown 白名单、UTF-8 BOM、CRLF 换行、常见编码污染和开源去身份化残留。
 - 分发 skill 前，可运行 `node scripts/package-skill.mjs` 生成 `dist/webnovel-handbook-skill.zip`；脚本会反读 zip 目录，确认根层包含 `SKILL.md`，且没有把 `docs/`、仓库级 `scripts/` 或其他仓库内容误打进轻量 skill 包。
 
 ## 开源状态

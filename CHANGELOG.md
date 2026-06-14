@@ -20,6 +20,7 @@
 
 ### Changed
 
+- 增强 `scripts/check-handbook-consumability.mjs`，新增活跃入口体积护栏和超大 Markdown 白名单检查，防止 README、启动索引、决策入口和路由入口继续膨胀，也避免未来新增未路由的巨型文档。
 - 增强 `scripts/package-skill.mjs`，打包后反读 zip 目录并校验根层 `SKILL.md`、路径安全和轻量 skill 内容边界；`scripts/check-handbook-consumability.mjs` 同步检查打包脚本是否保留 zip entry 校验能力。
 - 增强 `scripts/check-handbook-consumability.mjs`，新增 `docs/<目录>/<专题>.md` 必须被同目录 `README.md` 覆盖、关键 agent 入口必须存在、`docs` 一级目录必须被 `docs/00-index.md` 覆盖、skill 包目录名必须匹配 `SKILL.md` frontmatter `name`、skill 打包脚本必须指向当前分发目录且产物必须被忽略、文本文件不得带 UTF-8 BOM 或 CRLF 换行、开源文档不得残留本机路径、私有 Codex 路径或旧本地写作 skill 说法的检查，并补齐已发现的目录索引缺链。
 - 扩展 `docs/advanced-craft/README.md` 为高级专题目录级索引，按前 30 章工程、卷级推进、大场面/舆论、上架运营、场景微观技法、反馈路由等问题组织读取链路。

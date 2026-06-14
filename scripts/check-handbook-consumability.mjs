@@ -532,6 +532,47 @@ async function checkSkillPackagingSetup() {
   return packagingProblems;
 }
 
+async function checkMarkdownSizeGovernance(markdownFiles) {
+  const sizeProblems = [];
+  const activeEntrypointBudgets = new Map([
+    ["README.md", 10_000],
+    ["AGENTS.md", 18_000],
+    ["docs/00-index.md", 28_000],
+    ["docs/governance/99-decision-log.md", 10_000],
+    ["docs/workflows/57-knowledge-base-routing-consolidation-guide.md", 24_000],
+  ]);
+  const allowedLargeMarkdownFiles = new Map([
+    ["docs/sources/01-source-inventory.md", "source inventory; search only"],
+    ["docs/templates/10-templates-and-checklists.md", "template warehouse; search by heading"],
+    ["docs/decisions/2026-06.md", "frozen historical decision archive"],
+    ["docs/navigation/00-expanded-topic-catalog.md", "expanded catalog; keyword search only"],
+    ["docs/navigation/00-readme-details.md", "README overflow details; read by section"],
+  ]);
+  const largeMarkdownThreshold = 100_000;
+
+  for (const file of markdownFiles) {
+    const repoPath = toRepoPath(file);
+    const { size } = await fs.stat(file);
+    const activeBudget = activeEntrypointBudgets.get(repoPath);
+
+    if (activeBudget !== undefined && size > activeBudget) {
+      sizeProblems.push({
+        file: repoPath,
+        sample: `active entrypoint is ${size} bytes; budget is ${activeBudget} bytes, split or route through a thinner index`,
+      });
+    }
+
+    if (size >= largeMarkdownThreshold && !allowedLargeMarkdownFiles.has(repoPath)) {
+      sizeProblems.push({
+        file: repoPath,
+        sample: `large markdown file is ${size} bytes; add an explicit routing reason or split into smaller documents`,
+      });
+    }
+  }
+
+  return sizeProblems;
+}
+
 function printSection(title, rows) {
   console.log(`\n${title}: ${rows.length}`);
   for (const row of rows.slice(0, 50)) {
@@ -564,6 +605,7 @@ async function main() {
     missingDirectoryIndexCoverage,
     skillPackageProblems,
     skillPackagingProblems,
+    markdownSizeGovernanceProblems,
   ] =
     await Promise.all([
       checkMarkdownLinks(markdownFiles),
@@ -577,6 +619,7 @@ async function main() {
       checkDocsDirectoryIndexCoverage(),
       checkSkillPackageLayout(),
       checkSkillPackagingSetup(),
+      checkMarkdownSizeGovernance(markdownFiles),
     ]);
 
   printSection("Broken Markdown links", brokenLinks);
@@ -596,6 +639,7 @@ async function main() {
   );
   printSection("Skill package layout problems", skillPackageProblems);
   printSection("Skill packaging setup problems", skillPackagingProblems);
+  printSection("Markdown size governance problems", markdownSizeGovernanceProblems);
 
   const hasProblems =
     brokenLinks.length > 0 ||
@@ -608,7 +652,8 @@ async function main() {
     missingEntrypoints.length > 0 ||
     missingDirectoryIndexCoverage.length > 0 ||
     skillPackageProblems.length > 0 ||
-    skillPackagingProblems.length > 0;
+    skillPackagingProblems.length > 0 ||
+    markdownSizeGovernanceProblems.length > 0;
 
   if (hasProblems) {
     process.exitCode = 1;
