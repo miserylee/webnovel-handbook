@@ -358,6 +358,70 @@ async function checkSkillPackageLayout() {
   return skillPackageProblems;
 }
 
+async function checkSkillPackagingSetup() {
+  const packagingProblems = [];
+  const packageScriptRepoPath = "scripts/package-skill.mjs";
+  const packageScriptPath = path.join(repoRoot, packageScriptRepoPath);
+  const gitignorePath = path.join(repoRoot, ".gitignore");
+
+  if (!(await exists(packageScriptPath))) {
+    packagingProblems.push({
+      file: packageScriptRepoPath,
+      sample: "skill package script is missing",
+    });
+  } else {
+    const packageScript = await fs.readFile(packageScriptPath, "utf8");
+
+    if (packageScript.charCodeAt(0) === 0xfeff) {
+      packagingProblems.push({
+        file: packageScriptRepoPath,
+        sample: "script starts with a UTF-8 BOM before shebang",
+      });
+    }
+
+    if (!packageScript.includes('path.join(repoRoot, "skills", "webnovel-handbook")')) {
+      packagingProblems.push({
+        file: packageScriptRepoPath,
+        sample: "package script does not target skills/webnovel-handbook",
+      });
+    }
+
+    if (!packageScript.includes('"dist/webnovel-handbook-skill.zip"')) {
+      packagingProblems.push({
+        file: packageScriptRepoPath,
+        sample: "package script default output is not dist/webnovel-handbook-skill.zip",
+      });
+    }
+  }
+
+  if (!(await exists(gitignorePath))) {
+    packagingProblems.push({
+      file: ".gitignore",
+      sample: ".gitignore is missing",
+    });
+  } else {
+    const gitignoreLines = (await fs.readFile(gitignorePath, "utf8"))
+      .split(/\r?\n/)
+      .map((line) => line.trim());
+
+    if (!gitignoreLines.includes("dist/")) {
+      packagingProblems.push({
+        file: ".gitignore",
+        sample: "dist/ is not ignored",
+      });
+    }
+
+    if (!gitignoreLines.includes("*.zip")) {
+      packagingProblems.push({
+        file: ".gitignore",
+        sample: "*.zip is not ignored",
+      });
+    }
+  }
+
+  return packagingProblems;
+}
+
 function printSection(title, rows) {
   console.log(`\n${title}: ${rows.length}`);
   for (const row of rows.slice(0, 50)) {
@@ -386,6 +450,7 @@ async function main() {
     missingEntrypoints,
     missingDirectoryIndexCoverage,
     skillPackageProblems,
+    skillPackagingProblems,
   ] =
     await Promise.all([
       checkMarkdownLinks(markdownFiles),
@@ -395,6 +460,7 @@ async function main() {
       checkRequiredEntrypoints(),
       checkDocsDirectoryIndexCoverage(),
       checkSkillPackageLayout(),
+      checkSkillPackagingSetup(),
     ]);
 
   printSection("Broken Markdown links", brokenLinks);
@@ -410,6 +476,7 @@ async function main() {
     missingDirectoryIndexCoverage,
   );
   printSection("Skill package layout problems", skillPackageProblems);
+  printSection("Skill packaging setup problems", skillPackagingProblems);
 
   const hasProblems =
     brokenLinks.length > 0 ||
@@ -418,7 +485,8 @@ async function main() {
     missingDirectoryReadmeCoverage.length > 0 ||
     missingEntrypoints.length > 0 ||
     missingDirectoryIndexCoverage.length > 0 ||
-    skillPackageProblems.length > 0;
+    skillPackageProblems.length > 0 ||
+    skillPackagingProblems.length > 0;
 
   if (hasProblems) {
     process.exitCode = 1;
