@@ -2,6 +2,8 @@
 
 agent 工作流、项目初始化、章节生产、上下文打包、知识库路由和连载项目管理。
 
+用途：作为 `docs/workflows/` 的分类入口，帮助 agent 按任务阶段选择项目流程、章节生产、上下文打包、知识库维护或连载管理路线。
+
 本目录负责“怎么组织工作”，不是具体写法本身。正文质量去 `../core-writing/README.md`，读者反馈去 `../feedback-revision/README.md`，市场包装去 `../market-serialization/README.md`。
 
 ## 1. 先按任务阶段选入口

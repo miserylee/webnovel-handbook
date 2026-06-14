@@ -61,6 +61,9 @@ const requiredRootReadmeLinks = [
   "SOURCE_POLICY.md",
 ];
 
+const routeSignalPattern =
+  /(用途|适用对象|适用场景|核心用途|核心目标|目标：|适合|用于)/;
+
 async function walk(directory) {
   const entries = await fs.readdir(directory, { withFileTypes: true });
   const files = [];
@@ -375,6 +378,36 @@ async function checkRequiredEntrypoints() {
   }
 
   return missingEntrypoints;
+}
+
+async function checkRequiredEntrypointRouteSignals() {
+  const missingRouteSignals = [];
+
+  for (const repoPath of requiredEntrypoints) {
+    if (!repoPath.startsWith("docs/") || !markdownFilePattern.test(repoPath)) {
+      continue;
+    }
+
+    const absolutePath = path.join(repoRoot, repoPath);
+
+    if (!(await exists(absolutePath))) {
+      continue;
+    }
+
+    const headingBlock = (await fs.readFile(absolutePath, "utf8"))
+      .split(/\r?\n/)
+      .slice(0, 18)
+      .join("\n");
+
+    if (!routeSignalPattern.test(headingBlock)) {
+      missingRouteSignals.push({
+        file: repoPath,
+        sample: "required agent entrypoint is missing a route/use signal near the top",
+      });
+    }
+  }
+
+  return missingRouteSignals;
 }
 
 async function checkRootReadmeLinkCoverage() {
@@ -778,6 +811,7 @@ async function main() {
     publicHygieneResidue,
     missingDirectoryReadmeCoverage,
     missingEntrypoints,
+    missingEntrypointRouteSignals,
     missingRootReadmeLinks,
     missingDirectoryIndexCoverage,
     skillPackageProblems,
@@ -796,6 +830,7 @@ async function main() {
       checkPublicHygieneResidue(textFiles),
       checkDirectoryReadmeCoverage(markdownFiles),
       checkRequiredEntrypoints(),
+      checkRequiredEntrypointRouteSignals(),
       checkRootReadmeLinkCoverage(),
       checkDocsDirectoryIndexCoverage(),
       checkSkillPackageLayout(),
@@ -817,6 +852,10 @@ async function main() {
     missingDirectoryReadmeCoverage,
   );
   printSection("Missing required agent entrypoints", missingEntrypoints);
+  printSection(
+    "Missing required entrypoint route signals",
+    missingEntrypointRouteSignals,
+  );
   printSection("Missing root README links", missingRootReadmeLinks);
   printSection(
     "Docs top-level directories missing index coverage",
@@ -838,6 +877,7 @@ async function main() {
     publicHygieneResidue.length > 0 ||
     missingDirectoryReadmeCoverage.length > 0 ||
     missingEntrypoints.length > 0 ||
+    missingEntrypointRouteSignals.length > 0 ||
     missingRootReadmeLinks.length > 0 ||
     missingDirectoryIndexCoverage.length > 0 ||
     skillPackageProblems.length > 0 ||

@@ -21,6 +21,7 @@
 
 ### Changed
 
+- 增强关键 agent 入口的路由信号：为缺少用途提示的总流程、人物对话、AI 写作、人味增强和 workflows 目录入口补充开头用途说明，并让 `scripts/check-handbook-consumability.mjs` 检查关键入口是否具备用途/适用信号。
 - 补齐 `docs` 正式文档的开头状态元数据，并增强 `scripts/check-handbook-consumability.mjs`，要求非目录 README 的正式文档在开头声明 `状态：已确认/候选/待确认`，减少 agent 对文档稳定性的误判。
 - 增强 `scripts/check-handbook-consumability.mjs`，新增 `docs` 文件名数字前缀与一级标题数字前缀一致性检查，并修复上一轮重命名后残留的旧标题编号。
 - 增强 `scripts/check-handbook-consumability.mjs`，新增同一 `docs` 分类目录内数字前缀唯一性检查，防止新增专题时出现编号撞车导致 agent 路由混淆。
