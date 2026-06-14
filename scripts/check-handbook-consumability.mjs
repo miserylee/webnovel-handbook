@@ -303,6 +303,61 @@ async function checkDocsDirectoryIndexCoverage() {
   return missingDirectoryIndexCoverage;
 }
 
+async function checkSkillPackageLayout() {
+  const skillPackageProblems = [];
+  const skillsDirectory = path.join(repoRoot, "skills");
+
+  if (!(await exists(skillsDirectory))) {
+    skillPackageProblems.push({
+      file: "skills/",
+      sample: "skills directory is missing",
+    });
+    return skillPackageProblems;
+  }
+
+  const entries = await fs.readdir(skillsDirectory, { withFileTypes: true });
+
+  for (const entry of entries) {
+    if (!entry.isDirectory()) {
+      continue;
+    }
+
+    const skillDirectory = path.join(skillsDirectory, entry.name);
+    const skillFile = path.join(skillDirectory, "SKILL.md");
+    const skillRepoPath = `skills/${entry.name}/SKILL.md`;
+
+    if (!(await exists(skillFile))) {
+      skillPackageProblems.push({
+        file: skillRepoPath,
+        sample: "skill package directory is missing SKILL.md",
+      });
+      continue;
+    }
+
+    const content = await fs.readFile(skillFile, "utf8");
+    const frontmatterMatch = content.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+    const nameMatch = frontmatterMatch?.[1]?.match(/^name:\s*([^\r\n]+)/m);
+    const frontmatterName = nameMatch?.[1]?.trim().replace(/^["']|["']$/g, "");
+
+    if (!frontmatterName) {
+      skillPackageProblems.push({
+        file: skillRepoPath,
+        sample: "SKILL.md frontmatter is missing name",
+      });
+      continue;
+    }
+
+    if (frontmatterName !== entry.name) {
+      skillPackageProblems.push({
+        file: skillRepoPath,
+        sample: `frontmatter name "${frontmatterName}" does not match directory "${entry.name}"`,
+      });
+    }
+  }
+
+  return skillPackageProblems;
+}
+
 function printSection(title, rows) {
   console.log(`\n${title}: ${rows.length}`);
   for (const row of rows.slice(0, 50)) {
@@ -330,6 +385,7 @@ async function main() {
     missingDirectoryReadmeCoverage,
     missingEntrypoints,
     missingDirectoryIndexCoverage,
+    skillPackageProblems,
   ] =
     await Promise.all([
       checkMarkdownLinks(markdownFiles),
@@ -338,6 +394,7 @@ async function main() {
       checkDirectoryReadmeCoverage(markdownFiles),
       checkRequiredEntrypoints(),
       checkDocsDirectoryIndexCoverage(),
+      checkSkillPackageLayout(),
     ]);
 
   printSection("Broken Markdown links", brokenLinks);
@@ -352,6 +409,7 @@ async function main() {
     "Docs top-level directories missing index coverage",
     missingDirectoryIndexCoverage,
   );
+  printSection("Skill package layout problems", skillPackageProblems);
 
   const hasProblems =
     brokenLinks.length > 0 ||
@@ -359,7 +417,8 @@ async function main() {
     suspiciousMojibake.length > 0 ||
     missingDirectoryReadmeCoverage.length > 0 ||
     missingEntrypoints.length > 0 ||
-    missingDirectoryIndexCoverage.length > 0;
+    missingDirectoryIndexCoverage.length > 0 ||
+    skillPackageProblems.length > 0;
 
   if (hasProblems) {
     process.exitCode = 1;
