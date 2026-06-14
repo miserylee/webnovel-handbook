@@ -164,6 +164,66 @@ async function checkMojibake(textFiles) {
   return suspiciousFiles;
 }
 
+async function checkDirectoryReadmeCoverage(markdownFiles) {
+  const missingCoverage = [];
+  const readmeCache = new Map();
+
+  for (const file of markdownFiles) {
+    const repoPath = toRepoPath(file);
+
+    if (!repoPath.startsWith("docs/")) {
+      continue;
+    }
+
+    if (path.basename(file).toLowerCase() === "readme.md") {
+      continue;
+    }
+
+    const directoryRepoPath = path.dirname(repoPath).replaceAll(path.sep, "/");
+
+    if (directoryRepoPath === "docs") {
+      continue;
+    }
+
+    const readmePath = path.join(repoRoot, directoryRepoPath, "README.md");
+    const readmeRepoPath = `${directoryRepoPath}/README.md`;
+
+    if (!(await exists(readmePath))) {
+      missingCoverage.push({
+        file: readmeRepoPath,
+        target: repoPath,
+        sample: "directory README is missing",
+      });
+      continue;
+    }
+
+    let readmeContent = readmeCache.get(readmePath);
+    if (readmeContent === undefined) {
+      readmeContent = await fs.readFile(readmePath, "utf8");
+      readmeCache.set(readmePath, readmeContent);
+    }
+
+    const fileName = path.basename(file);
+    const relativeFromReadme = path
+      .relative(path.dirname(readmePath), file)
+      .replaceAll(path.sep, "/");
+
+    if (
+      !readmeContent.includes(fileName) &&
+      !readmeContent.includes(relativeFromReadme) &&
+      !readmeContent.includes(repoPath)
+    ) {
+      missingCoverage.push({
+        file: readmeRepoPath,
+        target: repoPath,
+        sample: "topic file is not mentioned in its directory README",
+      });
+    }
+  }
+
+  return missingCoverage;
+}
+
 function printSection(title, rows) {
   console.log(`\n${title}: ${rows.length}`);
   for (const row of rows.slice(0, 50)) {
@@ -184,21 +244,32 @@ async function main() {
     return textFilePattern.test(file) || path.basename(file) === "SKILL.md";
   });
 
-  const [brokenLinks, missingRawDocPaths, suspiciousMojibake] =
+  const [
+    brokenLinks,
+    missingRawDocPaths,
+    suspiciousMojibake,
+    missingDirectoryReadmeCoverage,
+  ] =
     await Promise.all([
       checkMarkdownLinks(markdownFiles),
       checkRawRepoDocPaths(markdownFiles),
       checkMojibake(textFiles),
+      checkDirectoryReadmeCoverage(markdownFiles),
     ]);
 
   printSection("Broken Markdown links", brokenLinks);
   printSection("Missing raw repo docs paths", missingRawDocPaths);
   printSection("Suspicious mojibake files", suspiciousMojibake);
+  printSection(
+    "Docs missing directory README coverage",
+    missingDirectoryReadmeCoverage,
+  );
 
   const hasProblems =
     brokenLinks.length > 0 ||
     missingRawDocPaths.length > 0 ||
-    suspiciousMojibake.length > 0;
+    suspiciousMojibake.length > 0 ||
+    missingDirectoryReadmeCoverage.length > 0;
 
   if (hasProblems) {
     process.exitCode = 1;

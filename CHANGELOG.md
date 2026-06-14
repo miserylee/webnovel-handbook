@@ -20,6 +20,7 @@
 
 ### Changed
 
+- 增强 `scripts/check-handbook-consumability.mjs`，新增 `docs/<目录>/<专题>.md` 必须被同目录 `README.md` 覆盖的检查，并补齐已发现的目录索引缺链。
 - 扩展 `docs/advanced-craft/README.md` 为高级专题目录级索引，按前 30 章工程、卷级推进、大场面/舆论、上架运营、场景微观技法、反馈路由等问题组织读取链路。
 - 扩展 `docs/governance/README.md` 为治理目录级索引，明确活跃决策、历史归档、变更记录和长期规则写入边界。
 - 扩展 `docs/navigation/README.md` 为导航目录级索引，明确启动索引、扩展专题目录和 README 下沉说明的读取边界，并修正导航文件名。

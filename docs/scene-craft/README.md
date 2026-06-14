@@ -102,3 +102,9 @@
 关系爆点：`115/127/128/129` + `25` + `37`。  
 生活质感：目标生活专题 + `11` + `32`。  
 高风险场景：目标场景专题 + `../safety-research/README.md`。
+
+## 补充场景入口
+
+| 文件 | 什么时候读 |
+|---|---|
+| `117-comedy-beat-running-gag-callback-fatigue-control.md` | 写喜剧节拍、重复梗、回调和防疲劳时读取；如果是整体喜剧方法，先读 `../storycraft/27-comedy-gags-lightness.md`。 |

@@ -85,3 +85,41 @@
 公安司法：`166` + `227/228/229` 按分流选择。  
 灾害事故：`164` + `235/236/237` 按事故类型选择。  
 农村农业：`194` + `195/196/197/198` 按资金、土地、产品或物流选择。
+
+## 补充专题入口
+
+以下专题用于目录覆盖和关键词定位。它们不应默认整读，只在章节确实涉及对应现实场景时读取。
+
+| 场景 | 文件 |
+|---|---|
+| 数字账号、密码、隐私、网络证据 | `163-digital-account-password-privacy-cybersecurity-hacking-data-evidence.md` |
+| 酒店、民宿、入住登记、监控和隐私安全 | `171-hotel-guesthouse-homestay-checkin-registration-room-service-surveillance-privacy-safety.md` |
+| 知识产权、商标、专利、商业秘密和改编授权 | `179-intellectual-property-copyright-trademark-patent-trade-secret-adaptation-licensing-infringement.md` |
+| 医美、健身、预付卡和身体风险服务纠纷 | `183-beauty-medical-aesthetics-fitness-wellness-prepaid-card-body-risk-service-dispute.md` |
+| 殡葬、墓地、火化、死亡证明和纪念仪式 | `185-funeral-burial-cemetery-cremation-death-certificate-memorial-ritual-dispute.md` |
+| 单位、社保、公积金、工伤、退休和人事档案 | `186-work-unit-social-insurance-housing-provident-fund-work-injury-retirement-personnel-file-dispute.md` |
+| 网游、电竞俱乐部、代练陪玩、虚拟物品和未成年人消费 | `188-online-game-esports-club-boosting-companion-virtual-item-minor-consumption-dispute.md` |
+| 低空经济、无人机、航拍测绘、空域和隐私坠机责任 | `190-low-altitude-economy-drone-uav-aerial-photography-mapping-airspace-privacy-crash-liability.md` |
+| 社区物业、业委会、邻里噪音、停车充电和公共空间 | `191-community-property-management-owners-committee-neighbor-noise-parking-charging-public-space-dispute.md` |
+| 社区卫生、家庭医生、疫苗、慢病和公共卫生随访 | `193-community-health-primary-care-family-doctor-vaccination-chronic-disease-public-health-followup.md` |
+| 县域婚恋、彩礼、媒人、跨省婚姻和家庭债务 | `202-county-marriage-dating-betrothal-gift-dowry-matchmaker-cross-provincial-marriage-custom-reform-family-debt.md` |
+| 县域司法所、人民调解、法律援助、基层法院和执行 | `204-county-justice-office-people-mediation-legal-aid-basic-court-enforcement-public-legal-service-dispute-resolution.md` |
+| 县域社会救助、低保、特困、临时救助和慈善困境 | `210-county-social-assistance-dibao-extreme-poverty-temporary-relief-medical-aid-charity-children-family-hardship.md` |
+| 县域农机、跨区作业、补贴、安全事故和机械化服务 | `215-county-agricultural-machinery-mechanization-harvest-service-cross-region-operation-subsidy-safety-accident.md` |
+| 县域农资、种子化肥农药兽药、赊销和技术服务 | `216-county-agricultural-inputs-seeds-fertilizer-pesticide-veterinary-drug-fake-inferior-credit-sales-technical-service.md` |
+| 县域退役军人、优待安置、就业创业和烈士荣誉 | `217-county-veterans-affairs-preferential-treatment-resettlement-employment-entrepreneurship-martyr-honor-family-assistance.md` |
+| 县域残联、残疾证、康复辅具、就业无障碍和补贴照护 | `218-county-disabled-persons-federation-disability-certificate-rehabilitation-assistive-devices-employment-accessibility-subsidy-care.md` |
+| 县域文物、非遗、古村、考古、博物馆和旅游开发保护 | `219-county-cultural-relics-intangible-heritage-ancient-village-archaeology-museum-tourism-development-protection.md` |
+| 县域政府采购、招投标、公共资源交易、验收审计结算 | `222-county-government-procurement-bidding-public-resource-transaction-project-acceptance-audit-settlement.md` |
+| 县域财政预算、专项资金、转移支付、绩效和债务风险 | `223-county-public-finance-budget-special-funds-transfer-payment-treasury-performance-debt-risk.md` |
+| 县域统计、普查、调查指标、数据质量和造假风险 | `224-county-statistics-census-survey-indicators-reporting-data-quality-falsification-risk.md` |
+| 县域审计监督、预算执行、经济责任和政府投资整改 | `225-county-audit-supervision-budget-execution-economic-responsibility-government-investment-rectification.md` |
+| 县域人大政协、代表建议、提案、预算监督和协商 | `226-county-people-congress-cppcc-deputy-suggestion-proposal-budget-supervision-consultation.md` |
+| 县域职业教育、中职、实习、校企合作、补助和就业 | `233-county-vocational-education-secondary-vocational-school-student-internship-school-enterprise-cooperation-subsidy-employment.md` |
+| 县域宗教事务、寺庙、民间信仰、香火商业化和邪教风险 | `240-county-religious-affairs-temple-monastery-folk-belief-incense-commercialization-cult-risk.md` |
+| 县域林业、森林防火、野生动物、采伐权和生态护林 | `243-county-forestry-forest-fire-wildlife-logging-rights-ecological-ranger-nature-reserve.md` |
+| 县域水利、河道水库、水坝灌溉、取水许可和河长制 | `244-county-water-conservancy-river-reservoir-dam-irrigation-water-permit-flood-control-river-chief.md` |
+| 县域粮食收购、储备、粮食安全、仓储质量和农户售粮 | `246-county-grain-purchase-storage-reserve-food-security-quality-warehouse-farmer-sale.md` |
+| 县域新能源、屋顶光伏、风电、充电并网和村集体收益 | `249-county-renewable-energy-rooftop-photovoltaic-wind-power-charging-grid-connection-village-revenue.md` |
+| 县域地名、行政区划、门牌地址、地图测绘和界线地理信息 | `251-county-place-names-administrative-division-address-house-number-map-surveying-boundary-geoinformation.md` |
+| 县域征兵、民兵、国防动员、人防和军地协调 | `252-county-conscription-militia-national-defense-mobilization-civil-air-defense-military-civilian-coordination.md` |
