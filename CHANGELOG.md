@@ -23,6 +23,7 @@
 
 ### Changed
 
+- 补强 `docs/workflows/38-chapter-production-pipeline-agent-handoff.md` 的章节任务单 Ready 定义，要求起草前具备承接点、章节目标、场景链、人物压力、信息来源、回报币种、章末牵引、目标字数和台账预期，防止 agent 拿薄事件列表硬扩成短章或提纲味正文。
 - 同步补强轻量 `webnovel-handbook` skill 的交付完成闸门，让小说项目 agent 在只读 skill 入口时也能知道正稿事实、逻辑链、高 AI 味、字数/细纲、台账和合规问题不能作为普通润色放行。
 - 补强 `docs/workflows/58-integrated-drafting-beta-review-revision-workflow.md` 的交付前完成定义，把正稿事实、逻辑链、高 AI 味、字数门槛、细纲厚度、台账回写和合规风险明确为一票阻塞项，避免 agent 把返修稿包装成定稿。
 - 收束 `webnovel-handbook` skill 启动阅读口径：新会话默认只读 `README.md`、`AGENTS.md` 和 `docs/00-index.md`，将 `57` 路由规范改为复杂任务、知识库维护或路由不明时再读，并在消费检查器中加入 skill 启动最小阅读包检查。
