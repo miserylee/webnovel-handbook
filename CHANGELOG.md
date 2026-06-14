@@ -20,6 +20,7 @@
 
 ### Changed
 
+- 扩展 `docs/storycraft/README.md` 为目录级渐进式索引，按机制、关系情绪、反派阻力、开篇留存、中段卷结构、结尾、悬疑伏笔、喜剧、设定投放和失败代价组织读取链路。
 - 扩展 `docs/market-serialization/README.md` 为目录级渐进式索引，按平台频道、题材承诺、包装、封面、更新运营、读者生命周期、口碑和完本/IP 组织读取链路。
 - 扩展 `docs/workflows/README.md` 为目录级渐进式索引，按知识库维护、开书、章节生产、连载项目管理和 agent 检索装配组织读取链路。
 - 扩展 `docs/core-writing/README.md` 为目录级渐进式索引，按章节成立、人味/AI 味、人物对白、连续性、段落阅读和反派升级等问题组织读取链路。
