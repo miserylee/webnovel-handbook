@@ -23,6 +23,7 @@
 
 ### Changed
 
+- 增强 `scripts/check-handbook-consumability.mjs`，自动检查根目录新增 Markdown 文件是否从 README 可发现，避免未来新增公开说明文档后留下孤儿入口。
 - 增强 `scripts/check-handbook-consumability.mjs`，新增 README、AGENTS、`docs/00-index.md` 和轻量 skill 的启动最小阅读包一致性检查，确保默认只读薄入口，来源清单和路由规范保持条件读取。
 - 增强 `scripts/check-handbook-consumability.mjs`，把 `AGENTS.md` 中的任务路线专题纳入 required entrypoints，并新增 AGENTS 路线覆盖检查，防止协作说明里的必读文件没有被关键入口存在性和用途信号校验守住。
 - 增强 `scripts/check-handbook-consumability.mjs`，新增关键入口文档内同级编号标题不重复检查，并修正 `docs/workflows/57-knowledge-base-routing-consolidation-guide.md` 中重复的 `## 12` 编号，减少 agent 按标题定位时的歧义。

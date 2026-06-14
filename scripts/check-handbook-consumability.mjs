@@ -470,6 +470,7 @@ async function checkRootReadmeLinkCoverage() {
   const missingRootReadmeLinks = [];
   const readmePath = path.join(repoRoot, "README.md");
   const readmeContent = await fs.readFile(readmePath, "utf8");
+  const rootEntries = await fs.readdir(repoRoot, { withFileTypes: true });
 
   for (const repoPath of requiredRootReadmeLinks) {
     if (!readmeContent.includes(repoPath)) {
@@ -477,6 +478,24 @@ async function checkRootReadmeLinkCoverage() {
         file: "README.md",
         target: repoPath,
         sample: "root public file is not linked from README.md",
+      });
+    }
+  }
+
+  for (const entry of rootEntries) {
+    if (!entry.isFile() || !markdownFilePattern.test(entry.name)) {
+      continue;
+    }
+
+    if (entry.name === "README.md") {
+      continue;
+    }
+
+    if (!readmeContent.includes(entry.name)) {
+      missingRootReadmeLinks.push({
+        file: "README.md",
+        target: entry.name,
+        sample: "root Markdown file is not linked from README.md",
       });
     }
   }
