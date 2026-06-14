@@ -80,6 +80,16 @@
 - 新增 agent 工作流：更新 `README.md`、`docs/workflows/35-ai-agent-novel-creation-workflow.md`、相关入口文档和模板。
 - 开源治理变更：更新 README、相关政策文件和 PR 模板。
 
+## Issue 和 PR 入口
+
+如果还不确定是否应该直接提交 PR，先按问题类型选择对应模板：
+
+- 文档错误、链接失效、规则过时或前后矛盾：使用 `.github/ISSUE_TEMPLATE/bug_report.md`。
+- 新增来源、来源失效或平台规则更新：使用 `.github/ISSUE_TEMPLATE/source_update.md`。
+- 请求新增专题：使用 `.github/ISSUE_TEMPLATE/topic_request.md`，并先说明为什么旧专题、索引或模板无法承接。
+- 起草、试读、审稿、改稿、台账或上下文封包流程改进：使用 `.github/ISSUE_TEMPLATE/workflow_improvement.md`。
+- 已经准备好提交修改：使用 `.github/PULL_REQUEST_TEMPLATE.md`，在 PR 里说明索引入口、来源边界、安全边界和 agent 可消费性。
+
 ## PR 检查
 
 提交 PR 前请确认：
@@ -92,6 +102,5 @@
 - 没有危险可操作细节。
 - 新内容能被 AI agent 直接消费，而不是只给人类阅读。
 - 已说明本次修改是否新增专题、修改入口、修改模板或修改安全边界。
-
 
 
