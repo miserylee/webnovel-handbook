@@ -698,6 +698,66 @@ async function checkDocsIndexMinimumReadEntrypointCoverage() {
   return missingMinimumReadCoverage;
 }
 
+async function checkDefaultRouteLargeDocLeakage() {
+  const leakageProblems = [];
+  const disallowedDefaultRoutePaths = new Set(largeConditionalStartupPaths);
+
+  const agentsPath = path.join(repoRoot, "AGENTS.md");
+  const agentsContent = await fs.readFile(agentsPath, "utf8");
+  const agentsTaskRouteBlock = extractBlock(
+    agentsContent,
+    "再按任务读取专题：",
+    "## 来源优先级",
+  );
+
+  for (const [index, line] of agentsTaskRouteBlock.split(/\r?\n/).entries()) {
+    if (!line.startsWith("- ")) {
+      continue;
+    }
+
+    for (const repoPath of disallowedDefaultRoutePaths) {
+      if (line.includes(repoPath)) {
+        leakageProblems.push({
+          file: "AGENTS.md",
+          line: index + 1,
+          target: repoPath,
+          sample: "large or conditional document appears in an AGENTS default task route",
+        });
+      }
+    }
+  }
+
+  const indexPath = path.join(repoRoot, "docs", "00-index.md");
+  const indexContent = await fs.readFile(indexPath, "utf8");
+  const minimumReadSection = extractBlock(
+    indexContent,
+    "## 2. 常用任务最小阅读包",
+    "## 3. 写稿质量硬入口",
+  );
+
+  for (const [index, line] of minimumReadSection.split(/\r?\n/).entries()) {
+    if (!line.startsWith("|") || !line.includes("`")) {
+      continue;
+    }
+
+    const cells = line.split("|").map((cell) => cell.trim());
+    const firstReadCell = cells[2] || "";
+
+    for (const repoPath of disallowedDefaultRoutePaths) {
+      if (firstReadCell.includes(repoPath)) {
+        leakageProblems.push({
+          file: "docs/00-index.md",
+          line: index + 1,
+          target: repoPath,
+          sample: "large or conditional document appears in a minimum-read cell",
+        });
+      }
+    }
+  }
+
+  return leakageProblems;
+}
+
 async function checkSkillPackageLayout() {
   const skillPackageProblems = [];
   const skillsDirectory = path.join(repoRoot, "skills");
@@ -1280,6 +1340,7 @@ async function main() {
     missingDirectoryIndexCoverage,
     missingDocsIndexRequiredEntrypointCoverage,
     missingDocsIndexMinimumReadEntrypointCoverage,
+    defaultRouteLargeDocLeakageProblems,
     skillPackageProblems,
     skillStartupRoutingProblems,
     startupReadingConsistencyProblems,
@@ -1308,6 +1369,7 @@ async function main() {
       checkDocsDirectoryIndexCoverage(),
       checkDocsIndexRequiredEntrypointCoverage(),
       checkDocsIndexMinimumReadEntrypointCoverage(),
+      checkDefaultRouteLargeDocLeakage(),
       checkSkillPackageLayout(),
       checkSkillStartupRoutingConsistency(),
       checkStartupReadingConsistency(),
@@ -1354,6 +1416,10 @@ async function main() {
     "Docs index minimum reads missing entrypoint coverage",
     missingDocsIndexMinimumReadEntrypointCoverage,
   );
+  printSection(
+    "Default routes leaking large conditional docs",
+    defaultRouteLargeDocLeakageProblems,
+  );
   printSection("Skill package layout problems", skillPackageProblems);
   printSection("Skill startup routing problems", skillStartupRoutingProblems);
   printSection(
@@ -1385,6 +1451,7 @@ async function main() {
     missingDirectoryIndexCoverage.length > 0 ||
     missingDocsIndexRequiredEntrypointCoverage.length > 0 ||
     missingDocsIndexMinimumReadEntrypointCoverage.length > 0 ||
+    defaultRouteLargeDocLeakageProblems.length > 0 ||
     skillPackageProblems.length > 0 ||
     skillStartupRoutingProblems.length > 0 ||
     startupReadingConsistencyProblems.length > 0 ||

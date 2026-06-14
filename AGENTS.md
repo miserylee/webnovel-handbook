@@ -21,7 +21,7 @@
 
 再按任务读取专题：
 
-- 起草或修订章节：`docs/workflows/35-ai-agent-novel-creation-workflow.md`、`docs/workflows/38-chapter-production-pipeline-agent-handoff.md`、`docs/workflows/58-integrated-drafting-beta-review-revision-workflow.md`、`docs/core-writing/02-webnovel-principles.md`、`docs/core-writing/04-character-and-dialogue.md`、`docs/core-writing/11-human-writing-upgrade.md`、`docs/core-writing/06-ai-writing-guidelines.md`、`docs/templates/10-templates-and-checklists.md`
+- 起草或修订章节：`docs/workflows/35-ai-agent-novel-creation-workflow.md`、`docs/workflows/38-chapter-production-pipeline-agent-handoff.md`、`docs/workflows/58-integrated-drafting-beta-review-revision-workflow.md`、`docs/core-writing/02-webnovel-principles.md`、`docs/core-writing/04-character-and-dialogue.md`、`docs/core-writing/11-human-writing-upgrade.md`、`docs/core-writing/06-ai-writing-guidelines.md`
 - 搭建新小说项目：`docs/workflows/43-commercial-project-greenlight-scorecard.md`、`docs/workflows/44-single-novel-project-initialization-package.md`、`docs/workflows/45-first-chapter-task-brief-production-gate.md`、`docs/workflows/03-project-workflow.md`、`docs/core-writing/07-continuity-ledger.md`
 - 设计大纲或连载节奏：`docs/core-writing/05-plot-and-serial-rhythm.md`
 - 审稿、试读、判断 AI 含量：`docs/feedback-revision/08-review-and-reader-feedback.md`、`docs/feedback-revision/09-case-notes.md`
