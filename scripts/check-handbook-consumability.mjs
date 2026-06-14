@@ -55,6 +55,7 @@ const requiredRootReadmeLinks = [
   "CONTRIBUTING.md",
   "DEIDENTIFICATION.md",
   "LICENSE",
+  "package.json",
   "ROADMAP.md",
   "SAFETY.md",
   "SECURITY.md",
@@ -680,6 +681,55 @@ async function checkSkillPackagingSetup() {
   return packagingProblems;
 }
 
+async function checkPackageJsonScripts() {
+  const packageProblems = [];
+  const packageJsonPath = path.join(repoRoot, "package.json");
+  const requiredScripts = new Map([
+    ["check", "node scripts/check-handbook-consumability.mjs"],
+    ["package-skill", "node scripts/package-skill.mjs"],
+    ["sync-skill", "node scripts/sync-installed-skill.mjs --write"],
+    ["sync-skill:check", "node scripts/sync-installed-skill.mjs --check"],
+  ]);
+
+  if (!(await exists(packageJsonPath))) {
+    packageProblems.push({
+      file: "package.json",
+      sample: "package.json is missing; maintenance commands lack a unified npm entrypoint",
+    });
+    return packageProblems;
+  }
+
+  let packageJson;
+  try {
+    packageJson = JSON.parse(await fs.readFile(packageJsonPath, "utf8"));
+  } catch (error) {
+    packageProblems.push({
+      file: "package.json",
+      sample: `package.json is not valid JSON: ${error instanceof Error ? error.message : error}`,
+    });
+    return packageProblems;
+  }
+
+  if (packageJson.license !== "MIT") {
+    packageProblems.push({
+      file: "package.json",
+      sample: "package.json license should be MIT",
+    });
+  }
+
+  for (const [scriptName, expectedCommand] of requiredScripts.entries()) {
+    if (packageJson.scripts?.[scriptName] !== expectedCommand) {
+      packageProblems.push({
+        file: "package.json",
+        target: scriptName,
+        sample: `expected npm script: ${expectedCommand}`,
+      });
+    }
+  }
+
+  return packageProblems;
+}
+
 async function checkMarkdownSizeGovernance(markdownFiles) {
   const sizeProblems = [];
   const activeEntrypointBudgets = new Map([
@@ -904,6 +954,7 @@ async function main() {
     skillPackageProblems,
     skillStartupRoutingProblems,
     skillPackagingProblems,
+    packageJsonProblems,
     markdownSizeGovernanceProblems,
     docsNumericPrefixProblems,
     docsHeadingPrefixProblems,
@@ -925,6 +976,7 @@ async function main() {
       checkSkillPackageLayout(),
       checkSkillStartupRoutingConsistency(),
       checkSkillPackagingSetup(),
+      checkPackageJsonScripts(),
       checkMarkdownSizeGovernance(markdownFiles),
       checkDocsNumericPrefixUniqueness(markdownFiles),
       checkDocsHeadingPrefixConsistency(markdownFiles),
@@ -955,6 +1007,7 @@ async function main() {
   printSection("Skill package layout problems", skillPackageProblems);
   printSection("Skill startup routing problems", skillStartupRoutingProblems);
   printSection("Skill packaging setup problems", skillPackagingProblems);
+  printSection("Package.json script problems", packageJsonProblems);
   printSection("Markdown size governance problems", markdownSizeGovernanceProblems);
   printSection("Docs numeric prefix problems", docsNumericPrefixProblems);
   printSection("Docs heading prefix problems", docsHeadingPrefixProblems);
@@ -976,6 +1029,7 @@ async function main() {
     skillPackageProblems.length > 0 ||
     skillStartupRoutingProblems.length > 0 ||
     skillPackagingProblems.length > 0 ||
+    packageJsonProblems.length > 0 ||
     markdownSizeGovernanceProblems.length > 0 ||
     docsNumericPrefixProblems.length > 0 ||
     docsHeadingPrefixProblems.length > 0 ||

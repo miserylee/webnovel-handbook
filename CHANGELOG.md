@@ -6,6 +6,7 @@
 
 ### Added
 
+- 新增 `package.json` 作为跨平台维护命令入口，提供 `npm run check`、`npm run package-skill`、`npm run sync-skill:check` 和 `npm run sync-skill`，并让消费检查器校验这些脚本存在。
 - 新增 `scripts/sync-installed-skill.mjs`，用于检查或同步本机已安装的 `webnovel-handbook` skill，避免仓库分发入口更新后本机 agent 继续读取旧规则。
 - 新增 `docs/feedback-revision/43-feedback-revision-priority-queue.md`，把 RICE/MoSCoW 等优先级方法迁移为连载反馈修订队列，帮助 agent 在多源反馈中决定本轮改、后文补、观察或拒绝。
 - 新增 `docs/workflows/65-serial-project-kanban-change-control.md`，用于把 Kanban/Scrum 的可视化工作流、WIP 限制、完成定义和复盘机制迁移为连载小说项目管理规则。

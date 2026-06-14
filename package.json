@@ -1,0 +1,13 @@
+{
+  "name": "webnovel-handbook",
+  "version": "0.0.0",
+  "description": "Chinese webnovel writing handbook for AI agents.",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "check": "node scripts/check-handbook-consumability.mjs",
+    "package-skill": "node scripts/package-skill.mjs",
+    "sync-skill": "node scripts/sync-installed-skill.mjs --write",
+    "sync-skill:check": "node scripts/sync-installed-skill.mjs --check"
+  }
+}
