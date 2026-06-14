@@ -20,6 +20,7 @@
 
 ### Changed
 
+- 扩展 `docs/feedback-revision/README.md` 为目录级渐进式索引，按审稿、数据、评论、冲突、优先级队列和修订执行组织读取链路。
 - README 增加开源使用、关键文件和 AI agent 消费路径。
 - 仓库维护重心明确为收束、提纯和 agent 可消费。
 
