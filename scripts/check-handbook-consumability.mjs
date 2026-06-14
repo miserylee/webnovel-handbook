@@ -782,6 +782,49 @@ async function checkDocsStatusMetadata(markdownFiles) {
   return statusMetadataProblems;
 }
 
+function checkDocsFilenameConventions(markdownFiles) {
+  const filenameConventionProblems = [];
+  const docsFileNamePattern = /^[0-9a-z][0-9a-z.-]*[0-9a-z]\.md$/;
+  const maxDocsFileNameLength = 160;
+
+  for (const file of markdownFiles) {
+    const repoPath = toRepoPath(file);
+
+    if (!repoPath.startsWith("docs/")) {
+      continue;
+    }
+
+    const fileName = path.basename(repoPath);
+
+    if (fileName === "README.md") {
+      continue;
+    }
+
+    if (!docsFileNamePattern.test(fileName)) {
+      filenameConventionProblems.push({
+        file: repoPath,
+        sample: "docs filename should use lowercase ASCII letters, digits, hyphens, dots, and .md",
+      });
+    }
+
+    if (fileName.includes("--")) {
+      filenameConventionProblems.push({
+        file: repoPath,
+        sample: "docs filename should not contain repeated hyphens",
+      });
+    }
+
+    if (fileName.length > maxDocsFileNameLength) {
+      filenameConventionProblems.push({
+        file: repoPath,
+        sample: `docs filename is ${fileName.length} characters; keep it at or below ${maxDocsFileNameLength}`,
+      });
+    }
+  }
+
+  return filenameConventionProblems;
+}
+
 function printSection(title, rows) {
   console.log(`\n${title}: ${rows.length}`);
   for (const row of rows.slice(0, 50)) {
@@ -820,6 +863,7 @@ async function main() {
     docsNumericPrefixProblems,
     docsHeadingPrefixProblems,
     docsStatusMetadataProblems,
+    docsFilenameConventionProblems,
   ] =
     await Promise.all([
       checkMarkdownLinks(markdownFiles),
@@ -839,6 +883,7 @@ async function main() {
       checkDocsNumericPrefixUniqueness(markdownFiles),
       checkDocsHeadingPrefixConsistency(markdownFiles),
       checkDocsStatusMetadata(markdownFiles),
+      checkDocsFilenameConventions(markdownFiles),
     ]);
 
   printSection("Broken Markdown links", brokenLinks);
@@ -867,6 +912,7 @@ async function main() {
   printSection("Docs numeric prefix problems", docsNumericPrefixProblems);
   printSection("Docs heading prefix problems", docsHeadingPrefixProblems);
   printSection("Docs status metadata problems", docsStatusMetadataProblems);
+  printSection("Docs filename convention problems", docsFilenameConventionProblems);
 
   const hasProblems =
     brokenLinks.length > 0 ||
@@ -885,7 +931,8 @@ async function main() {
     markdownSizeGovernanceProblems.length > 0 ||
     docsNumericPrefixProblems.length > 0 ||
     docsHeadingPrefixProblems.length > 0 ||
-    docsStatusMetadataProblems.length > 0;
+    docsStatusMetadataProblems.length > 0 ||
+    docsFilenameConventionProblems.length > 0;
 
   if (hasProblems) {
     process.exitCode = 1;
