@@ -235,6 +235,58 @@ async function checkCrlfLineEndings(textFiles) {
   return crlfFiles;
 }
 
+async function checkPublicHygieneResidue(textFiles) {
+  const residue = [];
+  const patterns = [
+    {
+      name: "local Windows user path",
+      pattern: /\b[A-Za-z]:[\\/](?:Users|Documents and Settings)[\\/][^\s`"')<]+/i,
+    },
+    {
+      name: "local Unix user path",
+      pattern: /\/(?:Users|home)\/[^\s`"')<]+/,
+    },
+    {
+      name: "private Codex runtime path",
+      pattern: /\.codex[\\/](?:skills|plugins)/i,
+    },
+    {
+      name: "obsolete novel skill wording",
+      pattern: /\bnovel skill\b/i,
+    },
+    {
+      name: "local workspace folder name",
+      pattern: /学习写网文/,
+    },
+  ];
+
+  for (const file of textFiles) {
+    const repoPath = toRepoPath(file);
+
+    if (repoPath === "scripts/check-handbook-consumability.mjs") {
+      continue;
+    }
+
+    const lines = (await fs.readFile(file, "utf8")).split(/\r?\n/);
+
+    for (const [index, line] of lines.entries()) {
+      for (const { name, pattern } of patterns) {
+        pattern.lastIndex = 0;
+
+        if (pattern.test(line)) {
+          residue.push({
+            file: repoPath,
+            line: index + 1,
+            sample: `${name}: ${line.slice(0, 120)}`,
+          });
+        }
+      }
+    }
+  }
+
+  return residue;
+}
+
 async function checkDirectoryReadmeCoverage(markdownFiles) {
   const missingCoverage = [];
   const readmeCache = new Map();
@@ -492,6 +544,7 @@ async function main() {
     suspiciousMojibake,
     utf8BomFiles,
     crlfLineEndingFiles,
+    publicHygieneResidue,
     missingDirectoryReadmeCoverage,
     missingEntrypoints,
     missingDirectoryIndexCoverage,
@@ -504,6 +557,7 @@ async function main() {
       checkMojibake(textFiles),
       checkUtf8Bom(textFiles),
       checkCrlfLineEndings(textFiles),
+      checkPublicHygieneResidue(textFiles),
       checkDirectoryReadmeCoverage(markdownFiles),
       checkRequiredEntrypoints(),
       checkDocsDirectoryIndexCoverage(),
@@ -516,6 +570,7 @@ async function main() {
   printSection("Suspicious mojibake files", suspiciousMojibake);
   printSection("UTF-8 BOM files", utf8BomFiles);
   printSection("CRLF line ending files", crlfLineEndingFiles);
+  printSection("Public hygiene residue", publicHygieneResidue);
   printSection(
     "Docs missing directory README coverage",
     missingDirectoryReadmeCoverage,
@@ -534,6 +589,7 @@ async function main() {
     suspiciousMojibake.length > 0 ||
     utf8BomFiles.length > 0 ||
     crlfLineEndingFiles.length > 0 ||
+    publicHygieneResidue.length > 0 ||
     missingDirectoryReadmeCoverage.length > 0 ||
     missingEntrypoints.length > 0 ||
     missingDirectoryIndexCoverage.length > 0 ||
