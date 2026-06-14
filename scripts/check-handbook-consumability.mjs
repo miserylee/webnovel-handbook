@@ -1424,6 +1424,7 @@ async function checkMarkdownSizeGovernance(markdownFiles) {
     ["docs/sources/01-source-inventory.md", "source inventory; search only"],
     ["docs/templates/10-templates-and-checklists.md", "template warehouse; search by heading"],
     ["docs/decisions/2026-06.md", "frozen historical decision archive"],
+    ["docs/governance/01-changelog-detail-archive.md", "changelog detail archive; read by date or keyword"],
     ["docs/navigation/00-expanded-topic-catalog.md", "expanded catalog; keyword search only"],
     ["docs/navigation/01-readme-details.md", "README overflow details; read by section"],
   ]);
@@ -1450,6 +1451,20 @@ async function checkMarkdownSizeGovernance(markdownFiles) {
     "## 6. 大文件使用方式",
     "## 7. 新文件索引要求",
   );
+  const changelogArchivePath = "docs/governance/01-changelog-detail-archive.md";
+  const changelogContent = await fs.readFile(
+    path.join(repoRoot, "CHANGELOG.md"),
+    "utf8",
+  );
+
+  if (!changelogContent.includes(changelogArchivePath)) {
+    sizeProblems.push({
+      file: "CHANGELOG.md",
+      target: changelogArchivePath,
+      sample:
+        "root changelog must stay as a summary and link to the routed detail archive",
+    });
+  }
 
   for (const [repoPath, reason] of docsIndexRequiredLargeDocRoutes) {
     if (
