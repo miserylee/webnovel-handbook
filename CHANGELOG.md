@@ -23,6 +23,7 @@
 
 ### Changed
 
+- 增强 `scripts/check-handbook-consumability.mjs`，将 `CHANGELOG.md` 纳入活跃入口体积护栏，防止变更记录在长期维护中继续无上限膨胀。
 - 增强 `scripts/check-handbook-consumability.mjs`，要求所有关键 `docs` 入口能从 `docs/00-index.md` 被发现，并把项目工作流与案例笔记补回启动索引，减少 agent 从 AGENTS 跳转时的路径断层。
 - 增强 `scripts/check-handbook-consumability.mjs`，自动检查根目录新增 Markdown 文件是否从 README 可发现，避免未来新增公开说明文档后留下孤儿入口。
 - 增强 `scripts/check-handbook-consumability.mjs`，新增 README、AGENTS、`docs/00-index.md` 和轻量 skill 的启动最小阅读包一致性检查，确保默认只读薄入口，来源清单和路由规范保持条件读取。
