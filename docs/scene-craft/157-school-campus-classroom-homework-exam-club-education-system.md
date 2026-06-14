@@ -15,7 +15,7 @@
 - `docs/safety-research/20-content-compliance-risk-review.md`：负责未成年人、校园欺凌、危险行为和平台合规底线。本篇负责校园场景如何在制度中运转。
 - `docs/reality-reference/30-profession-industry-life-detail-credibility.md`：负责教师、培训机构、学校管理等职业可信度。本篇负责学生、班级、课程和校园日常。
 - `docs/reality-reference/31-region-era-social-custom-texture.md`：负责地域、时代、学校制度差异。本篇只提供校园叙事执行框架。
-- `docs/workflows/58-training-growth-anti-padding.md`：负责学习、训练和能力成长不水。本篇负责课堂、作业、考试和学校评价如何嵌入剧情。
+- `docs/workflows/67-training-growth-anti-padding.md`：负责学习、训练和能力成长不水。本篇负责课堂、作业、考试和学校评价如何嵌入剧情。
 - `docs/advanced-craft/61-information-public-opinion-discourse-battle.md`：负责校园论坛、班级群、榜单、处分公告、谣言传播的话语权。本篇负责校园舆论的场景入口和制度后果。
 - `docs/storycraft/62-everyday-transition-low-intensity-anti-padding.md`：负责吃饭、聊天、休整、日常章不水。本篇负责校园日常中的课表、作业、社团和同伴生态。
 - `docs/advanced-craft/74-character-choice-dilemma-costly-decision.md`：负责选择代价。本篇负责学生选择为何受校规、家长、成绩、同伴和未来机会限制。

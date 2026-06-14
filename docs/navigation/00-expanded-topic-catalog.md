@@ -276,24 +276,24 @@
 
 ## 长篇时间跳跃与状态压缩
 
-- `docs/workflows/57-long-timeskip-state-compression.md`：定义长篇时间跳跃和状态压缩模型，包括时间跳跃三问、短跳/中跳/长跳/隐跳、跳前清单、跳中压缩方法、跳后恢复三件套、关系线/伏笔/对手/机制世界状态保留、时间跳跃闸门和台账回写。
+- `docs/workflows/66-long-timeskip-state-compression.md`：定义长篇时间跳跃和状态压缩模型，包括时间跳跃三问、短跳/中跳/长跳/隐跳、跳前清单、跳中压缩方法、跳后恢复三件套、关系线/伏笔/对手/机制世界状态保留、时间跳跃闸门和台账回写。
 - 使用场景：一句“数月后”导致旧资产断线、用时间跳跃逃避难写场景、跳后只有结果没有可信过程、跳后没有行动压力、长跳后人物像没活过。
 
 ## 58. 长篇训练、修炼与成长段落防水
 
-- 文档：`docs/workflows/58-training-growth-anti-padding.md`
+- 文档：`docs/workflows/67-training-growth-anti-padding.md`
 - 状态：已确认
 - 用途：给 AI agents 处理训练、修炼、闭关、学习、备赛、技能升级、职业成长、系统任务、团队磨合等段落时使用。
 - 核心规则：训练段不是“努力展示”，而是“能力差额验证”；重复练习可以压缩，但成长证据不能省。
-- 需要联动：`docs/core-writing/05-plot-and-serial-rhythm.md`、`docs/storycraft/14-mechanism-and-cheat-design.md`、`docs/storycraft/23-midbook-volume-structure.md`、`docs/core-writing/32-chapter-paragraph-mobile-reading-experience.md`、`docs/workflows/38-chapter-production-pipeline-agent-handoff.md`、`docs/workflows/57-long-timeskip-state-compression.md`、`docs/templates/10-templates-and-checklists.md`。
+- 需要联动：`docs/core-writing/05-plot-and-serial-rhythm.md`、`docs/storycraft/14-mechanism-and-cheat-design.md`、`docs/storycraft/23-midbook-volume-structure.md`、`docs/core-writing/32-chapter-paragraph-mobile-reading-experience.md`、`docs/workflows/38-chapter-production-pipeline-agent-handoff.md`、`docs/workflows/66-long-timeskip-state-compression.md`、`docs/templates/10-templates-and-checklists.md`。
 
 ## 59. 反派、竞争对手与外部世界同步升级
 
-- 文档：`docs/core-writing/59-antagonist-world-synchronous-escalation.md`
+- 文档：`docs/core-writing/60-antagonist-world-synchronous-escalation.md`
 - 状态：已确认
 - 用途：给 AI agents 在主角胜利、训练突破、时间跳跃、卷级推进、换地图、新阶段启动、对手失败但未退场、组织/制度/舆论/市场反馈时使用。
 - 核心规则：主角每一次有效成长，都必须改变外部世界对他的认知、资源分配、行动策略或风险等级；外部学习链为“看见 -> 解释 -> 试探 -> 反制 -> 升级”。
-- 需要联动：`docs/storycraft/21-antagonist-opposition-system.md`、`docs/core-writing/05-plot-and-serial-rhythm.md`、`docs/storycraft/23-midbook-volume-structure.md`、`docs/storycraft/28-worldbuilding-setting-exposition.md`、`docs/core-writing/07-continuity-ledger.md`、`docs/workflows/38-chapter-production-pipeline-agent-handoff.md`、`docs/workflows/57-long-timeskip-state-compression.md`、`docs/workflows/58-training-growth-anti-padding.md`、`docs/templates/10-templates-and-checklists.md`。
+- 需要联动：`docs/storycraft/21-antagonist-opposition-system.md`、`docs/core-writing/05-plot-and-serial-rhythm.md`、`docs/storycraft/23-midbook-volume-structure.md`、`docs/storycraft/28-worldbuilding-setting-exposition.md`、`docs/core-writing/07-continuity-ledger.md`、`docs/workflows/38-chapter-production-pipeline-agent-handoff.md`、`docs/workflows/66-long-timeskip-state-compression.md`、`docs/workflows/67-training-growth-anti-padding.md`、`docs/templates/10-templates-and-checklists.md`。
 
 ## 60. 高潮战、大场面与群体冲突调度
 
@@ -301,7 +301,7 @@
 - 状态：已确认
 - 用途：给 AI agents 在处理高潮战、决战、群战、团队战、战场、公开审判、比赛决胜、发布会、直播爆点、灾难救援、卷末大场面和终局决战时使用。
 - 核心规则：大场面不是人数和特效堆叠，而是多目标、多角色、多空间、多代价在读者可理解范围内完成状态翻转。
-- 需要联动：`docs/core-writing/04-character-and-dialogue.md`、`docs/core-writing/05-plot-and-serial-rhythm.md`、`docs/storycraft/21-antagonist-opposition-system.md`、`docs/storycraft/23-midbook-volume-structure.md`、`docs/storycraft/24-ending-completion-risk-control.md`、`docs/core-writing/32-chapter-paragraph-mobile-reading-experience.md`、`docs/workflows/38-chapter-production-pipeline-agent-handoff.md`、`docs/advanced-craft/52-chapters-21-30-stable-retention-stage-climax.md`、`docs/advanced-craft/55-volume-ending-settlement-next-hook.md`、`docs/core-writing/59-antagonist-world-synchronous-escalation.md`、`docs/templates/10-templates-and-checklists.md`。
+- 需要联动：`docs/core-writing/04-character-and-dialogue.md`、`docs/core-writing/05-plot-and-serial-rhythm.md`、`docs/storycraft/21-antagonist-opposition-system.md`、`docs/storycraft/23-midbook-volume-structure.md`、`docs/storycraft/24-ending-completion-risk-control.md`、`docs/core-writing/32-chapter-paragraph-mobile-reading-experience.md`、`docs/workflows/38-chapter-production-pipeline-agent-handoff.md`、`docs/advanced-craft/52-chapters-21-30-stable-retention-stage-climax.md`、`docs/advanced-craft/55-volume-ending-settlement-next-hook.md`、`docs/core-writing/60-antagonist-world-synchronous-escalation.md`、`docs/templates/10-templates-and-checklists.md`。
 
 ## 61. 信息战、舆论战与公开场合话语权攻防
 
@@ -309,7 +309,7 @@
 - 状态：已确认
 - 用途：给 AI agents 在处理证据链反杀、公开审判、庭审、朝堂对峙、直播翻车、热搜风波、危机公关、发布会、商战舆论、娱乐圈黑料、职场甩锅、宗门审判、弹幕评论区风向和任何“胜负取决于谁被相信”的场景时使用。
 - 核心规则：信息战的胜负，不是说出真相，而是让关键受众在正确时间相信、转向并采取行动。
-- 需要联动：`docs/storycraft/21-antagonist-opposition-system.md`、`docs/storycraft/26-suspense-reversal-information-control.md`、`docs/core-writing/32-chapter-paragraph-mobile-reading-experience.md`、`docs/workflows/38-chapter-production-pipeline-agent-handoff.md`、`docs/core-writing/59-antagonist-world-synchronous-escalation.md`、`docs/advanced-craft/60-climax-battle-large-scene-coordination.md`、`docs/safety-research/20-content-compliance-risk-review.md`、`docs/templates/10-templates-and-checklists.md`。
+- 需要联动：`docs/storycraft/21-antagonist-opposition-system.md`、`docs/storycraft/26-suspense-reversal-information-control.md`、`docs/core-writing/32-chapter-paragraph-mobile-reading-experience.md`、`docs/workflows/38-chapter-production-pipeline-agent-handoff.md`、`docs/core-writing/60-antagonist-world-synchronous-escalation.md`、`docs/advanced-craft/60-climax-battle-large-scene-coordination.md`、`docs/safety-research/20-content-compliance-risk-review.md`、`docs/templates/10-templates-and-checklists.md`。
 
 ## 62. 日常章、过渡章与低强度章节防水
 
@@ -317,7 +317,7 @@
 - 状态：已确认
 - 用途：给 AI agents 在处理日常、过渡、休整、赶路、聊天、吃饭、生活流、低冲突推进、战后余波、关系缓冲、情绪沉淀、信息整理、准备章和轻松章时使用。
 - 核心规则：日常章不是没有剧情，而是用低烈度方式改变人物、关系、信息、资源、情绪或下一步行动；安静不是问题，原地不动才是问题。
-- 需要联动：`docs/core-writing/05-plot-and-serial-rhythm.md`、`docs/core-writing/11-human-writing-upgrade.md`、`docs/storycraft/23-midbook-volume-structure.md`、`docs/storycraft/25-emotion-line-relationship-progression.md`、`docs/storycraft/27-comedy-gags-lightness.md`、`docs/core-writing/32-chapter-paragraph-mobile-reading-experience.md`、`docs/workflows/38-chapter-production-pipeline-agent-handoff.md`、`docs/workflows/57-long-timeskip-state-compression.md`、`docs/core-writing/59-antagonist-world-synchronous-escalation.md`、`docs/templates/10-templates-and-checklists.md`。
+- 需要联动：`docs/core-writing/05-plot-and-serial-rhythm.md`、`docs/core-writing/11-human-writing-upgrade.md`、`docs/storycraft/23-midbook-volume-structure.md`、`docs/storycraft/25-emotion-line-relationship-progression.md`、`docs/storycraft/27-comedy-gags-lightness.md`、`docs/core-writing/32-chapter-paragraph-mobile-reading-experience.md`、`docs/workflows/38-chapter-production-pipeline-agent-handoff.md`、`docs/workflows/66-long-timeskip-state-compression.md`、`docs/core-writing/60-antagonist-world-synchronous-escalation.md`、`docs/templates/10-templates-and-checklists.md`。
 
 
 ## 63. 卷级/长篇伏笔回响频率与读者记忆管理
@@ -331,7 +331,7 @@
 
 ## 64. 名场面、角色高光与可转述记忆点设计
 
-- 文件：`docs/workflows/64-iconic-scene-character-highlight-shareable-moment.md`
+- 文件：`docs/workflows/68-iconic-scene-character-highlight-shareable-moment.md`
 - 状态：已确认
 - 用途：让 AI agents 把爽点、情绪峰值、角色选择、关系爆点、梗点变体、公开反转和卷末大场面沉淀成读者能记住、能复述、能评论、能后文回响的场景资产。
 - 使用场景：角色高光设计、章节审稿、卷末高潮、公开反转、关系推进、喜剧梗点升级、评论区正反馈复盘、包装语言提炼、多 agent 交接。
@@ -374,7 +374,7 @@
 - 用途：为 AI agents 设计和审稿主角失败、吃亏、撤退、低谷、代价胜、阶段小败和反弹节奏提供执行规则。
 - 使用场景：主角连续胜利导致爽点变轻、对手需要托高、卷中转折、高潮前低谷、强敌初遇、机制反噬、付费节点高成本选择、读者反馈“主角太顺/失败太憋屈”。
 - 核心检查：主角是否主动尝试；失败是否来自合理阻力；是否避免主角突然降智；代价是否具体；是否留下反弹抓手；失败后余波是否进入下一章；F2 以上失败是否写入台账。
-- 关联文档：`docs/core-writing/02-webnovel-principles.md`、`docs/core-writing/05-plot-and-serial-rhythm.md`、`docs/core-writing/11-human-writing-upgrade.md`、`docs/storycraft/21-antagonist-opposition-system.md`、`docs/core-writing/59-antagonist-world-synchronous-escalation.md`、`docs/workflows/64-iconic-scene-character-highlight-shareable-moment.md`。
+- 关联文档：`docs/core-writing/02-webnovel-principles.md`、`docs/core-writing/05-plot-and-serial-rhythm.md`、`docs/core-writing/11-human-writing-upgrade.md`、`docs/storycraft/21-antagonist-opposition-system.md`、`docs/core-writing/60-antagonist-world-synchronous-escalation.md`、`docs/workflows/68-iconic-scene-character-highlight-shareable-moment.md`。
 
 ## 69. 叙事视角、叙述距离与信息焦点管理
 
@@ -403,7 +403,7 @@
 - 使用场景：章节起草、场景扩写、情绪戏重写、AI 味诊断、环境描写、名场面打磨、移动端段落优化、低强度章节防水。
 - 核心链条：`视角人物当前压力 -> 选择能被他注意到的具体细节 -> 细节触发身体/情绪/判断 -> 角色做出选择 -> 场景状态改变`。
 - 关键检查：细节是否有功能；感官是否按压力选择；情绪是否有身体或动作证据；环境是否参与行动；物件是否承担关系、伏笔、身份或情绪功能。
-- 关联文档：`docs/core-writing/11-human-writing-upgrade.md`、`docs/reality-reference/30-profession-industry-life-detail-credibility.md`、`docs/reality-reference/31-region-era-social-custom-texture.md`、`docs/core-writing/32-chapter-paragraph-mobile-reading-experience.md`、`docs/advanced-craft/60-climax-battle-large-scene-coordination.md`、`docs/workflows/64-iconic-scene-character-highlight-shareable-moment.md`、`docs/core-writing/69-pov-narrative-distance-information-focus.md`、`docs/advanced-craft/70-action-reaction-scene-beat.md`。
+- 关联文档：`docs/core-writing/11-human-writing-upgrade.md`、`docs/reality-reference/30-profession-industry-life-detail-credibility.md`、`docs/reality-reference/31-region-era-social-custom-texture.md`、`docs/core-writing/32-chapter-paragraph-mobile-reading-experience.md`、`docs/advanced-craft/60-climax-battle-large-scene-coordination.md`、`docs/workflows/68-iconic-scene-character-highlight-shareable-moment.md`、`docs/core-writing/69-pov-narrative-distance-information-focus.md`、`docs/advanced-craft/70-action-reaction-scene-beat.md`。
 
 ## 72. 读者信任、剧情合理性与反作者作弊
 
@@ -423,7 +423,7 @@
 - 使用场景：章节起草、场景删改、章节审稿、低强度章节防水、对话戏重构、设定章压缩、读者反馈为“水”“没进展”“看完像没发生什么”。
 - 核心链条：`场景目的 -> 开始状态 -> 阻力/复杂化 -> 转折点 -> 角色选择 -> 结果 -> 结束状态 -> 下一场压力`。
 - 关键检查：是否能写出 A->B 状态差；转折点是否明确；删掉后后文是否会断；主价值是否清晰；章末钩子是否替代主体进展。
-- 关联文档：`docs/core-writing/05-plot-and-serial-rhythm.md`、`docs/templates/10-templates-and-checklists.md`、`docs/core-writing/32-chapter-paragraph-mobile-reading-experience.md`、`docs/workflows/38-chapter-production-pipeline-agent-handoff.md`、`docs/storycraft/62-everyday-transition-low-intensity-anti-padding.md`、`docs/workflows/64-iconic-scene-character-highlight-shareable-moment.md`、`docs/advanced-craft/70-action-reaction-scene-beat.md`、`docs/advanced-craft/71-embodied-sensory-detail-grounding.md`、`docs/advanced-craft/72-reader-trust-plausibility-anti-cheat.md`。
+- 关联文档：`docs/core-writing/05-plot-and-serial-rhythm.md`、`docs/templates/10-templates-and-checklists.md`、`docs/core-writing/32-chapter-paragraph-mobile-reading-experience.md`、`docs/workflows/38-chapter-production-pipeline-agent-handoff.md`、`docs/storycraft/62-everyday-transition-low-intensity-anti-padding.md`、`docs/workflows/68-iconic-scene-character-highlight-shareable-moment.md`、`docs/advanced-craft/70-action-reaction-scene-beat.md`、`docs/advanced-craft/71-embodied-sensory-detail-grounding.md`、`docs/advanced-craft/72-reader-trust-plausibility-anti-cheat.md`。
 
 ## 74. 角色选择、两难压力与昂贵决定
 
@@ -433,7 +433,7 @@
 - 使用场景：章节起草、场景设计、人物弧线、关系线推进、爽点兑现、失败代价、反转设计、读者反馈为“主角没用”“选择太假”“人物不活”“剧情生硬”。
 - 核心链条：`目标/欲望 -> 外部压力 -> 互斥选项 -> 每项代价 -> 角色选择 -> 可见行动 -> 即时后果 -> 后续债务`。
 - 关键检查：谁在选择；选项是否互斥；每项是否有收益和代价；选择是否暴露价值排序；是否有可见行动；代价是否进入后文。
-- 关联文档：`docs/core-writing/11-human-writing-upgrade.md`、`docs/storycraft/21-antagonist-opposition-system.md`、`docs/storycraft/25-emotion-line-relationship-progression.md`、`docs/storycraft/26-suspense-reversal-information-control.md`、`docs/workflows/64-iconic-scene-character-highlight-shareable-moment.md`、`docs/storycraft/68-protagonist-failure-setback-cost-management.md`、`docs/advanced-craft/70-action-reaction-scene-beat.md`、`docs/advanced-craft/72-reader-trust-plausibility-anti-cheat.md`、`docs/advanced-craft/73-scene-value-shift-purpose-gate.md`。
+- 关联文档：`docs/core-writing/11-human-writing-upgrade.md`、`docs/storycraft/21-antagonist-opposition-system.md`、`docs/storycraft/25-emotion-line-relationship-progression.md`、`docs/storycraft/26-suspense-reversal-information-control.md`、`docs/workflows/68-iconic-scene-character-highlight-shareable-moment.md`、`docs/storycraft/68-protagonist-failure-setback-cost-management.md`、`docs/advanced-craft/70-action-reaction-scene-beat.md`、`docs/advanced-craft/72-reader-trust-plausibility-anti-cheat.md`、`docs/advanced-craft/73-scene-value-shift-purpose-gate.md`。
 
 ## 75. 对话潜台词、战术话轮与高密度台词
 
@@ -463,7 +463,7 @@
 - 使用场景：人物设计、卷级人物弧、章节起草、关系线推进、主角成长、配角成长、反派堕落、救赎线、终局选择、读者反馈为“人物没成长”“人设崩”。
 - 核心链条：`旧信念/旧防御 -> 外部压力 -> 旧方法失败 -> 新证据/新关系 -> 昂贵选择 -> 新行为 -> 后果验证 -> 稳定或反复`。
 - 关键检查：Want 与 Need 是否区分；Lie 是否有短期好处；变化是否有行为证据；扁平弧是否被测试；重大变化是否进入台账。
-- 关联文档：`docs/core-writing/04-character-and-dialogue.md`、`docs/core-writing/07-continuity-ledger.md`、`docs/core-writing/11-human-writing-upgrade.md`、`docs/storycraft/24-ending-completion-risk-control.md`、`docs/storycraft/25-emotion-line-relationship-progression.md`、`docs/workflows/58-training-growth-anti-padding.md`、`docs/storycraft/68-protagonist-failure-setback-cost-management.md`、`docs/advanced-craft/74-character-choice-dilemma-costly-decision.md`、`docs/advanced-craft/76-sentence-rhythm-narrative-breath-ai-flavor.md`。
+- 关联文档：`docs/core-writing/04-character-and-dialogue.md`、`docs/core-writing/07-continuity-ledger.md`、`docs/core-writing/11-human-writing-upgrade.md`、`docs/storycraft/24-ending-completion-risk-control.md`、`docs/storycraft/25-emotion-line-relationship-progression.md`、`docs/workflows/67-training-growth-anti-padding.md`、`docs/storycraft/68-protagonist-failure-setback-cost-management.md`、`docs/advanced-craft/74-character-choice-dilemma-costly-decision.md`、`docs/advanced-craft/76-sentence-rhythm-narrative-breath-ai-flavor.md`。
 
 ## 78. 信息密度、认知负荷与专有名词投放
 
@@ -497,7 +497,7 @@
 - 文件：`docs/advanced-craft/81-supporting-cast-allies-relationship-network.md`
 - 状态：已确认
 - 用途：补齐配角系统工程，区分核心关系人、阶段盟友、单元角色、场景功能人和群体氛围，指导 AI agent 判断谁该出场、承担什么功能、如何不工具化、不抢主角，以及如何复用或退场。
-- 关联：`docs/core-writing/04-character-and-dialogue.md`、`docs/storycraft/15-character-relationship-patterns.md`、`docs/storycraft/25-emotion-line-relationship-progression.md`、`docs/advanced-craft/54-volume-subplot-thread-management.md`、`docs/advanced-craft/60-climax-battle-large-scene-coordination.md`、`docs/workflows/64-iconic-scene-character-highlight-shareable-moment.md`、`docs/core-writing/69-pov-narrative-distance-information-focus.md`、`docs/advanced-craft/80-protagonist-followability-reader-alignment.md`。
+- 关联：`docs/core-writing/04-character-and-dialogue.md`、`docs/storycraft/15-character-relationship-patterns.md`、`docs/storycraft/25-emotion-line-relationship-progression.md`、`docs/advanced-craft/54-volume-subplot-thread-management.md`、`docs/advanced-craft/60-climax-battle-large-scene-coordination.md`、`docs/workflows/68-iconic-scene-character-highlight-shareable-moment.md`、`docs/core-writing/69-pov-narrative-distance-information-focus.md`、`docs/advanced-craft/80-protagonist-followability-reader-alignment.md`。
 
 ## 82. 读者问题链、好奇心缺口与答案释放专项
 
@@ -511,14 +511,14 @@
 - 文件：`docs/advanced-craft/83-theme-moral-premise-value-without-preaching.md`
 - 状态：已确认
 - 用途：为 AI agent 提供主题/立意/价值观表达的反说教规则，把主题落到人物选择、冲突代价、关系变化、世界规则、镜像人物、名场面和结尾余味中，避免空喊口号、角色嘴替、反派稻草人和结尾强行升华。
-- 关联：`docs/core-writing/11-human-writing-upgrade.md`、`docs/safety-research/20-content-compliance-risk-review.md`、`docs/storycraft/24-ending-completion-risk-control.md`、`docs/market-serialization/29-reader-expectation-genre-promise-selling-point.md`、`docs/workflows/64-iconic-scene-character-highlight-shareable-moment.md`、`docs/core-writing/69-pov-narrative-distance-information-focus.md`、`docs/advanced-craft/74-character-choice-dilemma-costly-decision.md`、`docs/advanced-craft/77-character-arc-belief-behavior-evidence.md`、`docs/advanced-craft/80-protagonist-followability-reader-alignment.md`、`docs/advanced-craft/81-supporting-cast-allies-relationship-network.md`、`docs/advanced-craft/82-reader-question-chain-curiosity-hook-answer-management.md`。
+- 关联：`docs/core-writing/11-human-writing-upgrade.md`、`docs/safety-research/20-content-compliance-risk-review.md`、`docs/storycraft/24-ending-completion-risk-control.md`、`docs/market-serialization/29-reader-expectation-genre-promise-selling-point.md`、`docs/workflows/68-iconic-scene-character-highlight-shareable-moment.md`、`docs/core-writing/69-pov-narrative-distance-information-focus.md`、`docs/advanced-craft/74-character-choice-dilemma-costly-decision.md`、`docs/advanced-craft/77-character-arc-belief-behavior-evidence.md`、`docs/advanced-craft/80-protagonist-followability-reader-alignment.md`、`docs/advanced-craft/81-supporting-cast-allies-relationship-network.md`、`docs/advanced-craft/82-reader-question-chain-curiosity-hook-answer-management.md`。
 
 ## 84. 意象、母题、重复物件与情绪回响专项
 
 - 文件：`docs/advanced-craft/84-motif-symbol-object-callback-emotional-resonance.md`
 - 状态：已确认
 - 用途：为 AI agent 提供意象、母题、重复物件、关系小物、主题载体和情绪回响的跨章节管理规则，区分普通细节、物件锚点、象征、母题、伏笔和名场面载体，避免象征漂浮、过度解释、出现一次就消失和只好看不推进。
-- 关联：`docs/core-writing/37-project-style-bible-character-voice.md`、`docs/workflows/38-chapter-production-pipeline-agent-handoff.md`、`docs/storycraft/63-foreshadowing-callback-reader-memory-management.md`、`docs/workflows/64-iconic-scene-character-highlight-shareable-moment.md`、`docs/advanced-craft/67-chapter-title-toc-promise-management.md`、`docs/advanced-craft/71-embodied-sensory-detail-grounding.md`、`docs/advanced-craft/73-scene-value-shift-purpose-gate.md`、`docs/advanced-craft/79-emotional-debt-payoff-reader-affect-curve.md`、`docs/advanced-craft/82-reader-question-chain-curiosity-hook-answer-management.md`、`docs/advanced-craft/83-theme-moral-premise-value-without-preaching.md`。
+- 关联：`docs/core-writing/37-project-style-bible-character-voice.md`、`docs/workflows/38-chapter-production-pipeline-agent-handoff.md`、`docs/storycraft/63-foreshadowing-callback-reader-memory-management.md`、`docs/workflows/68-iconic-scene-character-highlight-shareable-moment.md`、`docs/advanced-craft/67-chapter-title-toc-promise-management.md`、`docs/advanced-craft/71-embodied-sensory-detail-grounding.md`、`docs/advanced-craft/73-scene-value-shift-purpose-gate.md`、`docs/advanced-craft/79-emotional-debt-payoff-reader-affect-curve.md`、`docs/advanced-craft/82-reader-question-chain-curiosity-hook-answer-management.md`、`docs/advanced-craft/83-theme-moral-premise-value-without-preaching.md`。
 
 ## 85. 叙事张力、压力释放、节奏波形与疲劳管理专项
 
@@ -634,7 +634,7 @@
 - 状态：已确认
 - 适用：当 AI agent 需要评估或沉淀小说的影视、短剧、漫画/条漫、动画、有声、游戏、周边、系列化和授权开发潜力时使用。
 - 核心规则：小说正文优先；可改编资产必须先服务读者追读，再进入资产台账；跨媒介不是逐字搬运，而是根据不同媒介重构体验。
-- 关联：`docs/market-serialization/16-title-blurb-tag-packaging.md`、`docs/market-serialization/17-cover-visual-packaging.md`、`docs/safety-research/20-content-compliance-risk-review.md`、`docs/workflows/64-iconic-scene-character-highlight-shareable-moment.md`、`docs/advanced-craft/88-spatial-blocking-scene-geography-action-continuity.md`、`docs/advanced-craft/96-narrative-voice-attitude-narrator-persona.md`、`docs/safety-research/102-originality-source-transformation-anti-plagiarism.md`、`docs/market-serialization/103-reader-retelling-recommendation-word-of-mouth-assets.md`、`docs/market-serialization/109-series-shared-universe-cross-book-continuity-entry.md`。
+- 关联：`docs/market-serialization/16-title-blurb-tag-packaging.md`、`docs/market-serialization/17-cover-visual-packaging.md`、`docs/safety-research/20-content-compliance-risk-review.md`、`docs/workflows/68-iconic-scene-character-highlight-shareable-moment.md`、`docs/advanced-craft/88-spatial-blocking-scene-geography-action-continuity.md`、`docs/advanced-craft/96-narrative-voice-attitude-narrator-persona.md`、`docs/safety-research/102-originality-source-transformation-anti-plagiarism.md`、`docs/market-serialization/103-reader-retelling-recommendation-word-of-mouth-assets.md`、`docs/market-serialization/109-series-shared-universe-cross-book-continuity-entry.md`。
 ## 111. 创作调研、事实核查、来源可信度与小说转化
 
 - 文件：`docs/safety-research/111-research-fact-checking-source-evaluation-fiction-transformation.md`
@@ -662,7 +662,7 @@
 - 状态：已确认
 - 适用：当 AI agent 需要设计或审稿玄幻、仙侠、修仙、异能、系统、游戏、无限流、规则怪谈、末世、星际、机甲、卡牌、御兽、领主经营等含能力、等级、资源、技能、装备、积分、境界和地图层级的小说时使用。
 - 核心规则：每个核心能力必须有触发条件、限制、成本、失败方式和反制；每次升级必须改变行动资格并带来新价格；资源必须有入口和出口；对手必须学习旧招；新地图不能清零旧资产。
-- 关联：`docs/market-serialization/13-genre-patterns.md`、`docs/storycraft/14-mechanism-and-cheat-design.md`、`docs/storycraft/21-antagonist-opposition-system.md`、`docs/advanced-craft/56-volume-transition-new-stage-launch.md`、`docs/workflows/58-training-growth-anti-padding.md`、`docs/core-writing/59-antagonist-world-synchronous-escalation.md`、`docs/storycraft/68-protagonist-failure-setback-cost-management.md`、`docs/advanced-craft/72-reader-trust-plausibility-anti-cheat.md`、`docs/advanced-craft/86-payoff-currency-reward-asset-continuity.md`、`docs/core-writing/100-canon-uncertainty-conflict-hallucination-control.md`。
+- 关联：`docs/market-serialization/13-genre-patterns.md`、`docs/storycraft/14-mechanism-and-cheat-design.md`、`docs/storycraft/21-antagonist-opposition-system.md`、`docs/advanced-craft/56-volume-transition-new-stage-launch.md`、`docs/workflows/67-training-growth-anti-padding.md`、`docs/core-writing/60-antagonist-world-synchronous-escalation.md`、`docs/storycraft/68-protagonist-failure-setback-cost-management.md`、`docs/advanced-craft/72-reader-trust-plausibility-anti-cheat.md`、`docs/advanced-craft/86-payoff-currency-reward-asset-continuity.md`、`docs/core-writing/100-canon-uncertainty-conflict-hallucination-control.md`。
 ## 115. CP 化学反应、暧昧拉扯、亲密升级与关系边界
 
 - 文件：`docs/scene-craft/115-romantic-chemistry-intimacy-boundaries-relationship-tension.md`
@@ -712,7 +712,7 @@
 - 状态：已确认
 - 适用：当 AI agent 需要设计、起草、审稿或修订追逐、逃亡、追杀、追捕、猎杀、围捕、潜逃、护送撤离、被通缉、规则怪谈逃生、末世撤离、战场突围、都市躲追踪、飞车追逐、舰队追击、猫鼠博弈和任何“距离、时间、信息、路线决定生死”的剧情时使用。
 - 核心规则：追逃必须同时管理路线线、压力线、消耗线和反制线；每段至少改变距离、信息、资源、路线或身份之一；追方必须有追踪逻辑，逃方脱险必须有成本。
-- 关联：`docs/advanced-craft/56-volume-transition-new-stage-launch.md`、`docs/core-writing/59-antagonist-world-synchronous-escalation.md`、`docs/advanced-craft/61-information-public-opinion-discourse-battle.md`、`docs/advanced-craft/85-tension-release-pressure-rhythm-fatigue-management.md`、`docs/advanced-craft/86-payoff-currency-reward-asset-continuity.md`、`docs/advanced-craft/88-spatial-blocking-scene-geography-action-continuity.md`、`docs/advanced-craft/92-suspense-surprise-dramatic-irony-information-gap.md`、`docs/core-writing/100-canon-uncertainty-conflict-hallucination-control.md`、`docs/feedback-revision/101-reader-dropoff-poison-points-red-flags-retention-safety.md`、`docs/scene-craft/116-horror-fear-curve-dread-safety-threshold.md`、`docs/scene-craft/118-fight-scene-action-choreography-tactical-exchange.md`、`docs/scene-craft/120-investigation-clue-evidence-chain-reasoning-procedure.md`。
+- 关联：`docs/advanced-craft/56-volume-transition-new-stage-launch.md`、`docs/core-writing/60-antagonist-world-synchronous-escalation.md`、`docs/advanced-craft/61-information-public-opinion-discourse-battle.md`、`docs/advanced-craft/85-tension-release-pressure-rhythm-fatigue-management.md`、`docs/advanced-craft/86-payoff-currency-reward-asset-continuity.md`、`docs/advanced-craft/88-spatial-blocking-scene-geography-action-continuity.md`、`docs/advanced-craft/92-suspense-surprise-dramatic-irony-information-gap.md`、`docs/core-writing/100-canon-uncertainty-conflict-hallucination-control.md`、`docs/feedback-revision/101-reader-dropoff-poison-points-red-flags-retention-safety.md`、`docs/scene-craft/116-horror-fear-curve-dread-safety-threshold.md`、`docs/scene-craft/118-fight-scene-action-choreography-tactical-exchange.md`、`docs/scene-craft/120-investigation-clue-evidence-chain-reasoning-procedure.md`。
 
 ## 122. 谈判交易、筹码博弈、契约让步与联盟结构
 
@@ -736,7 +736,7 @@
 - 状态：已确认
 - 适用：当 AI agent 需要设计、起草、审稿或修订种田、经营、基建、领地、基地、店铺、宗门产业、家族产业、末世据点、领主经营、空间种田、餐馆/医馆/书院/工坊/商铺、直播带货、文娱公司、游戏公会、星际殖民、城市建设、门派经营和任何“主角通过组织资源、生产、交易、服务或建设获得可见改善”的剧情时使用。
 - 核心规则：经营建设必须同时管理目标线、资源线、生产线、反馈线和扩张线；每轮都要有当前瓶颈、投入资源、生产/服务链、顾客/民众/市场反馈、收益落袋、维护成本、外部反应和下一轮新瓶颈。
-- 关联：`docs/market-serialization/13-genre-patterns.md`、`docs/storycraft/14-mechanism-and-cheat-design.md`、`docs/reality-reference/30-profession-industry-life-detail-credibility.md`、`docs/reality-reference/31-region-era-social-custom-texture.md`、`docs/core-writing/59-antagonist-world-synchronous-escalation.md`、`docs/advanced-craft/61-information-public-opinion-discourse-battle.md`、`docs/advanced-craft/73-scene-value-shift-purpose-gate.md`、`docs/advanced-craft/86-payoff-currency-reward-asset-continuity.md`、`docs/advanced-craft/95-reader-feedback-symptom-diagnosis-routing.md`、`docs/scene-craft/114-power-system-scaling-resource-economy-inflation-control.md`、`docs/scene-craft/120-investigation-clue-evidence-chain-reasoning-procedure.md`、`docs/scene-craft/122-negotiation-deal-bargain-leverage-contract-alliance.md`。
+- 关联：`docs/market-serialization/13-genre-patterns.md`、`docs/storycraft/14-mechanism-and-cheat-design.md`、`docs/reality-reference/30-profession-industry-life-detail-credibility.md`、`docs/reality-reference/31-region-era-social-custom-texture.md`、`docs/core-writing/60-antagonist-world-synchronous-escalation.md`、`docs/advanced-craft/61-information-public-opinion-discourse-battle.md`、`docs/advanced-craft/73-scene-value-shift-purpose-gate.md`、`docs/advanced-craft/86-payoff-currency-reward-asset-continuity.md`、`docs/advanced-craft/95-reader-feedback-symptom-diagnosis-routing.md`、`docs/scene-craft/114-power-system-scaling-resource-economy-inflation-control.md`、`docs/scene-craft/120-investigation-clue-evidence-chain-reasoning-procedure.md`、`docs/scene-craft/122-negotiation-deal-bargain-leverage-contract-alliance.md`。
 
 ## 125. 隐藏身份、马甲误认、身份揭示与掉马余波
 
@@ -816,7 +816,7 @@
 - 状态：已确认
 - 适用：当 AI agent 需要设计、起草、审稿或修订师徒文、导师角色、拜师收徒、宗门师承、学院导师、职业师傅、师父师尊、徒弟成长、传承衣钵、秘法授业、技能训练、门派谱系、出师考核、师徒决裂、师门旧债、导师死亡、师父失误、徒弟超越、禁忌师徒关系、师徒 CP 边界和任何“一个角色通过教学、规训、保护、资源、价值观和试炼影响另一个角色成长”的剧情时使用。
 - 核心规则：师徒关系必须同时管理功能线、差额线、教学线、反馈线、资源线、权力边界线、情感债线和出师线；真正的传承不是把秘籍交出去，而是让徒弟在没有师父兜底时仍能用学到的判断做出不同选择。
-- 关联：`docs/storycraft/15-character-relationship-patterns.md`、`docs/safety-research/20-content-compliance-risk-review.md`、`docs/storycraft/25-emotion-line-relationship-progression.md`、`docs/workflows/58-training-growth-anti-padding.md`、`docs/advanced-craft/74-character-choice-dilemma-costly-decision.md`、`docs/advanced-craft/77-character-arc-belief-behavior-evidence.md`、`docs/advanced-craft/81-supporting-cast-allies-relationship-network.md`、`docs/advanced-craft/83-theme-moral-premise-value-without-preaching.md`、`docs/advanced-craft/86-payoff-currency-reward-asset-continuity.md`、`docs/feedback-revision/101-reader-dropoff-poison-points-red-flags-retention-safety.md`、`docs/safety-research/105-sensitive-content-trauma-informed-harm-avoidance.md`、`docs/scene-craft/115-romantic-chemistry-intimacy-boundaries-relationship-tension.md`、`docs/scene-craft/126-character-death-sacrifice-injury-resurrection-exit-grief-fallout.md`、`docs/scene-craft/127-betrayal-trust-rupture-apology-forgiveness-reconciliation.md`、`docs/scene-craft/130-faction-power-network-institutional-politics.md`。
+- 关联：`docs/storycraft/15-character-relationship-patterns.md`、`docs/safety-research/20-content-compliance-risk-review.md`、`docs/storycraft/25-emotion-line-relationship-progression.md`、`docs/workflows/67-training-growth-anti-padding.md`、`docs/advanced-craft/74-character-choice-dilemma-costly-decision.md`、`docs/advanced-craft/77-character-arc-belief-behavior-evidence.md`、`docs/advanced-craft/81-supporting-cast-allies-relationship-network.md`、`docs/advanced-craft/83-theme-moral-premise-value-without-preaching.md`、`docs/advanced-craft/86-payoff-currency-reward-asset-continuity.md`、`docs/feedback-revision/101-reader-dropoff-poison-points-red-flags-retention-safety.md`、`docs/safety-research/105-sensitive-content-trauma-informed-harm-avoidance.md`、`docs/scene-craft/115-romantic-chemistry-intimacy-boundaries-relationship-tension.md`、`docs/scene-craft/126-character-death-sacrifice-injury-resurrection-exit-grief-fallout.md`、`docs/scene-craft/127-betrayal-trust-rupture-apology-forgiveness-reconciliation.md`、`docs/scene-craft/130-faction-power-network-institutional-politics.md`。
 
 ## 140. 炼器炼丹、装备道具、工坊制造与物品升级经济
 
@@ -824,7 +824,7 @@
 - 状态：已确认
 - 适用：当 AI agent 需要设计、起草、审稿或修订炼器、炼丹、法宝、灵器、神器、丹药、药剂、装备、武器、防具、道具、符箓、阵盘、铭文、附魔、锻造、铸造、工坊制造、药方丹方、材料收集、装备升级、强化精炼、耐久维护、品质稀有度、套装、绑定物品、一次性道具、系统合成、游戏制作、末世装备、机甲零件、科幻装置和任何“角色把材料、技术、时间和风险转化为可使用资产”的剧情时使用。
 - 核心规则：制造类剧情必须同时管理需求线、材料线、配方线、工艺线、失败线、品质线、使用线、维护线和经济线；重要物品要进入台账，记录来源、功能、限制、代价、状态、使用和下次回收。
-- 关联：`docs/storycraft/14-mechanism-and-cheat-design.md`、`docs/reality-reference/30-profession-industry-life-detail-credibility.md`、`docs/workflows/58-training-growth-anti-padding.md`、`docs/storycraft/62-everyday-transition-low-intensity-anti-padding.md`、`docs/storycraft/63-foreshadowing-callback-reader-memory-management.md`、`docs/advanced-craft/84-motif-symbol-object-callback-emotional-resonance.md`、`docs/advanced-craft/86-payoff-currency-reward-asset-continuity.md`、`docs/advanced-craft/90-short-setup-payoff-scene-fairness.md`、`docs/safety-research/105-sensitive-content-trauma-informed-harm-avoidance.md`、`docs/scene-craft/114-power-system-scaling-resource-economy-inflation-control.md`、`docs/scene-craft/124-business-building-base-territory-management-production-chain.md`、`docs/scene-craft/131-injury-illness-treatment-healing-recovery-medical-credibility.md`、`docs/scene-craft/138-puzzle-trap-riddle-trial-mechanism-lockroom-fairness.md`。
+- 关联：`docs/storycraft/14-mechanism-and-cheat-design.md`、`docs/reality-reference/30-profession-industry-life-detail-credibility.md`、`docs/workflows/67-training-growth-anti-padding.md`、`docs/storycraft/62-everyday-transition-low-intensity-anti-padding.md`、`docs/storycraft/63-foreshadowing-callback-reader-memory-management.md`、`docs/advanced-craft/84-motif-symbol-object-callback-emotional-resonance.md`、`docs/advanced-craft/86-payoff-currency-reward-asset-continuity.md`、`docs/advanced-craft/90-short-setup-payoff-scene-fairness.md`、`docs/safety-research/105-sensitive-content-trauma-informed-harm-avoidance.md`、`docs/scene-craft/114-power-system-scaling-resource-economy-inflation-control.md`、`docs/scene-craft/124-business-building-base-territory-management-production-chain.md`、`docs/scene-craft/131-injury-illness-treatment-healing-recovery-medical-credibility.md`、`docs/scene-craft/138-puzzle-trap-riddle-trial-mechanism-lockroom-fairness.md`。
 
 ## 141. 庭审公堂、审判裁决、证据质证与程序攻防
 
@@ -952,7 +952,7 @@
 - 文件：`docs/scene-craft/157-school-campus-classroom-homework-exam-club-education-system.md`
 - 适用：当 AI agent 需要设计、起草、审稿或修订校园文、青春成长、学院流、书院/宗门课堂、训练营、班级群像、学生会/社团、考试升学、家长会、校园舆论、宿舍班级日常、补课培训、课堂戏、作业考试、同学关系、教师家长和任何“学生在教育制度中行动”的场景时使用。
 - 核心规则：校园不是背景板，而是日程、空间、权限、评价、同伴关系、家庭压力、身体资源和安全边界共同构成的制度场；课堂、考试、社团、家长会、宿舍和群聊都必须改变人物选择、关系、名声、资格、纪律、身体状态或下一步行动。
-- 关联：`docs/safety-research/20-content-compliance-risk-review.md`、`docs/reality-reference/30-profession-industry-life-detail-credibility.md`、`docs/reality-reference/31-region-era-social-custom-texture.md`、`docs/workflows/58-training-growth-anti-padding.md`、`docs/advanced-craft/61-information-public-opinion-discourse-battle.md`、`docs/storycraft/62-everyday-transition-low-intensity-anti-padding.md`、`docs/advanced-craft/74-character-choice-dilemma-costly-decision.md`、`docs/advanced-craft/88-spatial-blocking-scene-geography-action-continuity.md`、`docs/safety-research/105-sensitive-content-trauma-informed-harm-avoidance.md`、`docs/scene-craft/119-competition-tournament-ranking-audition-elimination-structure.md`、`docs/scene-craft/130-faction-power-network-institutional-politics.md`、`docs/scene-craft/139-mentor-apprentice-teaching-inheritance-lineage.md`、`docs/scene-craft/141-trial-courtroom-adjudication-evidence-verdict-procedure.md`、`docs/scene-craft/151-age-lifespan-generation-seniority-growth-stage-continuity.md`、`docs/scene-craft/152-home-house-residence-property-room-domestic-space-territory.md`、`docs/scene-craft/153-sleep-fatigue-rest-recovery-circadian-body-resource-continuity.md`、`docs/scene-craft/154-hygiene-bathing-toilet-laundry-sanitation-smell-body-care-daily-life.md`、`docs/scene-craft/155-language-dialect-accent-translation-code-switching-miscommunication.md`。
+- 关联：`docs/safety-research/20-content-compliance-risk-review.md`、`docs/reality-reference/30-profession-industry-life-detail-credibility.md`、`docs/reality-reference/31-region-era-social-custom-texture.md`、`docs/workflows/67-training-growth-anti-padding.md`、`docs/advanced-craft/61-information-public-opinion-discourse-battle.md`、`docs/storycraft/62-everyday-transition-low-intensity-anti-padding.md`、`docs/advanced-craft/74-character-choice-dilemma-costly-decision.md`、`docs/advanced-craft/88-spatial-blocking-scene-geography-action-continuity.md`、`docs/safety-research/105-sensitive-content-trauma-informed-harm-avoidance.md`、`docs/scene-craft/119-competition-tournament-ranking-audition-elimination-structure.md`、`docs/scene-craft/130-faction-power-network-institutional-politics.md`、`docs/scene-craft/139-mentor-apprentice-teaching-inheritance-lineage.md`、`docs/scene-craft/141-trial-courtroom-adjudication-evidence-verdict-procedure.md`、`docs/scene-craft/151-age-lifespan-generation-seniority-growth-stage-continuity.md`、`docs/scene-craft/152-home-house-residence-property-room-domestic-space-territory.md`、`docs/scene-craft/153-sleep-fatigue-rest-recovery-circadian-body-resource-continuity.md`、`docs/scene-craft/154-hygiene-bathing-toilet-laundry-sanitation-smell-body-care-daily-life.md`、`docs/scene-craft/155-language-dialect-accent-translation-code-switching-miscommunication.md`。
 
 ## 158. 怀孕分娩、产后恢复、婴幼儿照护、亲子责任与家庭后果
 
@@ -987,7 +987,7 @@
 - 文件：`docs/reality-reference/162-workplace-employment-hiring-contract-payroll-performance-promotion-termination-labor-rights.md`
 - 适用：当 AI agent 需要设计、起草、审稿或修订招聘、面试、背调、offer、入职、试用期、劳动合同、劳务/外包/实习、岗位职责、汇报线、薪酬工资、奖金提成、社保公积金、考勤打卡、加班调休、休假、绩效考核、KPI/OKR、晋升降职、转岗调岗、保密协议、竞业限制、离职、辞退、裁员、解雇、劳动仲裁、工伤、产假病假、职场歧视、办公室政治和任何“人在组织中通过劳动换取钱、职位、资源和未来机会”的剧情时使用。
 - 核心规则：职场不是办公室背景板，而是“岗位 -> 合同 -> 工资 -> 考勤 -> 绩效 -> 权限 -> 责任 -> 风险 -> 离职余波”的制度链；每一次入职、晋升、加薪、背锅、裁员或离职，都要改变钱、权限、记录、关系、名声或下一次机会。
-- 关联：`docs/safety-research/20-content-compliance-risk-review.md`、`docs/reality-reference/30-profession-industry-life-detail-credibility.md`、`docs/reality-reference/31-region-era-social-custom-texture.md`、`docs/workflows/58-training-growth-anti-padding.md`、`docs/advanced-craft/61-information-public-opinion-discourse-battle.md`、`docs/advanced-craft/74-character-choice-dilemma-costly-decision.md`、`docs/advanced-craft/81-supporting-cast-allies-relationship-network.md`、`docs/advanced-craft/86-payoff-currency-reward-asset-continuity.md`、`docs/core-writing/100-canon-uncertainty-conflict-hallucination-control.md`、`docs/safety-research/111-research-fact-checking-source-evaluation-fiction-transformation.md`、`docs/scene-craft/120-investigation-clue-evidence-chain-reasoning-procedure.md`、`docs/scene-craft/122-negotiation-deal-bargain-leverage-contract-alliance.md`、`docs/scene-craft/130-faction-power-network-institutional-politics.md`、`docs/scene-craft/141-trial-courtroom-adjudication-evidence-verdict-procedure.md`、`docs/scene-craft/144-bureaucracy-court-politics-officialdom-governance-faction-policy-execution.md`、`docs/scene-craft/148-message-communication-letter-courier-delay-misdelivery-signal-chain.md`、`docs/scene-craft/150-money-currency-price-income-expense-debt-cost-of-living-economic-credibility.md`、`docs/scene-craft/158-pregnancy-childbirth-postpartum-childcare-parenting-family-responsibility.md`、`docs/scene-craft/159-disability-chronic-illness-neurodiversity-accessibility-assistive-devices.md`、`docs/reality-reference/161-identity-documents-registration-records-permits-credentials-civil-status.md`。
+- 关联：`docs/safety-research/20-content-compliance-risk-review.md`、`docs/reality-reference/30-profession-industry-life-detail-credibility.md`、`docs/reality-reference/31-region-era-social-custom-texture.md`、`docs/workflows/67-training-growth-anti-padding.md`、`docs/advanced-craft/61-information-public-opinion-discourse-battle.md`、`docs/advanced-craft/74-character-choice-dilemma-costly-decision.md`、`docs/advanced-craft/81-supporting-cast-allies-relationship-network.md`、`docs/advanced-craft/86-payoff-currency-reward-asset-continuity.md`、`docs/core-writing/100-canon-uncertainty-conflict-hallucination-control.md`、`docs/safety-research/111-research-fact-checking-source-evaluation-fiction-transformation.md`、`docs/scene-craft/120-investigation-clue-evidence-chain-reasoning-procedure.md`、`docs/scene-craft/122-negotiation-deal-bargain-leverage-contract-alliance.md`、`docs/scene-craft/130-faction-power-network-institutional-politics.md`、`docs/scene-craft/141-trial-courtroom-adjudication-evidence-verdict-procedure.md`、`docs/scene-craft/144-bureaucracy-court-politics-officialdom-governance-faction-policy-execution.md`、`docs/scene-craft/148-message-communication-letter-courier-delay-misdelivery-signal-chain.md`、`docs/scene-craft/150-money-currency-price-income-expense-debt-cost-of-living-economic-credibility.md`、`docs/scene-craft/158-pregnancy-childbirth-postpartum-childcare-parenting-family-responsibility.md`、`docs/scene-craft/159-disability-chronic-illness-neurodiversity-accessibility-assistive-devices.md`、`docs/reality-reference/161-identity-documents-registration-records-permits-credentials-civil-status.md`。
 
 ## 163. 数字账号、密码隐私、网络安全、黑客桥段与电子数据可信度
 

@@ -26,7 +26,7 @@ AI 写小说时常见两个极端：
 | 文档 | 负责什么 | 本篇负责什么 |
 | --- | --- | --- |
 | `docs/storycraft/28-worldbuilding-setting-exposition.md` | 世界观、设定、规则、名词投放 | 本篇判断设定信息应场景化、说明化还是暂不投放 |
-| `docs/workflows/57-long-timeskip-state-compression.md` | 长时间跳跃与状态压缩 | 本篇提供更通用的 scene/summary/tell 选择原则 |
+| `docs/workflows/66-long-timeskip-state-compression.md` | 长时间跳跃与状态压缩 | 本篇提供更通用的 scene/summary/tell 选择原则 |
 | `docs/advanced-craft/71-embodied-sensory-detail-grounding.md` | 具身细节、感官锚点、在场感 | 本篇判断哪些内容值得具身化，哪些不值得 |
 | `docs/advanced-craft/73-scene-value-shift-purpose-gate.md` | 场景必要性与价值转变 | 本篇在保留场景前先判断叙事变焦方式 |
 | `docs/advanced-craft/76-sentence-rhythm-narrative-breath-ai-flavor.md` | 句段层删解释、调节奏 | 本篇处理更上层的“该写成什么模式” |

@@ -328,7 +328,7 @@ AI 不要平均写所有变化。先定主价值：
 - 配合 `docs/core-writing/32-chapter-paragraph-mobile-reading-experience.md`：每屏微进展必须服务场景总状态变化。
 - 配合 `docs/workflows/38-chapter-production-pipeline-agent-handoff.md`：章节交接包需要记录本章状态增量和下一章压力。
 - 配合 `docs/storycraft/62-everyday-transition-low-intensity-anti-padding.md`：低强度章节也必须有微价值转变。
-- 配合 `docs/workflows/64-iconic-scene-character-highlight-shareable-moment.md`：名场面必须产生可复述的状态翻转。
+- 配合 `docs/workflows/68-iconic-scene-character-highlight-shareable-moment.md`：名场面必须产生可复述的状态翻转。
 - 配合 `docs/advanced-craft/70-action-reaction-scene-beat.md`：价值转变要落到行动、反应、选择和后果链。
 - 配合 `docs/advanced-craft/71-embodied-sensory-detail-grounding.md`：细节服务状态变化，不服务状态变化的漂亮描写要删。
 - 配合 `docs/advanced-craft/72-reader-trust-plausibility-anti-cheat.md`：状态变化必须由前因推出，不能靠作者强行宣布。

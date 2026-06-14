@@ -18,7 +18,7 @@
 | --- | --- | --- |
 | `docs/core-writing/32-chapter-paragraph-mobile-reading-experience.md` | 章节、段落、移动端阅读、章末牵引 | 本篇细化场景与场景之间怎样接 |
 | `docs/advanced-craft/56-volume-transition-new-stage-launch.md` | 卷间转场、新地图、新阶段前五章 | 本篇处理同章、相邻章、相邻场景的微转场 |
-| `docs/workflows/57-long-timeskip-state-compression.md` | 几天、几月、几年等时间跳跃 | 本篇处理短跳、场景切换、摘要桥接和读者定位 |
+| `docs/workflows/66-long-timeskip-state-compression.md` | 几天、几月、几年等时间跳跃 | 本篇处理短跳、场景切换、摘要桥接和读者定位 |
 | `docs/storycraft/62-everyday-transition-low-intensity-anti-padding.md` | 低强度章节是否值得成章 | 本篇判断低价值过程是写成场景、摘要，还是直接切掉 |
 | `docs/core-writing/69-pov-narrative-distance-information-focus.md` | 视角距离与信息焦点 | 本篇处理换 POV 时如何避免读者断联 |
 | `docs/advanced-craft/73-scene-value-shift-purpose-gate.md` | 场景是否有状态变化 | 本篇处理两个有效场景之间的连接方式 |
@@ -232,7 +232,7 @@ AI 最容易把低价值过程误写成完整场景。判断标准如下：
 三天后，伤口结了薄痂，城里的传言却已经换了三种说法。
 ```
 
-长跳应联动 `docs/workflows/57-long-timeskip-state-compression.md`，因为关系债、伏笔、伤势、资源、对手反制和世界变化都可能需要台账处理。
+长跳应联动 `docs/workflows/66-long-timeskip-state-compression.md`，因为关系债、伏笔、伤势、资源、对手反制和世界变化都可能需要台账处理。
 
 无论跳多久，都要回答：这段时间里哪些重要状态变了？哪些承诺还没清？下一场为什么从这里开始？
 

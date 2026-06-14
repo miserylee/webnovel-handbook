@@ -14,8 +14,8 @@
 - `docs/storycraft/28-worldbuilding-setting-exposition.md`：负责世界规则、组织派系、资源结构和设定投放。
 - `docs/core-writing/07-continuity-ledger.md`：负责把对手状态、世界变化和规则变化写入台账。
 - `docs/workflows/38-chapter-production-pipeline-agent-handoff.md`：负责多 agent 续写时同步外部状态。
-- `docs/workflows/57-long-timeskip-state-compression.md`：负责时间跳跃后检查对手和世界是否变化。
-- `docs/workflows/58-training-growth-anti-padding.md`：负责主角训练成长后的外部反应与验证。
+- `docs/workflows/66-long-timeskip-state-compression.md`：负责时间跳跃后检查对手和世界是否变化。
+- `docs/workflows/67-training-growth-anti-padding.md`：负责主角训练成长后的外部反应与验证。
 - `docs/templates/10-templates-and-checklists.md`：提供可复制的同步升级卡。
 
 ---

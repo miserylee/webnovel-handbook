@@ -820,7 +820,7 @@ AI 写复仇、打脸和清算时常见问题：
 2. `docs/core-writing/100-canon-uncertainty-conflict-hallucination-control.md`
 3. `docs/scene-craft/128-revenge-payback-justice-retaliation-clearing.md`
 4. `docs/advanced-craft/53-after-30-first-volume-structure.md`
-5. `docs/core-writing/59-antagonist-world-synchronous-escalation.md`
+5. `docs/core-writing/60-antagonist-world-synchronous-escalation.md`
 
 ---
 

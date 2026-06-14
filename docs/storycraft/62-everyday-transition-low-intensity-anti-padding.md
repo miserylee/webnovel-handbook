@@ -15,8 +15,8 @@
 - `docs/storycraft/27-comedy-gags-lightness.md`：用于轻松章、日常梗和重复变体。
 - `docs/core-writing/32-chapter-paragraph-mobile-reading-experience.md`：用于低强度章节的手机阅读段落、转场和章末牵引。
 - `docs/workflows/38-chapter-production-pipeline-agent-handoff.md`：用于把低强度章节拆成可交接任务。
-- `docs/workflows/57-long-timeskip-state-compression.md`：用于判断低价值过渡是否应跳过或压缩。
-- `docs/core-writing/59-antagonist-world-synchronous-escalation.md`：用于休整期、余波期和过渡期的外部世界同步变化。
+- `docs/workflows/66-long-timeskip-state-compression.md`：用于判断低价值过渡是否应跳过或压缩。
+- `docs/core-writing/60-antagonist-world-synchronous-escalation.md`：用于休整期、余波期和过渡期的外部世界同步变化。
 - `docs/advanced-craft/60-climax-battle-large-scene-coordination.md`：用于大场面后余波、清账和低强度承接。
 - `docs/advanced-craft/61-information-public-opinion-discourse-battle.md`：用于公开反转后的舆论余波、澄清期和站队变化。
 - `docs/templates/10-templates-and-checklists.md`：提供可复制的低强度章节防水卡。

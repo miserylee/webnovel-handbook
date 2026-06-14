@@ -8,7 +8,7 @@
 
 | 任务 | 先读 | 作用 |
 |---|---|---|
-| 选择平台、频道、读者入口 | `12-platform-and-channel-differences.md`、`12-platform-and-reader-binding.md` | 判断平台规则、频道期待、读者绑定方式和连载入口差异 |
+| 选择平台、频道、读者入口 | `12-platform-and-channel-differences.md`、`14-platform-and-reader-binding.md` | 判断平台规则、频道期待、读者绑定方式和连载入口差异 |
 | 判断题材和类型承诺 | `13-genre-patterns.md`、`29-reader-expectation-genre-promise-selling-point.md` | 明确题材套路、主卖点、承诺回报和读者预期 |
 | 研究竞品和市场样本 | `34-market-research-comp-analysis.md` | 建样本池，拆解可迁移卖点，避免盲目跟风 |
 | 设计书名、简介、标签 | `16-title-blurb-tag-packaging.md` | 把类型承诺压缩成读者能一眼理解的入口 |
@@ -61,7 +61,7 @@
 | 文件 | 读它的场景 |
 |---|---|
 | `12-platform-and-channel-differences.md` | 平台、频道、推荐机制、投稿和读者期待差异 |
-| `12-platform-and-reader-binding.md` | 平台生态如何绑定读者关系、更新信任和长期追读 |
+| `14-platform-and-reader-binding.md` | 平台生态如何绑定读者关系、更新信任和长期追读 |
 
 数据掉点诊断不在本目录。需要点击、读完率、追读、评论和反馈复盘时，转去 `../feedback-revision/18-reader-data-feedback-diagnosis.md` 和 `../feedback-revision/40-serial-data-tuning-loop.md`。
 

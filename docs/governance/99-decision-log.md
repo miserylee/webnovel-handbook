@@ -31,8 +31,8 @@
 
 - 状态：已确认
 - 归档：`docs/decisions/2026-06.md`
-- 影响：`README.md`、`docs/navigation/00-readme-details.md`
-- 执行口径：根 README 只承担开源门面、快速使用和核心入口；详细任务路线、贡献、安全和维护说明下沉到 `docs/navigation/00-readme-details.md`。
+- 影响：`README.md`、`docs/navigation/01-readme-details.md`
+- 执行口径：根 README 只承担开源门面、快速使用和核心入口；详细任务路线、贡献、安全和维护说明下沉到 `docs/navigation/01-readme-details.md`。
 
 ### 2026-06-13：大纲、细纲和章节排表是连载活文档
 

@@ -32,7 +32,7 @@ AI 写穿越、重生和穿书时常见问题：
 | 文档 | 负责什么 | 本专题新增什么 |
 |---|---|---|
 | `docs/storycraft/14-mechanism-and-cheat-design.md` | 系统、重生、穿书等机制设计 | 先知信息进入长篇后如何贬值、验证和更新 |
-| `docs/workflows/57-long-timeskip-state-compression.md` | 长时间跳跃和状态压缩 | 回溯/重生前后状态差异、节点重演和新时间线管理 |
+| `docs/workflows/66-long-timeskip-state-compression.md` | 长时间跳跃和状态压缩 | 回溯/重生前后状态差异、节点重演和新时间线管理 |
 | `docs/advanced-craft/72-reader-trust-plausibility-anti-cheat.md` | 合理性和防作弊 | 预知优势如何不破坏读者信任 |
 | `docs/advanced-craft/90-short-setup-payoff-scene-fairness.md` | 短线铺垫回收 | 前世/原著信息作为 setup 时如何公平兑现 |
 | `docs/advanced-craft/92-suspense-surprise-dramatic-irony-information-gap.md` | 信息差模式 | 主角先知、读者半知、对手误知如何组合 |
@@ -691,7 +691,7 @@ AI 写穿越、重生和穿书时常见问题：
 2. `docs/advanced-craft/90-short-setup-payoff-scene-fairness.md`
 3. `docs/advanced-craft/92-suspense-surprise-dramatic-irony-information-gap.md`
 4. `docs/scene-craft/134-transmigration-rebirth-book-travel-foreknowledge-butterfly-effect.md`
-5. `docs/core-writing/59-antagonist-world-synchronous-escalation.md`
+5. `docs/core-writing/60-antagonist-world-synchronous-escalation.md`
 
 ### 19.3 写穿书剧情偏离
 

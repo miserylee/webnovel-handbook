@@ -495,7 +495,7 @@ AI agent 要问：同一筹码在双方眼里价值是否不同？
 
 1. 本专题确认互利条件、底线、破裂条件和执行机制。
 2. `docs/advanced-craft/81-supporting-cast-allies-relationship-network.md` 管配角网络和站队变化。
-3. `docs/core-writing/59-antagonist-world-synchronous-escalation.md` 管对手和外部世界反应。
+3. `docs/core-writing/60-antagonist-world-synchronous-escalation.md` 管对手和外部世界反应。
 4. `docs/core-writing/100-canon-uncertainty-conflict-hallucination-control.md` 管盟约状态和事实台账。
 
 ### 16.3 公开谈判、朝堂对峙、发布会签约

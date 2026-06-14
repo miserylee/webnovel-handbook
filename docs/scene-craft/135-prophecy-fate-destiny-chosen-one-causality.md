@@ -669,7 +669,7 @@ AI 写预言、天命和天选者时常见问题：
 2. `docs/advanced-craft/74-character-choice-dilemma-costly-decision.md`
 3. `docs/scene-craft/134-transmigration-rebirth-book-travel-foreknowledge-butterfly-effect.md`
 4. `docs/scene-craft/135-prophecy-fate-destiny-chosen-one-causality.md`
-5. `docs/core-writing/59-antagonist-world-synchronous-escalation.md`
+5. `docs/core-writing/60-antagonist-world-synchronous-escalation.md`
 
 ---
 

@@ -17,7 +17,7 @@
 - `docs/safety-research/20-content-compliance-risk-review.md`：负责现实法律、劳动争议、隐私、歧视、骚扰和合规风险。本篇负责职场制度如何服务叙事。
 - `docs/reality-reference/30-profession-industry-life-detail-credibility.md`：负责职业和行业可信度。本篇负责“成为员工/失去员工身份”的用工制度。
 - `docs/reality-reference/31-region-era-social-custom-texture.md`：负责地域、时代和制度差异。本篇只提供职场制度的通用执行框架。
-- `docs/workflows/58-training-growth-anti-padding.md`：负责职业技能成长。本篇负责岗位、绩效、晋升和组织回报。
+- `docs/workflows/67-training-growth-anti-padding.md`：负责职业技能成长。本篇负责岗位、绩效、晋升和组织回报。
 - `docs/advanced-craft/61-information-public-opinion-discourse-battle.md`：负责职场甩锅、公开证据和解释权。本篇负责会议纪要、人事记录、绩效材料、离职证明如何进入证据链。
 - `docs/advanced-craft/74-character-choice-dilemma-costly-decision.md`：负责选择代价。本篇负责“留下/辞职/举报/签字/背锅/拒绝加班/接受调岗”的代价。
 - `docs/advanced-craft/81-supporting-cast-allies-relationship-network.md`：负责同事、上级、下属和客户群像。本篇负责这些人的岗位功能和制度关系。

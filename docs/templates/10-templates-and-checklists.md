@@ -2513,7 +2513,7 @@
 
 ## 1.44 长篇时间跳跃与状态压缩卡
 
-用途：处理“几天后、几个月后、几年后”，或压缩训练、赶路、调查、备赛、项目推进、伤后恢复、卷间空窗时，检查跳前清单、状态差额、关系债、伏笔回响、对手变化、跳后第一场景和台账回写。详见 `docs/workflows/57-long-timeskip-state-compression.md`。
+用途：处理“几天后、几个月后、几年后”，或压缩训练、赶路、调查、备赛、项目推进、伤后恢复、卷间空窗时，检查跳前清单、状态差额、关系债、伏笔回响、对手变化、跳后第一场景和台账回写。详见 `docs/workflows/66-long-timeskip-state-compression.md`。
 
 ```markdown
 # 长篇时间跳跃与状态压缩卡
@@ -2589,7 +2589,7 @@
 
 ## 1.45 长篇训练、修炼与成长段落防水卡
 
-适用场景：训练、修炼、闭关、学习、备赛、技能升级、职业成长、系统任务、团队磨合。详细规则见 `docs/workflows/58-training-growth-anti-padding.md`。
+适用场景：训练、修炼、闭关、学习、备赛、技能升级、职业成长、系统任务、团队磨合。详细规则见 `docs/workflows/67-training-growth-anti-padding.md`。
 
 ```text
 长篇训练/修炼/成长段落防水卡
@@ -2632,7 +2632,7 @@
 
 ## 1.46 反派、竞争对手与外部世界同步升级卡
 
-适用场景：主角胜利、训练突破、暴露新能力、夺取资源、时间跳跃、卷级推进、换地图、新阶段启动、对手失败但未退场、组织/制度/舆论/市场需要反馈。详细规则见 `docs/core-writing/59-antagonist-world-synchronous-escalation.md`。
+适用场景：主角胜利、训练突破、暴露新能力、夺取资源、时间跳跃、卷级推进、换地图、新阶段启动、对手失败但未退场、组织/制度/舆论/市场需要反馈。详细规则见 `docs/core-writing/60-antagonist-world-synchronous-escalation.md`。
 
 ```text
 反派、竞争对手与外部世界同步升级卡
@@ -2884,7 +2884,7 @@
 
 ## 名场面、角色高光与可转述记忆点设计卡
 
-适用文档：`docs/workflows/64-iconic-scene-character-highlight-shareable-moment.md`
+适用文档：`docs/workflows/68-iconic-scene-character-highlight-shareable-moment.md`
 
 使用时机：角色高光、爽点落袋、情绪峰值、关系爆点、悬疑反转、喜剧梗点变体、机制规则高光、公开反转、卷末名场面、评论区可复述点复盘。
 

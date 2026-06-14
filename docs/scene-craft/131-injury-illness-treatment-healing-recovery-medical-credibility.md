@@ -33,7 +33,7 @@ AI 写伤病、治疗和神医桥段时常见问题：
 |---|---|---|
 | `docs/safety-research/20-content-compliance-risk-review.md` | 合规和高风险内容 | 医疗/毒物/伤害桥段的现实风险边界 |
 | `docs/reality-reference/30-profession-industry-life-detail-credibility.md` | 职业与行业可信度 | 医护角色、医馆、医院、诊疗流程的场景级执行 |
-| `docs/workflows/58-training-growth-anti-padding.md` | 训练成长和代价 | 训练伤、恢复期、过度训练副作用和行动限制 |
+| `docs/workflows/67-training-growth-anti-padding.md` | 训练成长和代价 | 训练伤、恢复期、过度训练副作用和行动限制 |
 | `docs/storycraft/68-protagonist-failure-setback-cost-management.md` | 失败、挫折和反弹 | 伤病如何成为失败代价，而不是临时装饰 |
 | `docs/advanced-craft/71-embodied-sensory-detail-grounding.md` | 身体感和感官细节 | 伤病细节如何服务行动限制和视角过滤 |
 | `docs/advanced-craft/85-tension-release-pressure-rhythm-fatigue-management.md` | 身体压力与节奏释放 | 疗伤/休整如何有状态增量，避免水章 |

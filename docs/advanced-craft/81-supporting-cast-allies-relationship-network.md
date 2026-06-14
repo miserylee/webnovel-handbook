@@ -507,7 +507,7 @@ AI 写长篇网文时，配角最容易出现两种相反失败：
 - `docs/storycraft/27-comedy-gags-lightness.md`：喜剧配角需联动笑点、反应顺序和后果。
 - `docs/advanced-craft/54-volume-subplot-thread-management.md`：配角线进入卷级支线时，要纳入线程管理。
 - `docs/advanced-craft/60-climax-battle-large-scene-coordination.md`：大场面中的队友任务和群像分工要继承本专题层级。
-- `docs/workflows/64-iconic-scene-character-highlight-shareable-moment.md`：配角高光必须来自已有功能和关系债。
+- `docs/workflows/68-iconic-scene-character-highlight-shareable-moment.md`：配角高光必须来自已有功能和关系债。
 - `docs/core-writing/69-pov-narrative-distance-information-focus.md`：配角视角必须带来新增读者价值。
 - `docs/advanced-craft/74-character-choice-dilemma-costly-decision.md`：配角重大转向必须有选择链。
 - `docs/advanced-craft/77-character-arc-belief-behavior-evidence.md`：长期配角需要行为证据支持弧线。

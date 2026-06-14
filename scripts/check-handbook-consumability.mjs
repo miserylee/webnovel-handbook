@@ -32,7 +32,7 @@ const requiredEntrypoints = [
   "docs/00-index.md",
   "docs/navigation/README.md",
   "docs/navigation/00-expanded-topic-catalog.md",
-  "docs/navigation/00-readme-details.md",
+  "docs/navigation/01-readme-details.md",
   "docs/workflows/README.md",
   "docs/workflows/35-ai-agent-novel-creation-workflow.md",
   "docs/workflows/44-single-novel-project-initialization-package.md",
@@ -617,7 +617,7 @@ async function checkMarkdownSizeGovernance(markdownFiles) {
     ["docs/templates/10-templates-and-checklists.md", "template warehouse; search by heading"],
     ["docs/decisions/2026-06.md", "frozen historical decision archive"],
     ["docs/navigation/00-expanded-topic-catalog.md", "expanded catalog; keyword search only"],
-    ["docs/navigation/00-readme-details.md", "README overflow details; read by section"],
+    ["docs/navigation/01-readme-details.md", "README overflow details; read by section"],
   ]);
   const largeMarkdownThreshold = 100_000;
 
@@ -642,6 +642,45 @@ async function checkMarkdownSizeGovernance(markdownFiles) {
   }
 
   return sizeProblems;
+}
+
+async function checkDocsNumericPrefixUniqueness(markdownFiles) {
+  const duplicatePrefixProblems = [];
+  const prefixesByDirectory = new Map();
+
+  for (const file of markdownFiles) {
+    const repoPath = toRepoPath(file);
+
+    if (!repoPath.startsWith("docs/")) {
+      continue;
+    }
+
+    const fileName = path.basename(repoPath);
+    const prefixMatch = fileName.match(/^(\d+)-/);
+
+    if (!prefixMatch) {
+      continue;
+    }
+
+    const directory = path.dirname(repoPath).replaceAll(path.sep, "/");
+    const key = `${directory}/${prefixMatch[1]}`;
+    const filesWithPrefix = prefixesByDirectory.get(key) || [];
+    filesWithPrefix.push(repoPath);
+    prefixesByDirectory.set(key, filesWithPrefix);
+  }
+
+  for (const [key, filesWithPrefix] of prefixesByDirectory.entries()) {
+    if (filesWithPrefix.length <= 1) {
+      continue;
+    }
+
+    duplicatePrefixProblems.push({
+      file: key,
+      sample: `duplicate numeric prefix in one docs directory: ${filesWithPrefix.join(", ")}`,
+    });
+  }
+
+  return duplicatePrefixProblems;
 }
 
 function printSection(title, rows) {
@@ -678,6 +717,7 @@ async function main() {
     skillPackageProblems,
     skillPackagingProblems,
     markdownSizeGovernanceProblems,
+    docsNumericPrefixProblems,
   ] =
     await Promise.all([
       checkMarkdownLinks(markdownFiles),
@@ -693,6 +733,7 @@ async function main() {
       checkSkillPackageLayout(),
       checkSkillPackagingSetup(),
       checkMarkdownSizeGovernance(markdownFiles),
+      checkDocsNumericPrefixUniqueness(markdownFiles),
     ]);
 
   printSection("Broken Markdown links", brokenLinks);
@@ -714,6 +755,7 @@ async function main() {
   printSection("Skill package layout problems", skillPackageProblems);
   printSection("Skill packaging setup problems", skillPackagingProblems);
   printSection("Markdown size governance problems", markdownSizeGovernanceProblems);
+  printSection("Docs numeric prefix problems", docsNumericPrefixProblems);
 
   const hasProblems =
     brokenLinks.length > 0 ||
@@ -728,7 +770,8 @@ async function main() {
     missingDirectoryIndexCoverage.length > 0 ||
     skillPackageProblems.length > 0 ||
     skillPackagingProblems.length > 0 ||
-    markdownSizeGovernanceProblems.length > 0;
+    markdownSizeGovernanceProblems.length > 0 ||
+    docsNumericPrefixProblems.length > 0;
 
   if (hasProblems) {
     process.exitCode = 1;

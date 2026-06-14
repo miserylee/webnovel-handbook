@@ -16,7 +16,7 @@
 | 命名、称呼、术语前后不一致 | `106-naming-address-terminology-recognition-consistency.md` | 角色称呼、地名、术语、识别线索和一致性 |
 | 章法、段落、转场、手机阅读体验 | `32-chapter-paragraph-mobile-reading-experience.md` | 段落密度、转场、章末牵引和移动端可读性 |
 | 视角、叙述距离、信息焦点混乱 | `69-pov-narrative-distance-information-focus.md` | POV、叙述距离、信息控制和读者站位 |
-| 反派、世界压力和主角成长不同步 | `59-antagonist-world-synchronous-escalation.md` | 对手系统、世界升级和主角能力成长的同步压力 |
+| 反派、世界压力和主角成长不同步 | `60-antagonist-world-synchronous-escalation.md` | 对手系统、世界升级和主角能力成长的同步压力 |
 
 ## 2. 推荐读取链路
 
@@ -59,7 +59,7 @@
 | 文件 | 读它的场景 |
 |---|---|
 | `59-dialogue-comparison-reference.md` | 对白自然度、Agent 初稿/用户改稿对比、台词样本训练 |
-| `59-antagonist-world-synchronous-escalation.md` | 反派压力、世界升级、主角成长节奏同步 |
+| `60-antagonist-world-synchronous-escalation.md` | 反派压力、世界升级、主角成长节奏同步 |
 
 后续新增或重命名时，优先避免继续产生同号文件；如果历史文件暂不重排，索引里必须写完整文件名。
 

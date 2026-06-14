@@ -35,7 +35,7 @@
 | `docs/feedback-revision/41-reader-comment-coding-feedback-clustering.md` | 评论编码 | 本篇把评论聚类转成经验资产 |
 | `docs/feedback-revision/42-editor-reader-data-feedback-conflict-resolution.md` | 编辑、读者和数据冲突 | 本篇复盘哪些判断后来被证实 |
 | `docs/workflows/43-commercial-project-greenlight-scorecard.md` | 开书立项评分 | 本篇反查立项假设是否成立 |
-| `docs/workflows/64-iconic-scene-character-highlight-shareable-moment.md` | 名场面资产 | 本篇统计哪些场景真的被记住 |
+| `docs/workflows/68-iconic-scene-character-highlight-shareable-moment.md` | 名场面资产 | 本篇统计哪些场景真的被记住 |
 | `docs/advanced-craft/65-paid-conversion-subscription-retention.md` | 付费和留存 | 本篇复盘付费阶段的承诺兑现 |
 | `docs/advanced-craft/95-reader-feedback-symptom-diagnosis-routing.md` | 反馈路由 | 本篇把症状复盘为下一本闸门 |
 | `docs/market-serialization/103-reader-retelling-recommendation-word-of-mouth-assets.md` | 口碑资产 | 本篇把口碑资产迁移到下一本策略 |

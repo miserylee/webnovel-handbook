@@ -14,7 +14,7 @@
 - `docs/storycraft/26-suspense-reversal-information-control.md`：用于线索、误导、红鲱鱼、真相揭示和公平反转。
 - `docs/core-writing/32-chapter-paragraph-mobile-reading-experience.md`：用于手机阅读下的信息拆段、证据展示和章末牵引。
 - `docs/workflows/38-chapter-production-pipeline-agent-handoff.md`：用于多 agent 交接信息战任务、证据链和台账变化。
-- `docs/core-writing/59-antagonist-world-synchronous-escalation.md`：用于公开结果后的舆论、规则、组织和风险等级变化。
+- `docs/core-writing/60-antagonist-world-synchronous-escalation.md`：用于公开结果后的舆论、规则、组织和风险等级变化。
 - `docs/advanced-craft/60-climax-battle-large-scene-coordination.md`：用于公开审判、发布会、朝堂、庭审等大场面调度。
 - `docs/safety-research/20-content-compliance-risk-review.md`：用于平台合规、现实风险、诽谤、隐私和低质内容风险。
 - `docs/templates/10-templates-and-checklists.md`：提供可复制的信息战与话语权攻防卡。
@@ -440,7 +440,7 @@
 功能：
 
 - 让舆论结果复杂化。
-- 连接 `docs/core-writing/59-antagonist-world-synchronous-escalation.md` 的外部升级。
+- 连接 `docs/core-writing/60-antagonist-world-synchronous-escalation.md` 的外部升级。
 
 信息战最真实的结果常常不是“所有人相信主角”，而是“关键决策者不得不行动，中立者开始观望，既得利益者转暗线”。
 

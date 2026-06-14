@@ -20,7 +20,7 @@
 - `docs/advanced-craft/52-chapters-21-30-stable-retention-stage-climax.md`：前 30 章稳定追读与阶段高潮。
 - `docs/advanced-craft/53-after-30-first-volume-structure.md`：30 章后卷级结构与长期信任。
 - `docs/advanced-craft/55-volume-ending-settlement-next-hook.md`：卷末结算、余波和下一卷牵引。
-- `docs/workflows/64-iconic-scene-character-highlight-shareable-moment.md`：名场面与可转述场景资产。
+- `docs/workflows/68-iconic-scene-character-highlight-shareable-moment.md`：名场面与可转述场景资产。
 
 ## 1. 先区分：付费转化不是单点技巧
 

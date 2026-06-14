@@ -1009,7 +1009,7 @@
 
 状态：已确认。
 
-用途：支撑 `docs/workflows/57-long-timeskip-state-compression.md`，补足“几天后、几个月后、几年后、训练/赶路/调查/备赛/项目推进/伤后恢复等时间跳跃如何不丢状态”的执行规范。
+用途：支撑 `docs/workflows/66-long-timeskip-state-compression.md`，补足“几天后、几个月后、几年后、训练/赶路/调查/备赛/项目推进/伤后恢复等时间跳跃如何不丢状态”的执行规范。
 
 来源：
 
@@ -1034,7 +1034,7 @@
 
 状态：已确认
 
-新增沉淀：`docs/workflows/58-training-growth-anti-padding.md`
+新增沉淀：`docs/workflows/67-training-growth-anti-padding.md`
 
 来源与用途：
 
@@ -1050,7 +1050,7 @@
 
 状态：已确认
 
-新增沉淀：`docs/core-writing/59-antagonist-world-synchronous-escalation.md`
+新增沉淀：`docs/core-writing/60-antagonist-world-synchronous-escalation.md`
 
 来源与用途：
 
@@ -1138,7 +1138,7 @@
 
 状态：已确认
 
-沉淀文档：`docs/workflows/64-iconic-scene-character-highlight-shareable-moment.md`
+沉淀文档：`docs/workflows/68-iconic-scene-character-highlight-shareable-moment.md`
 
 外部来源：
 

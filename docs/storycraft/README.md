@@ -10,7 +10,7 @@
 |---|---|---|
 | 金手指、系统、重生、规则反杀不好用 | `14-mechanism-and-cheat-design.md` | 机制限制、使用成本、回报方式和反杀结构 |
 | 人物关系没张力、CP/队友/宿敌不黏 | `15-character-relationship-patterns.md`、`25-emotion-line-relationship-progression.md` | 关系类型、情绪债、糖点虐点和推进节奏 |
-| 反派弱、阻力降智、主角赢得太轻 | `21-antagonist-opposition-system.md`、`../core-writing/59-antagonist-world-synchronous-escalation.md` | 对手系统、组织压力、世界升级和主角成长同步 |
+| 反派弱、阻力降智、主角赢得太轻 | `21-antagonist-opposition-system.md`、`../core-writing/60-antagonist-world-synchronous-escalation.md` | 对手系统、组织压力、世界升级和主角成长同步 |
 | 第一章和前十章留不住人 | `22-opening-retention-model.md` | 开篇承诺、主角处境、前 3-6 章和前 10 章留存 |
 | 中段水、支线散、卷结构松 | `23-midbook-volume-structure.md` | 卷目标、支线生命周期、中段升级和卷末结算 |
 | 结尾塌、烂尾、最后一卷收不住 | `24-ending-completion-risk-control.md` | 完本风险、最后一卷、情绪结算和坑位回收 |

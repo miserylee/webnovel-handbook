@@ -545,7 +545,7 @@ TV Tropes 中 chase scene、hunted protagonist、hunter becomes the hunted、ste
 
 1. 本专题先设路线、追方、资源和阶段目标。
 2. `docs/advanced-craft/56-volume-transition-new-stage-launch.md` 管新地图/新阶段。
-3. `docs/core-writing/59-antagonist-world-synchronous-escalation.md` 管追方同步升级。
+3. `docs/core-writing/60-antagonist-world-synchronous-escalation.md` 管追方同步升级。
 4. `docs/advanced-craft/86-payoff-currency-reward-asset-continuity.md` 管脱险收益和代价延续。
 5. `docs/core-writing/100-canon-uncertainty-conflict-hallucination-control.md` 管状态台账。
 

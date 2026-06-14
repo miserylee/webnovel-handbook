@@ -17,7 +17,7 @@
 - `docs/workflows/38-chapter-production-pipeline-agent-handoff.md`：用于多 agent 分工和大场面任务拆解。
 - `docs/advanced-craft/52-chapters-21-30-stable-retention-stage-climax.md`：用于前 30 章阶段高潮。
 - `docs/advanced-craft/55-volume-ending-settlement-next-hook.md`：用于卷末大场面后的结算、余波和下一卷牵引。
-- `docs/core-writing/59-antagonist-world-synchronous-escalation.md`：用于大场面前后的外部同步升级。
+- `docs/core-writing/60-antagonist-world-synchronous-escalation.md`：用于大场面前后的外部同步升级。
 - `docs/templates/10-templates-and-checklists.md`：提供可复制的大场面调度卡。
 
 ---
@@ -265,7 +265,7 @@ AI 不要把所有冲突都写成最高规格大战。先判断规模。
 - 队友救人成功，却暴露主角底牌。
 - 战场上出现第三方。
 
-反转不能空降，必须来自前文铺垫或 `docs/core-writing/59-antagonist-world-synchronous-escalation.md` 中的外部学习。
+反转不能空降，必须来自前文铺垫或 `docs/core-writing/60-antagonist-world-synchronous-escalation.md` 中的外部学习。
 
 ### 6.5 失控：多线压力同时压到主角
 
@@ -994,6 +994,6 @@ AI 不要把所有冲突都写成最高规格大战。先判断规模。
 
 ## 与 64 号专题的衔接：大场面要提炼为读者能复述的高光资产
 
-处理高潮战、决战、群战、公开审判、比赛决胜、灾难救援、发布会或卷末大场面时，除了调用本专题检查目标、空间、视角、角色功能和战后结算，还应联动 `docs/workflows/64-iconic-scene-character-highlight-shareable-moment.md`。
+处理高潮战、决战、群战、公开审判、比赛决胜、灾难救援、发布会或卷末大场面时，除了调用本专题检查目标、空间、视角、角色功能和战后结算，还应联动 `docs/workflows/68-iconic-scene-character-highlight-shareable-moment.md`。
 
 大场面不只要“打清楚”，还要让读者能复述其中一个关键高光：谁在什么压力下做了什么昂贵选择，用哪个动作、物件、台词或站位完成状态翻转，见证者因此改变了什么行动。没有可复述高光的大场面，容易热闹但不留记忆。

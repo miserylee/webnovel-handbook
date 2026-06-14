@@ -34,7 +34,7 @@ AI 写御兽、灵宠和非人伙伴时常见问题：
 | `docs/storycraft/14-mechanism-and-cheat-design.md` | 金手指和机制设计 | 御兽/召唤机制如何不变成万能外挂 |
 | `docs/storycraft/15-character-relationship-patterns.md` | 关系类型 | 人与非人伙伴的信任、照护、依赖和边界 |
 | `docs/storycraft/21-antagonist-opposition-system.md` | 对手和阻力 | 敌方兽群、兽王、御兽师对手和克制关系 |
-| `docs/workflows/58-training-growth-anti-padding.md` | 训练成长 | 战宠训练、进化和技能掌握如何有代价 |
+| `docs/workflows/67-training-growth-anti-padding.md` | 训练成长 | 战宠训练、进化和技能掌握如何有代价 |
 | `docs/advanced-craft/70-action-reaction-scene-beat.md` | 行动反应单元 | 非人伙伴行动如何接上主角反应和场景结果 |
 | `docs/advanced-craft/71-embodied-sensory-detail-grounding.md` | 感官与身体落地 | 动物/非人感官如何区别于人类视角 |
 | `docs/advanced-craft/81-supporting-cast-allies-relationship-network.md` | 配角和盟友网络 | 灵宠作为队友如何承担功能而不是工具人 |

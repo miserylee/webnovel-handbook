@@ -19,7 +19,7 @@
 ## 2. 与既有专题的分工
 
 - `docs/advanced-craft/56-volume-transition-new-stage-launch.md`：负责新地图、新阶段、新卷开场。本篇负责人物如何抵达新地图，以及抵达前后状态差额。
-- `docs/workflows/57-long-timeskip-state-compression.md`：负责时间跳跃和长时段压缩。本篇负责旅程是否值得展开、如何压缩、压缩后保留哪些变化。
+- `docs/workflows/66-long-timeskip-state-compression.md`：负责时间跳跃和长时段压缩。本篇负责旅程是否值得展开、如何压缩、压缩后保留哪些变化。
 - `docs/storycraft/62-everyday-transition-low-intensity-anti-padding.md`：负责低强度日常不水文。本篇负责普通赶路如何不变成水章。
 - `docs/advanced-craft/88-spatial-blocking-scene-geography-action-continuity.md`：负责单场景空间调度。本篇负责跨地点路线、节点和距离成本。
 - `docs/advanced-craft/91-scene-transition-bridge-continuity-momentum.md`：负责场景转场。本篇负责长距离转场的交通、通行和成本。

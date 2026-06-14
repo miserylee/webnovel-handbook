@@ -20,7 +20,7 @@
 4. 人物、对白、人味、降低 AI 味优先读 [docs/core-writing/11-human-writing-upgrade.md](./docs/core-writing/11-human-writing-upgrade.md)、[docs/core-writing/37-project-style-bible-character-voice.md](./docs/core-writing/37-project-style-bible-character-voice.md)、[docs/core-writing/59-dialogue-comparison-reference.md](./docs/core-writing/59-dialogue-comparison-reference.md)。
 5. 需要找大量专题时，再定向检索 [docs/navigation/00-expanded-topic-catalog.md](./docs/navigation/00-expanded-topic-catalog.md)。
 
-更完整的阅读路线见 [docs/navigation/00-readme-details.md](./docs/navigation/00-readme-details.md)。
+更完整的阅读路线见 [docs/navigation/01-readme-details.md](./docs/navigation/01-readme-details.md)。
 
 ## 核心入口
 
@@ -45,7 +45,7 @@
 ## 维护检查
 
 - Skill 分发入口：[skills/webnovel-handbook/SKILL.md](skills/webnovel-handbook/SKILL.md)。
-- 调整索引、路径或 skill 入口后，可运行 `node scripts/check-handbook-consumability.mjs` 检查 Markdown 本地链接、本仓库 `docs/...md` 裸路径、目录 README 覆盖、关键 agent 入口、`docs` 一级目录索引覆盖、skill 包布局、skill 打包设置、活跃入口体积护栏、超大 Markdown 白名单、UTF-8 BOM、CRLF 换行、常见编码污染和开源去身份化残留。
+- 调整索引、路径或 skill 入口后，可运行 `node scripts/check-handbook-consumability.mjs` 检查 Markdown 本地链接、本仓库 `docs/...md` 裸路径、目录 README 覆盖、同一 `docs` 分类目录内编号唯一、关键 agent 入口、`docs` 一级目录索引覆盖、skill 包布局、skill 打包设置、活跃入口体积护栏、超大 Markdown 白名单、UTF-8 BOM、CRLF 换行、常见编码污染和开源去身份化残留。
 - 分发 skill 前，可运行 `node scripts/package-skill.mjs` 生成 `dist/webnovel-handbook-skill.zip`；脚本会反读 zip 目录，确认根层包含 `SKILL.md`，且没有把 `docs/`、仓库级 `scripts/` 或其他仓库内容误打进轻量 skill 包。
 - 本机已安装 skill 需要同步时，可运行 `node scripts/sync-installed-skill.mjs --check` 或 `node scripts/sync-installed-skill.mjs --write`；默认目标是 `~/.agents/skills/webnovel-handbook/SKILL.md`，也可用 `--target` 指定。
 
@@ -56,4 +56,4 @@
 - 主要用途：中文网文创作知识库与 agent 工作流
 - 协作入口：[AGENTS.md](AGENTS.md)、[CONTRIBUTING.md](CONTRIBUTING.md)、[CHANGELOG.md](CHANGELOG.md)、[ROADMAP.md](ROADMAP.md)
 - 开源治理：[SOURCE_POLICY.md](SOURCE_POLICY.md)、[SAFETY.md](SAFETY.md)、[DEIDENTIFICATION.md](DEIDENTIFICATION.md)、[SECURITY.md](SECURITY.md)、[CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
-- 详细贡献、安全、来源和去身份化规则见 [docs/navigation/00-readme-details.md](./docs/navigation/00-readme-details.md)
+- 详细贡献、安全、来源和去身份化规则见 [docs/navigation/01-readme-details.md](./docs/navigation/01-readme-details.md)

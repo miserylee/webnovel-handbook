@@ -34,7 +34,7 @@ AI 写组织、派系和权力结构时常见问题：
 | `docs/storycraft/21-antagonist-opposition-system.md` | 反派、对手、组织/制度/环境阻力 | 组织内部谁为什么阻挡、谁能调资源、谁会被牵连 |
 | `docs/storycraft/28-worldbuilding-setting-exposition.md` | 世界观和设定投放 | 组织设定如何转化为可行动规则和权力关系 |
 | `docs/reality-reference/31-region-era-social-custom-texture.md` | 地域、时代和社会风俗 | 权力网络如何体现礼法、阶层、规矩和社会习惯 |
-| `docs/core-writing/59-antagonist-world-synchronous-escalation.md` | 主角变化后外部世界同步升级 | 组织如何复盘、调人、改规则、重新估值 |
+| `docs/core-writing/60-antagonist-world-synchronous-escalation.md` | 主角变化后外部世界同步升级 | 组织如何复盘、调人、改规则、重新估值 |
 | `docs/advanced-craft/61-information-public-opinion-discourse-battle.md` | 公开信息战和话语权 | 派系如何围绕证据、舆论和解释权站队 |
 | `docs/advanced-craft/78-information-density-cognitive-load-term-management.md` | 信息密度和名词负担 | 新组织和派系如何分批出现，避免名词轰炸 |
 | `docs/advanced-craft/81-supporting-cast-allies-relationship-network.md` | 配角关系网和群像反应 | 配角站队背后的组织利益和职位风险 |
@@ -854,7 +854,7 @@ AI 写组织、派系和权力结构时常见问题：
 
 1. `docs/advanced-craft/86-payoff-currency-reward-asset-continuity.md`
 2. `docs/scene-craft/130-faction-power-network-institutional-politics.md`
-3. `docs/core-writing/59-antagonist-world-synchronous-escalation.md`
+3. `docs/core-writing/60-antagonist-world-synchronous-escalation.md`
 4. `docs/scene-craft/124-business-building-base-territory-management-production-chain.md`
 5. `docs/core-writing/100-canon-uncertainty-conflict-hallucination-control.md`
 

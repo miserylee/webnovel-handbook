@@ -13,7 +13,7 @@
 - `docs/storycraft/23-midbook-volume-structure.md`：用于处理中段训练、升级、复盘、转场的防水问题。
 - `docs/core-writing/32-chapter-paragraph-mobile-reading-experience.md`：用于控制训练段在手机阅读中的段落密度和爽点间隔。
 - `docs/workflows/38-chapter-production-pipeline-agent-handoff.md`：用于把训练段拆成可交接的写作任务。
-- `docs/workflows/57-long-timeskip-state-compression.md`：用于判断训练过程是否应该被时间跳跃压缩。
+- `docs/workflows/66-long-timeskip-state-compression.md`：用于判断训练过程是否应该被时间跳跃压缩。
 - `docs/templates/10-templates-and-checklists.md`：用于调用本专题的训练段落卡。
 
 ---
@@ -61,7 +61,7 @@
 - 群像故事中的团队磨合、配合训练、角色互补、短板补位。
 - 长篇中段需要让主角“变强”但暂时没有大事件可写的章节。
 
-如果训练段只为了说明“时间过去了”，优先查看 `docs/workflows/57-long-timeskip-state-compression.md`，不要硬写完整过程。
+如果训练段只为了说明“时间过去了”，优先查看 `docs/workflows/66-long-timeskip-state-compression.md`，不要硬写完整过程。
 
 ---
 
@@ -792,4 +792,4 @@ AI agent 生成训练段时，低于 B 级应重写或压缩。
 
 ## 反派、竞争对手与外部世界同步升级入口
 
-当主角胜利、训练突破、暴露新能力、夺取资源、改变规则、经过时间跳跃、进入新卷或开启新地图后，需要调用 `docs/core-writing/59-antagonist-world-synchronous-escalation.md`。该专题负责判断外部世界是否同步变化：谁看见了主角变化、谁产生误判、对手换了什么策略、组织调了什么资源、规则或舆论怎样反馈、下一轮压力如何针对主角旧优势，防止世界原地等待、对手重复送、新敌人空降和升级失真。
+当主角胜利、训练突破、暴露新能力、夺取资源、改变规则、经过时间跳跃、进入新卷或开启新地图后，需要调用 `docs/core-writing/60-antagonist-world-synchronous-escalation.md`。该专题负责判断外部世界是否同步变化：谁看见了主角变化、谁产生误判、对手换了什么策略、组织调了什么资源、规则或舆论怎样反馈、下一轮压力如何针对主角旧优势，防止世界原地等待、对手重复送、新敌人空降和升级失真。
